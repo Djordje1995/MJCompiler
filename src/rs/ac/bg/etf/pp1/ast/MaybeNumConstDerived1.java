@@ -1,13 +1,24 @@
 // generated with ast extension for cup
 // version 0.8
-// 29/3/2019 10:23:44
+// 29/3/2019 20:58:3
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class MaybeNumConstDerived1 extends MaybeNumConst {
 
-    public MaybeNumConstDerived1 () {
+    private Integer N1;
+
+    public MaybeNumConstDerived1 (Integer N1) {
+        this.N1=N1;
+    }
+
+    public Integer getN1() {
+        return N1;
+    }
+
+    public void setN1(Integer N1) {
+        this.N1=N1;
     }
 
     public void accept(Visitor visitor) {
@@ -29,6 +40,9 @@ public class MaybeNumConstDerived1 extends MaybeNumConst {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
         buffer.append("MaybeNumConstDerived1(\n");
+
+        buffer.append(" "+tab+N1);
+        buffer.append("\n");
 
         buffer.append(tab);
         buffer.append(") [MaybeNumConstDerived1]");

@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 29/3/2019 10:23:43
+// 29/3/2019 20:58:3
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -12,15 +12,15 @@ public class MethodDecl implements SyntaxNode {
     public rs.etf.pp1.symboltable.concepts.Obj obj = null;
 
     private TypeOrVoid TypeOrVoid;
-    private String I2;
+    private String methName;
     private MaybeFormPars MaybeFormPars;
     private VarDeclList VarDeclList;
     private StatementList StatementList;
 
-    public MethodDecl (TypeOrVoid TypeOrVoid, String I2, MaybeFormPars MaybeFormPars, VarDeclList VarDeclList, StatementList StatementList) {
+    public MethodDecl (TypeOrVoid TypeOrVoid, String methName, MaybeFormPars MaybeFormPars, VarDeclList VarDeclList, StatementList StatementList) {
         this.TypeOrVoid=TypeOrVoid;
         if(TypeOrVoid!=null) TypeOrVoid.setParent(this);
-        this.I2=I2;
+        this.methName=methName;
         this.MaybeFormPars=MaybeFormPars;
         if(MaybeFormPars!=null) MaybeFormPars.setParent(this);
         this.VarDeclList=VarDeclList;
@@ -37,12 +37,12 @@ public class MethodDecl implements SyntaxNode {
         this.TypeOrVoid=TypeOrVoid;
     }
 
-    public String getI2() {
-        return I2;
+    public String getMethName() {
+        return methName;
     }
 
-    public void setI2(String I2) {
-        this.I2=I2;
+    public void setMethName(String methName) {
+        this.methName=methName;
     }
 
     public MaybeFormPars getMaybeFormPars() {
@@ -123,7 +123,7 @@ public class MethodDecl implements SyntaxNode {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        buffer.append(" "+tab+I2);
+        buffer.append(" "+tab+methName);
         buffer.append("\n");
 
         if(MaybeFormPars!=null)

@@ -1,23 +1,13 @@
 package rs.ac.bg.etf.pp1;
 import org.apache.log4j.Logger;
 
-import rs.ac.bg.etf.pp1.ast.AddExpr;
-import rs.ac.bg.etf.pp1.ast.Assignment;
-import rs.ac.bg.etf.pp1.ast.Const;
 import rs.ac.bg.etf.pp1.ast.Designator;
-import rs.ac.bg.etf.pp1.ast.FuncCall;
 import rs.ac.bg.etf.pp1.ast.MethodDecl;
-import rs.ac.bg.etf.pp1.ast.MethodTypeName;
-import rs.ac.bg.etf.pp1.ast.PrintStmt;
-import rs.ac.bg.etf.pp1.ast.ProcCall;
 import rs.ac.bg.etf.pp1.ast.ProgName;
 import rs.ac.bg.etf.pp1.ast.Program;
-import rs.ac.bg.etf.pp1.ast.ReturnExpr;
 import rs.ac.bg.etf.pp1.ast.SyntaxNode;
 import rs.ac.bg.etf.pp1.ast.Term;
-import rs.ac.bg.etf.pp1.ast.TermExpr;
 import rs.ac.bg.etf.pp1.ast.Type;
-import rs.ac.bg.etf.pp1.ast.Var;
 import rs.ac.bg.etf.pp1.ast.VarDecl;
 import rs.ac.bg.etf.pp1.ast.VisitorAdaptor;
 import rs.etf.pp1.symboltable.Tab;
@@ -58,7 +48,7 @@ public class SemanticPass extends VisitorAdaptor {
 	}
 
 	public void visit(ProgName progName) {
-		progName.obj = Tab.insert(Obj.Prog, progName.getPName(), Tab.noType);
+		progName.obj = Tab.insert(Obj.Prog, progName.getProgName(), Tab.noType);
 		Tab.openScope();     	
 	}
 

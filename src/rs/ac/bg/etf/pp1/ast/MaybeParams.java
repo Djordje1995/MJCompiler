@@ -1,28 +1,15 @@
 // generated with ast extension for cup
 // version 0.8
-// 29/3/2019 10:23:44
+// 29/3/2019 20:58:4
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class MaybeParams implements SyntaxNode {
+public abstract class MaybeParams implements SyntaxNode {
 
     private SyntaxNode parent;
+
     private int line;
-    private MaybeActualParams MaybeActualParams;
-
-    public MaybeParams (MaybeActualParams MaybeActualParams) {
-        this.MaybeActualParams=MaybeActualParams;
-        if(MaybeActualParams!=null) MaybeActualParams.setParent(this);
-    }
-
-    public MaybeActualParams getMaybeActualParams() {
-        return MaybeActualParams;
-    }
-
-    public void setMaybeActualParams(MaybeActualParams MaybeActualParams) {
-        this.MaybeActualParams=MaybeActualParams;
-    }
 
     public SyntaxNode getParent() {
         return parent;
@@ -40,37 +27,11 @@ public class MaybeParams implements SyntaxNode {
         this.line=line;
     }
 
-    public void accept(Visitor visitor) {
-        visitor.visit(this);
-    }
+    public abstract void accept(Visitor visitor);
+    public abstract void childrenAccept(Visitor visitor);
+    public abstract void traverseTopDown(Visitor visitor);
+    public abstract void traverseBottomUp(Visitor visitor);
 
-    public void childrenAccept(Visitor visitor) {
-        if(MaybeActualParams!=null) MaybeActualParams.accept(visitor);
-    }
-
-    public void traverseTopDown(Visitor visitor) {
-        accept(visitor);
-        if(MaybeActualParams!=null) MaybeActualParams.traverseTopDown(visitor);
-    }
-
-    public void traverseBottomUp(Visitor visitor) {
-        if(MaybeActualParams!=null) MaybeActualParams.traverseBottomUp(visitor);
-        accept(visitor);
-    }
-
-    public String toString(String tab) {
-        StringBuffer buffer=new StringBuffer();
-        buffer.append(tab);
-        buffer.append("MaybeParams(\n");
-
-        if(MaybeActualParams!=null)
-            buffer.append(MaybeActualParams.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
-        buffer.append("\n");
-
-        buffer.append(tab);
-        buffer.append(") [MaybeParams]");
-        return buffer.toString();
-    }
+    public String toString() { return toString(""); }
+    public abstract String toString(String tab);
 }

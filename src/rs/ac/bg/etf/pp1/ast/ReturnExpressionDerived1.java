@@ -1,13 +1,25 @@
 // generated with ast extension for cup
 // version 0.8
-// 29/3/2019 10:23:44
+// 29/3/2019 20:58:3
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class ReturnExpressionDerived1 extends ReturnExpression {
 
-    public ReturnExpressionDerived1 () {
+    private Expr Expr;
+
+    public ReturnExpressionDerived1 (Expr Expr) {
+        this.Expr=Expr;
+        if(Expr!=null) Expr.setParent(this);
+    }
+
+    public Expr getExpr() {
+        return Expr;
+    }
+
+    public void setExpr(Expr Expr) {
+        this.Expr=Expr;
     }
 
     public void accept(Visitor visitor) {
@@ -15,13 +27,16 @@ public class ReturnExpressionDerived1 extends ReturnExpression {
     }
 
     public void childrenAccept(Visitor visitor) {
+        if(Expr!=null) Expr.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
+        if(Expr!=null) Expr.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
+        if(Expr!=null) Expr.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -29,6 +44,12 @@ public class ReturnExpressionDerived1 extends ReturnExpression {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
         buffer.append("ReturnExpressionDerived1(\n");
+
+        if(Expr!=null)
+            buffer.append(Expr.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
 
         buffer.append(tab);
         buffer.append(") [ReturnExpressionDerived1]");

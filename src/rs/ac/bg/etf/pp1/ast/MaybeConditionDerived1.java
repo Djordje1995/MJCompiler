@@ -1,13 +1,25 @@
 // generated with ast extension for cup
 // version 0.8
-// 29/3/2019 10:23:44
+// 29/3/2019 20:58:3
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class MaybeConditionDerived1 extends MaybeCondition {
 
-    public MaybeConditionDerived1 () {
+    private Condition Condition;
+
+    public MaybeConditionDerived1 (Condition Condition) {
+        this.Condition=Condition;
+        if(Condition!=null) Condition.setParent(this);
+    }
+
+    public Condition getCondition() {
+        return Condition;
+    }
+
+    public void setCondition(Condition Condition) {
+        this.Condition=Condition;
     }
 
     public void accept(Visitor visitor) {
@@ -15,13 +27,16 @@ public class MaybeConditionDerived1 extends MaybeCondition {
     }
 
     public void childrenAccept(Visitor visitor) {
+        if(Condition!=null) Condition.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
+        if(Condition!=null) Condition.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
+        if(Condition!=null) Condition.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -29,6 +44,12 @@ public class MaybeConditionDerived1 extends MaybeCondition {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
         buffer.append("MaybeConditionDerived1(\n");
+
+        if(Condition!=null)
+            buffer.append(Condition.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
 
         buffer.append(tab);
         buffer.append(") [MaybeConditionDerived1]");

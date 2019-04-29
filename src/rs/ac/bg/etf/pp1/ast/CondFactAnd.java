@@ -1,39 +1,15 @@
 // generated with ast extension for cup
 // version 0.8
-// 29/3/2019 10:23:44
+// 29/3/2019 20:58:4
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class CondFactAnd implements SyntaxNode {
+public abstract class CondFactAnd implements SyntaxNode {
 
     private SyntaxNode parent;
+
     private int line;
-    private CondFactAnd CondFactAnd;
-    private CondFact CondFact;
-
-    public CondFactAnd (CondFactAnd CondFactAnd, CondFact CondFact) {
-        this.CondFactAnd=CondFactAnd;
-        if(CondFactAnd!=null) CondFactAnd.setParent(this);
-        this.CondFact=CondFact;
-        if(CondFact!=null) CondFact.setParent(this);
-    }
-
-    public CondFactAnd getCondFactAnd() {
-        return CondFactAnd;
-    }
-
-    public void setCondFactAnd(CondFactAnd CondFactAnd) {
-        this.CondFactAnd=CondFactAnd;
-    }
-
-    public CondFact getCondFact() {
-        return CondFact;
-    }
-
-    public void setCondFact(CondFact CondFact) {
-        this.CondFact=CondFact;
-    }
 
     public SyntaxNode getParent() {
         return parent;
@@ -51,46 +27,11 @@ public class CondFactAnd implements SyntaxNode {
         this.line=line;
     }
 
-    public void accept(Visitor visitor) {
-        visitor.visit(this);
-    }
+    public abstract void accept(Visitor visitor);
+    public abstract void childrenAccept(Visitor visitor);
+    public abstract void traverseTopDown(Visitor visitor);
+    public abstract void traverseBottomUp(Visitor visitor);
 
-    public void childrenAccept(Visitor visitor) {
-        if(CondFactAnd!=null) CondFactAnd.accept(visitor);
-        if(CondFact!=null) CondFact.accept(visitor);
-    }
-
-    public void traverseTopDown(Visitor visitor) {
-        accept(visitor);
-        if(CondFactAnd!=null) CondFactAnd.traverseTopDown(visitor);
-        if(CondFact!=null) CondFact.traverseTopDown(visitor);
-    }
-
-    public void traverseBottomUp(Visitor visitor) {
-        if(CondFactAnd!=null) CondFactAnd.traverseBottomUp(visitor);
-        if(CondFact!=null) CondFact.traverseBottomUp(visitor);
-        accept(visitor);
-    }
-
-    public String toString(String tab) {
-        StringBuffer buffer=new StringBuffer();
-        buffer.append(tab);
-        buffer.append("CondFactAnd(\n");
-
-        if(CondFactAnd!=null)
-            buffer.append(CondFactAnd.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
-        buffer.append("\n");
-
-        if(CondFact!=null)
-            buffer.append(CondFact.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
-        buffer.append("\n");
-
-        buffer.append(tab);
-        buffer.append(") [CondFactAnd]");
-        return buffer.toString();
-    }
+    public String toString() { return toString(""); }
+    public abstract String toString(String tab);
 }

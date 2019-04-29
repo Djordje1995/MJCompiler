@@ -79,20 +79,20 @@ Program ::= (Program) PROGRAM ProgName DeclarationList LBRACE MethodDeclList RBR
 ProgName ::= (ProgName) IDENT:progName 
 ;  
 
-DeclarationList ::= (ConstDecl) ConstDecl
+DeclarationList ::= (ConstDeclaration) ConstDecl
 					|
-					(VarDecl) VarDecl
+					(VarDeclaration) VarDecl
 					|
-					(ClassDecl) ClassDecl
+					(ClassDeclaration) ClassDecl
 					|
-					(EnumDecl) EnumDecl
+					(EnumDeclaration) EnumDecl
 					|
-					(InterfaceDecl) InterfaceDecl
+					(InterfaceDeclaration) InterfaceDecl
 					; 
 
-ConstDecl ::= (ConstDecl) CONST Type:t IDENT ASSIGN AnyConst:const IdentConstList SEMI;
+ConstDecl ::= (ConstDecl) CONST Type:t IDENT ASSIGN AnyConst IdentConstList SEMI;
 
-IdentConstList ::= (IdentConstList) IdentConstList COMMA IDENT ASSIGN AnyConst
+IdentConstList ::= (IdentConstListRec) IdentConstList COMMA IDENT ASSIGN AnyConst
 				|
 				/* epsilon */
 				;
@@ -106,84 +106,84 @@ AnyConst ::= (NumConst) NUM_CONST
 
 EnumDecl ::= (EnumDecl) ENUM IDENT LBRACE IDENT MaybeAssignNumConst IdentMaybeConstList RBRACE;
 
-IdentMaybeConstList ::= (IdentMaybeConstList) IdentMaybeConstList COMMA IDENT MaybeAssignNumConst
+IdentMaybeConstList ::= (IdentMaybeConstListRec) IdentMaybeConstList COMMA IDENT MaybeAssignNumConst
 						|
 						/* epsilon */
 						;
 
-MaybeAssignNumConst ::= (MaybeAssignNumConst) ASSIGN NUM_CONST
+MaybeAssignNumConst ::= ASSIGN NUM_CONST
 				|
 				/* epsilon */
 				;
 
-VarDecl ::= (VarDecl) Type:t IDENT MaybeEmptySquareBrackets IdentList SEMI;
+VarDecl ::= (VarDecl) Type:t IDENT:varName MaybeEmptySquareBrackets IdentList SEMI;
 
-IdentList ::= (IdentList) IdentList COMMA IDENT MaybeEmptySquareBrackets
+IdentList ::= (IdentListRec) IdentList COMMA IDENT MaybeEmptySquareBrackets
 				|
 				/* epsilon */
 				;
 
 ClassDecl ::= (ClassDecl) CLASS IDENT MaybeExtends MaybeImplements LBRACE VarDeclList MaybeMethodDecl RBRACE;
 
-MaybeMethodDecl ::= (MaybeMethodDecl) LBRACE MethodDeclList RBRACE
+MaybeMethodDecl ::= LBRACE MethodDeclList RBRACE
 					|
 					/* epsilon */
 					;
 
-MethodDeclList ::= (MethodDeclList) MethodDeclList MethodDecl
+MethodDeclList ::= (MethodDeclListRec) MethodDeclList MethodDecl
 					|
 					/* epsilon */
 					;
 
-MaybeImplements ::= (MaybeImplements) IMPLEMENTS Type:t TypeList
+MaybeImplements ::= IMPLEMENTS Type:t TypeList
 					|
 					/* epsilon */
 					;
 
-TypeList ::= (TypeList) TypeList COMMA Type:t
+TypeList ::= (TypeListRec) TypeList COMMA Type:t
 				|
 				/* epsilon */
 				;
 
-MaybeExtends ::= (MaybeExtends) EXTENDS Type:t
+MaybeExtends ::= EXTENDS Type:t
 				|
 				/* epsilon */
 				;
 
 InterfaceDecl ::= (InterfaceDecl) INTERFACE IDENT LBRACE InterfaceMethodDeclList RBRACE;
 
-InterfaceMethodDeclList ::= (InterfaceMethodDeclList) InterfaceMethodDeclList InterfaceMethodDecl
+InterfaceMethodDeclList ::= (InterfaceMethodDeclListRec) InterfaceMethodDeclList InterfaceMethodDecl
 							|
 							/* epsilon */
 							;
 
 InterfaceMethodDecl ::= (InterfaceMethodDecl) TypeOrVoid IDENT LPAREN MaybeFormPars RPAREN SEMI;
 
-MethodDecl ::= (MethodDecl) TypeOrVoid IDENT LPAREN MaybeFormPars RPAREN VarDeclList LBRACE StatementList RBRACE;
+MethodDecl ::= (MethodDecl) TypeOrVoid IDENT:methName LPAREN MaybeFormPars RPAREN VarDeclList LBRACE StatementList RBRACE;
 
-TypeOrVoid ::= (Type) Type:typeName
+TypeOrVoid ::= (SomeType) Type:typeName
 				|
-				(Void) VOID
+				(VoidType) VOID
 				; 
 
-MaybeFormPars ::= (MaybeFormPars) FormPars:fp 
+MaybeFormPars ::= FormPars:fp 
 				|
 				/* epsilon */
 				;
 
-VarDeclList ::= (VarDeclList) VarDeclList VarDecl:var
+VarDeclList ::= (VarDeclListRec) VarDeclList VarDecl:var
 				|
 				/* epsilon */
 				; 
 
 FormPars ::= (FormPars) Type:t IDENT MaybeEmptySquareBrackets FormParsList:l;
 
-MaybeEmptySquareBrackets ::= (MaybeEmptySquareBrackets) LSQUAREB RSQUAREB
+MaybeEmptySquareBrackets ::= LSQUAREB RSQUAREB
 							|
 							/* epsilon */
 							;			
 
-FormParsList ::= (FormParsList) FormParsList COMMA Type:t IDENT MaybeEmptySquareBrackets
+FormParsList ::= (FormParsListRec) FormParsList COMMA Type:t IDENT MaybeEmptySquareBrackets
 				|
 				/* epsilon */
 				;
@@ -219,28 +219,28 @@ Matched ::=
 			(StatementBody) LBRACE StatementList RBRACE
 			;
 			
-StatementList ::= (StatementList) StatementList Statement:stmt
+StatementList ::= (StatementListRec) StatementList Statement:stmt
 				|
 				/* epsilon */
 				;
 			
-MaybeNumConst ::= (MaybeNumConst) COMMA NUM_CONST
+MaybeNumConst ::= COMMA NUM_CONST
 				|
 				/* epsilon */
 				;			
 
-ReturnExpression ::= (ReturnExpression) Expr:e
+ReturnExpression ::= Expr:e
 					|
 					/* epsilon */
 					;
 					 
 			
-MaybeCondition ::= (MaybeCondition) Condition:cond
+MaybeCondition ::= Condition:cond
 					|
 					/* epsilon */
 					;
 			
-MaybeDesignatorStatement ::= (MaybeDesignatorStatement) DesignatorStatement:stmt
+MaybeDesignatorStatement ::= DesignatorStatement:stmt
 							|
 							/* epsilon */
 							;			
@@ -256,47 +256,47 @@ DesignatorStatement ::= (DesignatorExpr) Designator:d Assignop Expr:e
 
 ActPars ::= (ActPars) Expr:e ActParList;
 
-ActParList ::= (ActParList) ActParList COMMA Expr:e
+ActParList ::= (ActParListRec) ActParList COMMA Expr:e
 				|
 				/* epsilon */
 				;
 				
 Condition ::= (Condition) CondTerm:ct CondTermOr;
 
-CondTermOr ::= (CondTermOr) CondTermOr OR CondTerm
+CondTermOr ::= (CondTermOrRec) CondTermOr OR CondTerm
 				|
 				/* epsilon */
 				;
 
 CondTerm ::= (CondTerm) CondFact:cf CondFactAnd;
 
-CondFactAnd ::= (CondFactAnd) CondFactAnd AND CondFact
+CondFactAnd ::= (CondFactAndRec) CondFactAnd AND CondFact
 				|
 				/* epsilon */
 				;
 
 CondFact ::= (CondFact) Expr:e MaybeRelopExpr; 
 			
-MaybeRelopExpr ::= (MaybeRelopExpr) Relop Expr:e
+MaybeRelopExpr ::= Relop Expr:e
 				|
 				/* epsilon */
 				;
 				
 Expr ::= (Expr) MaybeMinus Term:t AddopTermList;
 
-MaybeMinus ::= (MaybeMinus) MINUS
+MaybeMinus ::=  MINUS
 				|
 				/* epsilon */
 				;
 
-AddopTermList ::= (AddopTermList) AddopTermList Addop Term:t
+AddopTermList ::= (AddopTermListRec) AddopTermList Addop Term:t
 				|
 				/* epsilon */
 				;
 
 Term ::= (Term) Factor:f MulopFactorList;
 
-MulopFactorList ::= (MulopFactorList) MulopFactorList Mulop Factor:f 
+MulopFactorList ::= (MulopFactorListRec) MulopFactorList Mulop Factor:f 
 				|
 				/* epsilon */
 				;
@@ -314,17 +314,17 @@ Factor ::= (FactorDesignator) Designator:d MaybeParams
 		(FactorExpression) LPAREN Expr:e RPAREN
 		;
 
-MaybeParams ::= (MaybeParams) LPAREN MaybeActualParams:params RPAREN
+MaybeParams ::= LPAREN MaybeActualParams:params RPAREN
 				|
 				/* epsilon */
 				;
 				
-MaybeActualParams ::= (MaybeActualParams) ActPars:params
+MaybeActualParams ::= ActPars:params
 						|
 						/* epsilon */
 						;
 				
-MaybeExpression ::= (MaybeExpression) LSQUAREB Expr:e RSQUAREB
+MaybeExpression ::= LSQUAREB Expr:e RSQUAREB
 					|
 					/* epsilon */
 					;

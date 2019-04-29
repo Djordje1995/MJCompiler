@@ -1,49 +1,15 @@
 // generated with ast extension for cup
 // version 0.8
-// 29/3/2019 10:23:43
+// 29/3/2019 20:58:4
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class IdentList implements SyntaxNode {
+public abstract class IdentList implements SyntaxNode {
 
     private SyntaxNode parent;
+
     private int line;
-    private IdentList IdentList;
-    private String I2;
-    private MaybeEmptySquareBrackets MaybeEmptySquareBrackets;
-
-    public IdentList (IdentList IdentList, String I2, MaybeEmptySquareBrackets MaybeEmptySquareBrackets) {
-        this.IdentList=IdentList;
-        if(IdentList!=null) IdentList.setParent(this);
-        this.I2=I2;
-        this.MaybeEmptySquareBrackets=MaybeEmptySquareBrackets;
-        if(MaybeEmptySquareBrackets!=null) MaybeEmptySquareBrackets.setParent(this);
-    }
-
-    public IdentList getIdentList() {
-        return IdentList;
-    }
-
-    public void setIdentList(IdentList IdentList) {
-        this.IdentList=IdentList;
-    }
-
-    public String getI2() {
-        return I2;
-    }
-
-    public void setI2(String I2) {
-        this.I2=I2;
-    }
-
-    public MaybeEmptySquareBrackets getMaybeEmptySquareBrackets() {
-        return MaybeEmptySquareBrackets;
-    }
-
-    public void setMaybeEmptySquareBrackets(MaybeEmptySquareBrackets MaybeEmptySquareBrackets) {
-        this.MaybeEmptySquareBrackets=MaybeEmptySquareBrackets;
-    }
 
     public SyntaxNode getParent() {
         return parent;
@@ -61,49 +27,11 @@ public class IdentList implements SyntaxNode {
         this.line=line;
     }
 
-    public void accept(Visitor visitor) {
-        visitor.visit(this);
-    }
+    public abstract void accept(Visitor visitor);
+    public abstract void childrenAccept(Visitor visitor);
+    public abstract void traverseTopDown(Visitor visitor);
+    public abstract void traverseBottomUp(Visitor visitor);
 
-    public void childrenAccept(Visitor visitor) {
-        if(IdentList!=null) IdentList.accept(visitor);
-        if(MaybeEmptySquareBrackets!=null) MaybeEmptySquareBrackets.accept(visitor);
-    }
-
-    public void traverseTopDown(Visitor visitor) {
-        accept(visitor);
-        if(IdentList!=null) IdentList.traverseTopDown(visitor);
-        if(MaybeEmptySquareBrackets!=null) MaybeEmptySquareBrackets.traverseTopDown(visitor);
-    }
-
-    public void traverseBottomUp(Visitor visitor) {
-        if(IdentList!=null) IdentList.traverseBottomUp(visitor);
-        if(MaybeEmptySquareBrackets!=null) MaybeEmptySquareBrackets.traverseBottomUp(visitor);
-        accept(visitor);
-    }
-
-    public String toString(String tab) {
-        StringBuffer buffer=new StringBuffer();
-        buffer.append(tab);
-        buffer.append("IdentList(\n");
-
-        if(IdentList!=null)
-            buffer.append(IdentList.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
-        buffer.append("\n");
-
-        buffer.append(" "+tab+I2);
-        buffer.append("\n");
-
-        if(MaybeEmptySquareBrackets!=null)
-            buffer.append(MaybeEmptySquareBrackets.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
-        buffer.append("\n");
-
-        buffer.append(tab);
-        buffer.append(") [IdentList]");
-        return buffer.toString();
-    }
+    public String toString() { return toString(""); }
+    public abstract String toString(String tab);
 }
