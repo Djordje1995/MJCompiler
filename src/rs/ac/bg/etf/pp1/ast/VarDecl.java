@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 29/3/2019 10:23:43
+// 29/3/2019 20:58:2
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -10,14 +10,14 @@ public class VarDecl implements SyntaxNode {
     private SyntaxNode parent;
     private int line;
     private Type Type;
-    private String I1;
+    private String varName;
     private MaybeEmptySquareBrackets MaybeEmptySquareBrackets;
     private IdentList IdentList;
 
-    public VarDecl (Type Type, String I1, MaybeEmptySquareBrackets MaybeEmptySquareBrackets, IdentList IdentList) {
+    public VarDecl (Type Type, String varName, MaybeEmptySquareBrackets MaybeEmptySquareBrackets, IdentList IdentList) {
         this.Type=Type;
         if(Type!=null) Type.setParent(this);
-        this.I1=I1;
+        this.varName=varName;
         this.MaybeEmptySquareBrackets=MaybeEmptySquareBrackets;
         if(MaybeEmptySquareBrackets!=null) MaybeEmptySquareBrackets.setParent(this);
         this.IdentList=IdentList;
@@ -32,12 +32,12 @@ public class VarDecl implements SyntaxNode {
         this.Type=Type;
     }
 
-    public String getI1() {
-        return I1;
+    public String getVarName() {
+        return varName;
     }
 
-    public void setI1(String I1) {
-        this.I1=I1;
+    public void setVarName(String varName) {
+        this.varName=varName;
     }
 
     public MaybeEmptySquareBrackets getMaybeEmptySquareBrackets() {
@@ -107,7 +107,7 @@ public class VarDecl implements SyntaxNode {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        buffer.append(" "+tab+I1);
+        buffer.append(" "+tab+varName);
         buffer.append("\n");
 
         if(MaybeEmptySquareBrackets!=null)
