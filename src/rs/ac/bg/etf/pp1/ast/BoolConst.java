@@ -1,24 +1,23 @@
 // generated with ast extension for cup
 // version 0.8
-// 29/3/2019 20:58:2
+// 30/3/2019 13:4:40
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class BoolConst extends AnyConst {
 
-    private java.lang.Boolean B1;
+    private Boolean B1;
 
-    public BoolConst (java.lang.Boolean B1) {
+    public BoolConst (Boolean B1) {
         this.B1=B1;
-        if(B1!=null) B1.setParent(this);
     }
 
-    public java.lang.Boolean getB1() {
+    public Boolean getB1() {
         return B1;
     }
 
-    public void setB1(java.lang.Boolean B1) {
+    public void setB1(Boolean B1) {
         this.B1=B1;
     }
 
@@ -27,16 +26,13 @@ public class BoolConst extends AnyConst {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(B1!=null) B1.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(B1!=null) B1.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(B1!=null) B1.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -45,10 +41,7 @@ public class BoolConst extends AnyConst {
         buffer.append(tab);
         buffer.append("BoolConst(\n");
 
-        if(B1!=null)
-            buffer.append(B1.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
+        buffer.append(" "+tab+B1);
         buffer.append("\n");
 
         buffer.append(tab);
