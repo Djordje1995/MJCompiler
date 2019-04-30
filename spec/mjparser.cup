@@ -59,7 +59,7 @@ terminal MUL, DIV, MOD, NEQUAL, GREATER, GREATERE, LESSER, LESSERE, ASSIGN, DOT,
 terminal READ, BREAK, CONTINUE, FOR, INTERFACE, EXTENDS, CLASS, IMPLEMENTS, ENUM, CONST;
 terminal String IDENT;
 terminal Integer NUM_CONST;
-terminal java.lang.Boolean BOOL_CONST;
+terminal Boolean BOOL_CONST;
 terminal Character CHAR_CONST;
 
 nonterminal MaybeAssignNumConst, IdentMaybeConstList, EnumDecl, AnyConst, IdentConstList, ConstDecl, DeclarationList;  
