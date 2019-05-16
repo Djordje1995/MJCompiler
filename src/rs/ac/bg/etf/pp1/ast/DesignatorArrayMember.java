@@ -1,28 +1,28 @@
 // generated with ast extension for cup
 // version 0.8
-// 30/3/2019 13:4:41
+// 16/4/2019 21:19:58
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class DesignatorMoreArrayMember extends DesignatorMore {
+public class DesignatorArrayMember extends Designator {
 
-    private DesignatorMore DesignatorMore;
+    private Designator Designator;
     private Expr Expr;
 
-    public DesignatorMoreArrayMember (DesignatorMore DesignatorMore, Expr Expr) {
-        this.DesignatorMore=DesignatorMore;
-        if(DesignatorMore!=null) DesignatorMore.setParent(this);
+    public DesignatorArrayMember (Designator Designator, Expr Expr) {
+        this.Designator=Designator;
+        if(Designator!=null) Designator.setParent(this);
         this.Expr=Expr;
         if(Expr!=null) Expr.setParent(this);
     }
 
-    public DesignatorMore getDesignatorMore() {
-        return DesignatorMore;
+    public Designator getDesignator() {
+        return Designator;
     }
 
-    public void setDesignatorMore(DesignatorMore DesignatorMore) {
-        this.DesignatorMore=DesignatorMore;
+    public void setDesignator(Designator Designator) {
+        this.Designator=Designator;
     }
 
     public Expr getExpr() {
@@ -38,18 +38,18 @@ public class DesignatorMoreArrayMember extends DesignatorMore {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(DesignatorMore!=null) DesignatorMore.accept(visitor);
+        if(Designator!=null) Designator.accept(visitor);
         if(Expr!=null) Expr.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(DesignatorMore!=null) DesignatorMore.traverseTopDown(visitor);
+        if(Designator!=null) Designator.traverseTopDown(visitor);
         if(Expr!=null) Expr.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(DesignatorMore!=null) DesignatorMore.traverseBottomUp(visitor);
+        if(Designator!=null) Designator.traverseBottomUp(visitor);
         if(Expr!=null) Expr.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -57,10 +57,10 @@ public class DesignatorMoreArrayMember extends DesignatorMore {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("DesignatorMoreArrayMember(\n");
+        buffer.append("DesignatorArrayMember(\n");
 
-        if(DesignatorMore!=null)
-            buffer.append(DesignatorMore.toString("  "+tab));
+        if(Designator!=null)
+            buffer.append(Designator.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");
@@ -72,7 +72,7 @@ public class DesignatorMoreArrayMember extends DesignatorMore {
         buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [DesignatorMoreArrayMember]");
+        buffer.append(") [DesignatorArrayMember]");
         return buffer.toString();
     }
 }

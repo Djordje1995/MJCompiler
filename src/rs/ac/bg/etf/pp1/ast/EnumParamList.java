@@ -1,11 +1,11 @@
 // generated with ast extension for cup
 // version 0.8
-// 30/3/2019 13:4:41
+// 16/4/2019 21:19:58
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public abstract class DesignatorMore implements SyntaxNode {
+public abstract class EnumParamList implements SyntaxNode {
 
     private SyntaxNode parent;
 

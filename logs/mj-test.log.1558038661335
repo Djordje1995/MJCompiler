@@ -1,0 +1,20 @@
+INFO  22:22:02,789 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  22:22:02,812 - #2 program
+INFO  22:22:02,812 - #44 MJProgram
+INFO  22:22:02,812 - #43 const
+INFO  22:22:02,813 - #44 int
+INFO  22:22:02,813 - #44 a
+INFO  22:22:02,813 - #27 =
+INFO  22:22:02,813 - #45 3
+INFO  22:22:02,813 - #8 ,
+INFO  22:22:02,814 - #44 b
+INFO  22:22:02,814 - #27 =
+INFO  22:22:02,814 - #45 2
+INFO  22:22:02,814 - #5 ;
+INFO  22:22:02,814 - #3 {
+INFO  22:22:02,815 - #4 }
+INFO  22:22:02,820 - Definisana je konstanta a je tipa Int na liniji 3
+INFO  22:22:02,820 - Definisana je konstanta b je tipa Int na liniji 3
+INFO  22:22:02,820 - Print calls = 0
+INFO  22:22:02,821 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  22:22:02,836 - Parsiranje uspesno zavrseno!

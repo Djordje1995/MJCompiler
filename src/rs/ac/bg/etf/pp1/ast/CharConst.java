@@ -1,24 +1,24 @@
 // generated with ast extension for cup
 // version 0.8
-// 30/3/2019 13:4:40
+// 16/4/2019 21:19:58
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class CharConst extends AnyConst {
 
-    private Character C1;
+    private Character charValue;
 
-    public CharConst (Character C1) {
-        this.C1=C1;
+    public CharConst (Character charValue) {
+        this.charValue=charValue;
     }
 
-    public Character getC1() {
-        return C1;
+    public Character getCharValue() {
+        return charValue;
     }
 
-    public void setC1(Character C1) {
-        this.C1=C1;
+    public void setCharValue(Character charValue) {
+        this.charValue=charValue;
     }
 
     public void accept(Visitor visitor) {
@@ -41,7 +41,7 @@ public class CharConst extends AnyConst {
         buffer.append(tab);
         buffer.append("CharConst(\n");
 
-        buffer.append(" "+tab+C1);
+        buffer.append(" "+tab+charValue);
         buffer.append("\n");
 
         buffer.append(tab);

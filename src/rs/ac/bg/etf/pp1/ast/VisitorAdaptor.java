@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 30/3/2019 13:4:41
+// 16/4/2019 21:19:58
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -25,6 +25,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(TypeList TypeList) { }
     public void visit(Factor Factor) { }
     public void visit(MaybeExpression MaybeExpression) { }
+    public void visit(Designator Designator) { }
     public void visit(MaybeFormPars MaybeFormPars) { }
     public void visit(FormParsList FormParsList) { }
     public void visit(IdentList IdentList) { }
@@ -38,15 +39,14 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(VarDeclList VarDeclList) { }
     public void visit(TypeOrVoid TypeOrVoid) { }
     public void visit(MaybeAssignNumConst MaybeAssignNumConst) { }
-    public void visit(IdentMaybeConstList IdentMaybeConstList) { }
     public void visit(DesignatorStatement DesignatorStatement) { }
     public void visit(MaybeActualParams MaybeActualParams) { }
     public void visit(MaybeParams MaybeParams) { }
     public void visit(Statement Statement) { }
+    public void visit(EnumParamList EnumParamList) { }
     public void visit(MaybeNumConst MaybeNumConst) { }
     public void visit(MaybeExtends MaybeExtends) { }
     public void visit(MethodDeclList MethodDeclList) { }
-    public void visit(DesignatorMore DesignatorMore) { }
     public void visit(CondTermOr CondTermOr) { }
     public void visit(AddopTermList AddopTermList) { }
     public void visit(Mod Mod) { visit(); }
@@ -61,10 +61,9 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(NotEqual NotEqual) { visit(); }
     public void visit(Equal Equal) { visit(); }
     public void visit(Assign Assign) { visit(); }
-    public void visit(DesignatorMoreDerived1 DesignatorMoreDerived1) { visit(); }
-    public void visit(DesignatorMoreArrayMember DesignatorMoreArrayMember) { visit(); }
-    public void visit(DesignatorMoreRefMember DesignatorMoreRefMember) { visit(); }
-    public void visit(Designator Designator) { visit(); }
+    public void visit(DesignatorIdent DesignatorIdent) { visit(); }
+    public void visit(DesignatorArrayMember DesignatorArrayMember) { visit(); }
+    public void visit(DesignatorRefMember DesignatorRefMember) { visit(); }
     public void visit(MaybeExpressionDerived2 MaybeExpressionDerived2) { visit(); }
     public void visit(MaybeExpressionDerived1 MaybeExpressionDerived1) { visit(); }
     public void visit(MaybeActualParamsDerived2 MaybeActualParamsDerived2) { visit(); }
@@ -157,14 +156,17 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(VarDecl VarDecl) { visit(); }
     public void visit(MaybeAssignNumConstDerived2 MaybeAssignNumConstDerived2) { visit(); }
     public void visit(MaybeAssignNumConstDerived1 MaybeAssignNumConstDerived1) { visit(); }
-    public void visit(IdentMaybeConstListDerived1 IdentMaybeConstListDerived1) { visit(); }
-    public void visit(IdentMaybeConstListRec IdentMaybeConstListRec) { visit(); }
+    public void visit(NoEnumParamsList NoEnumParamsList) { visit(); }
+    public void visit(EnumParamsList EnumParamsList) { visit(); }
+    public void visit(EnumParam EnumParam) { visit(); }
+    public void visit(EnumName EnumName) { visit(); }
     public void visit(EnumDecl EnumDecl) { visit(); }
     public void visit(BoolConst BoolConst) { visit(); }
     public void visit(CharConst CharConst) { visit(); }
     public void visit(NumConst NumConst) { visit(); }
     public void visit(IdentConstListDerived1 IdentConstListDerived1) { visit(); }
     public void visit(IdentConstListRec IdentConstListRec) { visit(); }
+    public void visit(IdentConst IdentConst) { visit(); }
     public void visit(ConstDecl ConstDecl) { visit(); }
     public void visit(InterfaceDeclaration InterfaceDeclaration) { visit(); }
     public void visit(EnumDeclaration EnumDeclaration) { visit(); }

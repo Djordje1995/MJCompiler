@@ -1,0 +1,21 @@
+INFO  22:33:00,776 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  22:33:00,799 - #2 program
+INFO  22:33:00,799 - #44 MJProgram
+INFO  22:33:00,799 - #43 const
+INFO  22:33:00,800 - #44 int
+INFO  22:33:00,800 - #44 a
+INFO  22:33:00,800 - #27 =
+INFO  22:33:00,800 - #45 3
+INFO  22:33:00,800 - #8 ,
+INFO  22:33:00,801 - #44 b
+INFO  22:33:00,801 - #27 =
+INFO  22:33:00,801 - #45 2
+INFO  22:33:00,801 - #5 ;
+INFO  22:33:00,801 - #3 {
+INFO  22:33:00,802 - #4 }
+ERROR 22:33:00,809 - Konstanta a je vec definisana  na liniji 3
+INFO  22:33:00,809 - Definisana je konstanta a je tipa Int na liniji 3
+ERROR 22:33:00,809 - Konstanta b je vec definisana  na liniji 3
+INFO  22:33:00,809 - Definisana je konstanta b je tipa Int na liniji 3
+INFO  22:33:00,815 - Print calls = 0
+ERROR 22:33:00,816 - Parsiranje NIJE uspesno zavrseno!

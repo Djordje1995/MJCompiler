@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 30/3/2019 13:4:40
+// 16/4/2019 21:19:58
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -9,50 +9,41 @@ public class EnumDecl implements SyntaxNode {
 
     private SyntaxNode parent;
     private int line;
-    private String I1;
-    private String I2;
-    private MaybeAssignNumConst MaybeAssignNumConst;
-    private IdentMaybeConstList IdentMaybeConstList;
+    private EnumName EnumName;
+    private EnumParam EnumParam;
+    private EnumParamList EnumParamList;
 
-    public EnumDecl (String I1, String I2, MaybeAssignNumConst MaybeAssignNumConst, IdentMaybeConstList IdentMaybeConstList) {
-        this.I1=I1;
-        this.I2=I2;
-        this.MaybeAssignNumConst=MaybeAssignNumConst;
-        if(MaybeAssignNumConst!=null) MaybeAssignNumConst.setParent(this);
-        this.IdentMaybeConstList=IdentMaybeConstList;
-        if(IdentMaybeConstList!=null) IdentMaybeConstList.setParent(this);
+    public EnumDecl (EnumName EnumName, EnumParam EnumParam, EnumParamList EnumParamList) {
+        this.EnumName=EnumName;
+        if(EnumName!=null) EnumName.setParent(this);
+        this.EnumParam=EnumParam;
+        if(EnumParam!=null) EnumParam.setParent(this);
+        this.EnumParamList=EnumParamList;
+        if(EnumParamList!=null) EnumParamList.setParent(this);
     }
 
-    public String getI1() {
-        return I1;
+    public EnumName getEnumName() {
+        return EnumName;
     }
 
-    public void setI1(String I1) {
-        this.I1=I1;
+    public void setEnumName(EnumName EnumName) {
+        this.EnumName=EnumName;
     }
 
-    public String getI2() {
-        return I2;
+    public EnumParam getEnumParam() {
+        return EnumParam;
     }
 
-    public void setI2(String I2) {
-        this.I2=I2;
+    public void setEnumParam(EnumParam EnumParam) {
+        this.EnumParam=EnumParam;
     }
 
-    public MaybeAssignNumConst getMaybeAssignNumConst() {
-        return MaybeAssignNumConst;
+    public EnumParamList getEnumParamList() {
+        return EnumParamList;
     }
 
-    public void setMaybeAssignNumConst(MaybeAssignNumConst MaybeAssignNumConst) {
-        this.MaybeAssignNumConst=MaybeAssignNumConst;
-    }
-
-    public IdentMaybeConstList getIdentMaybeConstList() {
-        return IdentMaybeConstList;
-    }
-
-    public void setIdentMaybeConstList(IdentMaybeConstList IdentMaybeConstList) {
-        this.IdentMaybeConstList=IdentMaybeConstList;
+    public void setEnumParamList(EnumParamList EnumParamList) {
+        this.EnumParamList=EnumParamList;
     }
 
     public SyntaxNode getParent() {
@@ -76,19 +67,22 @@ public class EnumDecl implements SyntaxNode {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(MaybeAssignNumConst!=null) MaybeAssignNumConst.accept(visitor);
-        if(IdentMaybeConstList!=null) IdentMaybeConstList.accept(visitor);
+        if(EnumName!=null) EnumName.accept(visitor);
+        if(EnumParam!=null) EnumParam.accept(visitor);
+        if(EnumParamList!=null) EnumParamList.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(MaybeAssignNumConst!=null) MaybeAssignNumConst.traverseTopDown(visitor);
-        if(IdentMaybeConstList!=null) IdentMaybeConstList.traverseTopDown(visitor);
+        if(EnumName!=null) EnumName.traverseTopDown(visitor);
+        if(EnumParam!=null) EnumParam.traverseTopDown(visitor);
+        if(EnumParamList!=null) EnumParamList.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(MaybeAssignNumConst!=null) MaybeAssignNumConst.traverseBottomUp(visitor);
-        if(IdentMaybeConstList!=null) IdentMaybeConstList.traverseBottomUp(visitor);
+        if(EnumName!=null) EnumName.traverseBottomUp(visitor);
+        if(EnumParam!=null) EnumParam.traverseBottomUp(visitor);
+        if(EnumParamList!=null) EnumParamList.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -97,20 +91,20 @@ public class EnumDecl implements SyntaxNode {
         buffer.append(tab);
         buffer.append("EnumDecl(\n");
 
-        buffer.append(" "+tab+I1);
-        buffer.append("\n");
-
-        buffer.append(" "+tab+I2);
-        buffer.append("\n");
-
-        if(MaybeAssignNumConst!=null)
-            buffer.append(MaybeAssignNumConst.toString("  "+tab));
+        if(EnumName!=null)
+            buffer.append(EnumName.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(IdentMaybeConstList!=null)
-            buffer.append(IdentMaybeConstList.toString("  "+tab));
+        if(EnumParam!=null)
+            buffer.append(EnumParam.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        if(EnumParamList!=null)
+            buffer.append(EnumParamList.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

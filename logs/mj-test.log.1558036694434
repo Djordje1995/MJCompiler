@@ -1,0 +1,22 @@
+INFO  21:44:09,425 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  21:44:09,448 - #2 program
+INFO  21:44:09,449 - #44 MJProgram
+INFO  21:44:09,449 - #43 const
+INFO  21:44:09,449 - #44 bool
+INFO  21:44:09,449 - #44 a
+INFO  21:44:09,449 - #27 =
+INFO  21:44:09,449 - #46 false
+INFO  21:44:09,449 - #8 ,
+INFO  21:44:09,450 - #44 b
+INFO  21:44:09,450 - #27 =
+INFO  21:44:09,450 - #46 true
+INFO  21:44:09,450 - #5 ;
+INFO  21:44:09,450 - #3 {
+INFO  21:44:09,451 - #4 }
+INFO  21:44:09,460 - konstanta je tipa Bool na liniji 3
+INFO  21:44:09,460 - tip ove konstante jeste:  bool
+INFO  21:44:09,460 - konstanta je tipa Bool na liniji 3
+INFO  21:44:09,460 - tip ove konstante jeste:  bool
+INFO  21:44:09,460 - Print calls = 0
+INFO  21:44:09,461 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  21:44:09,466 - Parsiranje uspesno zavrseno!

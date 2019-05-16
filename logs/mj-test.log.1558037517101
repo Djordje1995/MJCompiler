@@ -1,0 +1,21 @@
+INFO  21:58:14,438 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  21:58:14,460 - #2 program
+INFO  21:58:14,461 - #44 MJProgram
+INFO  21:58:14,461 - #43 const
+INFO  21:58:14,461 - #44 bool
+INFO  21:58:14,461 - #44 a
+INFO  21:58:14,461 - #27 =
+INFO  21:58:14,461 - #46 false
+INFO  21:58:14,461 - #8 ,
+INFO  21:58:14,462 - #44 b
+INFO  21:58:14,462 - #27 =
+INFO  21:58:14,462 - #45 2
+INFO  21:58:14,462 - #5 ;
+INFO  21:58:14,462 - #3 {
+INFO  21:58:14,463 - #4 }
+INFO  21:58:14,470 - konstanta je tipa Bool na liniji 3
+INFO  21:58:14,470 - tip ove konstante jeste:  bool
+INFO  21:58:14,470 - konstanta je tipa Int na liniji 3
+ERROR 21:58:14,470 - dodeljena vrednost nije odgovarajuceg tipa  na liniji 3
+INFO  21:58:14,476 - Print calls = 0
+ERROR 21:58:14,476 - Parsiranje NIJE uspesno zavrseno!

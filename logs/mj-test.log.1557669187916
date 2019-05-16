@@ -1,0 +1,16 @@
+INFO  15:52:48,590 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  15:52:48,617 - #2 program
+INFO  15:52:48,617 - #44 MJProgram
+INFO  15:52:48,617 - #43 const
+INFO  15:52:48,618 - #44 int
+INFO  15:52:48,618 - #44 a
+INFO  15:52:48,618 - #27 =
+INFO  15:52:48,618 - #45 5
+INFO  15:52:48,618 - #5 ;
+INFO  15:52:48,619 - #3 {
+INFO  15:52:48,619 - #4 }
+INFO  15:52:48,626 - konstanta je tipa Int na liniji3
+INFO  15:52:48,626 - tip ove konstante jeste:  rs.ac.bg.etf.pp1.ast.Type@378fd1ac
+INFO  15:52:48,626 - Print calls = 0
+INFO  15:52:48,627 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  15:52:48,631 - Parsiranje uspesno zavrseno!

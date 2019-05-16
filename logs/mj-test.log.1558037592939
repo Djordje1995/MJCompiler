@@ -1,0 +1,22 @@
+INFO  22:12:59,861 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  22:12:59,886 - #2 program
+INFO  22:12:59,886 - #44 MJProgram
+INFO  22:12:59,886 - #43 const
+INFO  22:12:59,886 - #44 int
+INFO  22:12:59,886 - #44 a
+INFO  22:12:59,887 - #27 =
+INFO  22:12:59,887 - #45 3
+INFO  22:12:59,887 - #8 ,
+INFO  22:12:59,888 - #44 b
+INFO  22:12:59,888 - #27 =
+INFO  22:12:59,888 - #45 2
+INFO  22:12:59,888 - #5 ;
+INFO  22:12:59,888 - #3 {
+INFO  22:12:59,888 - #4 }
+INFO  22:12:59,898 - Definisana je konstanta je tipa rs.etf.pp1.symboltable.concepts.Struct@378fd1ac na liniji 3
+INFO  22:12:59,898 - tip ove konstante jeste:  int
+INFO  22:12:59,898 - Definisana je konstanta je tipa rs.etf.pp1.symboltable.concepts.Struct@378fd1ac na liniji 3
+INFO  22:12:59,902 - tip ove konstante jeste:  int
+INFO  22:12:59,902 - Print calls = 0
+INFO  22:12:59,904 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  22:12:59,914 - Parsiranje uspesno zavrseno!

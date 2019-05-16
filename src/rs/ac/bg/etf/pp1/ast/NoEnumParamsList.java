@@ -1,13 +1,13 @@
 // generated with ast extension for cup
 // version 0.8
-// 30/3/2019 13:4:41
+// 16/4/2019 21:19:58
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class DesignatorMoreDerived1 extends DesignatorMore {
+public class NoEnumParamsList extends EnumParamList {
 
-    public DesignatorMoreDerived1 () {
+    public NoEnumParamsList () {
     }
 
     public void accept(Visitor visitor) {
@@ -28,10 +28,10 @@ public class DesignatorMoreDerived1 extends DesignatorMore {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("DesignatorMoreDerived1(\n");
+        buffer.append("NoEnumParamsList(\n");
 
         buffer.append(tab);
-        buffer.append(") [DesignatorMoreDerived1]");
+        buffer.append(") [NoEnumParamsList]");
         return buffer.toString();
     }
 }

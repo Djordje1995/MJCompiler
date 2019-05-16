@@ -1,0 +1,16 @@
+INFO  18:13:44,296 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  18:13:44,341 - #2 program
+INFO  18:13:44,341 - #44 MJProgram
+INFO  18:13:44,342 - #43 const
+INFO  18:13:44,342 - #44 bool
+INFO  18:13:44,342 - #44 a
+INFO  18:13:44,343 - #27 =
+INFO  18:13:44,343 - #46 false
+INFO  18:13:44,343 - #5 ;
+INFO  18:13:44,344 - #3 {
+INFO  18:13:44,345 - #4 }
+ERROR 18:15:12,177 - Nije pronadjen tip bool u tabeli simbola
+INFO  18:15:12,761 - konstanta je tipa Bool na liniji 3
+ERROR 18:15:12,761 - dodeljena vrednost nije odgovarajuceg tipa  na liniji 3
+INFO  18:15:12,761 - Print calls = 0
+ERROR 18:15:12,763 - Parsiranje NIJE uspesno zavrseno!

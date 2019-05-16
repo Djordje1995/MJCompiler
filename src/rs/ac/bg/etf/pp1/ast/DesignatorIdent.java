@@ -1,13 +1,24 @@
 // generated with ast extension for cup
 // version 0.8
-// 30/3/2019 13:4:40
+// 16/4/2019 21:19:58
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class IdentMaybeConstListDerived1 extends IdentMaybeConstList {
+public class DesignatorIdent extends Designator {
 
-    public IdentMaybeConstListDerived1 () {
+    private String name;
+
+    public DesignatorIdent (String name) {
+        this.name=name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name=name;
     }
 
     public void accept(Visitor visitor) {
@@ -28,10 +39,13 @@ public class IdentMaybeConstListDerived1 extends IdentMaybeConstList {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("IdentMaybeConstListDerived1(\n");
+        buffer.append("DesignatorIdent(\n");
+
+        buffer.append(" "+tab+name);
+        buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [IdentMaybeConstListDerived1]");
+        buffer.append(") [DesignatorIdent]");
         return buffer.toString();
     }
 }

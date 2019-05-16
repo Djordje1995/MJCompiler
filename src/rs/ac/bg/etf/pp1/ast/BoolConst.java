@@ -1,24 +1,24 @@
 // generated with ast extension for cup
 // version 0.8
-// 30/3/2019 13:4:40
+// 16/4/2019 21:19:58
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class BoolConst extends AnyConst {
 
-    private Boolean B1;
+    private Boolean boolValue;
 
-    public BoolConst (Boolean B1) {
-        this.B1=B1;
+    public BoolConst (Boolean boolValue) {
+        this.boolValue=boolValue;
     }
 
-    public Boolean getB1() {
-        return B1;
+    public Boolean getBoolValue() {
+        return boolValue;
     }
 
-    public void setB1(Boolean B1) {
-        this.B1=B1;
+    public void setBoolValue(Boolean boolValue) {
+        this.boolValue=boolValue;
     }
 
     public void accept(Visitor visitor) {
@@ -41,7 +41,7 @@ public class BoolConst extends AnyConst {
         buffer.append(tab);
         buffer.append("BoolConst(\n");
 
-        buffer.append(" "+tab+B1);
+        buffer.append(" "+tab+boolValue);
         buffer.append("\n");
 
         buffer.append(tab);

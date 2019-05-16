@@ -1,0 +1,14 @@
+INFO  19:45:26,729 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  19:45:26,755 - #2 program
+INFO  19:45:26,755 - #44 MJProgram
+INFO  19:45:26,755 - #43 const
+INFO  19:45:26,755 - #44 int
+INFO  19:45:26,755 - #44 a
+INFO  19:45:26,755 - #27 =
+INFO  19:45:26,755 - #45 5
+INFO  19:45:26,755 - #5 ;
+INFO  19:45:26,756 - #3 {
+INFO  19:45:26,757 - #4 }
+INFO  19:45:26,764 - Print calls = 0
+INFO  19:45:26,764 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  19:45:26,769 - Parsiranje uspesno zavrseno!

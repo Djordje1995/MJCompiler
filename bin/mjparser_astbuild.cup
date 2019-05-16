@@ -59,7 +59,7 @@ terminal MUL, DIV, MOD, NEQUAL, GREATER, GREATERE, LESSER, LESSERE, ASSIGN, DOT,
 terminal READ, BREAK, CONTINUE, FOR, INTERFACE, EXTENDS, CLASS, IMPLEMENTS, ENUM, CONST;
 terminal String IDENT;
 terminal Integer NUM_CONST;
-terminal java.lang.Boolean BOOL_CONST;
+terminal Boolean BOOL_CONST;
 terminal Character CHAR_CONST;
 
 nonterminal MaybeAssignNumConst MaybeAssignNumConst;
@@ -98,7 +98,7 @@ nonterminal MaybeNumConst MaybeNumConst;
 nonterminal ReturnExpression ReturnExpression;
 nonterminal MaybeCondition MaybeCondition;
 nonterminal MaybeDesignatorStatement MaybeDesignatorStatement;
-nonterminal DesignatorMore DesignatorMore;
+nonterminal IdentConst IdentConst;
 nonterminal MulopFactorList MulopFactorList;
 nonterminal AddopTermList AddopTermList;
 nonterminal CondFact CondFact;
@@ -117,10 +117,9 @@ nonterminal Unmatched Unmatched;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgName, Designator, MethodDecl; 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Term, Expr, Factor, VarDeclList; 
 
-Program ::= (Program) PROGRAM ProgName:P1 DeclarationList:D2 LBRACE MethodDeclList:M3 RBRACE {: RESULT=new Program(P1, D2, M3); RESULT.setLine(P1left); :};
+Program ::= (Program) PROGRAM ProgName:p DeclarationList:D1 LBRACE MethodDeclList:M2 RBRACE {: RESULT=new Program(p, D1, M2); RESULT.setLine(pleft); :};
 
-ProgName ::= (ProgName) IDENT:progName {: RESULT=new ProgName(progName); RESULT.setLine(progNameleft); :} 
-;  
+ProgName ::= (ProgName) IDENT:progName {: RESULT=new ProgName(progName); RESULT.setLine(progNameleft); :};  
 
 DeclarationList ::= (ConstDeclaration) ConstDecl:C1 {: RESULT=new ConstDeclaration(C1); RESULT.setLine(C1left); :}
 					|
@@ -133,18 +132,20 @@ DeclarationList ::= (ConstDeclaration) ConstDecl:C1 {: RESULT=new ConstDeclarati
 					(InterfaceDeclaration) InterfaceDecl:I1 {: RESULT=new InterfaceDeclaration(I1); RESULT.setLine(I1left); :}
 					; 
 
-ConstDecl ::= (ConstDecl) CONST Type:t IDENT:I1 ASSIGN AnyConst:A2 IdentConstList:I3 SEMI {: RESULT=new ConstDecl(t, I1, A2, I3); RESULT.setLine(tleft); :};
+ConstDecl ::= (ConstDecl) CONST Type:t  IdentConst:I1 IdentConstList:I2 SEMI {: RESULT=new ConstDecl(t, I1, I2); RESULT.setLine(tleft); :};
 
-IdentConstList ::= (IdentConstListRec) IdentConstList:I1 COMMA IDENT:I2 ASSIGN AnyConst:A3 {: RESULT=new IdentConstListRec(I1, I2, A3); RESULT.setLine(I1left); :}
+IdentConst ::= (IdentConst) IDENT:name ASSIGN AnyConst:A1 {: RESULT=new IdentConst(name, A1); RESULT.setLine(nameleft); :};
+
+IdentConstList ::= (IdentConstListRec) IdentConstList:I1 COMMA IdentConst:I2 {: RESULT=new IdentConstListRec(I1, I2); RESULT.setLine(I1left); :}
 				| {: RESULT=new IdentConstListDerived1(); :}
 				/* epsilon */
 				;
 
-AnyConst ::= (NumConst) NUM_CONST:N1 {: RESULT=new NumConst(N1); RESULT.setLine(N1left); :}
+AnyConst ::= (NumConst) NUM_CONST:numValue {: RESULT=new NumConst(numValue); RESULT.setLine(numValueleft); :}
 			|
-			(CharConst) CHAR_CONST:C1 {: RESULT=new CharConst(C1); RESULT.setLine(C1left); :}
+			(CharConst) CHAR_CONST:charValue {: RESULT=new CharConst(charValue); RESULT.setLine(charValueleft); :}
 			|
-			(BoolConst) BOOL_CONST:B1 {: RESULT=new BoolConst(B1); RESULT.setLine(B1left); :}
+			(BoolConst) BOOL_CONST:boolValue {: RESULT=new BoolConst(boolValue); RESULT.setLine(boolValueleft); :}
 			;
 
 EnumDecl ::= (EnumDecl) ENUM IDENT:I1 LBRACE IDENT:I2 MaybeAssignNumConst:M3 IdentMaybeConstList:I4 RBRACE {: RESULT=new EnumDecl(I1, I2, M3, I4); RESULT.setLine(I1left); :};
@@ -372,13 +373,11 @@ MaybeExpression ::= LSQUAREB Expr:e RSQUAREB {: RESULT=new MaybeExpressionDerive
 					/* epsilon */
 					;
 
-Designator ::= (Designator) IDENT:name DesignatorMore:dm {: RESULT=new Designator(name, dm); RESULT.setLine(nameleft); :};
-
-DesignatorMore ::= (DesignatorMoreRefMember) DesignatorMore:D1 DOT IDENT:I2 {: RESULT=new DesignatorMoreRefMember(D1, I2); RESULT.setLine(D1left); :}
+Designator ::= (DesignatorRefMember) Designator:D1 DOT IDENT:I2 {: RESULT=new DesignatorRefMember(D1, I2); RESULT.setLine(D1left); :}
 				|
-				(DesignatorMoreArrayMember) DesignatorMore:D1 LSQUAREB Expr:e RSQUAREB {: RESULT=new DesignatorMoreArrayMember(D1, e); RESULT.setLine(D1left); :}
-				| {: RESULT=new DesignatorMoreDerived1(); :}
-				/* epsilon */
+				(DesignatorArrayMember) Designator:D1 LSQUAREB Expr:e RSQUAREB {: RESULT=new DesignatorArrayMember(D1, e); RESULT.setLine(D1left); :}
+				|
+				(DesignatorIdent) IDENT:name {: RESULT=new DesignatorIdent(name); RESULT.setLine(nameleft); :}
 				;
 
 Assignop ::= (Assign) ASSIGN {: RESULT=new Assign(); :};

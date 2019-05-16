@@ -1,38 +1,29 @@
 // generated with ast extension for cup
 // version 0.8
-// 30/3/2019 13:4:40
+// 16/4/2019 21:19:58
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class IdentMaybeConstListRec extends IdentMaybeConstList {
+public class EnumParam implements SyntaxNode {
 
-    private IdentMaybeConstList IdentMaybeConstList;
-    private String I2;
+    private SyntaxNode parent;
+    private int line;
+    private String name;
     private MaybeAssignNumConst MaybeAssignNumConst;
 
-    public IdentMaybeConstListRec (IdentMaybeConstList IdentMaybeConstList, String I2, MaybeAssignNumConst MaybeAssignNumConst) {
-        this.IdentMaybeConstList=IdentMaybeConstList;
-        if(IdentMaybeConstList!=null) IdentMaybeConstList.setParent(this);
-        this.I2=I2;
+    public EnumParam (String name, MaybeAssignNumConst MaybeAssignNumConst) {
+        this.name=name;
         this.MaybeAssignNumConst=MaybeAssignNumConst;
         if(MaybeAssignNumConst!=null) MaybeAssignNumConst.setParent(this);
     }
 
-    public IdentMaybeConstList getIdentMaybeConstList() {
-        return IdentMaybeConstList;
+    public String getName() {
+        return name;
     }
 
-    public void setIdentMaybeConstList(IdentMaybeConstList IdentMaybeConstList) {
-        this.IdentMaybeConstList=IdentMaybeConstList;
-    }
-
-    public String getI2() {
-        return I2;
-    }
-
-    public void setI2(String I2) {
-        this.I2=I2;
+    public void setName(String name) {
+        this.name=name;
     }
 
     public MaybeAssignNumConst getMaybeAssignNumConst() {
@@ -43,23 +34,36 @@ public class IdentMaybeConstListRec extends IdentMaybeConstList {
         this.MaybeAssignNumConst=MaybeAssignNumConst;
     }
 
+    public SyntaxNode getParent() {
+        return parent;
+    }
+
+    public void setParent(SyntaxNode parent) {
+        this.parent=parent;
+    }
+
+    public int getLine() {
+        return line;
+    }
+
+    public void setLine(int line) {
+        this.line=line;
+    }
+
     public void accept(Visitor visitor) {
         visitor.visit(this);
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(IdentMaybeConstList!=null) IdentMaybeConstList.accept(visitor);
         if(MaybeAssignNumConst!=null) MaybeAssignNumConst.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(IdentMaybeConstList!=null) IdentMaybeConstList.traverseTopDown(visitor);
         if(MaybeAssignNumConst!=null) MaybeAssignNumConst.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(IdentMaybeConstList!=null) IdentMaybeConstList.traverseBottomUp(visitor);
         if(MaybeAssignNumConst!=null) MaybeAssignNumConst.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -67,15 +71,9 @@ public class IdentMaybeConstListRec extends IdentMaybeConstList {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("IdentMaybeConstListRec(\n");
+        buffer.append("EnumParam(\n");
 
-        if(IdentMaybeConstList!=null)
-            buffer.append(IdentMaybeConstList.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
-        buffer.append("\n");
-
-        buffer.append(" "+tab+I2);
+        buffer.append(" "+tab+name);
         buffer.append("\n");
 
         if(MaybeAssignNumConst!=null)
@@ -85,7 +83,7 @@ public class IdentMaybeConstListRec extends IdentMaybeConstList {
         buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [IdentMaybeConstListRec]");
+        buffer.append(") [EnumParam]");
         return buffer.toString();
     }
 }

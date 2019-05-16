@@ -43,7 +43,7 @@ public class MJParserTest {
 	        SyntaxNode prog = (SyntaxNode)(s.value);
 	        
 			Tab.init(); // Universe scope
-			SemanticPass semanticCheck = new SemanticPass();
+			SemanticAnalyser semanticCheck = new SemanticAnalyser();
 			prog.traverseBottomUp(semanticCheck);
 			
 	        log.info("Print calls = " + semanticCheck.printCallCount);
