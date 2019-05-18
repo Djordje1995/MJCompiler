@@ -63,23 +63,28 @@ terminal Boolean BOOL_CONST;
 terminal Character CHAR_CONST;
 
 nonterminal MaybeAssignNumConst, EnumDecl, AnyConst, IdentConstList, ConstDecl, DeclarationList;  
-nonterminal MaybeExtends, ClassDecl, MaybeMethodDecl, MaybeImplements, TypeList, IdentList;
+nonterminal MaybeExtends, ClassDecl, MaybeMethodDecl, MaybeImplements, TypeList;
 nonterminal MethodDeclList, VarDecl, MaybeFormPars, InterfaceMethodDecl, InterfaceMethodDeclList, InterfaceDecl;
 nonterminal FormParsList, MaybeEmptySquareBrackets, FormPars, ActPars, ActParList, MaybeExpression; 
 nonterminal DesignatorStatement, StatementList, Statement, Addop, Mulop, Relop, Assignop;
 nonterminal MaybeNumConst, ReturnExpression, MaybeCondition, MaybeDesignatorStatement, IdentConst;
 nonterminal MulopFactorList, AddopTermList, CondFact, CondFactAnd, CondTerm, CondTermOr, Condition;
 nonterminal MaybeActualParams, MaybeParams, MaybeMinus, MaybeRelopExpr, TypeOrVoid, Matched, Unmatched;
-nonterminal EnumParamList, EnumParam, EnumName;
+nonterminal EnumParamList, EnumParam, EnumName, Declaration, VarName, VarList;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgName, Designator, MethodDecl; 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Term, Expr, Factor, VarDeclList; 
 
-Program ::= (Program) PROGRAM ProgName:p DeclarationList LBRACE MethodDeclList RBRACE;
+Program ::= (Program) PROGRAM ProgName:name DeclarationList LBRACE MethodDeclList RBRACE;
 
 ProgName ::= (ProgName) IDENT:progName;  
 
-DeclarationList ::= (ConstDeclaration) ConstDecl
+DeclarationList ::= (DeclarationsList) DeclarationList Declaration
+                  |
+                  (NoDeclaration) /* epsilon */
+                  ;
+
+Declaration ::= (ConstDeclaration) ConstDecl
 					|
 					(VarDeclaration) VarDecl
 					|
@@ -117,14 +122,16 @@ EnumParamList ::= (EnumParamsList) EnumParamList COMMA EnumParam
                   (NoEnumParamsList) /* epsilon */
                   ; 
 
-MaybeAssignNumConst ::= ASSIGN NUM_CONST:value
+MaybeAssignNumConst ::= (EnumAssignNumConst) ASSIGN NUM_CONST:value
 				              |
 				              /* epsilon */
 				              ;
 
-VarDecl ::= (VarDecl) Type:t IDENT:varName MaybeEmptySquareBrackets IdentList SEMI;
+VarDecl ::= (VarDecl) Type:t VarName:name VarList SEMI;
 
-IdentList ::= (IdentListRec) IdentList COMMA IDENT MaybeEmptySquareBrackets
+VarName ::= (VarName) IDENT:varName MaybeEmptySquareBrackets;
+
+VarList ::= (VarListRec) VarList COMMA VarName:name
 				|
 				/* epsilon */
 				;
@@ -184,9 +191,9 @@ VarDeclList ::= (VarDeclListRec) VarDeclList VarDecl:var
 
 FormPars ::= (FormPars) Type:t IDENT MaybeEmptySquareBrackets FormParsList:l;
 
-MaybeEmptySquareBrackets ::= LSQUAREB RSQUAREB
+MaybeEmptySquareBrackets ::= (EmptySquareBrackets) LSQUAREB RSQUAREB
 							|
-							/* epsilon */
+							(NoSquareBrackets) /* epsilon */
 							;			
 
 FormParsList ::= (FormParsListRec) FormParsList COMMA Type:t IDENT MaybeEmptySquareBrackets

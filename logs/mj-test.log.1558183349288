@@ -1,0 +1,15 @@
+INFO  22:35:30,163 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  22:35:30,211 - #2 program
+INFO  22:35:30,211 - #44 MJProgram
+INFO  22:35:30,211 - #43 const
+INFO  22:35:30,212 - #44 int
+INFO  22:35:30,212 - #44 a
+INFO  22:35:30,213 - #27 =
+INFO  22:35:30,213 - #45 3
+INFO  22:35:30,213 - #8 ,
+INFO  22:35:30,214 - #44 b
+INFO  22:35:30,214 - #27 =
+INFO  22:35:30,214 - #45 2
+INFO  22:35:30,214 - #5 ;
+INFO  22:35:30,214 - #3 {
+INFO  22:35:30,215 - #4 }

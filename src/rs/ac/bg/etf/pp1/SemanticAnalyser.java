@@ -8,15 +8,21 @@ import rs.ac.bg.etf.pp1.ast.CharConst;
 import rs.ac.bg.etf.pp1.ast.ConstDecl;
 import rs.ac.bg.etf.pp1.ast.Designator;
 import rs.ac.bg.etf.pp1.ast.DesignatorIdent;
+import rs.ac.bg.etf.pp1.ast.EmptySquareBrackets;
+import rs.ac.bg.etf.pp1.ast.EnumAssignNumConst;
 import rs.ac.bg.etf.pp1.ast.EnumDecl;
 import rs.ac.bg.etf.pp1.ast.EnumName;
+import rs.ac.bg.etf.pp1.ast.EnumParam;
 import rs.ac.bg.etf.pp1.ast.IdentConst;
+import rs.ac.bg.etf.pp1.ast.MaybeAssignNumConst;
+import rs.ac.bg.etf.pp1.ast.MaybeEmptySquareBrackets;
 import rs.ac.bg.etf.pp1.ast.NumConst;
 import rs.ac.bg.etf.pp1.ast.ProgName;
 import rs.ac.bg.etf.pp1.ast.Program;
 import rs.ac.bg.etf.pp1.ast.SyntaxNode;
 import rs.ac.bg.etf.pp1.ast.Type;
 import rs.ac.bg.etf.pp1.ast.VarDecl;
+import rs.ac.bg.etf.pp1.ast.VarName;
 import rs.ac.bg.etf.pp1.ast.VisitorAdaptor;
 import rs.etf.pp1.symboltable.Tab;
 import rs.etf.pp1.symboltable.concepts.Obj;
@@ -24,15 +30,16 @@ import rs.etf.pp1.symboltable.concepts.Struct;
 
 public class SemanticAnalyser extends VisitorAdaptor {
 
-	public static final Struct boolType = new Struct(Struct.Bool);
-	public static final Struct enumType = new Struct(Struct.Enum);
 	boolean errorDetected = false;
 	int printCallCount = 0;
 	Obj currentMethod = null;
 	Type currentType = null;
 	Obj currentEnum = null;
+	int currentEnumValue = 0;
 	boolean returnFound = false;
 	int nVars;
+	public static final Struct boolType = new Struct(Struct.Bool);
+	public static final Struct enumType = new Struct(Struct.Enum);
 
 	Logger log = Logger.getLogger(getClass());
 
@@ -42,7 +49,7 @@ public class SemanticAnalyser extends VisitorAdaptor {
 //		scopeStack.push(ScopeEnum.GLOBAL);
 //		isCorrect = true;
 	}
-	
+
 	public void report_error(String message, SyntaxNode info) {
 		errorDetected = true;
 		StringBuilder msg = new StringBuilder(message);
@@ -84,8 +91,24 @@ public class SemanticAnalyser extends VisitorAdaptor {
 	}
 
 	public void visit(VarDecl varDecl) {
-//		report_info("Deklarisana promenljiva " + varDecl.getVarName(), varDecl);
-//		Obj varNode = Tab.insert(Obj.Var, varDecl.getVarName(), varDecl.getType().struct);
+		currentType = null;
+	}
+
+	public void visit(VarName varName) {
+		if (Tab.currentScope.findSymbol(varName.getVarName()) != null
+				&& Tab.currentScope.findSymbol(varName.getVarName()) != Tab.noObj) {
+			report_error("Visestruka deklaracija promenljive " + varName.getVarName(), varName);
+		}
+		MaybeEmptySquareBrackets square = varName.getMaybeEmptySquareBrackets();
+		if (square instanceof EmptySquareBrackets) {
+			Tab.insert(Obj.Var, varName.getVarName(), new Struct(Struct.Array, currentType.struct));
+			report_info("Deklarisana je promenljiva " + varName.getVarName() + " tipa "
+					+ currentType.getTypeName() + " array", varName);
+		} else {
+			Tab.insert(Obj.Var, varName.getVarName(), currentType.struct);
+			report_info("Deklarisana je promenljiva " + varName.getVarName() + " tipa "
+					+ currentType.getTypeName(), varName);
+		}
 	}
 
 	public void visit(Type type) {
@@ -106,26 +129,29 @@ public class SemanticAnalyser extends VisitorAdaptor {
 	}
 
 	public void visit(IdentConst identConst) {
-		if (Tab.find(identConst.getName()) == null) { 
+		if (Tab.find(identConst.getName()) != null && Tab.find(identConst.getName()) != Tab.noObj) {
 			report_error("Konstanta " + identConst.getName() + " je vec definisana ", identConst);
 		}
 		AnyConst cnst = identConst.getAnyConst();
 		Struct tempType = null;
 		if (cnst instanceof NumConst) {
 			tempType = Tab.intType;
-			report_info("Definisana je konstanta " + identConst.getName() + " je tipa Int" , identConst);
+			report_info("Definisana je konstanta " + identConst.getName() + " tipa Int sa vrednoscu "
+					+ ((NumConst) cnst).getNumValue(), identConst);
 			Obj obj = Tab.insert(Obj.Con, identConst.getName(), Tab.intType);
 			obj.setAdr(((NumConst) cnst).getNumValue());
 		}
 		if (cnst instanceof CharConst) {
 			tempType = Tab.charType;
-			report_info("Definisana je konstanta " + identConst.getName() + " je tipa Char" , identConst);
+			report_info("Definisana je konstanta " + identConst.getName() + " tipa Char sa vrednoscu '"
+					+ ((CharConst) cnst).getCharValue() + "'", identConst);
 			Obj obj = Tab.insert(Obj.Con, identConst.getName(), Tab.charType);
 			obj.setAdr(((CharConst) cnst).getCharValue());
 		}
 		if (cnst instanceof BoolConst) {
 			tempType = boolType;
-			report_info("Definisana je konstanta " + identConst.getName() + " je tipa Bool" , identConst);
+			report_info("Definisana je konstanta " + identConst.getName() + " tipa Bool sa vrednoscu "
+					+ ((BoolConst) cnst).getBoolValue(), identConst);
 			Obj obj = Tab.insert(Obj.Con, identConst.getName(), boolType);
 			obj.setAdr(((BoolConst) cnst).getBoolValue() ? 1 : 0);
 		}
@@ -134,21 +160,47 @@ public class SemanticAnalyser extends VisitorAdaptor {
 			return;
 		}
 	}
-	
+
 	public void visit(ConstDecl constant) {
-		currentType = null;  	
+		currentType = null;
 	}
 
 	public void visit(EnumDecl enumDecl) {
 		Tab.closeScope();
+		report_info("Definisan je enum " + enumDecl.getEnumName().getEnumName(), enumDecl);
+		currentType = null;
 	}
-	
+
 	public void visit(EnumName enumName) {
+		if (Tab.find(enumName.getEnumName()) != null && Tab.find(enumName.getEnumName()) != Tab.noObj) {
+			report_error("Dvostruka definicija enuma " + enumName.getEnumName(), enumName);
+			return;
+		}
 		currentEnum = Tab.insert(Obj.Type, enumName.getEnumName(), enumType);
 		Tab.openScope();
-		//
+		currentEnumValue = 0;
+		report_info("Definise se enum " + enumName.getEnumName(), enumName);
 	}
-	
+
+	public void visit(EnumParam enumParam) {
+		if (Tab.find(enumParam.getName()) != null && Tab.find(enumParam.getName()) != Tab.noObj) {
+			report_error("Polje " + enumParam.getName() + " je vec definisano unutar Enuma " + currentEnum.getName(),
+					enumParam);
+			return;
+		}
+		Obj enumField = Tab.insert(Obj.Con, enumParam.getName(), Tab.intType);
+		MaybeAssignNumConst anc = enumParam.getMaybeAssignNumConst();
+		if (anc instanceof EnumAssignNumConst) {
+			enumField.setAdr(((EnumAssignNumConst) anc).getValue());
+			currentEnumValue = ((EnumAssignNumConst) anc).getValue() + 1;
+		} else {
+			enumField.setAdr(currentEnumValue);
+			currentEnumValue += 1;
+		}
+		report_info("Dodato je polje " + enumParam.getName() + " sa vrednoscu " + (currentEnumValue - 1) + " u Enum "
+				+ currentEnum.getName(), enumParam);
+	}
+
 //	public void visit(MethodDecl methodDecl) {
 //		if (!returnFound && currentMethod.getType() != Tab.noType) {
 //			report_error("Semanticka greska na liniji " + methodDecl.getLine() + ": funcija " + currentMethod.getName() + " nema return iskaz!", null);

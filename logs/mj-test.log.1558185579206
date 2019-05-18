@@ -1,0 +1,40 @@
+INFO  15:12:19,588 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  15:12:19,613 - #2 program
+INFO  15:12:19,613 - #44 MJProgram
+INFO  15:12:19,613 - #42 enum
+INFO  15:12:19,613 - #44 dayy
+INFO  15:12:19,613 - #3 {
+INFO  15:12:19,613 - #44 pon1
+INFO  15:12:19,613 - #27 =
+INFO  15:12:19,613 - #45 1
+INFO  15:12:19,613 - #8 ,
+INFO  15:12:19,613 - #44 uto1
+INFO  15:12:19,613 - #8 ,
+INFO  15:12:19,613 - #44 sre1
+INFO  15:12:19,613 - #8 ,
+INFO  15:12:19,613 - #44 cet1
+INFO  15:12:19,613 - #8 ,
+INFO  15:12:19,613 - #44 pet1
+INFO  15:12:19,613 - #27 =
+INFO  15:12:19,613 - #45 5
+INFO  15:12:19,613 - #8 ,
+INFO  15:12:19,613 - #44 sub1
+INFO  15:12:19,613 - #8 ,
+INFO  15:12:19,613 - #44 ned1
+INFO  15:12:19,618 - #27 =
+INFO  15:12:19,618 - #45 9
+INFO  15:12:19,618 - #4 }
+INFO  15:12:19,618 - #3 {
+INFO  15:12:19,618 - #4 }
+INFO  15:12:19,624 - Definise se enum dayy na liniji 7
+INFO  15:12:19,624 - Dodato je polje pon1 sa vrednoscu 1 u Enum dayy na liniji 7
+INFO  15:12:19,624 - Dodato je polje uto1 sa vrednoscu 2 u Enum dayy na liniji 7
+INFO  15:12:19,624 - Dodato je polje sre1 sa vrednoscu 3 u Enum dayy na liniji 7
+INFO  15:12:19,624 - Dodato je polje cet1 sa vrednoscu 4 u Enum dayy na liniji 7
+INFO  15:12:19,624 - Dodato je polje pet1 sa vrednoscu 5 u Enum dayy na liniji 7
+INFO  15:12:19,624 - Dodato je polje sub1 sa vrednoscu 6 u Enum dayy na liniji 7
+INFO  15:12:19,624 - Dodato je polje ned1 sa vrednoscu 9 u Enum dayy na liniji 7
+INFO  15:12:19,624 - Definisan je enum dayy na liniji 7
+INFO  15:12:19,624 - Print calls = 0
+INFO  15:12:19,624 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  15:12:19,629 - Parsiranje uspesno zavrseno!

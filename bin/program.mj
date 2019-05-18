@@ -1,6 +1,13 @@
 program MJProgram
-	//int x; int y;
-	const int a = 3, b = 2;
+	int x;
+	int y;
+	int niz[], neniz, mojkurac, mojikurci[];
+	//const int a = 3, b = 2;
+	//const bool m = true;
+	//const char k = 'a';
+	//enum day { pon = 1, uto, sre, cet, pet = 5, sub, ned = 9 }
+	//enum dayy { pon = 1, uto, sre, cet, pet = 5, sub, ned = 9 }
+	char sp;
 {
 	
 	//int k () int c; {

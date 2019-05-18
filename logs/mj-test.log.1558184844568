@@ -1,0 +1,40 @@
+INFO  15:06:41,285 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  15:06:41,310 - #2 program
+INFO  15:06:41,310 - #44 MJProgram
+INFO  15:06:41,310 - #42 enum
+INFO  15:06:41,310 - #44 day
+INFO  15:06:41,310 - #3 {
+INFO  15:06:41,310 - #44 pon
+INFO  15:06:41,310 - #27 =
+INFO  15:06:41,310 - #45 1
+INFO  15:06:41,310 - #8 ,
+INFO  15:06:41,310 - #44 uto
+INFO  15:06:41,310 - #8 ,
+INFO  15:06:41,310 - #44 sre
+INFO  15:06:41,310 - #8 ,
+INFO  15:06:41,310 - #44 cet
+INFO  15:06:41,310 - #8 ,
+INFO  15:06:41,310 - #44 pet
+INFO  15:06:41,310 - #27 =
+INFO  15:06:41,310 - #45 5
+INFO  15:06:41,310 - #8 ,
+INFO  15:06:41,310 - #44 sub
+INFO  15:06:41,310 - #8 ,
+INFO  15:06:41,310 - #44 ned
+INFO  15:06:41,310 - #27 =
+INFO  15:06:41,310 - #45 9
+INFO  15:06:41,310 - #4 }
+INFO  15:06:41,310 - #3 {
+INFO  15:06:41,310 - #4 }
+INFO  15:06:41,315 - Definise se enum day na liniji 4
+INFO  15:06:41,315 - Dodato je polje pon sa vrednoscu 1 u Enum day na liniji 4
+INFO  15:06:41,315 - Dodato je polje uto sa vrednoscu 2 u Enum day na liniji 4
+INFO  15:06:41,315 - Dodato je polje sre sa vrednoscu 3 u Enum day na liniji 4
+INFO  15:06:41,315 - Dodato je polje cet sa vrednoscu 4 u Enum day na liniji 4
+INFO  15:06:41,315 - Dodato je polje pet sa vrednoscu 5 u Enum day na liniji 4
+INFO  15:06:41,315 - Dodato je polje sub sa vrednoscu 6 u Enum day na liniji 4
+INFO  15:06:41,315 - Dodato je polje ned sa vrednoscu 9 u Enum day na liniji 4
+INFO  15:06:41,315 - Definisan je enum day na liniji 4
+INFO  15:06:41,315 - Print calls = 0
+INFO  15:06:41,315 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  15:06:41,315 - Parsiranje uspesno zavrseno!

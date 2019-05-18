@@ -1,13 +1,24 @@
 // generated with ast extension for cup
 // version 0.8
-// 16/4/2019 21:19:58
+// 18/4/2019 18:19:46
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class MaybeAssignNumConstDerived2 extends MaybeAssignNumConst {
+public class EnumAssignNumConst extends MaybeAssignNumConst {
 
-    public MaybeAssignNumConstDerived2 () {
+    private Integer value;
+
+    public EnumAssignNumConst (Integer value) {
+        this.value=value;
+    }
+
+    public Integer getValue() {
+        return value;
+    }
+
+    public void setValue(Integer value) {
+        this.value=value;
     }
 
     public void accept(Visitor visitor) {
@@ -28,10 +39,13 @@ public class MaybeAssignNumConstDerived2 extends MaybeAssignNumConst {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("MaybeAssignNumConstDerived2(\n");
+        buffer.append("EnumAssignNumConst(\n");
+
+        buffer.append(" "+tab+value);
+        buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [MaybeAssignNumConstDerived2]");
+        buffer.append(") [EnumAssignNumConst]");
         return buffer.toString();
     }
 }

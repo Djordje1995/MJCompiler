@@ -1,0 +1,20 @@
+INFO  18:52:12,479 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  18:52:12,510 - #2 program
+INFO  18:52:12,510 - #44 MJProgram
+INFO  18:52:12,510 - #44 int
+INFO  18:52:12,510 - #44 x
+INFO  18:52:12,510 - #5 ;
+INFO  18:52:12,510 - #44 int
+INFO  18:52:12,510 - #44 y
+INFO  18:52:12,510 - #5 ;
+INFO  18:52:12,510 - #44 char
+INFO  18:52:12,510 - #44 sp
+INFO  18:52:12,510 - #5 ;
+INFO  18:52:12,510 - #3 {
+INFO  18:52:12,510 - #4 }
+INFO  18:52:12,520 - Deklarisana je promenljiva x tipa int na liniji 2
+INFO  18:52:12,520 - Deklarisana je promenljiva y tipa int na liniji 3
+INFO  18:52:12,520 - Deklarisana je promenljiva sp tipa char na liniji 9
+INFO  18:52:12,520 - Print calls = 0
+INFO  18:52:12,520 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  18:52:12,520 - Parsiranje uspesno zavrseno!

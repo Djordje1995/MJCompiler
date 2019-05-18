@@ -1,0 +1,30 @@
+INFO  15:08:27,039 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  15:08:27,064 - #2 program
+INFO  15:08:27,064 - #44 MJProgram
+INFO  15:08:27,064 - #42 enum
+INFO  15:08:27,064 - #44 day
+INFO  15:08:27,064 - #3 {
+INFO  15:08:27,064 - #44 pon
+INFO  15:08:27,064 - #27 =
+INFO  15:08:27,064 - #45 1
+INFO  15:08:27,064 - #8 ,
+INFO  15:08:27,064 - #44 uto
+INFO  15:08:27,064 - #8 ,
+INFO  15:08:27,064 - #44 sre
+INFO  15:08:27,064 - #8 ,
+INFO  15:08:27,064 - #44 cet
+INFO  15:08:27,064 - #8 ,
+INFO  15:08:27,064 - #44 pet
+INFO  15:08:27,064 - #27 =
+INFO  15:08:27,064 - #45 5
+INFO  15:08:27,064 - #8 ,
+INFO  15:08:27,064 - #44 sub
+INFO  15:08:27,064 - #8 ,
+INFO  15:08:27,064 - #44 ned
+INFO  15:08:27,064 - #27 =
+INFO  15:08:27,064 - #45 9
+INFO  15:08:27,064 - #4 }
+INFO  15:08:27,064 - #42 enum
+ERROR 15:08:27,064 - 
+Sintaksna greska na liniji 5
+ERROR 15:08:27,064 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 5

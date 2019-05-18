@@ -1,38 +1,29 @@
 // generated with ast extension for cup
 // version 0.8
-// 16/4/2019 21:19:58
+// 18/4/2019 18:19:46
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class IdentListRec extends IdentList {
+public class VarName implements SyntaxNode {
 
-    private IdentList IdentList;
-    private String I2;
+    private SyntaxNode parent;
+    private int line;
+    private String varName;
     private MaybeEmptySquareBrackets MaybeEmptySquareBrackets;
 
-    public IdentListRec (IdentList IdentList, String I2, MaybeEmptySquareBrackets MaybeEmptySquareBrackets) {
-        this.IdentList=IdentList;
-        if(IdentList!=null) IdentList.setParent(this);
-        this.I2=I2;
+    public VarName (String varName, MaybeEmptySquareBrackets MaybeEmptySquareBrackets) {
+        this.varName=varName;
         this.MaybeEmptySquareBrackets=MaybeEmptySquareBrackets;
         if(MaybeEmptySquareBrackets!=null) MaybeEmptySquareBrackets.setParent(this);
     }
 
-    public IdentList getIdentList() {
-        return IdentList;
+    public String getVarName() {
+        return varName;
     }
 
-    public void setIdentList(IdentList IdentList) {
-        this.IdentList=IdentList;
-    }
-
-    public String getI2() {
-        return I2;
-    }
-
-    public void setI2(String I2) {
-        this.I2=I2;
+    public void setVarName(String varName) {
+        this.varName=varName;
     }
 
     public MaybeEmptySquareBrackets getMaybeEmptySquareBrackets() {
@@ -43,23 +34,36 @@ public class IdentListRec extends IdentList {
         this.MaybeEmptySquareBrackets=MaybeEmptySquareBrackets;
     }
 
+    public SyntaxNode getParent() {
+        return parent;
+    }
+
+    public void setParent(SyntaxNode parent) {
+        this.parent=parent;
+    }
+
+    public int getLine() {
+        return line;
+    }
+
+    public void setLine(int line) {
+        this.line=line;
+    }
+
     public void accept(Visitor visitor) {
         visitor.visit(this);
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(IdentList!=null) IdentList.accept(visitor);
         if(MaybeEmptySquareBrackets!=null) MaybeEmptySquareBrackets.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(IdentList!=null) IdentList.traverseTopDown(visitor);
         if(MaybeEmptySquareBrackets!=null) MaybeEmptySquareBrackets.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(IdentList!=null) IdentList.traverseBottomUp(visitor);
         if(MaybeEmptySquareBrackets!=null) MaybeEmptySquareBrackets.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -67,15 +71,9 @@ public class IdentListRec extends IdentList {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("IdentListRec(\n");
+        buffer.append("VarName(\n");
 
-        if(IdentList!=null)
-            buffer.append(IdentList.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
-        buffer.append("\n");
-
-        buffer.append(" "+tab+I2);
+        buffer.append(" "+tab+varName);
         buffer.append("\n");
 
         if(MaybeEmptySquareBrackets!=null)
@@ -85,7 +83,7 @@ public class IdentListRec extends IdentList {
         buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [IdentListRec]");
+        buffer.append(") [VarName]");
         return buffer.toString();
     }
 }

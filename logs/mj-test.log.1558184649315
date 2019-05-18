@@ -1,0 +1,13 @@
+INFO  15:02:50,665 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  15:02:50,690 - #2 program
+INFO  15:02:50,690 - #44 MJProgram
+INFO  15:02:50,690 - #42 enum
+INFO  15:02:50,690 - #44 day
+INFO  15:02:50,690 - #3 {
+INFO  15:02:50,690 - #44 mon
+INFO  15:02:50,690 - #4 }
+INFO  15:02:50,690 - #3 {
+INFO  15:02:50,690 - #4 }
+ERROR 15:02:50,697 - Polje mon je vec definisano unutar Enuma day na liniji 4
+INFO  15:02:50,697 - Print calls = 0
+ERROR 15:02:50,697 - Parsiranje NIJE uspesno zavrseno!

@@ -1,0 +1,98 @@
+INFO  15:33:15,488 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  15:33:15,508 - #2 program
+INFO  15:33:15,508 - #44 MJProgram
+INFO  15:33:15,508 - #43 const
+INFO  15:33:15,508 - #44 int
+INFO  15:33:15,508 - #44 a
+INFO  15:33:15,508 - #27 =
+INFO  15:33:15,508 - #45 3
+INFO  15:33:15,508 - #8 ,
+INFO  15:33:15,513 - #44 b
+INFO  15:33:15,513 - #27 =
+INFO  15:33:15,513 - #45 2
+INFO  15:33:15,513 - #5 ;
+INFO  15:33:15,513 - #43 const
+INFO  15:33:15,513 - #44 bool
+INFO  15:33:15,513 - #44 m
+INFO  15:33:15,513 - #27 =
+INFO  15:33:15,513 - #46 true
+INFO  15:33:15,513 - #5 ;
+INFO  15:33:15,513 - #43 const
+INFO  15:33:15,513 - #44 char
+INFO  15:33:15,513 - #44 k
+INFO  15:33:15,513 - #27 =
+INFO  15:33:15,513 - #47 a
+INFO  15:33:15,513 - #5 ;
+INFO  15:33:15,513 - #42 enum
+INFO  15:33:15,513 - #44 day
+INFO  15:33:15,513 - #3 {
+INFO  15:33:15,513 - #44 pon
+INFO  15:33:15,513 - #27 =
+INFO  15:33:15,513 - #45 1
+INFO  15:33:15,513 - #8 ,
+INFO  15:33:15,513 - #44 uto
+INFO  15:33:15,513 - #8 ,
+INFO  15:33:15,513 - #44 sre
+INFO  15:33:15,513 - #8 ,
+INFO  15:33:15,513 - #44 cet
+INFO  15:33:15,513 - #8 ,
+INFO  15:33:15,513 - #44 pet
+INFO  15:33:15,513 - #27 =
+INFO  15:33:15,513 - #45 5
+INFO  15:33:15,513 - #8 ,
+INFO  15:33:15,513 - #44 sub
+INFO  15:33:15,513 - #8 ,
+INFO  15:33:15,513 - #44 ned
+INFO  15:33:15,513 - #27 =
+INFO  15:33:15,513 - #45 9
+INFO  15:33:15,518 - #4 }
+INFO  15:33:15,518 - #42 enum
+INFO  15:33:15,518 - #44 dayy
+INFO  15:33:15,518 - #3 {
+INFO  15:33:15,518 - #44 pon
+INFO  15:33:15,518 - #27 =
+INFO  15:33:15,518 - #45 1
+INFO  15:33:15,518 - #8 ,
+INFO  15:33:15,518 - #44 uto
+INFO  15:33:15,518 - #8 ,
+INFO  15:33:15,518 - #44 sre
+INFO  15:33:15,518 - #8 ,
+INFO  15:33:15,518 - #44 cet1
+INFO  15:33:15,518 - #8 ,
+INFO  15:33:15,518 - #44 pet
+INFO  15:33:15,518 - #27 =
+INFO  15:33:15,518 - #45 5
+INFO  15:33:15,518 - #8 ,
+INFO  15:33:15,518 - #44 sub
+INFO  15:33:15,518 - #8 ,
+INFO  15:33:15,518 - #44 ned
+INFO  15:33:15,518 - #27 =
+INFO  15:33:15,518 - #45 9
+INFO  15:33:15,518 - #4 }
+INFO  15:33:15,518 - #3 {
+INFO  15:33:15,518 - #4 }
+INFO  15:33:15,528 - Definisana je konstanta a tipa Int sa vrednoscu 3 na liniji 3
+INFO  15:33:15,528 - Definisana je konstanta b tipa Int sa vrednoscu 2 na liniji 3
+INFO  15:33:15,528 - Definisana je konstanta m tipa Bool sa vrednoscu true na liniji 4
+INFO  15:33:15,528 - Definisana je konstanta k tipa Char sa vrednoscu 'a' na liniji 5
+INFO  15:33:15,528 - Definise se enum day na liniji 6
+INFO  15:33:15,528 - Dodato je polje pon sa vrednoscu 1 u Enum day na liniji 6
+INFO  15:33:15,528 - Dodato je polje uto sa vrednoscu 2 u Enum day na liniji 6
+INFO  15:33:15,528 - Dodato je polje sre sa vrednoscu 3 u Enum day na liniji 6
+INFO  15:33:15,528 - Dodato je polje cet sa vrednoscu 4 u Enum day na liniji 6
+INFO  15:33:15,528 - Dodato je polje pet sa vrednoscu 5 u Enum day na liniji 6
+INFO  15:33:15,528 - Dodato je polje sub sa vrednoscu 6 u Enum day na liniji 6
+INFO  15:33:15,528 - Dodato je polje ned sa vrednoscu 9 u Enum day na liniji 6
+INFO  15:33:15,528 - Definisan je enum day na liniji 6
+INFO  15:33:15,528 - Definise se enum dayy na liniji 7
+INFO  15:33:15,528 - Dodato je polje pon sa vrednoscu 1 u Enum dayy na liniji 7
+INFO  15:33:15,528 - Dodato je polje uto sa vrednoscu 2 u Enum dayy na liniji 7
+INFO  15:33:15,528 - Dodato je polje sre sa vrednoscu 3 u Enum dayy na liniji 7
+INFO  15:33:15,528 - Dodato je polje cet1 sa vrednoscu 4 u Enum dayy na liniji 7
+INFO  15:33:15,528 - Dodato je polje pet sa vrednoscu 5 u Enum dayy na liniji 7
+INFO  15:33:15,528 - Dodato je polje sub sa vrednoscu 6 u Enum dayy na liniji 7
+INFO  15:33:15,528 - Dodato je polje ned sa vrednoscu 9 u Enum dayy na liniji 7
+INFO  15:33:15,528 - Definisan je enum dayy na liniji 7
+INFO  15:33:15,528 - Print calls = 0
+INFO  15:33:15,528 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  15:33:15,533 - Parsiranje uspesno zavrseno!

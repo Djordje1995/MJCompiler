@@ -1,13 +1,13 @@
 // generated with ast extension for cup
 // version 0.8
-// 16/4/2019 21:19:58
+// 18/4/2019 18:19:46
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class IdentListDerived1 extends IdentList {
+public class EmptySquareBrackets extends MaybeEmptySquareBrackets {
 
-    public IdentListDerived1 () {
+    public EmptySquareBrackets () {
     }
 
     public void accept(Visitor visitor) {
@@ -28,10 +28,10 @@ public class IdentListDerived1 extends IdentList {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("IdentListDerived1(\n");
+        buffer.append("EmptySquareBrackets(\n");
 
         buffer.append(tab);
-        buffer.append(") [IdentListDerived1]");
+        buffer.append(") [EmptySquareBrackets]");
         return buffer.toString();
     }
 }

@@ -1,0 +1,15 @@
+INFO  15:11:55,798 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  15:11:55,828 - #2 program
+INFO  15:11:55,828 - #44 MJProgram
+INFO  15:11:55,828 - #43 const
+INFO  15:11:55,828 - #44 char
+INFO  15:11:55,828 - #44 k
+INFO  15:11:55,828 - #27 =
+INFO  15:11:55,828 - #47 a
+INFO  15:11:55,828 - #5 ;
+INFO  15:11:55,828 - #3 {
+INFO  15:11:55,828 - #4 }
+INFO  15:11:55,839 - Definisana je konstanta k je tipa Char na liniji 5
+INFO  15:11:55,839 - Print calls = 0
+INFO  15:11:55,839 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  15:11:55,840 - Parsiranje uspesno zavrseno!

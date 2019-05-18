@@ -63,7 +63,6 @@ terminal Boolean BOOL_CONST;
 terminal Character CHAR_CONST;
 
 nonterminal MaybeAssignNumConst MaybeAssignNumConst;
-nonterminal IdentMaybeConstList IdentMaybeConstList;
 nonterminal EnumDecl EnumDecl;
 nonterminal AnyConst AnyConst;
 nonterminal IdentConstList IdentConstList;
@@ -113,6 +112,9 @@ nonterminal MaybeRelopExpr MaybeRelopExpr;
 nonterminal TypeOrVoid TypeOrVoid;
 nonterminal Matched Matched;
 nonterminal Unmatched Unmatched;
+nonterminal EnumParamList EnumParamList;
+nonterminal EnumParam EnumParam;
+nonterminal EnumName EnumName;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgName, Designator, MethodDecl; 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Term, Expr, Factor, VarDeclList; 
@@ -148,14 +150,18 @@ AnyConst ::= (NumConst) NUM_CONST:numValue {: RESULT=new NumConst(numValue); RES
 			(BoolConst) BOOL_CONST:boolValue {: RESULT=new BoolConst(boolValue); RESULT.setLine(boolValueleft); :}
 			;
 
-EnumDecl ::= (EnumDecl) ENUM IDENT:I1 LBRACE IDENT:I2 MaybeAssignNumConst:M3 IdentMaybeConstList:I4 RBRACE {: RESULT=new EnumDecl(I1, I2, M3, I4); RESULT.setLine(I1left); :};
+EnumDecl ::= (EnumDecl) EnumName:name LBRACE EnumParam:E1 EnumParamList:E2 RBRACE {: RESULT=new EnumDecl(name, E1, E2); RESULT.setLine(nameleft); :};
 
-IdentMaybeConstList ::= (IdentMaybeConstListRec) IdentMaybeConstList:I1 COMMA IDENT:I2 MaybeAssignNumConst:M3 {: RESULT=new IdentMaybeConstListRec(I1, I2, M3); RESULT.setLine(I1left); :}
-						| {: RESULT=new IdentMaybeConstListDerived1(); :}
-						/* epsilon */
-						;
+EnumName ::= (EnumName) ENUM IDENT:enumName {: RESULT=new EnumName(enumName); RESULT.setLine(enumNameleft); :};
 
-MaybeAssignNumConst ::= ASSIGN NUM_CONST:N1 {: RESULT=new MaybeAssignNumConstDerived1(N1); RESULT.setLine(N1left); :}
+EnumParam ::= (EnumParam) IDENT:name MaybeAssignNumConst:M1 {: RESULT=new EnumParam(name, M1); RESULT.setLine(nameleft); :};
+
+EnumParamList ::= (EnumParamsList) EnumParamList:E1 COMMA EnumParam:E2 {: RESULT=new EnumParamsList(E1, E2); RESULT.setLine(E1left); :}
+                  |
+                  (NoEnumParamsList) {: RESULT=new NoEnumParamsList(); :} /* epsilon */
+                  ; 
+
+MaybeAssignNumConst ::= ASSIGN NUM_CONST:value {: RESULT=new MaybeAssignNumConstDerived1(value); RESULT.setLine(valueleft); :}
 				| {: RESULT=new MaybeAssignNumConstDerived2(); :}
 				/* epsilon */
 				;

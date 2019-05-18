@@ -1,0 +1,7 @@
+INFO  15:19:39,211 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  15:19:39,237 - #2 program
+INFO  15:19:39,237 - #44 MJProgram
+INFO  15:19:39,237 - #43 const
+ERROR 15:19:39,237 - 
+Sintaksna greska na liniji 3
+ERROR 15:19:39,237 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 3

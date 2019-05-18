@@ -1,11 +1,11 @@
 // generated with ast extension for cup
 // version 0.8
-// 12/4/2019 20:13:6
+// 18/4/2019 18:19:46
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public abstract class IdentMaybeConstList implements SyntaxNode {
+public abstract class Declaration implements SyntaxNode {
 
     private SyntaxNode parent;
 

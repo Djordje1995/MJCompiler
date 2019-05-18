@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 16/4/2019 21:19:58
+// 18/4/2019 18:19:46
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -24,17 +24,17 @@ public interface Visitor {
     public void visit(IdentConstList IdentConstList);
     public void visit(TypeList TypeList);
     public void visit(Factor Factor);
+    public void visit(VarList VarList);
     public void visit(MaybeExpression MaybeExpression);
     public void visit(Designator Designator);
     public void visit(MaybeFormPars MaybeFormPars);
     public void visit(FormParsList FormParsList);
-    public void visit(IdentList IdentList);
     public void visit(ReturnExpression ReturnExpression);
     public void visit(MaybeRelopExpr MaybeRelopExpr);
     public void visit(AnyConst AnyConst);
     public void visit(MaybeCondition MaybeCondition);
-    public void visit(MaybeDesignatorStatement MaybeDesignatorStatement);
     public void visit(MaybeMethodDecl MaybeMethodDecl);
+    public void visit(MaybeDesignatorStatement MaybeDesignatorStatement);
     public void visit(MaybeEmptySquareBrackets MaybeEmptySquareBrackets);
     public void visit(VarDeclList VarDeclList);
     public void visit(TypeOrVoid TypeOrVoid);
@@ -46,6 +46,7 @@ public interface Visitor {
     public void visit(EnumParamList EnumParamList);
     public void visit(MaybeNumConst MaybeNumConst);
     public void visit(MaybeExtends MaybeExtends);
+    public void visit(Declaration Declaration);
     public void visit(MethodDeclList MethodDeclList);
     public void visit(CondTermOr CondTermOr);
     public void visit(AddopTermList AddopTermList);
@@ -126,8 +127,8 @@ public interface Visitor {
     public void visit(Type Type);
     public void visit(FormParsListDerived1 FormParsListDerived1);
     public void visit(FormParsListRec FormParsListRec);
-    public void visit(MaybeEmptySquareBracketsDerived2 MaybeEmptySquareBracketsDerived2);
-    public void visit(MaybeEmptySquareBracketsDerived1 MaybeEmptySquareBracketsDerived1);
+    public void visit(NoSquareBrackets NoSquareBrackets);
+    public void visit(EmptySquareBrackets EmptySquareBrackets);
     public void visit(FormPars FormPars);
     public void visit(VarDeclListDerived1 VarDeclListDerived1);
     public void visit(VarDeclListRec VarDeclListRec);
@@ -151,11 +152,12 @@ public interface Visitor {
     public void visit(MaybeMethodDeclDerived2 MaybeMethodDeclDerived2);
     public void visit(MaybeMethodDeclDerived1 MaybeMethodDeclDerived1);
     public void visit(ClassDecl ClassDecl);
-    public void visit(IdentListDerived1 IdentListDerived1);
-    public void visit(IdentListRec IdentListRec);
+    public void visit(VarListDerived1 VarListDerived1);
+    public void visit(VarListRec VarListRec);
+    public void visit(VarName VarName);
     public void visit(VarDecl VarDecl);
-    public void visit(MaybeAssignNumConstDerived2 MaybeAssignNumConstDerived2);
     public void visit(MaybeAssignNumConstDerived1 MaybeAssignNumConstDerived1);
+    public void visit(EnumAssignNumConst EnumAssignNumConst);
     public void visit(NoEnumParamsList NoEnumParamsList);
     public void visit(EnumParamsList EnumParamsList);
     public void visit(EnumParam EnumParam);
@@ -173,6 +175,8 @@ public interface Visitor {
     public void visit(ClassDeclaration ClassDeclaration);
     public void visit(VarDeclaration VarDeclaration);
     public void visit(ConstDeclaration ConstDeclaration);
+    public void visit(NoDeclaration NoDeclaration);
+    public void visit(DeclarationsList DeclarationsList);
     public void visit(ProgName ProgName);
     public void visit(Program Program);
 
