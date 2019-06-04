@@ -1,0 +1,40 @@
+INFO  21:54:58,749 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  21:54:58,791 - #2 program
+INFO  21:54:58,791 - #44 MJProgram
+INFO  21:54:58,791 - #43 const
+INFO  21:54:58,792 - #44 int
+INFO  21:54:58,792 - #44 a
+INFO  21:54:58,792 - #27 =
+INFO  21:54:58,792 - #45 3
+INFO  21:54:58,792 - #8 ,
+INFO  21:54:58,793 - #44 b
+INFO  21:54:58,793 - #27 =
+INFO  21:54:58,793 - #45 2
+INFO  21:54:58,793 - #5 ;
+INFO  21:54:58,793 - #3 {
+INFO  21:54:58,793 - #44 int
+INFO  21:54:58,794 - #44 main
+INFO  21:54:58,794 - #6 (
+INFO  21:54:58,794 - #7 )
+INFO  21:54:58,794 - #44 int
+INFO  21:54:58,795 - #44 c
+INFO  21:54:58,795 - #8 ,
+INFO  21:54:58,796 - #44 d
+INFO  21:54:58,796 - #5 ;
+INFO  21:54:58,796 - #3 {
+INFO  21:54:58,800 - #9 print
+INFO  21:54:58,801 - #6 (
+INFO  21:54:58,801 - #44 a
+INFO  21:54:58,801 - #7 )
+INFO  21:54:58,803 - #5 ;
+INFO  21:54:58,803 - #4 }
+INFO  21:54:58,803 - #4 }
+INFO  21:54:58,811 - Definisana je konstanta a tipa Int sa vrednoscu 3 na liniji 5
+INFO  21:54:58,811 - Definisana je konstanta b tipa Int sa vrednoscu 2 na liniji 5
+INFO  21:54:58,811 - Deklarisana je lokalna promenljiva c tipa int na liniji 18
+INFO  21:54:58,811 - Deklarisana je lokalna promenljiva d tipa int na liniji 18
+ERROR 21:54:58,811 - Pogresan tip argumenta funkcije print, argumenti mogu biti samo int ili char tipa na liniji 9
+INFO  21:54:58,812 - Definisana je metoda main tipa int na liniji 18
+INFO  21:54:58,812 - Globalnih promeljivih ima 0, a lokalnih 2
+INFO  21:54:58,812 - Print calls = 0
+ERROR 21:54:58,812 - Parsiranje NIJE uspesno zavrseno!

@@ -1,0 +1,37 @@
+INFO  20:44:30,141 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  20:44:30,166 - #2 program
+INFO  20:44:30,167 - #44 MJProgram
+INFO  20:44:30,167 - #44 int
+INFO  20:44:30,167 - #44 niz
+INFO  20:44:30,168 - #29 [
+INFO  20:44:30,168 - #30 ]
+INFO  20:44:30,168 - #8 ,
+INFO  20:44:30,169 - #44 neniz
+INFO  20:44:30,169 - #8 ,
+INFO  20:44:30,169 - #44 mojkurac
+INFO  20:44:30,169 - #8 ,
+INFO  20:44:30,169 - #44 mojikurci
+INFO  20:44:30,169 - #29 [
+INFO  20:44:30,169 - #30 ]
+INFO  20:44:30,169 - #5 ;
+INFO  20:44:30,169 - #3 {
+INFO  20:44:30,170 - #14 void
+INFO  20:44:30,170 - #44 k
+INFO  20:44:30,171 - #6 (
+INFO  20:44:30,171 - #7 )
+INFO  20:44:30,171 - #44 int
+INFO  20:44:30,171 - #44 c
+INFO  20:44:30,172 - #5 ;
+INFO  20:44:30,172 - #3 {
+INFO  20:44:30,172 - #4 }
+INFO  20:44:30,172 - #4 }
+INFO  20:44:30,183 - Deklarisana je globalna promenljiva niz tipa int array na liniji 4
+INFO  20:44:30,183 - Deklarisana je globalna promenljiva neniz tipa int na liniji 4
+INFO  20:44:30,183 - Deklarisana je globalna promenljiva mojkurac tipa int na liniji 4
+INFO  20:44:30,183 - Deklarisana je globalna promenljiva mojikurci tipa int array na liniji 4
+INFO  20:44:30,183 - Deklarisana je lokalna promenljiva c tipa int na liniji 13
+INFO  20:44:30,183 - Definisana je metoda k tipa void na liniji 13
+INFO  20:44:30,183 - Globalnih promeljivih ima 4, a lokalnih 1
+INFO  20:44:30,183 - Print calls = 0
+INFO  20:44:30,183 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  20:44:30,188 - Parsiranje uspesno zavrseno!

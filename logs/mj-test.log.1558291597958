@@ -1,0 +1,37 @@
+INFO  20:46:22,341 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  20:46:22,366 - #2 program
+INFO  20:46:22,366 - #44 MJProgram
+INFO  20:46:22,366 - #44 int
+INFO  20:46:22,366 - #44 niz
+INFO  20:46:22,367 - #29 [
+INFO  20:46:22,367 - #30 ]
+INFO  20:46:22,367 - #8 ,
+INFO  20:46:22,368 - #44 neniz
+INFO  20:46:22,368 - #8 ,
+INFO  20:46:22,368 - #44 mojkurac
+INFO  20:46:22,368 - #8 ,
+INFO  20:46:22,368 - #44 mojikurci
+INFO  20:46:22,368 - #29 [
+INFO  20:46:22,368 - #30 ]
+INFO  20:46:22,369 - #5 ;
+INFO  20:46:22,369 - #3 {
+INFO  20:46:22,369 - #14 void
+INFO  20:46:22,369 - #44 k
+INFO  20:46:22,370 - #6 (
+INFO  20:46:22,370 - #7 )
+INFO  20:46:22,370 - #44 int
+INFO  20:46:22,371 - #44 c
+INFO  20:46:22,371 - #5 ;
+INFO  20:46:22,371 - #3 {
+INFO  20:46:22,371 - #4 }
+INFO  20:46:22,371 - #4 }
+INFO  20:46:22,379 - Deklarisana je globalna promenljiva niz tipa int array na liniji 4
+INFO  20:46:22,379 - Deklarisana je globalna promenljiva neniz tipa int na liniji 4
+INFO  20:46:22,379 - Deklarisana je globalna promenljiva mojkurac tipa int na liniji 4
+INFO  20:46:22,379 - Deklarisana je globalna promenljiva mojikurci tipa int array na liniji 4
+INFO  20:46:22,379 - Deklarisana je lokalna promenljiva c tipa int na liniji 13
+INFO  20:46:22,380 - Definisana je metoda k tipa void na liniji 13
+INFO  20:46:22,380 - Globalnih promeljivih ima 4, a lokalnih 1
+INFO  20:46:22,380 - Print calls = 0
+INFO  20:46:22,380 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  20:46:22,386 - Parsiranje uspesno zavrseno!

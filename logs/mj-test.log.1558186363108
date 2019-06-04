@@ -1,0 +1,34 @@
+INFO  15:32:10,358 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  15:32:10,388 - #2 program
+INFO  15:32:10,388 - #44 MJProgram
+INFO  15:32:10,388 - #43 const
+INFO  15:32:10,388 - #44 int
+INFO  15:32:10,388 - #44 a
+INFO  15:32:10,388 - #27 =
+INFO  15:32:10,388 - #45 3
+INFO  15:32:10,388 - #8 ,
+INFO  15:32:10,388 - #44 b
+INFO  15:32:10,388 - #27 =
+INFO  15:32:10,388 - #45 2
+INFO  15:32:10,388 - #5 ;
+INFO  15:32:10,388 - #43 const
+INFO  15:32:10,388 - #44 bool
+INFO  15:32:10,388 - #44 m
+INFO  15:32:10,388 - #27 =
+INFO  15:32:10,388 - #46 true
+INFO  15:32:10,388 - #5 ;
+INFO  15:32:10,388 - #43 const
+INFO  15:32:10,388 - #44 char
+INFO  15:32:10,388 - #44 k
+INFO  15:32:10,388 - #27 =
+INFO  15:32:10,388 - #47 a
+INFO  15:32:10,388 - #5 ;
+INFO  15:32:10,388 - #3 {
+INFO  15:32:10,388 - #4 }
+INFO  15:32:10,398 - Definisana je konstanta a tipa Int sa vrednoscu 3 na liniji 3
+INFO  15:32:10,398 - Definisana je konstanta b tipa Int sa vrednoscu 2 na liniji 3
+INFO  15:32:10,398 - Definisana je konstanta m tipa Bool sa vrednoscu true na liniji 4
+INFO  15:32:10,398 - Definisana je konstanta k tipa Char sa vrednoscu a na liniji 5
+INFO  15:32:10,398 - Print calls = 0
+INFO  15:32:10,398 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  15:32:10,398 - Parsiranje uspesno zavrseno!

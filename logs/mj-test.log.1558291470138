@@ -1,0 +1,15 @@
+INFO  20:43:16,469 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  20:43:16,494 - #2 program
+INFO  20:43:16,494 - #44 MJProgram
+INFO  20:43:16,495 - #44 int
+INFO  20:43:16,495 - #44 niz
+INFO  20:43:16,495 - #29 [
+INFO  20:43:16,495 - #30 ]
+INFO  20:43:16,495 - #8 ,
+INFO  20:43:16,496 - #44 mm
+INFO  20:43:16,497 - #44 neniz
+ERROR 20:43:16,497 - 
+Sintaksna greska na liniji 4
+ERROR 20:43:16,497 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 4
+INFO  20:43:16,506 - Print calls = 0
+ERROR 20:43:16,506 - Parsiranje NIJE uspesno zavrseno!

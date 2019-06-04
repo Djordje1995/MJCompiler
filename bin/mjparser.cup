@@ -62,24 +62,29 @@ terminal Integer NUM_CONST;
 terminal Boolean BOOL_CONST;
 terminal Character CHAR_CONST;
 
-nonterminal MaybeAssignNumConst, IdentMaybeConstList, EnumDecl, AnyConst, IdentConstList, ConstDecl, DeclarationList;  
-nonterminal MaybeExtends, ClassDecl, MaybeMethodDecl, MaybeImplements, TypeList, IdentList;
+nonterminal MaybeAssignNumConst, EnumDecl, AnyConst, IdentConstList, ConstDecl, DeclarationList;  
+nonterminal MaybeExtends, ClassDecl, MaybeMethodDecl, MaybeImplements, TypeList;
 nonterminal MethodDeclList, VarDecl, MaybeFormPars, InterfaceMethodDecl, InterfaceMethodDeclList, InterfaceDecl;
 nonterminal FormParsList, MaybeEmptySquareBrackets, FormPars, ActPars, ActParList, MaybeExpression; 
 nonterminal DesignatorStatement, StatementList, Statement, Addop, Mulop, Relop, Assignop;
-nonterminal MaybeNumConst, ReturnExpression, MaybeCondition, MaybeDesignatorStatement;
-nonterminal DesignatorMore, MulopFactorList, AddopTermList, CondFact, CondFactAnd, CondTerm, CondTermOr, Condition;
+nonterminal MaybeNumConst, ReturnExpression, MaybeCondition, MaybeDesignatorStatement, IdentConst;
+nonterminal MulopFactorList, AddopTermList, CondFact, CondFactAnd, CondTerm, CondTermOr, Condition;
 nonterminal MaybeActualParams, MaybeParams, MaybeMinus, MaybeRelopExpr, TypeOrVoid, Matched, Unmatched;
+nonterminal EnumParamList, EnumParam, EnumName, Declaration, VarName, VarList, MethodStart;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgName, Designator, MethodDecl; 
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgName, MethodDecl, MethodName, Designator; 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Term, Expr, Factor, VarDeclList; 
 
-Program ::= (Program) PROGRAM ProgName DeclarationList LBRACE MethodDeclList RBRACE;
+Program ::= (Program) PROGRAM ProgName:name DeclarationList LBRACE MethodDeclList RBRACE;
 
-ProgName ::= (ProgName) IDENT:progName 
-;  
+ProgName ::= (ProgName) IDENT:progName;  
 
-DeclarationList ::= (ConstDeclaration) ConstDecl
+DeclarationList ::= (DeclarationsList) DeclarationList Declaration
+                  |
+                  (NoDeclaration) /* epsilon */
+                  ;
+
+Declaration ::= (ConstDeclaration) ConstDecl
 					|
 					(VarDeclaration) VarDecl
 					|
@@ -90,35 +95,43 @@ DeclarationList ::= (ConstDeclaration) ConstDecl
 					(InterfaceDeclaration) InterfaceDecl
 					; 
 
-ConstDecl ::= (ConstDecl) CONST Type:t IDENT ASSIGN AnyConst IdentConstList SEMI;
+ConstDecl ::= (ConstDecl) CONST Type:t  IdentConst IdentConstList SEMI;
 
-IdentConstList ::= (IdentConstListRec) IdentConstList COMMA IDENT ASSIGN AnyConst
+IdentConst ::= (IdentConst) IDENT:name ASSIGN AnyConst;
+
+IdentConstList ::= (IdentConstListRec) IdentConstList COMMA IdentConst
 				|
 				/* epsilon */
 				;
 
-AnyConst ::= (NumConst) NUM_CONST
+AnyConst ::= (NumConst) NUM_CONST:numValue
 			|
-			(CharConst) CHAR_CONST
+			(CharConst) CHAR_CONST:charValue
 			|
-			(BoolConst) BOOL_CONST
+			(BoolConst) BOOL_CONST:boolValue
 			;
 
-EnumDecl ::= (EnumDecl) ENUM IDENT LBRACE IDENT MaybeAssignNumConst IdentMaybeConstList RBRACE;
+EnumDecl ::= (EnumDecl) EnumName:name LBRACE EnumParam EnumParamList RBRACE;
 
-IdentMaybeConstList ::= (IdentMaybeConstListRec) IdentMaybeConstList COMMA IDENT MaybeAssignNumConst
-						|
-						/* epsilon */
-						;
+EnumName ::= (EnumName) ENUM IDENT:enumName;
 
-MaybeAssignNumConst ::= ASSIGN NUM_CONST
-				|
-				/* epsilon */
-				;
+EnumParam ::= (EnumParam) IDENT:name MaybeAssignNumConst;
 
-VarDecl ::= (VarDecl) Type:t IDENT:varName MaybeEmptySquareBrackets IdentList SEMI;
+EnumParamList ::= (EnumParamsList) EnumParamList COMMA EnumParam
+                  |
+                  (NoEnumParamsList) /* epsilon */
+                  ; 
 
-IdentList ::= (IdentListRec) IdentList COMMA IDENT MaybeEmptySquareBrackets
+MaybeAssignNumConst ::= (EnumAssignNumConst) ASSIGN NUM_CONST:value
+				              |
+				              /* epsilon */
+				              ;
+
+VarDecl ::= (VarDecl) Type:t VarName:name VarList SEMI;
+
+VarName ::= (VarName) IDENT:varName MaybeEmptySquareBrackets;
+
+VarList ::= (VarListRec) VarList COMMA VarName:name
 				|
 				/* epsilon */
 				;
@@ -159,17 +172,21 @@ InterfaceMethodDeclList ::= (InterfaceMethodDeclListRec) InterfaceMethodDeclList
 
 InterfaceMethodDecl ::= (InterfaceMethodDecl) TypeOrVoid IDENT LPAREN MaybeFormPars RPAREN SEMI;
 
-MethodDecl ::= (MethodDecl) TypeOrVoid IDENT:methName LPAREN MaybeFormPars RPAREN VarDeclList LBRACE StatementList RBRACE;
+MethodDecl ::= (MethodDecl) MethodName LPAREN MaybeFormPars RPAREN VarDeclList LBRACE MethodStart StatementList RBRACE;
+
+MethodStart ::= (MethodStart) /* epsilon */;
+
+MethodName ::= (MethodName) TypeOrVoid IDENT:methodName;
 
 TypeOrVoid ::= (SomeType) Type:typeName
-				|
-				(VoidType) VOID
-				; 
+				      |
+				      (VoidType) VOID
+				      ; 
 
-MaybeFormPars ::= FormPars:fp 
-				|
-				/* epsilon */
-				;
+MaybeFormPars ::= (FormParams) FormPars:fp 
+				      |
+				      (NoFormParams) /* epsilon */
+				      ;
 
 VarDeclList ::= (VarDeclListRec) VarDeclList VarDecl:var
 				|
@@ -178,9 +195,9 @@ VarDeclList ::= (VarDeclListRec) VarDeclList VarDecl:var
 
 FormPars ::= (FormPars) Type:t IDENT MaybeEmptySquareBrackets FormParsList:l;
 
-MaybeEmptySquareBrackets ::= LSQUAREB RSQUAREB
+MaybeEmptySquareBrackets ::= (EmptySquareBrackets) LSQUAREB RSQUAREB
 							|
-							/* epsilon */
+							(NoSquareBrackets) /* epsilon */
 							;			
 
 FormParsList ::= (FormParsListRec) FormParsList COMMA Type:t IDENT MaybeEmptySquareBrackets
@@ -229,10 +246,10 @@ MaybeNumConst ::= COMMA NUM_CONST
 				/* epsilon */
 				;			
 
-ReturnExpression ::= Expr:e
-					|
-					/* epsilon */
-					;
+ReturnExpression ::= (ReturnExpressionE) Expr:e
+					         |
+					         (NoReturnExpression) /* epsilon */
+					         ;
 					 
 			
 MaybeCondition ::= Condition:cond
@@ -314,12 +331,12 @@ Factor ::= (FactorDesignator) Designator:d MaybeParams
 		(FactorExpression) LPAREN Expr:e RPAREN
 		;
 
-MaybeParams ::= LPAREN MaybeActualParams:params RPAREN
-				|
-				/* epsilon */
-				;
+MaybeParams ::= (ActualParamsBrackets) LPAREN MaybeActualParams:params RPAREN
+				      |
+				      /* epsilon */
+				      ;
 				
-MaybeActualParams ::= ActPars:params
+MaybeActualParams ::= (ActualParams) ActPars:params
 						|
 						/* epsilon */
 						;
@@ -329,13 +346,11 @@ MaybeExpression ::= LSQUAREB Expr:e RSQUAREB
 					/* epsilon */
 					;
 
-Designator ::= (Designator) IDENT:name DesignatorMore:dm;
-
-DesignatorMore ::= (DesignatorMoreRefMember) DesignatorMore DOT IDENT
+Designator ::= (DesignatorRefMember) Designator DOT IDENT
 				|
-				(DesignatorMoreArrayMember) DesignatorMore LSQUAREB Expr:e RSQUAREB
+				(DesignatorArrayMember) Designator LSQUAREB Expr:e RSQUAREB
 				|
-				/* epsilon */
+				(DesignatorIdent) IDENT:name
 				;
 
 Assignop ::= (Assign) ASSIGN;

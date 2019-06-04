@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 30/3/2019 13:4:41
+// 3/5/2019 19:19:33
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -24,29 +24,30 @@ public interface Visitor {
     public void visit(IdentConstList IdentConstList);
     public void visit(TypeList TypeList);
     public void visit(Factor Factor);
+    public void visit(VarList VarList);
     public void visit(MaybeExpression MaybeExpression);
+    public void visit(Designator Designator);
     public void visit(MaybeFormPars MaybeFormPars);
     public void visit(FormParsList FormParsList);
-    public void visit(IdentList IdentList);
     public void visit(ReturnExpression ReturnExpression);
     public void visit(MaybeRelopExpr MaybeRelopExpr);
     public void visit(AnyConst AnyConst);
     public void visit(MaybeCondition MaybeCondition);
-    public void visit(MaybeDesignatorStatement MaybeDesignatorStatement);
     public void visit(MaybeMethodDecl MaybeMethodDecl);
+    public void visit(MaybeDesignatorStatement MaybeDesignatorStatement);
     public void visit(MaybeEmptySquareBrackets MaybeEmptySquareBrackets);
     public void visit(VarDeclList VarDeclList);
     public void visit(TypeOrVoid TypeOrVoid);
     public void visit(MaybeAssignNumConst MaybeAssignNumConst);
-    public void visit(IdentMaybeConstList IdentMaybeConstList);
     public void visit(DesignatorStatement DesignatorStatement);
     public void visit(MaybeActualParams MaybeActualParams);
     public void visit(MaybeParams MaybeParams);
     public void visit(Statement Statement);
+    public void visit(EnumParamList EnumParamList);
     public void visit(MaybeNumConst MaybeNumConst);
     public void visit(MaybeExtends MaybeExtends);
+    public void visit(Declaration Declaration);
     public void visit(MethodDeclList MethodDeclList);
-    public void visit(DesignatorMore DesignatorMore);
     public void visit(CondTermOr CondTermOr);
     public void visit(AddopTermList AddopTermList);
     public void visit(Mod Mod);
@@ -61,16 +62,15 @@ public interface Visitor {
     public void visit(NotEqual NotEqual);
     public void visit(Equal Equal);
     public void visit(Assign Assign);
-    public void visit(DesignatorMoreDerived1 DesignatorMoreDerived1);
-    public void visit(DesignatorMoreArrayMember DesignatorMoreArrayMember);
-    public void visit(DesignatorMoreRefMember DesignatorMoreRefMember);
-    public void visit(Designator Designator);
+    public void visit(DesignatorIdent DesignatorIdent);
+    public void visit(DesignatorArrayMember DesignatorArrayMember);
+    public void visit(DesignatorRefMember DesignatorRefMember);
     public void visit(MaybeExpressionDerived2 MaybeExpressionDerived2);
     public void visit(MaybeExpressionDerived1 MaybeExpressionDerived1);
-    public void visit(MaybeActualParamsDerived2 MaybeActualParamsDerived2);
     public void visit(MaybeActualParamsDerived1 MaybeActualParamsDerived1);
-    public void visit(MaybeParamsDerived2 MaybeParamsDerived2);
+    public void visit(ActualParams ActualParams);
     public void visit(MaybeParamsDerived1 MaybeParamsDerived1);
+    public void visit(ActualParamsBrackets ActualParamsBrackets);
     public void visit(FactorExpression FactorExpression);
     public void visit(FactorNewType FactorNewType);
     public void visit(FactorBool FactorBool);
@@ -105,8 +105,8 @@ public interface Visitor {
     public void visit(MaybeDesignatorStatementDerived1 MaybeDesignatorStatementDerived1);
     public void visit(MaybeConditionDerived2 MaybeConditionDerived2);
     public void visit(MaybeConditionDerived1 MaybeConditionDerived1);
-    public void visit(ReturnExpressionDerived2 ReturnExpressionDerived2);
-    public void visit(ReturnExpressionDerived1 ReturnExpressionDerived1);
+    public void visit(NoReturnExpression NoReturnExpression);
+    public void visit(ReturnExpressionE ReturnExpressionE);
     public void visit(MaybeNumConstDerived2 MaybeNumConstDerived2);
     public void visit(MaybeNumConstDerived1 MaybeNumConstDerived1);
     public void visit(StatementListDerived1 StatementListDerived1);
@@ -127,15 +127,17 @@ public interface Visitor {
     public void visit(Type Type);
     public void visit(FormParsListDerived1 FormParsListDerived1);
     public void visit(FormParsListRec FormParsListRec);
-    public void visit(MaybeEmptySquareBracketsDerived2 MaybeEmptySquareBracketsDerived2);
-    public void visit(MaybeEmptySquareBracketsDerived1 MaybeEmptySquareBracketsDerived1);
+    public void visit(NoSquareBrackets NoSquareBrackets);
+    public void visit(EmptySquareBrackets EmptySquareBrackets);
     public void visit(FormPars FormPars);
     public void visit(VarDeclListDerived1 VarDeclListDerived1);
     public void visit(VarDeclListRec VarDeclListRec);
-    public void visit(MaybeFormParsDerived2 MaybeFormParsDerived2);
-    public void visit(MaybeFormParsDerived1 MaybeFormParsDerived1);
+    public void visit(NoFormParams NoFormParams);
+    public void visit(FormParams FormParams);
     public void visit(VoidType VoidType);
     public void visit(SomeType SomeType);
+    public void visit(MethodName MethodName);
+    public void visit(MethodStart MethodStart);
     public void visit(MethodDecl MethodDecl);
     public void visit(InterfaceMethodDecl InterfaceMethodDecl);
     public void visit(InterfaceMethodDeclListDerived1 InterfaceMethodDeclListDerived1);
@@ -152,25 +154,31 @@ public interface Visitor {
     public void visit(MaybeMethodDeclDerived2 MaybeMethodDeclDerived2);
     public void visit(MaybeMethodDeclDerived1 MaybeMethodDeclDerived1);
     public void visit(ClassDecl ClassDecl);
-    public void visit(IdentListDerived1 IdentListDerived1);
-    public void visit(IdentListRec IdentListRec);
+    public void visit(VarListDerived1 VarListDerived1);
+    public void visit(VarListRec VarListRec);
+    public void visit(VarName VarName);
     public void visit(VarDecl VarDecl);
-    public void visit(MaybeAssignNumConstDerived2 MaybeAssignNumConstDerived2);
     public void visit(MaybeAssignNumConstDerived1 MaybeAssignNumConstDerived1);
-    public void visit(IdentMaybeConstListDerived1 IdentMaybeConstListDerived1);
-    public void visit(IdentMaybeConstListRec IdentMaybeConstListRec);
+    public void visit(EnumAssignNumConst EnumAssignNumConst);
+    public void visit(NoEnumParamsList NoEnumParamsList);
+    public void visit(EnumParamsList EnumParamsList);
+    public void visit(EnumParam EnumParam);
+    public void visit(EnumName EnumName);
     public void visit(EnumDecl EnumDecl);
     public void visit(BoolConst BoolConst);
     public void visit(CharConst CharConst);
     public void visit(NumConst NumConst);
     public void visit(IdentConstListDerived1 IdentConstListDerived1);
     public void visit(IdentConstListRec IdentConstListRec);
+    public void visit(IdentConst IdentConst);
     public void visit(ConstDecl ConstDecl);
     public void visit(InterfaceDeclaration InterfaceDeclaration);
     public void visit(EnumDeclaration EnumDeclaration);
     public void visit(ClassDeclaration ClassDeclaration);
     public void visit(VarDeclaration VarDeclaration);
     public void visit(ConstDeclaration ConstDeclaration);
+    public void visit(NoDeclaration NoDeclaration);
+    public void visit(DeclarationsList DeclarationsList);
     public void visit(ProgName ProgName);
     public void visit(Program Program);
 

@@ -1,0 +1,38 @@
+INFO  22:24:37,001 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  22:24:37,051 - #2 program
+INFO  22:24:37,051 - #44 MJProgram
+INFO  22:24:37,051 - #43 const
+INFO  22:24:37,056 - #44 int
+INFO  22:24:37,056 - #44 a
+INFO  22:24:37,056 - #27 =
+INFO  22:24:37,056 - #45 3
+INFO  22:24:37,056 - #8 ,
+INFO  22:24:37,056 - #44 b
+INFO  22:24:37,056 - #27 =
+INFO  22:24:37,056 - #45 2
+INFO  22:24:37,056 - #5 ;
+INFO  22:24:37,056 - #3 {
+INFO  22:24:37,056 - #44 int
+INFO  22:24:37,056 - #44 main
+INFO  22:24:37,056 - #6 (
+INFO  22:24:37,056 - #7 )
+INFO  22:24:37,056 - #44 int
+INFO  22:24:37,061 - #44 c
+INFO  22:24:37,061 - #8 ,
+INFO  22:24:37,061 - #44 d
+INFO  22:24:37,061 - #5 ;
+INFO  22:24:37,061 - #3 {
+INFO  22:24:37,061 - #10 return
+INFO  22:24:37,066 - #45 0
+INFO  22:24:37,066 - #5 ;
+INFO  22:24:37,066 - #4 }
+INFO  22:24:37,070 - #4 }
+INFO  22:24:37,085 - Definisana je konstanta a tipa Int sa vrednoscu 3 na liniji 5
+INFO  22:24:37,085 - Definisana je konstanta b tipa Int sa vrednoscu 2 na liniji 5
+INFO  22:24:37,091 - Deklarisana je lokalna promenljiva c tipa int na liniji 18
+INFO  22:24:37,091 - Deklarisana je lokalna promenljiva d tipa int na liniji 18
+ERROR 22:26:12,171 - Neodgovarajuc tip povratne vrednosti na liniji 4
+INFO  22:26:18,221 - Definisana je metoda main tipa int na liniji 18
+INFO  22:26:18,221 - Globalnih promeljivih ima 0, a lokalnih 2
+INFO  22:26:18,231 - Print calls = 0
+ERROR 22:26:18,232 - Parsiranje NIJE uspesno zavrseno!

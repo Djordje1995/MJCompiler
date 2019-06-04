@@ -1,0 +1,38 @@
+INFO  20:00:42,316 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  20:00:42,360 - #2 program
+INFO  20:00:42,360 - #44 MJProgram
+INFO  20:00:42,360 - #43 const
+INFO  20:00:42,360 - #44 int
+INFO  20:00:42,360 - #44 a
+INFO  20:00:42,361 - #27 =
+INFO  20:00:42,361 - #45 3
+INFO  20:00:42,361 - #8 ,
+INFO  20:00:42,362 - #44 b
+INFO  20:00:42,362 - #27 =
+INFO  20:00:42,362 - #45 2
+INFO  20:00:42,362 - #5 ;
+INFO  20:00:42,362 - #3 {
+INFO  20:00:42,363 - #44 int
+INFO  20:00:42,363 - #44 main
+INFO  20:00:42,363 - #6 (
+INFO  20:00:42,364 - #7 )
+INFO  20:00:42,364 - #44 var
+INFO  20:00:42,364 - #44 c
+INFO  20:00:42,364 - #5 ;
+INFO  20:00:42,365 - #3 {
+INFO  20:00:42,366 - #44 c
+INFO  20:00:42,366 - #27 =
+INFO  20:00:42,367 - #44 a
+INFO  20:00:42,367 - #11 +
+INFO  20:00:42,369 - #44 b
+INFO  20:00:42,369 - #5 ;
+INFO  20:00:42,370 - #4 }
+INFO  20:00:42,370 - #4 }
+INFO  20:00:42,375 - Definisana je konstanta a tipa Int sa vrednoscu 3 na liniji 5
+INFO  20:00:42,375 - Definisana je konstanta b tipa Int sa vrednoscu 2 na liniji 5
+ERROR 20:00:42,376 - Nije pronadjen tip var u tabeli simbola
+INFO  20:00:42,376 - Deklarisana je lokalna promenljiva c tipa var na liniji 18
+INFO  20:00:42,376 - Definisana je metoda main tipa int na liniji 18
+INFO  20:00:42,376 - Globalnih promeljivih ima 0, a lokalnih 1
+INFO  20:00:42,376 - Print calls = 0
+ERROR 20:00:42,377 - Parsiranje NIJE uspesno zavrseno!

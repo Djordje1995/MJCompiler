@@ -1,0 +1,18 @@
+INFO  14:44:14,931 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  14:44:14,955 - #2 program
+INFO  14:44:14,955 - #44 MJProgram
+INFO  14:44:14,955 - #43 const
+INFO  14:44:14,956 - #44 int
+INFO  14:44:14,956 - #44 a
+INFO  14:44:14,956 - #27 =
+INFO  14:44:14,956 - #45 3
+INFO  14:44:14,956 - #8 ,
+INFO  14:44:14,957 - #44 b
+INFO  14:44:14,957 - #27 =
+INFO  14:44:14,957 - #45 2
+INFO  14:44:14,957 - #5 ;
+INFO  14:44:14,957 - #42 enum
+ERROR 14:44:14,957 - 
+Sintaksna greska na liniji 4
+ERROR 14:44:14,957 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 4
+INFO  14:44:14,964 - Definisana je konstanta b je tipa Int na liniji 3

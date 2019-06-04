@@ -1,0 +1,11 @@
+INFO  14:57:54,392 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  14:57:54,416 - #2 program
+INFO  14:57:54,416 - #44 MJProgram
+INFO  14:57:54,416 - #42 enum
+INFO  14:57:54,416 - #44 dayl
+INFO  14:57:54,417 - #3 {
+INFO  14:57:54,417 - #44 mon
+INFO  14:57:54,417 - #4 }
+INFO  14:57:54,418 - #3 {
+INFO  14:57:54,418 - #4 }
+ERROR 14:57:54,426 - Dvostruka definicija enuma dayl  na liniji 4

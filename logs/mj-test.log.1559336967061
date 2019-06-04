@@ -1,0 +1,37 @@
+INFO  23:09:16,157 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  23:09:16,172 - #2 program
+INFO  23:09:16,172 - #44 MJProgram
+INFO  23:09:16,172 - #43 const
+INFO  23:09:16,172 - #44 int
+INFO  23:09:16,172 - #44 a
+INFO  23:09:16,172 - #27 =
+INFO  23:09:16,172 - #45 3
+INFO  23:09:16,172 - #8 ,
+INFO  23:09:16,172 - #44 b
+INFO  23:09:16,172 - #27 =
+INFO  23:09:16,172 - #45 2
+INFO  23:09:16,172 - #5 ;
+INFO  23:09:16,172 - #3 {
+INFO  23:09:16,172 - #44 int
+INFO  23:09:16,172 - #44 main
+INFO  23:09:16,172 - #6 (
+INFO  23:09:16,172 - #7 )
+INFO  23:09:16,172 - #44 int
+INFO  23:09:16,172 - #44 c
+INFO  23:09:16,172 - #8 ,
+INFO  23:09:16,172 - #44 d
+INFO  23:09:16,172 - #5 ;
+INFO  23:09:16,172 - #3 {
+INFO  23:09:16,172 - #10 return
+INFO  23:09:16,172 - #5 ;
+INFO  23:09:16,172 - #4 }
+INFO  23:09:16,172 - #4 }
+INFO  23:09:16,194 - Definisana je konstanta a tipa Int sa vrednoscu 3 na liniji 5
+INFO  23:09:16,194 - Definisana je konstanta b tipa Int sa vrednoscu 2 na liniji 5
+INFO  23:09:16,194 - Deklarisana je lokalna promenljiva c tipa int na liniji 18
+INFO  23:09:16,194 - Deklarisana je lokalna promenljiva d tipa int na liniji 18
+ERROR 23:09:16,194 - Sintaksna greska, return iskaz nema povratnu vrednost
+INFO  23:09:16,194 - Definisana je metoda main tipa int na liniji 18
+INFO  23:09:16,194 - Globalnih promeljivih ima 0, a lokalnih 2
+INFO  23:09:16,194 - Print calls = 0
+ERROR 23:09:16,194 - Parsiranje NIJE uspesno zavrseno!

@@ -1,0 +1,14 @@
+INFO  18:07:46,424 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  18:07:46,447 - #2 program
+INFO  18:07:46,447 - #44 MJProgram
+INFO  18:07:46,447 - #43 const
+INFO  18:07:46,447 - #44 bool
+INFO  18:07:46,448 - #44 a
+INFO  18:07:46,448 - #27 =
+INFO  18:07:46,448 - #44 True
+ERROR 18:07:46,448 - 
+Sintaksna greska na liniji 3
+ERROR 18:07:46,448 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 3
+ERROR 18:07:46,452 - Nije pronadjen tip bool u tabeli simbola
+INFO  18:07:46,452 - Print calls = 0
+ERROR 18:07:46,453 - Parsiranje NIJE uspesno zavrseno!

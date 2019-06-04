@@ -1,0 +1,16 @@
+INFO  17:48:37,526 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  17:48:37,550 - #2 program
+INFO  17:48:37,551 - #44 MJProgram
+INFO  17:48:37,551 - #43 const
+INFO  17:48:37,551 - #44 char
+INFO  17:48:37,551 - #44 a
+INFO  17:48:37,551 - #27 =
+INFO  17:48:37,551 - #45 5
+INFO  17:48:37,551 - #5 ;
+INFO  17:48:37,552 - #3 {
+INFO  17:48:37,553 - #4 }
+INFO  17:48:37,562 - konstanta je tipa Int na liniji3
+ERROR 17:48:37,562 - dodeljena vrednost nije odgovarajuceg tipa
+INFO  17:48:37,562 - Print calls = 0
+INFO  17:48:37,563 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  17:48:37,568 - Parsiranje uspesno zavrseno!

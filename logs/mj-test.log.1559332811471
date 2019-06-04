@@ -1,0 +1,44 @@
+INFO  21:59:56,586 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  21:59:56,611 - #2 program
+INFO  21:59:56,611 - #44 MJProgram
+INFO  21:59:56,611 - #43 const
+INFO  21:59:56,611 - #44 int
+INFO  21:59:56,611 - #44 a
+INFO  21:59:56,611 - #27 =
+INFO  21:59:56,611 - #45 3
+INFO  21:59:56,611 - #8 ,
+INFO  21:59:56,611 - #44 b
+INFO  21:59:56,611 - #27 =
+INFO  21:59:56,611 - #45 2
+INFO  21:59:56,611 - #5 ;
+INFO  21:59:56,611 - #3 {
+INFO  21:59:56,611 - #44 int
+INFO  21:59:56,611 - #44 main
+INFO  21:59:56,611 - #6 (
+INFO  21:59:56,611 - #7 )
+INFO  21:59:56,616 - #44 int
+INFO  21:59:56,616 - #44 c
+INFO  21:59:56,616 - #8 ,
+INFO  21:59:56,616 - #44 d
+INFO  21:59:56,616 - #5 ;
+INFO  21:59:56,616 - #3 {
+INFO  21:59:56,616 - #9 print
+INFO  21:59:56,616 - #6 (
+INFO  21:59:56,616 - #44 a
+INFO  21:59:56,616 - #7 )
+INFO  21:59:56,616 - #5 ;
+INFO  21:59:56,616 - #10 return
+INFO  21:59:56,616 - #45 0
+INFO  21:59:56,616 - #5 ;
+INFO  21:59:56,616 - #4 }
+INFO  21:59:56,616 - #4 }
+INFO  21:59:56,626 - Definisana je konstanta a tipa Int sa vrednoscu 3 na liniji 5
+INFO  21:59:56,626 - Definisana je konstanta b tipa Int sa vrednoscu 2 na liniji 5
+INFO  21:59:56,626 - Deklarisana je lokalna promenljiva c tipa int na liniji 18
+INFO  21:59:56,626 - Deklarisana je lokalna promenljiva d tipa int na liniji 18
+ERROR 21:59:56,626 - Pogresan tip argumenta funkcije print, argumenti mogu biti samo int ili char tipa na liniji 9
+INFO  21:59:56,626 - tekuci tip je rs.etf.pp1.symboltable.concepts.Struct@378fd1ac
+INFO  21:59:56,631 - Definisana je metoda main tipa int na liniji 18
+INFO  21:59:56,631 - Globalnih promeljivih ima 0, a lokalnih 2
+INFO  21:59:56,631 - Print calls = 0
+ERROR 21:59:56,631 - Parsiranje NIJE uspesno zavrseno!

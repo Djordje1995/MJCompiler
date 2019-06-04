@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 30/3/2019 13:4:40
+// 3/5/2019 19:19:33
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,15 +8,13 @@ package rs.ac.bg.etf.pp1.ast;
 public class IdentConstListRec extends IdentConstList {
 
     private IdentConstList IdentConstList;
-    private String I2;
-    private AnyConst AnyConst;
+    private IdentConst IdentConst;
 
-    public IdentConstListRec (IdentConstList IdentConstList, String I2, AnyConst AnyConst) {
+    public IdentConstListRec (IdentConstList IdentConstList, IdentConst IdentConst) {
         this.IdentConstList=IdentConstList;
         if(IdentConstList!=null) IdentConstList.setParent(this);
-        this.I2=I2;
-        this.AnyConst=AnyConst;
-        if(AnyConst!=null) AnyConst.setParent(this);
+        this.IdentConst=IdentConst;
+        if(IdentConst!=null) IdentConst.setParent(this);
     }
 
     public IdentConstList getIdentConstList() {
@@ -27,20 +25,12 @@ public class IdentConstListRec extends IdentConstList {
         this.IdentConstList=IdentConstList;
     }
 
-    public String getI2() {
-        return I2;
+    public IdentConst getIdentConst() {
+        return IdentConst;
     }
 
-    public void setI2(String I2) {
-        this.I2=I2;
-    }
-
-    public AnyConst getAnyConst() {
-        return AnyConst;
-    }
-
-    public void setAnyConst(AnyConst AnyConst) {
-        this.AnyConst=AnyConst;
+    public void setIdentConst(IdentConst IdentConst) {
+        this.IdentConst=IdentConst;
     }
 
     public void accept(Visitor visitor) {
@@ -49,18 +39,18 @@ public class IdentConstListRec extends IdentConstList {
 
     public void childrenAccept(Visitor visitor) {
         if(IdentConstList!=null) IdentConstList.accept(visitor);
-        if(AnyConst!=null) AnyConst.accept(visitor);
+        if(IdentConst!=null) IdentConst.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(IdentConstList!=null) IdentConstList.traverseTopDown(visitor);
-        if(AnyConst!=null) AnyConst.traverseTopDown(visitor);
+        if(IdentConst!=null) IdentConst.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(IdentConstList!=null) IdentConstList.traverseBottomUp(visitor);
-        if(AnyConst!=null) AnyConst.traverseBottomUp(visitor);
+        if(IdentConst!=null) IdentConst.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -75,11 +65,8 @@ public class IdentConstListRec extends IdentConstList {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        buffer.append(" "+tab+I2);
-        buffer.append("\n");
-
-        if(AnyConst!=null)
-            buffer.append(AnyConst.toString("  "+tab));
+        if(IdentConst!=null)
+            buffer.append(IdentConst.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

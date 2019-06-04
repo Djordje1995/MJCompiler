@@ -1,0 +1,20 @@
+INFO  13:41:38,353 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  13:41:38,377 - #2 program
+INFO  13:41:38,377 - #44 MJProgram
+INFO  13:41:38,377 - #3 {
+INFO  13:41:38,377 - #44 int
+INFO  13:41:38,378 - #44 k
+INFO  13:41:38,378 - #6 (
+INFO  13:41:38,379 - #7 )
+INFO  13:41:38,379 - #44 int
+INFO  13:41:38,379 - #44 c
+INFO  13:41:38,379 - #5 ;
+INFO  13:41:38,380 - #3 {
+INFO  13:41:38,381 - #4 }
+INFO  13:41:38,381 - #4 }
+INFO  13:41:38,389 - Deklarisana je lokalna promenljiva c tipa int na liniji 13
+INFO  13:41:38,389 - Definisana je metoda k tipa int na liniji 13
+INFO  13:41:38,389 - Globalnih promeljivih ima -1, a lokalnih 1
+INFO  13:41:38,389 - Print calls = 0
+INFO  13:41:38,390 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  13:41:38,395 - Parsiranje uspesno zavrseno!

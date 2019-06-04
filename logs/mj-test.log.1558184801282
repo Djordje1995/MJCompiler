@@ -1,0 +1,16 @@
+INFO  15:05:54,305 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  15:05:54,325 - #2 program
+INFO  15:05:54,325 - #44 MJProgram
+INFO  15:05:54,325 - #42 enum
+INFO  15:05:54,335 - #44 day
+INFO  15:05:54,335 - #3 {
+INFO  15:05:54,335 - #44 mon
+INFO  15:05:54,335 - #4 }
+INFO  15:05:54,335 - #3 {
+INFO  15:05:54,335 - #4 }
+INFO  15:05:54,335 - Definise se enum day na liniji 4
+INFO  15:05:54,345 - Dodato je polje mon sa vrednoscu 0 u Enum day na liniji 4
+INFO  15:05:54,345 - Definisan je enum day na liniji 4
+INFO  15:05:54,345 - Print calls = 0
+INFO  15:05:54,345 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  15:05:54,345 - Parsiranje uspesno zavrseno!

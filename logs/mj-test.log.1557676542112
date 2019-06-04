@@ -1,0 +1,15 @@
+INFO  17:50:16,244 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  17:50:16,269 - #2 program
+INFO  17:50:16,269 - #44 MJProgram
+INFO  17:50:16,269 - #43 const
+INFO  17:50:16,270 - #44 char
+INFO  17:50:16,270 - #44 a
+INFO  17:50:16,270 - #27 =
+INFO  17:50:16,270 - #45 5
+INFO  17:50:16,270 - #5 ;
+INFO  17:50:16,271 - #3 {
+INFO  17:50:16,271 - #4 }
+INFO  17:50:16,279 - konstanta je tipa Int na liniji3
+ERROR 17:50:16,279 - dodeljena vrednost nije odgovarajuceg tipa na liniji 3
+INFO  17:50:16,279 - Print calls = 0
+ERROR 17:50:16,279 - Parsiranje NIJE uspesno zavrseno!

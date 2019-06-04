@@ -1,0 +1,27 @@
+INFO  20:51:18,135 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  20:51:18,160 - #2 program
+INFO  20:51:18,160 - #44 MJProgram
+INFO  20:51:18,160 - #43 const
+INFO  20:51:18,160 - #44 bool
+INFO  20:51:18,160 - #44 m
+INFO  20:51:18,161 - #27 =
+INFO  20:51:18,161 - #46 true
+INFO  20:51:18,161 - #5 ;
+INFO  20:51:18,161 - #3 {
+INFO  20:51:18,162 - #14 void
+INFO  20:51:18,162 - #44 k
+INFO  20:51:18,162 - #6 (
+INFO  20:51:18,163 - #7 )
+INFO  20:51:18,163 - #44 int
+INFO  20:51:18,163 - #44 c
+INFO  20:51:18,163 - #5 ;
+INFO  20:51:18,164 - #3 {
+INFO  20:51:18,164 - #4 }
+INFO  20:51:18,165 - #4 }
+INFO  20:51:18,173 - Definisana je konstanta m tipa Bool sa vrednoscu true na liniji 6
+INFO  20:51:18,173 - Deklarisana je lokalna promenljiva c tipa int na liniji 13
+INFO  20:51:18,173 - Definisana je metoda k tipa void na liniji 13
+INFO  20:51:18,173 - Globalnih promeljivih ima 0, a lokalnih 1
+INFO  20:51:18,173 - Print calls = 0
+INFO  20:51:18,174 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  20:51:18,179 - Parsiranje uspesno zavrseno!

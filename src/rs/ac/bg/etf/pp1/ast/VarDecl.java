@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 30/3/2019 13:4:40
+// 3/5/2019 19:19:33
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -10,18 +10,16 @@ public class VarDecl implements SyntaxNode {
     private SyntaxNode parent;
     private int line;
     private Type Type;
-    private String varName;
-    private MaybeEmptySquareBrackets MaybeEmptySquareBrackets;
-    private IdentList IdentList;
+    private VarName VarName;
+    private VarList VarList;
 
-    public VarDecl (Type Type, String varName, MaybeEmptySquareBrackets MaybeEmptySquareBrackets, IdentList IdentList) {
+    public VarDecl (Type Type, VarName VarName, VarList VarList) {
         this.Type=Type;
         if(Type!=null) Type.setParent(this);
-        this.varName=varName;
-        this.MaybeEmptySquareBrackets=MaybeEmptySquareBrackets;
-        if(MaybeEmptySquareBrackets!=null) MaybeEmptySquareBrackets.setParent(this);
-        this.IdentList=IdentList;
-        if(IdentList!=null) IdentList.setParent(this);
+        this.VarName=VarName;
+        if(VarName!=null) VarName.setParent(this);
+        this.VarList=VarList;
+        if(VarList!=null) VarList.setParent(this);
     }
 
     public Type getType() {
@@ -32,28 +30,20 @@ public class VarDecl implements SyntaxNode {
         this.Type=Type;
     }
 
-    public String getVarName() {
-        return varName;
+    public VarName getVarName() {
+        return VarName;
     }
 
-    public void setVarName(String varName) {
-        this.varName=varName;
+    public void setVarName(VarName VarName) {
+        this.VarName=VarName;
     }
 
-    public MaybeEmptySquareBrackets getMaybeEmptySquareBrackets() {
-        return MaybeEmptySquareBrackets;
+    public VarList getVarList() {
+        return VarList;
     }
 
-    public void setMaybeEmptySquareBrackets(MaybeEmptySquareBrackets MaybeEmptySquareBrackets) {
-        this.MaybeEmptySquareBrackets=MaybeEmptySquareBrackets;
-    }
-
-    public IdentList getIdentList() {
-        return IdentList;
-    }
-
-    public void setIdentList(IdentList IdentList) {
-        this.IdentList=IdentList;
+    public void setVarList(VarList VarList) {
+        this.VarList=VarList;
     }
 
     public SyntaxNode getParent() {
@@ -78,21 +68,21 @@ public class VarDecl implements SyntaxNode {
 
     public void childrenAccept(Visitor visitor) {
         if(Type!=null) Type.accept(visitor);
-        if(MaybeEmptySquareBrackets!=null) MaybeEmptySquareBrackets.accept(visitor);
-        if(IdentList!=null) IdentList.accept(visitor);
+        if(VarName!=null) VarName.accept(visitor);
+        if(VarList!=null) VarList.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(Type!=null) Type.traverseTopDown(visitor);
-        if(MaybeEmptySquareBrackets!=null) MaybeEmptySquareBrackets.traverseTopDown(visitor);
-        if(IdentList!=null) IdentList.traverseTopDown(visitor);
+        if(VarName!=null) VarName.traverseTopDown(visitor);
+        if(VarList!=null) VarList.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(Type!=null) Type.traverseBottomUp(visitor);
-        if(MaybeEmptySquareBrackets!=null) MaybeEmptySquareBrackets.traverseBottomUp(visitor);
-        if(IdentList!=null) IdentList.traverseBottomUp(visitor);
+        if(VarName!=null) VarName.traverseBottomUp(visitor);
+        if(VarList!=null) VarList.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -107,17 +97,14 @@ public class VarDecl implements SyntaxNode {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        buffer.append(" "+tab+varName);
-        buffer.append("\n");
-
-        if(MaybeEmptySquareBrackets!=null)
-            buffer.append(MaybeEmptySquareBrackets.toString("  "+tab));
+        if(VarName!=null)
+            buffer.append(VarName.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(IdentList!=null)
-            buffer.append(IdentList.toString("  "+tab));
+        if(VarList!=null)
+            buffer.append(VarList.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

@@ -1,0 +1,26 @@
+INFO  20:47:23,053 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  20:47:23,077 - #2 program
+INFO  20:47:23,077 - #44 MJProgram
+INFO  20:47:23,077 - #43 const
+INFO  20:47:23,078 - #44 bool
+INFO  20:47:23,078 - #44 m
+INFO  20:47:23,078 - #27 =
+INFO  20:47:23,078 - #45 5
+INFO  20:47:23,078 - #44 s
+ERROR 20:47:23,078 - 
+Sintaksna greska na liniji 6
+INFO  20:47:23,078 - #5 ;
+INFO  20:47:23,078 - #3 {
+INFO  20:47:23,078 - #14 void
+INFO  20:47:23,081 - #44 k
+INFO  20:47:23,081 - #6 (
+INFO  20:47:23,081 - #7 )
+INFO  20:47:23,081 - #44 int
+INFO  20:47:23,081 - #44 c
+INFO  20:47:23,081 - #5 ;
+INFO  20:47:23,081 - #3 {
+INFO  20:47:23,081 - #4 }
+INFO  20:47:23,081 - #4 }
+ERROR 20:47:23,082 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 25
+INFO  20:47:23,092 - Print calls = 0
+ERROR 20:47:23,092 - Parsiranje NIJE uspesno zavrseno!

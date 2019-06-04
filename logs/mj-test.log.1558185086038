@@ -1,0 +1,18 @@
+INFO  15:09:59,643 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  15:09:59,669 - #2 program
+INFO  15:09:59,669 - #44 MJProgram
+INFO  15:09:59,669 - #43 const
+INFO  15:09:59,669 - #44 int
+INFO  15:09:59,669 - #44 a
+INFO  15:09:59,669 - #27 =
+INFO  15:09:59,669 - #45 3
+INFO  15:09:59,669 - #8 ,
+INFO  15:09:59,669 - #44 b
+INFO  15:09:59,669 - #27 =
+INFO  15:09:59,669 - #45 2
+INFO  15:09:59,669 - #5 ;
+INFO  15:09:59,669 - #43 const
+ERROR 15:09:59,669 - 
+Sintaksna greska na liniji 4
+ERROR 15:09:59,669 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 4
+INFO  15:09:59,669 - Definisana je konstanta b je tipa Int na liniji 3
