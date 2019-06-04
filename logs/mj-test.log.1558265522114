@@ -1,0 +1,44 @@
+INFO  13:30:22,363 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  13:30:22,387 - #2 program
+INFO  13:30:22,388 - #44 MJProgram
+INFO  13:30:22,388 - #44 int
+INFO  13:30:22,388 - #44 x
+INFO  13:30:22,389 - #5 ;
+INFO  13:30:22,390 - #44 int
+INFO  13:30:22,390 - #44 y
+INFO  13:30:22,390 - #5 ;
+INFO  13:30:22,390 - #44 int
+INFO  13:30:22,390 - #44 niz
+INFO  13:30:22,390 - #29 [
+INFO  13:30:22,390 - #30 ]
+INFO  13:30:22,390 - #8 ,
+INFO  13:30:22,391 - #44 neniz
+INFO  13:30:22,391 - #8 ,
+INFO  13:30:22,391 - #44 mojkurac
+INFO  13:30:22,391 - #8 ,
+INFO  13:30:22,391 - #44 mojikurci
+INFO  13:30:22,391 - #29 [
+INFO  13:30:22,391 - #30 ]
+INFO  13:30:22,391 - #5 ;
+INFO  13:30:22,391 - #44 char
+INFO  13:30:22,392 - #44 sp
+INFO  13:30:22,392 - #5 ;
+INFO  13:30:22,392 - #3 {
+INFO  13:30:22,392 - #44 int
+INFO  13:30:22,392 - #44 k
+INFO  13:30:22,392 - #6 (
+INFO  13:30:22,393 - #7 )
+INFO  13:30:22,393 - #44 int
+INFO  13:30:22,393 - #44 c
+INFO  13:30:22,393 - #5 ;
+INFO  13:30:22,393 - #3 {
+INFO  13:30:22,393 - #4 }
+INFO  13:30:22,394 - #4 }
+INFO  13:30:22,402 - Deklarisana je globalna promenljiva x tipa int na liniji 2
+INFO  13:30:22,402 - Deklarisana je globalna promenljiva y tipa int na liniji 3
+INFO  13:30:22,402 - Deklarisana je globalna promenljiva niz tipa int array na liniji 4
+INFO  13:30:22,402 - Deklarisana je globalna promenljiva neniz tipa int na liniji 4
+INFO  13:30:22,402 - Deklarisana je globalna promenljiva mojkurac tipa int na liniji 4
+INFO  13:30:22,402 - Deklarisana je globalna promenljiva mojikurci tipa int array na liniji 4
+INFO  13:30:22,402 - Deklarisana je globalna promenljiva sp tipa char na liniji 10
+INFO  13:30:22,402 - Deklarisana je lokalna promenljiva c tipa int na liniji 13

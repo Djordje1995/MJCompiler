@@ -117,8 +117,9 @@ nonterminal EnumName EnumName;
 nonterminal Declaration Declaration;
 nonterminal VarName VarName;
 nonterminal VarList VarList;
+nonterminal MethodStart MethodStart;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgName, Designator, MethodDecl; 
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgName, MethodDecl, MethodName, Designator; 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Term, Expr, Factor, VarDeclList; 
 
 Program ::= (Program) PROGRAM ProgName:name DeclarationList:D1 LBRACE MethodDeclList:M2 RBRACE {: RESULT=new Program(name, D1, M2); RESULT.setLine(nameleft); :};
@@ -218,17 +219,21 @@ InterfaceMethodDeclList ::= (InterfaceMethodDeclListRec) InterfaceMethodDeclList
 
 InterfaceMethodDecl ::= (InterfaceMethodDecl) TypeOrVoid:T1 IDENT:I2 LPAREN MaybeFormPars:M3 RPAREN SEMI {: RESULT=new InterfaceMethodDecl(T1, I2, M3); RESULT.setLine(T1left); :};
 
-MethodDecl ::= (MethodDecl) TypeOrVoid:T1 IDENT:methName LPAREN MaybeFormPars:M2 RPAREN VarDeclList:V3 LBRACE StatementList:S4 RBRACE {: RESULT=new MethodDecl(T1, methName, M2, V3, S4); RESULT.setLine(T1left); :};
+MethodDecl ::= (MethodDecl) MethodName:M1 LPAREN MaybeFormPars:M2 RPAREN VarDeclList:V3 LBRACE MethodStart:M4 StatementList:S5 RBRACE {: RESULT=new MethodDecl(M1, M2, V3, M4, S5); RESULT.setLine(M1left); :};
+
+MethodStart ::= (MethodStart) {: RESULT=new MethodStart(); :} /* epsilon */;
+
+MethodName ::= (MethodName) TypeOrVoid:T1 IDENT:methodName {: RESULT=new MethodName(T1, methodName); RESULT.setLine(T1left); :};
 
 TypeOrVoid ::= (SomeType) Type:typeName {: RESULT=new SomeType(typeName); RESULT.setLine(typeNameleft); :}
-				|
-				(VoidType) VOID {: RESULT=new VoidType(); :}
-				; 
+				      |
+				      (VoidType) VOID {: RESULT=new VoidType(); :}
+				      ; 
 
-MaybeFormPars ::= FormPars:fp {: RESULT=new MaybeFormParsDerived1(fp); RESULT.setLine(fpleft); :} 
-				| {: RESULT=new MaybeFormParsDerived2(); :}
-				/* epsilon */
-				;
+MaybeFormPars ::= (FormParams) FormPars:fp {: RESULT=new FormParams(fp); RESULT.setLine(fpleft); :} 
+				      |
+				      (NoFormParams) {: RESULT=new NoFormParams(); :} /* epsilon */
+				      ;
 
 VarDeclList ::= (VarDeclListRec) VarDeclList:V1 VarDecl:var {: RESULT=new VarDeclListRec(V1, var); RESULT.setLine(V1left); :}
 				| {: RESULT=new VarDeclListDerived1(); :}
@@ -288,10 +293,10 @@ MaybeNumConst ::= COMMA NUM_CONST:N1 {: RESULT=new MaybeNumConstDerived1(N1); RE
 				/* epsilon */
 				;			
 
-ReturnExpression ::= Expr:e {: RESULT=new ReturnExpressionDerived1(e); RESULT.setLine(eleft); :}
-					| {: RESULT=new ReturnExpressionDerived2(); :}
-					/* epsilon */
-					;
+ReturnExpression ::= (ReturnExpressionE) Expr:e {: RESULT=new ReturnExpressionE(e); RESULT.setLine(eleft); :}
+					         |
+					         (NoReturnExpression) {: RESULT=new NoReturnExpression(); :} /* epsilon */
+					         ;
 					 
 			
 MaybeCondition ::= Condition:cond {: RESULT=new MaybeConditionDerived1(cond); RESULT.setLine(condleft); :}
@@ -373,13 +378,13 @@ Factor ::= (FactorDesignator) Designator:d MaybeParams:M1 {: RESULT=new FactorDe
 		(FactorExpression) LPAREN Expr:e RPAREN {: RESULT=new FactorExpression(e); RESULT.setLine(eleft); :}
 		;
 
-MaybeParams ::= LPAREN MaybeActualParams:params RPAREN {: RESULT=new MaybeParamsDerived1(params); RESULT.setLine(paramsleft); :}
-				| {: RESULT=new MaybeParamsDerived2(); :}
-				/* epsilon */
-				;
+MaybeParams ::= (ActualParamsBrackets) LPAREN MaybeActualParams:params RPAREN {: RESULT=new ActualParamsBrackets(params); RESULT.setLine(paramsleft); :}
+				      | {: RESULT=new MaybeParamsDerived1(); :}
+				      /* epsilon */
+				      ;
 				
-MaybeActualParams ::= ActPars:params {: RESULT=new MaybeActualParamsDerived1(params); RESULT.setLine(paramsleft); :}
-						| {: RESULT=new MaybeActualParamsDerived2(); :}
+MaybeActualParams ::= (ActualParams) ActPars:params {: RESULT=new ActualParams(params); RESULT.setLine(paramsleft); :}
+						| {: RESULT=new MaybeActualParamsDerived1(); :}
 						/* epsilon */
 						;
 				

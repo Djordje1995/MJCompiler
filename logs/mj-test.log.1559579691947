@@ -1,0 +1,47 @@
+INFO  18:13:26,106 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  18:13:26,153 - #2 program
+INFO  18:13:26,153 - #44 MJProgram
+INFO  18:13:26,153 - #43 const
+INFO  18:13:26,154 - #44 int
+INFO  18:13:26,154 - #44 a
+INFO  18:13:26,154 - #27 =
+INFO  18:13:26,155 - #45 3
+INFO  18:13:26,155 - #8 ,
+INFO  18:13:26,155 - #44 b
+INFO  18:13:26,155 - #27 =
+INFO  18:13:26,155 - #45 2
+INFO  18:13:26,155 - #5 ;
+INFO  18:13:26,156 - #3 {
+INFO  18:13:26,156 - #14 void
+INFO  18:13:26,156 - #44 main
+INFO  18:13:26,157 - #6 (
+INFO  18:13:26,157 - #7 )
+INFO  18:13:26,160 - #44 int
+INFO  18:13:26,161 - #44 c
+INFO  18:13:26,161 - #8 ,
+INFO  18:13:26,162 - #44 d
+INFO  18:13:26,162 - #5 ;
+INFO  18:13:26,162 - #3 {
+INFO  18:13:26,163 - #9 print
+INFO  18:13:26,163 - #6 (
+INFO  18:13:26,163 - #45 1
+INFO  18:13:26,163 - #7 )
+INFO  18:13:26,165 - #5 ;
+INFO  18:13:26,165 - #9 print
+INFO  18:13:26,165 - #6 (
+INFO  18:13:26,165 - #45 2
+INFO  18:13:26,165 - #7 )
+INFO  18:13:26,165 - #5 ;
+INFO  18:13:26,165 - #10 return
+INFO  18:13:26,165 - #5 ;
+INFO  18:13:26,166 - #4 }
+INFO  18:13:26,166 - #4 }
+INFO  18:13:26,176 - Definisana je konstanta a tipa Int sa vrednoscu 3 na liniji 5
+INFO  18:13:26,176 - Definisana je konstanta b tipa Int sa vrednoscu 2 na liniji 5
+INFO  18:13:26,176 - Deklarisana je lokalna promenljiva c tipa int na liniji 18
+INFO  18:13:26,176 - Deklarisana je lokalna promenljiva d tipa int na liniji 18
+INFO  18:13:26,176 - Definisana je metoda main tipa void na liniji 18
+INFO  18:13:26,176 - Globalnih promeljivih ima 0, a lokalnih 2
+INFO  18:13:26,176 - Print calls = 0
+INFO  18:13:26,177 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  18:13:26,183 - Parsiranje uspesno zavrseno!

@@ -1,0 +1,15 @@
+INFO  13:36:25,289 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  13:36:25,340 - #2 program
+INFO  13:36:25,340 - #44 MJProgram
+INFO  13:36:25,340 - #3 {
+INFO  13:36:25,341 - #44 int
+INFO  13:36:25,342 - #44 k
+INFO  13:36:25,343 - #6 (
+INFO  13:36:25,344 - #7 )
+INFO  13:36:25,345 - #44 int
+INFO  13:36:25,345 - #44 c
+INFO  13:36:25,345 - #5 ;
+INFO  13:36:25,347 - #3 {
+INFO  13:36:25,348 - #4 }
+INFO  13:36:25,349 - #4 }
+INFO  13:36:25,374 - Deklarisana je lokalna promenljiva c tipa int na liniji 13

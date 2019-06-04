@@ -1,37 +1,40 @@
-INFO  18:54:37,025 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
-INFO  18:54:37,045 - #2 program
-INFO  18:54:37,045 - #44 MJProgram
-INFO  18:54:37,045 - #44 int
-INFO  18:54:37,050 - #44 x
-INFO  18:54:37,050 - #5 ;
-INFO  18:54:37,050 - #44 int
-INFO  18:54:37,050 - #44 y
-INFO  18:54:37,050 - #5 ;
-INFO  18:54:37,050 - #44 int
-INFO  18:54:37,050 - #44 niz
-INFO  18:54:37,050 - #29 [
-INFO  18:54:37,050 - #30 ]
-INFO  18:54:37,050 - #8 ,
-INFO  18:54:37,050 - #44 neniz
-INFO  18:54:37,050 - #8 ,
-INFO  18:54:37,050 - #44 mojkurac
-INFO  18:54:37,050 - #8 ,
-INFO  18:54:37,050 - #44 mojikurci
-INFO  18:54:37,050 - #29 [
-INFO  18:54:37,050 - #30 ]
-INFO  18:54:37,050 - #5 ;
-INFO  18:54:37,050 - #44 char
-INFO  18:54:37,050 - #44 sp
-INFO  18:54:37,050 - #5 ;
-INFO  18:54:37,050 - #3 {
-INFO  18:54:37,050 - #4 }
-INFO  18:54:37,060 - Deklarisana je promenljiva x tipa int na liniji 2
-INFO  18:54:37,060 - Deklarisana je promenljiva y tipa int na liniji 3
-INFO  18:54:37,060 - Deklarisana je promenljiva niz tipa int array na liniji 4
-INFO  18:54:37,060 - Deklarisana je promenljiva neniz tipa int na liniji 4
-INFO  18:54:37,060 - Deklarisana je promenljiva mojkurac tipa int na liniji 4
-INFO  18:54:37,060 - Deklarisana je promenljiva mojikurci tipa int array na liniji 4
-INFO  18:54:37,060 - Deklarisana je promenljiva sp tipa char na liniji 10
-INFO  18:54:37,060 - Print calls = 0
-INFO  18:54:37,060 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
-INFO  18:54:37,065 - Parsiranje uspesno zavrseno!
+INFO  19:23:47,746 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  19:23:47,768 - #2 program
+INFO  19:23:47,768 - #44 MJProgram
+INFO  19:23:47,768 - #43 const
+INFO  19:23:47,768 - #44 int
+INFO  19:23:47,768 - #44 a
+INFO  19:23:47,768 - #27 =
+INFO  19:23:47,768 - #45 3
+INFO  19:23:47,768 - #8 ,
+INFO  19:23:47,768 - #44 b
+INFO  19:23:47,768 - #27 =
+INFO  19:23:47,768 - #45 2
+INFO  19:23:47,768 - #5 ;
+INFO  19:23:47,768 - #3 {
+INFO  19:23:47,768 - #14 void
+INFO  19:23:47,768 - #44 main
+INFO  19:23:47,768 - #6 (
+INFO  19:23:47,768 - #7 )
+INFO  19:23:47,768 - #3 {
+INFO  19:23:47,768 - #9 print
+INFO  19:23:47,768 - #6 (
+INFO  19:23:47,768 - #45 1
+INFO  19:23:47,768 - #7 )
+INFO  19:23:47,768 - #5 ;
+INFO  19:23:47,768 - #9 print
+INFO  19:23:47,768 - #6 (
+INFO  19:23:47,768 - #45 2
+INFO  19:23:47,768 - #7 )
+INFO  19:23:47,768 - #5 ;
+INFO  19:23:47,768 - #10 return
+INFO  19:23:47,768 - #5 ;
+INFO  19:23:47,768 - #4 }
+INFO  19:23:47,768 - #4 }
+INFO  19:23:47,783 - Definisana je konstanta a tipa Int sa vrednoscu 3 na liniji 2
+INFO  19:23:47,783 - Definisana je konstanta b tipa Int sa vrednoscu 2 na liniji 2
+INFO  19:23:47,783 - Definisana je metoda main tipa void na liniji 4
+INFO  19:23:47,783 - Globalnih promeljivih ima 0, a lokalnih 0
+INFO  19:23:47,783 - Print calls = 0
+INFO  19:23:47,783 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  19:23:47,783 - Parsiranje uspesno zavrseno!

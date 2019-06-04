@@ -1,0 +1,57 @@
+INFO  20:36:04,779 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  20:36:04,804 - #2 program
+INFO  20:36:04,804 - #44 MJProgram
+INFO  20:36:04,804 - #44 int
+INFO  20:36:04,804 - #44 x
+INFO  20:36:04,805 - #5 ;
+INFO  20:36:04,806 - #44 int
+INFO  20:36:04,806 - #44 y
+INFO  20:36:04,806 - #5 ;
+INFO  20:36:04,806 - #44 int
+INFO  20:36:04,806 - #44 niz
+INFO  20:36:04,806 - #29 [
+INFO  20:36:04,806 - #30 ]
+INFO  20:36:04,806 - #8 ,
+INFO  20:36:04,807 - #44 neniz
+INFO  20:36:04,807 - #8 ,
+INFO  20:36:04,807 - #44 mojkurac
+INFO  20:36:04,807 - #8 ,
+INFO  20:36:04,807 - #44 mojikurci
+INFO  20:36:04,807 - #29 [
+INFO  20:36:04,807 - #30 ]
+INFO  20:36:04,807 - #5 ;
+INFO  20:36:04,807 - #43 const
+INFO  20:36:04,808 - #44 int
+INFO  20:36:04,808 - #44 a
+INFO  20:36:04,808 - #27 =
+INFO  20:36:04,808 - #45 3
+INFO  20:36:04,808 - #8 ,
+INFO  20:36:04,809 - #44 b
+INFO  20:36:04,809 - #27 =
+INFO  20:36:04,809 - #46 true
+INFO  20:36:04,809 - #5 ;
+INFO  20:36:04,809 - #3 {
+INFO  20:36:04,809 - #14 void
+INFO  20:36:04,810 - #44 k
+INFO  20:36:04,810 - #6 (
+INFO  20:36:04,810 - #7 )
+INFO  20:36:04,811 - #44 int
+INFO  20:36:04,811 - #44 c
+INFO  20:36:04,811 - #5 ;
+INFO  20:36:04,811 - #3 {
+INFO  20:36:04,811 - #4 }
+INFO  20:36:04,811 - #4 }
+INFO  20:36:04,817 - Deklarisana je globalna promenljiva x tipa int na liniji 2
+INFO  20:36:04,817 - Deklarisana je globalna promenljiva y tipa int na liniji 3
+INFO  20:36:04,817 - Deklarisana je globalna promenljiva niz tipa int array na liniji 4
+INFO  20:36:04,817 - Deklarisana je globalna promenljiva neniz tipa int na liniji 4
+INFO  20:36:04,817 - Deklarisana je globalna promenljiva mojkurac tipa int na liniji 4
+INFO  20:36:04,817 - Deklarisana je globalna promenljiva mojikurci tipa int array na liniji 4
+INFO  20:36:04,817 - Definisana je konstanta a tipa Int sa vrednoscu 3 na liniji 5
+INFO  20:36:04,817 - Definisana je konstanta b tipa Bool sa vrednoscu true na liniji 5
+ERROR 20:36:04,817 - dodeljena vrednost nije odgovarajuceg tipa  na liniji 5
+INFO  20:36:04,817 - Deklarisana je lokalna promenljiva c tipa int na liniji 13
+INFO  20:36:04,817 - Definisana je metoda k tipa void na liniji 13
+INFO  20:36:04,817 - Globalnih promeljivih ima 6, a lokalnih 1
+INFO  20:36:04,818 - Print calls = 0
+ERROR 20:36:04,818 - Parsiranje NIJE uspesno zavrseno!

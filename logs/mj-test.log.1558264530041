@@ -1,0 +1,38 @@
+INFO  12:38:34,899 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  12:38:34,925 - #2 program
+INFO  12:38:34,925 - #44 MJProgram
+INFO  12:38:34,926 - #44 int
+INFO  12:38:34,926 - #44 x
+INFO  12:38:34,926 - #5 ;
+INFO  12:38:34,927 - #44 int
+INFO  12:38:34,928 - #44 y
+INFO  12:38:34,928 - #5 ;
+INFO  12:38:34,928 - #44 int
+INFO  12:38:34,928 - #44 niz
+INFO  12:38:34,928 - #29 [
+INFO  12:38:34,928 - #30 ]
+INFO  12:38:34,928 - #8 ,
+INFO  12:38:34,929 - #44 neniz
+INFO  12:38:34,929 - #8 ,
+INFO  12:38:34,929 - #44 mojkurac
+INFO  12:38:34,929 - #8 ,
+INFO  12:38:34,929 - #44 mojikurci
+INFO  12:38:34,929 - #29 [
+INFO  12:38:34,929 - #30 ]
+INFO  12:38:34,929 - #5 ;
+INFO  12:38:34,929 - #44 char
+INFO  12:38:34,929 - #44 sp
+INFO  12:38:34,929 - #5 ;
+INFO  12:38:34,929 - #3 {
+INFO  12:38:34,929 - #4 }
+INFO  12:38:34,940 - Deklarisana je promenljiva x tipa int na liniji 2
+INFO  12:38:34,940 - Deklarisana je promenljiva y tipa int na liniji 3
+INFO  12:38:34,940 - Deklarisana je promenljiva niz tipa int array na liniji 4
+INFO  12:38:34,940 - Deklarisana je promenljiva neniz tipa int na liniji 4
+INFO  12:38:34,940 - Deklarisana je promenljiva mojkurac tipa int na liniji 4
+INFO  12:38:34,940 - Deklarisana je promenljiva mojikurci tipa int array na liniji 4
+INFO  12:38:34,940 - Deklarisana je promenljiva sp tipa char na liniji 10
+INFO  12:38:34,940 - Globalnih promeljivih ima 7, a lokalnih 0
+INFO  12:38:34,940 - Print calls = 0
+INFO  12:38:34,941 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  12:38:34,946 - Parsiranje uspesno zavrseno!

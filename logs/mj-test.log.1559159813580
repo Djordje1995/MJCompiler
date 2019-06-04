@@ -1,0 +1,40 @@
+INFO  21:55:08,142 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  21:55:08,167 - #2 program
+INFO  21:55:08,167 - #44 MJProgram
+INFO  21:55:08,167 - #43 const
+INFO  21:55:08,168 - #44 int
+INFO  21:55:08,168 - #44 a
+INFO  21:55:08,168 - #27 =
+INFO  21:55:08,168 - #45 3
+INFO  21:55:08,168 - #8 ,
+INFO  21:55:08,169 - #44 b
+INFO  21:55:08,169 - #27 =
+INFO  21:55:08,169 - #45 2
+INFO  21:55:08,169 - #5 ;
+INFO  21:55:08,169 - #3 {
+INFO  21:55:08,170 - #44 int
+INFO  21:55:08,170 - #44 main
+INFO  21:55:08,170 - #6 (
+INFO  21:55:08,171 - #7 )
+INFO  21:55:08,171 - #44 int
+INFO  21:55:08,171 - #44 c
+INFO  21:55:08,171 - #8 ,
+INFO  21:55:08,172 - #44 d
+INFO  21:55:08,172 - #5 ;
+INFO  21:55:08,172 - #3 {
+INFO  21:55:08,177 - #9 print
+INFO  21:55:08,178 - #6 (
+INFO  21:55:08,178 - #44 a
+INFO  21:55:08,178 - #7 )
+INFO  21:55:08,180 - #5 ;
+INFO  21:55:08,180 - #4 }
+INFO  21:55:08,180 - #4 }
+INFO  21:55:08,189 - Definisana je konstanta a tipa Int sa vrednoscu 3 na liniji 5
+INFO  21:55:08,189 - Definisana je konstanta b tipa Int sa vrednoscu 2 na liniji 5
+INFO  21:55:08,189 - Deklarisana je lokalna promenljiva c tipa int na liniji 18
+INFO  21:55:08,189 - Deklarisana je lokalna promenljiva d tipa int na liniji 18
+INFO  21:55:08,189 - Definisana je metoda main tipa int na liniji 18
+INFO  21:55:08,189 - Globalnih promeljivih ima 0, a lokalnih 2
+INFO  21:55:08,189 - Print calls = 0
+INFO  21:55:08,190 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  21:55:08,195 - Parsiranje uspesno zavrseno!

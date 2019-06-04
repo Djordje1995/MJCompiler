@@ -1,0 +1,38 @@
+INFO  21:54:55,953 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  21:54:55,978 - #2 program
+INFO  21:54:55,978 - #44 MJProgram
+INFO  21:54:55,978 - #43 const
+INFO  21:54:55,978 - #44 int
+INFO  21:54:55,978 - #44 a
+INFO  21:54:55,978 - #27 =
+INFO  21:54:55,978 - #45 3
+INFO  21:54:55,978 - #8 ,
+INFO  21:54:55,978 - #44 b
+INFO  21:54:55,978 - #27 =
+INFO  21:54:55,978 - #45 2
+INFO  21:54:55,978 - #5 ;
+INFO  21:54:55,978 - #3 {
+INFO  21:54:55,978 - #44 int
+INFO  21:54:55,978 - #44 main
+INFO  21:54:55,978 - #6 (
+INFO  21:54:55,983 - #7 )
+INFO  21:54:55,983 - #44 int
+INFO  21:54:55,983 - #44 c
+INFO  21:54:55,983 - #8 ,
+INFO  21:54:55,984 - #44 d
+INFO  21:54:55,984 - #5 ;
+INFO  21:54:55,984 - #3 {
+INFO  21:54:55,988 - #9 print
+INFO  21:54:55,988 - #6 (
+INFO  21:54:55,988 - #44 a
+INFO  21:54:55,988 - #7 )
+INFO  21:54:55,993 - #5 ;
+INFO  21:54:55,993 - #10 return
+INFO  21:54:55,993 - #45 0
+INFO  21:54:55,993 - #5 ;
+INFO  21:54:55,993 - #4 }
+INFO  21:54:55,993 - #4 }
+INFO  21:54:56,008 - Definisana je konstanta a tipa Int sa vrednoscu 3 na liniji 5
+INFO  21:54:56,008 - Definisana je konstanta b tipa Int sa vrednoscu 2 na liniji 5
+INFO  21:54:56,008 - Deklarisana je lokalna promenljiva c tipa int na liniji 18
+INFO  21:54:56,008 - Deklarisana je lokalna promenljiva d tipa int na liniji 18

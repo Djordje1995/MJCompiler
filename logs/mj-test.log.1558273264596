@@ -1,0 +1,14 @@
+INFO  14:22:23,724 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  14:22:23,769 - #2 program
+INFO  14:22:23,769 - #44 MJProgram
+INFO  14:22:23,769 - #3 {
+INFO  14:22:23,770 - #14 void
+INFO  14:22:23,770 - #44 k
+INFO  14:22:23,771 - #6 (
+INFO  14:22:23,771 - #7 )
+INFO  14:22:23,772 - #44 int
+INFO  14:22:23,772 - #44 c
+INFO  14:22:23,773 - #5 ;
+INFO  14:22:23,774 - #3 {
+INFO  14:22:23,775 - #4 }
+INFO  14:22:23,775 - #4 }

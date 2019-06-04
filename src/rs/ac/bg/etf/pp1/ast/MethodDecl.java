@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 18/4/2019 18:19:46
+// 3/5/2019 19:19:33
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -11,38 +11,31 @@ public class MethodDecl implements SyntaxNode {
     private int line;
     public rs.etf.pp1.symboltable.concepts.Obj obj = null;
 
-    private TypeOrVoid TypeOrVoid;
-    private String methName;
+    private MethodName MethodName;
     private MaybeFormPars MaybeFormPars;
     private VarDeclList VarDeclList;
+    private MethodStart MethodStart;
     private StatementList StatementList;
 
-    public MethodDecl (TypeOrVoid TypeOrVoid, String methName, MaybeFormPars MaybeFormPars, VarDeclList VarDeclList, StatementList StatementList) {
-        this.TypeOrVoid=TypeOrVoid;
-        if(TypeOrVoid!=null) TypeOrVoid.setParent(this);
-        this.methName=methName;
+    public MethodDecl (MethodName MethodName, MaybeFormPars MaybeFormPars, VarDeclList VarDeclList, MethodStart MethodStart, StatementList StatementList) {
+        this.MethodName=MethodName;
+        if(MethodName!=null) MethodName.setParent(this);
         this.MaybeFormPars=MaybeFormPars;
         if(MaybeFormPars!=null) MaybeFormPars.setParent(this);
         this.VarDeclList=VarDeclList;
         if(VarDeclList!=null) VarDeclList.setParent(this);
+        this.MethodStart=MethodStart;
+        if(MethodStart!=null) MethodStart.setParent(this);
         this.StatementList=StatementList;
         if(StatementList!=null) StatementList.setParent(this);
     }
 
-    public TypeOrVoid getTypeOrVoid() {
-        return TypeOrVoid;
+    public MethodName getMethodName() {
+        return MethodName;
     }
 
-    public void setTypeOrVoid(TypeOrVoid TypeOrVoid) {
-        this.TypeOrVoid=TypeOrVoid;
-    }
-
-    public String getMethName() {
-        return methName;
-    }
-
-    public void setMethName(String methName) {
-        this.methName=methName;
+    public void setMethodName(MethodName MethodName) {
+        this.MethodName=MethodName;
     }
 
     public MaybeFormPars getMaybeFormPars() {
@@ -59,6 +52,14 @@ public class MethodDecl implements SyntaxNode {
 
     public void setVarDeclList(VarDeclList VarDeclList) {
         this.VarDeclList=VarDeclList;
+    }
+
+    public MethodStart getMethodStart() {
+        return MethodStart;
+    }
+
+    public void setMethodStart(MethodStart MethodStart) {
+        this.MethodStart=MethodStart;
     }
 
     public StatementList getStatementList() {
@@ -90,24 +91,27 @@ public class MethodDecl implements SyntaxNode {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(TypeOrVoid!=null) TypeOrVoid.accept(visitor);
+        if(MethodName!=null) MethodName.accept(visitor);
         if(MaybeFormPars!=null) MaybeFormPars.accept(visitor);
         if(VarDeclList!=null) VarDeclList.accept(visitor);
+        if(MethodStart!=null) MethodStart.accept(visitor);
         if(StatementList!=null) StatementList.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(TypeOrVoid!=null) TypeOrVoid.traverseTopDown(visitor);
+        if(MethodName!=null) MethodName.traverseTopDown(visitor);
         if(MaybeFormPars!=null) MaybeFormPars.traverseTopDown(visitor);
         if(VarDeclList!=null) VarDeclList.traverseTopDown(visitor);
+        if(MethodStart!=null) MethodStart.traverseTopDown(visitor);
         if(StatementList!=null) StatementList.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(TypeOrVoid!=null) TypeOrVoid.traverseBottomUp(visitor);
+        if(MethodName!=null) MethodName.traverseBottomUp(visitor);
         if(MaybeFormPars!=null) MaybeFormPars.traverseBottomUp(visitor);
         if(VarDeclList!=null) VarDeclList.traverseBottomUp(visitor);
+        if(MethodStart!=null) MethodStart.traverseBottomUp(visitor);
         if(StatementList!=null) StatementList.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -117,13 +121,10 @@ public class MethodDecl implements SyntaxNode {
         buffer.append(tab);
         buffer.append("MethodDecl(\n");
 
-        if(TypeOrVoid!=null)
-            buffer.append(TypeOrVoid.toString("  "+tab));
+        if(MethodName!=null)
+            buffer.append(MethodName.toString("  "+tab));
         else
             buffer.append(tab+"  null");
-        buffer.append("\n");
-
-        buffer.append(" "+tab+methName);
         buffer.append("\n");
 
         if(MaybeFormPars!=null)
@@ -134,6 +135,12 @@ public class MethodDecl implements SyntaxNode {
 
         if(VarDeclList!=null)
             buffer.append(VarDeclList.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        if(MethodStart!=null)
+            buffer.append(MethodStart.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

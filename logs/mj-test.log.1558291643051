@@ -1,0 +1,27 @@
+INFO  20:46:37,960 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  20:46:37,984 - #2 program
+INFO  20:46:37,984 - #44 MJProgram
+INFO  20:46:37,984 - #43 const
+INFO  20:46:37,985 - #44 bool
+INFO  20:46:37,985 - #44 m
+INFO  20:46:37,985 - #27 =
+INFO  20:46:37,985 - #45 5
+INFO  20:46:37,985 - #5 ;
+INFO  20:46:37,986 - #3 {
+INFO  20:46:37,986 - #14 void
+INFO  20:46:37,987 - #44 k
+INFO  20:46:37,987 - #6 (
+INFO  20:46:37,987 - #7 )
+INFO  20:46:37,987 - #44 int
+INFO  20:46:37,988 - #44 c
+INFO  20:46:37,988 - #5 ;
+INFO  20:46:37,989 - #3 {
+INFO  20:46:37,989 - #4 }
+INFO  20:46:37,990 - #4 }
+INFO  20:46:37,997 - Definisana je konstanta m tipa Int sa vrednoscu 5 na liniji 6
+ERROR 20:46:37,997 - dodeljena vrednost nije odgovarajuceg tipa  na liniji 6
+INFO  20:46:38,001 - Deklarisana je lokalna promenljiva c tipa int na liniji 13
+INFO  20:46:38,001 - Definisana je metoda k tipa void na liniji 13
+INFO  20:46:38,001 - Globalnih promeljivih ima 0, a lokalnih 1
+INFO  20:46:38,001 - Print calls = 0
+ERROR 20:46:38,001 - Parsiranje NIJE uspesno zavrseno!

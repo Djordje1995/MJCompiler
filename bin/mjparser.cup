@@ -70,9 +70,9 @@ nonterminal DesignatorStatement, StatementList, Statement, Addop, Mulop, Relop, 
 nonterminal MaybeNumConst, ReturnExpression, MaybeCondition, MaybeDesignatorStatement, IdentConst;
 nonterminal MulopFactorList, AddopTermList, CondFact, CondFactAnd, CondTerm, CondTermOr, Condition;
 nonterminal MaybeActualParams, MaybeParams, MaybeMinus, MaybeRelopExpr, TypeOrVoid, Matched, Unmatched;
-nonterminal EnumParamList, EnumParam, EnumName, Declaration, VarName, VarList;
+nonterminal EnumParamList, EnumParam, EnumName, Declaration, VarName, VarList, MethodStart;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgName, Designator, MethodDecl; 
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgName, MethodDecl, MethodName, Designator; 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Term, Expr, Factor, VarDeclList; 
 
 Program ::= (Program) PROGRAM ProgName:name DeclarationList LBRACE MethodDeclList RBRACE;
@@ -172,17 +172,21 @@ InterfaceMethodDeclList ::= (InterfaceMethodDeclListRec) InterfaceMethodDeclList
 
 InterfaceMethodDecl ::= (InterfaceMethodDecl) TypeOrVoid IDENT LPAREN MaybeFormPars RPAREN SEMI;
 
-MethodDecl ::= (MethodDecl) TypeOrVoid IDENT:methName LPAREN MaybeFormPars RPAREN VarDeclList LBRACE StatementList RBRACE;
+MethodDecl ::= (MethodDecl) MethodName LPAREN MaybeFormPars RPAREN VarDeclList LBRACE MethodStart StatementList RBRACE;
+
+MethodStart ::= (MethodStart) /* epsilon */;
+
+MethodName ::= (MethodName) TypeOrVoid IDENT:methodName;
 
 TypeOrVoid ::= (SomeType) Type:typeName
-				|
-				(VoidType) VOID
-				; 
+				      |
+				      (VoidType) VOID
+				      ; 
 
-MaybeFormPars ::= FormPars:fp 
-				|
-				/* epsilon */
-				;
+MaybeFormPars ::= (FormParams) FormPars:fp 
+				      |
+				      (NoFormParams) /* epsilon */
+				      ;
 
 VarDeclList ::= (VarDeclListRec) VarDeclList VarDecl:var
 				|
@@ -242,10 +246,10 @@ MaybeNumConst ::= COMMA NUM_CONST
 				/* epsilon */
 				;			
 
-ReturnExpression ::= Expr:e
-					|
-					/* epsilon */
-					;
+ReturnExpression ::= (ReturnExpressionE) Expr:e
+					         |
+					         (NoReturnExpression) /* epsilon */
+					         ;
 					 
 			
 MaybeCondition ::= Condition:cond
@@ -327,12 +331,12 @@ Factor ::= (FactorDesignator) Designator:d MaybeParams
 		(FactorExpression) LPAREN Expr:e RPAREN
 		;
 
-MaybeParams ::= LPAREN MaybeActualParams:params RPAREN
-				|
-				/* epsilon */
-				;
+MaybeParams ::= (ActualParamsBrackets) LPAREN MaybeActualParams:params RPAREN
+				      |
+				      /* epsilon */
+				      ;
 				
-MaybeActualParams ::= ActPars:params
+MaybeActualParams ::= (ActualParams) ActPars:params
 						|
 						/* epsilon */
 						;

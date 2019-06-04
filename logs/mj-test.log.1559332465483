@@ -1,0 +1,22 @@
+INFO  22:04:24,013 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  22:04:24,041 - #2 program
+INFO  22:04:24,042 - #44 MJProgram
+INFO  22:04:24,042 - #43 const
+INFO  22:04:24,042 - #44 int
+INFO  22:04:24,042 - #44 a
+INFO  22:04:24,043 - #27 =
+INFO  22:04:24,043 - #45 3
+INFO  22:04:24,043 - #8 ,
+INFO  22:04:24,043 - #44 b
+INFO  22:04:24,043 - #27 =
+INFO  22:04:24,043 - #45 2
+INFO  22:04:24,043 - #5 ;
+INFO  22:04:24,044 - #3 {
+INFO  22:04:24,044 - #9 print
+ERROR 22:04:24,044 - 
+Sintaksna greska na liniji 20
+ERROR 22:04:24,044 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 20
+INFO  22:04:24,049 - Definisana je konstanta a tipa Int sa vrednoscu 3 na liniji 5
+INFO  22:04:24,050 - Definisana je konstanta b tipa Int sa vrednoscu 2 na liniji 5
+INFO  22:04:24,054 - Print calls = 0
+ERROR 22:04:24,054 - Parsiranje NIJE uspesno zavrseno!

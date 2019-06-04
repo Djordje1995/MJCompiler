@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 18/4/2019 18:19:46
+// 3/5/2019 19:19:33
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -67,10 +67,10 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(DesignatorRefMember DesignatorRefMember) { visit(); }
     public void visit(MaybeExpressionDerived2 MaybeExpressionDerived2) { visit(); }
     public void visit(MaybeExpressionDerived1 MaybeExpressionDerived1) { visit(); }
-    public void visit(MaybeActualParamsDerived2 MaybeActualParamsDerived2) { visit(); }
     public void visit(MaybeActualParamsDerived1 MaybeActualParamsDerived1) { visit(); }
-    public void visit(MaybeParamsDerived2 MaybeParamsDerived2) { visit(); }
+    public void visit(ActualParams ActualParams) { visit(); }
     public void visit(MaybeParamsDerived1 MaybeParamsDerived1) { visit(); }
+    public void visit(ActualParamsBrackets ActualParamsBrackets) { visit(); }
     public void visit(FactorExpression FactorExpression) { visit(); }
     public void visit(FactorNewType FactorNewType) { visit(); }
     public void visit(FactorBool FactorBool) { visit(); }
@@ -105,8 +105,8 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(MaybeDesignatorStatementDerived1 MaybeDesignatorStatementDerived1) { visit(); }
     public void visit(MaybeConditionDerived2 MaybeConditionDerived2) { visit(); }
     public void visit(MaybeConditionDerived1 MaybeConditionDerived1) { visit(); }
-    public void visit(ReturnExpressionDerived2 ReturnExpressionDerived2) { visit(); }
-    public void visit(ReturnExpressionDerived1 ReturnExpressionDerived1) { visit(); }
+    public void visit(NoReturnExpression NoReturnExpression) { visit(); }
+    public void visit(ReturnExpressionE ReturnExpressionE) { visit(); }
     public void visit(MaybeNumConstDerived2 MaybeNumConstDerived2) { visit(); }
     public void visit(MaybeNumConstDerived1 MaybeNumConstDerived1) { visit(); }
     public void visit(StatementListDerived1 StatementListDerived1) { visit(); }
@@ -132,10 +132,12 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(FormPars FormPars) { visit(); }
     public void visit(VarDeclListDerived1 VarDeclListDerived1) { visit(); }
     public void visit(VarDeclListRec VarDeclListRec) { visit(); }
-    public void visit(MaybeFormParsDerived2 MaybeFormParsDerived2) { visit(); }
-    public void visit(MaybeFormParsDerived1 MaybeFormParsDerived1) { visit(); }
+    public void visit(NoFormParams NoFormParams) { visit(); }
+    public void visit(FormParams FormParams) { visit(); }
     public void visit(VoidType VoidType) { visit(); }
     public void visit(SomeType SomeType) { visit(); }
+    public void visit(MethodName MethodName) { visit(); }
+    public void visit(MethodStart MethodStart) { visit(); }
     public void visit(MethodDecl MethodDecl) { visit(); }
     public void visit(InterfaceMethodDecl InterfaceMethodDecl) { visit(); }
     public void visit(InterfaceMethodDeclListDerived1 InterfaceMethodDeclListDerived1) { visit(); }

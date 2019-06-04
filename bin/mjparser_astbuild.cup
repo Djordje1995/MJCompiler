@@ -73,7 +73,6 @@ nonterminal ClassDecl ClassDecl;
 nonterminal MaybeMethodDecl MaybeMethodDecl;
 nonterminal MaybeImplements MaybeImplements;
 nonterminal TypeList TypeList;
-nonterminal IdentList IdentList;
 nonterminal MethodDeclList MethodDeclList;
 nonterminal VarDecl VarDecl;
 nonterminal MaybeFormPars MaybeFormPars;
@@ -115,15 +114,23 @@ nonterminal Unmatched Unmatched;
 nonterminal EnumParamList EnumParamList;
 nonterminal EnumParam EnumParam;
 nonterminal EnumName EnumName;
+nonterminal Declaration Declaration;
+nonterminal VarName VarName;
+nonterminal VarList VarList;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgName, Designator, MethodDecl; 
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgName, MethodDecl, MethodName, Designator; 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Term, Expr, Factor, VarDeclList; 
 
-Program ::= (Program) PROGRAM ProgName:p DeclarationList:D1 LBRACE MethodDeclList:M2 RBRACE {: RESULT=new Program(p, D1, M2); RESULT.setLine(pleft); :};
+Program ::= (Program) PROGRAM ProgName:name DeclarationList:D1 LBRACE MethodDeclList:M2 RBRACE {: RESULT=new Program(name, D1, M2); RESULT.setLine(nameleft); :};
 
 ProgName ::= (ProgName) IDENT:progName {: RESULT=new ProgName(progName); RESULT.setLine(progNameleft); :};  
 
-DeclarationList ::= (ConstDeclaration) ConstDecl:C1 {: RESULT=new ConstDeclaration(C1); RESULT.setLine(C1left); :}
+DeclarationList ::= (DeclarationsList) DeclarationList:D1 Declaration:D2 {: RESULT=new DeclarationsList(D1, D2); RESULT.setLine(D1left); :}
+                  |
+                  (NoDeclaration) {: RESULT=new NoDeclaration(); :} /* epsilon */
+                  ;
+
+Declaration ::= (ConstDeclaration) ConstDecl:C1 {: RESULT=new ConstDeclaration(C1); RESULT.setLine(C1left); :}
 					|
 					(VarDeclaration) VarDecl:V1 {: RESULT=new VarDeclaration(V1); RESULT.setLine(V1left); :}
 					|
@@ -161,15 +168,17 @@ EnumParamList ::= (EnumParamsList) EnumParamList:E1 COMMA EnumParam:E2 {: RESULT
                   (NoEnumParamsList) {: RESULT=new NoEnumParamsList(); :} /* epsilon */
                   ; 
 
-MaybeAssignNumConst ::= ASSIGN NUM_CONST:value {: RESULT=new MaybeAssignNumConstDerived1(value); RESULT.setLine(valueleft); :}
-				| {: RESULT=new MaybeAssignNumConstDerived2(); :}
-				/* epsilon */
-				;
+MaybeAssignNumConst ::= (EnumAssignNumConst) ASSIGN NUM_CONST:value {: RESULT=new EnumAssignNumConst(value); RESULT.setLine(valueleft); :}
+				              | {: RESULT=new MaybeAssignNumConstDerived1(); :}
+				              /* epsilon */
+				              ;
 
-VarDecl ::= (VarDecl) Type:t IDENT:varName MaybeEmptySquareBrackets:M1 IdentList:I2 SEMI {: RESULT=new VarDecl(t, varName, M1, I2); RESULT.setLine(tleft); :};
+VarDecl ::= (VarDecl) Type:t VarName:name VarList:V1 SEMI {: RESULT=new VarDecl(t, name, V1); RESULT.setLine(tleft); :};
 
-IdentList ::= (IdentListRec) IdentList:I1 COMMA IDENT:I2 MaybeEmptySquareBrackets:M3 {: RESULT=new IdentListRec(I1, I2, M3); RESULT.setLine(I1left); :}
-				| {: RESULT=new IdentListDerived1(); :}
+VarName ::= (VarName) IDENT:varName MaybeEmptySquareBrackets:M1 {: RESULT=new VarName(varName, M1); RESULT.setLine(varNameleft); :};
+
+VarList ::= (VarListRec) VarList:V1 COMMA VarName:name {: RESULT=new VarListRec(V1, name); RESULT.setLine(V1left); :}
+				| {: RESULT=new VarListDerived1(); :}
 				/* epsilon */
 				;
 
@@ -209,12 +218,14 @@ InterfaceMethodDeclList ::= (InterfaceMethodDeclListRec) InterfaceMethodDeclList
 
 InterfaceMethodDecl ::= (InterfaceMethodDecl) TypeOrVoid:T1 IDENT:I2 LPAREN MaybeFormPars:M3 RPAREN SEMI {: RESULT=new InterfaceMethodDecl(T1, I2, M3); RESULT.setLine(T1left); :};
 
-MethodDecl ::= (MethodDecl) TypeOrVoid:T1 IDENT:methName LPAREN MaybeFormPars:M2 RPAREN VarDeclList:V3 LBRACE StatementList:S4 RBRACE {: RESULT=new MethodDecl(T1, methName, M2, V3, S4); RESULT.setLine(T1left); :};
+MethodDecl ::= (MethodDecl) MethodName:M1 LPAREN MaybeFormPars:M2 RPAREN VarDeclList:V3 LBRACE StatementList:S4 RBRACE {: RESULT=new MethodDecl(M1, M2, V3, S4); RESULT.setLine(M1left); :};
+
+MethodName ::= (MethodName) TypeOrVoid:T1 IDENT:methodName {: RESULT=new MethodName(T1, methodName); RESULT.setLine(T1left); :};
 
 TypeOrVoid ::= (SomeType) Type:typeName {: RESULT=new SomeType(typeName); RESULT.setLine(typeNameleft); :}
-				|
-				(VoidType) VOID {: RESULT=new VoidType(); :}
-				; 
+				      |
+				      (VoidType) VOID {: RESULT=new VoidType(); :}
+				      ; 
 
 MaybeFormPars ::= FormPars:fp {: RESULT=new MaybeFormParsDerived1(fp); RESULT.setLine(fpleft); :} 
 				| {: RESULT=new MaybeFormParsDerived2(); :}
@@ -228,9 +239,9 @@ VarDeclList ::= (VarDeclListRec) VarDeclList:V1 VarDecl:var {: RESULT=new VarDec
 
 FormPars ::= (FormPars) Type:t IDENT:I1 MaybeEmptySquareBrackets:M2 FormParsList:l {: RESULT=new FormPars(t, I1, M2, l); RESULT.setLine(tleft); :};
 
-MaybeEmptySquareBrackets ::= LSQUAREB RSQUAREB {: RESULT=new MaybeEmptySquareBracketsDerived1(); :}
-							| {: RESULT=new MaybeEmptySquareBracketsDerived2(); :}
-							/* epsilon */
+MaybeEmptySquareBrackets ::= (EmptySquareBrackets) LSQUAREB RSQUAREB {: RESULT=new EmptySquareBrackets(); :}
+							|
+							(NoSquareBrackets) {: RESULT=new NoSquareBrackets(); :} /* epsilon */
 							;			
 
 FormParsList ::= (FormParsListRec) FormParsList:F1 COMMA Type:t IDENT:I2 MaybeEmptySquareBrackets:M3 {: RESULT=new FormParsListRec(F1, t, I2, M3); RESULT.setLine(F1left); :}
@@ -279,10 +290,10 @@ MaybeNumConst ::= COMMA NUM_CONST:N1 {: RESULT=new MaybeNumConstDerived1(N1); RE
 				/* epsilon */
 				;			
 
-ReturnExpression ::= Expr:e {: RESULT=new ReturnExpressionDerived1(e); RESULT.setLine(eleft); :}
-					| {: RESULT=new ReturnExpressionDerived2(); :}
-					/* epsilon */
-					;
+ReturnExpression ::= (ReturnExpressionE) Expr:e {: RESULT=new ReturnExpressionE(e); RESULT.setLine(eleft); :}
+					         |
+					         (NoReturnExpression) {: RESULT=new NoReturnExpression(); :} /* epsilon */
+					         ;
 					 
 			
 MaybeCondition ::= Condition:cond {: RESULT=new MaybeConditionDerived1(cond); RESULT.setLine(condleft); :}

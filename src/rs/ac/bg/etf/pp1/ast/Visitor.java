@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 18/4/2019 18:19:46
+// 3/5/2019 19:19:33
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -67,10 +67,10 @@ public interface Visitor {
     public void visit(DesignatorRefMember DesignatorRefMember);
     public void visit(MaybeExpressionDerived2 MaybeExpressionDerived2);
     public void visit(MaybeExpressionDerived1 MaybeExpressionDerived1);
-    public void visit(MaybeActualParamsDerived2 MaybeActualParamsDerived2);
     public void visit(MaybeActualParamsDerived1 MaybeActualParamsDerived1);
-    public void visit(MaybeParamsDerived2 MaybeParamsDerived2);
+    public void visit(ActualParams ActualParams);
     public void visit(MaybeParamsDerived1 MaybeParamsDerived1);
+    public void visit(ActualParamsBrackets ActualParamsBrackets);
     public void visit(FactorExpression FactorExpression);
     public void visit(FactorNewType FactorNewType);
     public void visit(FactorBool FactorBool);
@@ -105,8 +105,8 @@ public interface Visitor {
     public void visit(MaybeDesignatorStatementDerived1 MaybeDesignatorStatementDerived1);
     public void visit(MaybeConditionDerived2 MaybeConditionDerived2);
     public void visit(MaybeConditionDerived1 MaybeConditionDerived1);
-    public void visit(ReturnExpressionDerived2 ReturnExpressionDerived2);
-    public void visit(ReturnExpressionDerived1 ReturnExpressionDerived1);
+    public void visit(NoReturnExpression NoReturnExpression);
+    public void visit(ReturnExpressionE ReturnExpressionE);
     public void visit(MaybeNumConstDerived2 MaybeNumConstDerived2);
     public void visit(MaybeNumConstDerived1 MaybeNumConstDerived1);
     public void visit(StatementListDerived1 StatementListDerived1);
@@ -132,10 +132,12 @@ public interface Visitor {
     public void visit(FormPars FormPars);
     public void visit(VarDeclListDerived1 VarDeclListDerived1);
     public void visit(VarDeclListRec VarDeclListRec);
-    public void visit(MaybeFormParsDerived2 MaybeFormParsDerived2);
-    public void visit(MaybeFormParsDerived1 MaybeFormParsDerived1);
+    public void visit(NoFormParams NoFormParams);
+    public void visit(FormParams FormParams);
     public void visit(VoidType VoidType);
     public void visit(SomeType SomeType);
+    public void visit(MethodName MethodName);
+    public void visit(MethodStart MethodStart);
     public void visit(MethodDecl MethodDecl);
     public void visit(InterfaceMethodDecl InterfaceMethodDecl);
     public void visit(InterfaceMethodDeclListDerived1 InterfaceMethodDeclListDerived1);
