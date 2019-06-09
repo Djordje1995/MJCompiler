@@ -1,25 +1,13 @@
 // generated with ast extension for cup
 // version 0.8
-// 3/5/2019 19:19:33
+// 8/5/2019 18:57:42
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class DesignatorDec extends DesignatorStatement {
+public class DesignatorDec extends DesignatorStatementOp {
 
-    private Designator Designator;
-
-    public DesignatorDec (Designator Designator) {
-        this.Designator=Designator;
-        if(Designator!=null) Designator.setParent(this);
-    }
-
-    public Designator getDesignator() {
-        return Designator;
-    }
-
-    public void setDesignator(Designator Designator) {
-        this.Designator=Designator;
+    public DesignatorDec () {
     }
 
     public void accept(Visitor visitor) {
@@ -27,16 +15,13 @@ public class DesignatorDec extends DesignatorStatement {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(Designator!=null) Designator.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(Designator!=null) Designator.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(Designator!=null) Designator.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -44,12 +29,6 @@ public class DesignatorDec extends DesignatorStatement {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
         buffer.append("DesignatorDec(\n");
-
-        if(Designator!=null)
-            buffer.append(Designator.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
-        buffer.append("\n");
 
         buffer.append(tab);
         buffer.append(") [DesignatorDec]");

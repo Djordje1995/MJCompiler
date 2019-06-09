@@ -1,0 +1,56 @@
+INFO  21:22:30,992 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  21:22:31,029 - #2 program
+INFO  21:22:31,029 - #44 MJProgram
+INFO  21:22:31,029 - #43 const
+INFO  21:22:31,029 - #44 int
+INFO  21:22:31,029 - #44 a
+INFO  21:22:31,029 - #27 =
+INFO  21:22:31,029 - #45 3
+INFO  21:22:31,029 - #8 ,
+INFO  21:22:31,029 - #44 b
+INFO  21:22:31,029 - #27 =
+INFO  21:22:31,029 - #45 2
+INFO  21:22:31,029 - #5 ;
+INFO  21:22:31,029 - #42 enum
+INFO  21:22:31,029 - #44 dani
+INFO  21:22:31,029 - #3 {
+INFO  21:22:31,029 - #44 pon
+INFO  21:22:31,029 - #8 ,
+INFO  21:22:31,045 - #44 uto
+INFO  21:22:31,045 - #8 ,
+INFO  21:22:31,045 - #44 sre
+INFO  21:22:31,045 - #4 }
+INFO  21:22:31,045 - #3 {
+INFO  21:22:31,045 - #14 void
+INFO  21:22:31,045 - #44 main
+INFO  21:22:31,045 - #6 (
+INFO  21:22:31,045 - #7 )
+INFO  21:22:31,045 - #3 {
+INFO  21:22:31,045 - #9 print
+INFO  21:22:31,045 - #6 (
+INFO  21:22:31,045 - #44 a
+INFO  21:22:31,045 - #7 )
+INFO  21:22:31,045 - #5 ;
+INFO  21:22:31,045 - #9 print
+INFO  21:22:31,045 - #6 (
+INFO  21:22:31,045 - #44 dani
+INFO  21:22:31,045 - #28 .
+INFO  21:22:31,045 - #44 pon
+INFO  21:22:31,045 - #7 )
+INFO  21:22:31,045 - #5 ;
+INFO  21:22:31,045 - #10 return
+INFO  21:22:31,045 - #5 ;
+INFO  21:22:31,045 - #4 }
+INFO  21:22:31,045 - #4 }
+INFO  21:22:31,061 - Definisana je konstanta a tipa Int sa vrednoscu 3 na liniji 2
+INFO  21:22:31,061 - Definisana je konstanta b tipa Int sa vrednoscu 2 na liniji 2
+INFO  21:22:31,061 - Definise se enum dani na liniji 3
+INFO  21:22:31,061 - Dodato je polje pon sa vrednoscu 0 u Enum dani na liniji 3
+INFO  21:22:31,061 - Dodato je polje uto sa vrednoscu 1 u Enum dani na liniji 3
+INFO  21:22:31,061 - Dodato je polje sre sa vrednoscu 2 u Enum dani na liniji 3
+INFO  21:22:31,061 - Definisan je enum dani na liniji 3
+INFO  21:22:31,061 - Definisana je metoda main tipa void na liniji 5
+INFO  21:22:31,061 - Globalnih promeljivih ima 0, a lokalnih 0
+INFO  21:22:31,061 - Print calls = 0
+INFO  21:22:31,061 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  21:22:39,439 - Parsiranje uspesno zavrseno!

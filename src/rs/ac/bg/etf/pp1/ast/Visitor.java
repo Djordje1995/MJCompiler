@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 3/5/2019 19:19:33
+// 8/5/2019 18:57:43
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -33,13 +33,12 @@ public interface Visitor {
     public void visit(MaybeRelopExpr MaybeRelopExpr);
     public void visit(AnyConst AnyConst);
     public void visit(MaybeCondition MaybeCondition);
-    public void visit(MaybeMethodDecl MaybeMethodDecl);
     public void visit(MaybeDesignatorStatement MaybeDesignatorStatement);
+    public void visit(MaybeMethodDecl MaybeMethodDecl);
     public void visit(MaybeEmptySquareBrackets MaybeEmptySquareBrackets);
     public void visit(VarDeclList VarDeclList);
     public void visit(TypeOrVoid TypeOrVoid);
     public void visit(MaybeAssignNumConst MaybeAssignNumConst);
-    public void visit(DesignatorStatement DesignatorStatement);
     public void visit(MaybeActualParams MaybeActualParams);
     public void visit(MaybeParams MaybeParams);
     public void visit(Statement Statement);
@@ -49,6 +48,7 @@ public interface Visitor {
     public void visit(Declaration Declaration);
     public void visit(MethodDeclList MethodDeclList);
     public void visit(CondTermOr CondTermOr);
+    public void visit(DesignatorStatementOp DesignatorStatementOp);
     public void visit(AddopTermList AddopTermList);
     public void visit(Mod Mod);
     public void visit(Div Div);
@@ -65,8 +65,8 @@ public interface Visitor {
     public void visit(DesignatorIdent DesignatorIdent);
     public void visit(DesignatorArrayMember DesignatorArrayMember);
     public void visit(DesignatorRefMember DesignatorRefMember);
-    public void visit(MaybeExpressionDerived2 MaybeExpressionDerived2);
-    public void visit(MaybeExpressionDerived1 MaybeExpressionDerived1);
+    public void visit(NoExpression NoExpression);
+    public void visit(IsExpression IsExpression);
     public void visit(MaybeActualParamsDerived1 MaybeActualParamsDerived1);
     public void visit(ActualParams ActualParams);
     public void visit(MaybeParamsDerived1 MaybeParamsDerived1);
@@ -101,14 +101,15 @@ public interface Visitor {
     public void visit(DesignatorInc DesignatorInc);
     public void visit(DesignatorParams DesignatorParams);
     public void visit(DesignatorExpr DesignatorExpr);
+    public void visit(DesignatorStatement DesignatorStatement);
     public void visit(MaybeDesignatorStatementDerived2 MaybeDesignatorStatementDerived2);
     public void visit(MaybeDesignatorStatementDerived1 MaybeDesignatorStatementDerived1);
     public void visit(MaybeConditionDerived2 MaybeConditionDerived2);
     public void visit(MaybeConditionDerived1 MaybeConditionDerived1);
     public void visit(NoReturnExpression NoReturnExpression);
     public void visit(ReturnExpressionE ReturnExpressionE);
-    public void visit(MaybeNumConstDerived2 MaybeNumConstDerived2);
-    public void visit(MaybeNumConstDerived1 MaybeNumConstDerived1);
+    public void visit(NoNumConst NoNumConst);
+    public void visit(IsNumConst IsNumConst);
     public void visit(StatementListDerived1 StatementListDerived1);
     public void visit(StatementListRec StatementListRec);
     public void visit(StatementBody StatementBody);

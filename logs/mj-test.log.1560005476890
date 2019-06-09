@@ -1,0 +1,12 @@
+INFO  16:46:14,137 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  16:46:14,153 - #2 program
+INFO  16:46:14,153 - #44 MJProgram
+INFO  16:46:14,153 - #43 const
+INFO  16:46:14,153 - #44 int
+INFO  16:46:14,153 - #44 a
+INFO  16:46:14,153 - #29 [
+ERROR 16:46:14,153 - 
+Sintaksna greska na liniji 2
+ERROR 16:46:14,153 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 2
+INFO  16:46:14,168 - Print calls = 0
+ERROR 16:46:14,168 - Parsiranje NIJE uspesno zavrseno!

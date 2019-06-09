@@ -1,0 +1,63 @@
+INFO  23:24:59,682 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  23:24:59,704 - #2 program
+INFO  23:24:59,704 - #44 MJProgram
+INFO  23:24:59,704 - #43 const
+INFO  23:24:59,704 - #44 int
+INFO  23:24:59,704 - #44 a
+INFO  23:24:59,704 - #27 =
+INFO  23:24:59,704 - #45 3
+INFO  23:24:59,704 - #8 ,
+INFO  23:24:59,704 - #44 b
+INFO  23:24:59,704 - #27 =
+INFO  23:24:59,704 - #45 2
+INFO  23:24:59,704 - #5 ;
+INFO  23:24:59,704 - #42 enum
+INFO  23:24:59,704 - #44 dani
+INFO  23:24:59,704 - #3 {
+INFO  23:24:59,704 - #44 pon
+INFO  23:24:59,704 - #8 ,
+INFO  23:24:59,704 - #44 uto
+INFO  23:24:59,704 - #8 ,
+INFO  23:24:59,704 - #44 sre
+INFO  23:24:59,704 - #4 }
+INFO  23:24:59,704 - #3 {
+INFO  23:24:59,704 - #14 void
+INFO  23:24:59,704 - #44 main
+INFO  23:24:59,704 - #6 (
+INFO  23:24:59,704 - #7 )
+INFO  23:24:59,704 - #44 int
+INFO  23:24:59,704 - #44 c
+INFO  23:24:59,704 - #5 ;
+INFO  23:24:59,704 - #3 {
+INFO  23:24:59,704 - #34 read
+INFO  23:24:59,704 - #6 (
+INFO  23:24:59,704 - #44 c
+INFO  23:24:59,704 - #7 )
+INFO  23:24:59,704 - #5 ;
+INFO  23:24:59,704 - #9 print
+INFO  23:24:59,704 - #6 (
+INFO  23:24:59,704 - #44 c
+INFO  23:24:59,704 - #7 )
+INFO  23:24:59,704 - #5 ;
+INFO  23:24:59,704 - #9 print
+INFO  23:24:59,704 - #6 (
+INFO  23:24:59,704 - #44 c
+INFO  23:24:59,704 - #7 )
+INFO  23:24:59,704 - #5 ;
+INFO  23:24:59,704 - #10 return
+INFO  23:24:59,704 - #5 ;
+INFO  23:24:59,704 - #4 }
+INFO  23:24:59,720 - #4 }
+INFO  23:24:59,720 - Definisana je konstanta a tipa Int sa vrednoscu 3 na liniji 2
+INFO  23:24:59,720 - Definisana je konstanta b tipa Int sa vrednoscu 2 na liniji 2
+INFO  23:24:59,720 - Definise se enum dani na liniji 3
+INFO  23:24:59,720 - Dodato je polje pon sa vrednoscu 0 u Enum dani na liniji 3
+INFO  23:24:59,720 - Dodato je polje uto sa vrednoscu 1 u Enum dani na liniji 3
+INFO  23:24:59,720 - Dodato je polje sre sa vrednoscu 2 u Enum dani na liniji 3
+INFO  23:24:59,720 - Definisan je enum dani na liniji 3
+INFO  23:24:59,720 - Deklarisana je lokalna promenljiva c tipa int na liniji 5
+INFO  23:24:59,720 - Definisana je metoda main tipa void na liniji 5
+INFO  23:24:59,720 - Globalnih promeljivih ima 0, a lokalnih 1
+INFO  23:24:59,720 - Print calls = 0
+INFO  23:24:59,720 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  23:24:59,720 - Parsiranje uspesno zavrseno!

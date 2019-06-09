@@ -1,0 +1,52 @@
+INFO  15:54:03,646 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  15:54:03,696 - #2 program
+INFO  15:54:03,696 - #44 MJProgram
+INFO  15:54:03,696 - #43 const
+INFO  15:54:03,696 - #44 int
+INFO  15:54:03,696 - #44 a
+INFO  15:54:03,696 - #27 =
+INFO  15:54:03,696 - #45 3
+INFO  15:54:03,696 - #8 ,
+INFO  15:54:03,696 - #44 b
+INFO  15:54:03,696 - #27 =
+INFO  15:54:03,696 - #45 2
+INFO  15:54:03,696 - #5 ;
+INFO  15:54:03,696 - #42 enum
+INFO  15:54:03,696 - #44 dani
+INFO  15:54:03,696 - #3 {
+INFO  15:54:03,696 - #44 pon
+INFO  15:54:03,706 - #8 ,
+INFO  15:54:03,706 - #44 uto
+INFO  15:54:03,706 - #8 ,
+INFO  15:54:03,706 - #44 sre
+INFO  15:54:03,706 - #4 }
+INFO  15:54:03,706 - #3 {
+INFO  15:54:03,706 - #14 void
+INFO  15:54:03,713 - #44 main
+INFO  15:54:03,713 - #6 (
+INFO  15:54:03,713 - #7 )
+INFO  15:54:03,713 - #3 {
+INFO  15:54:03,716 - #9 print
+INFO  15:54:03,716 - #6 (
+INFO  15:54:03,716 - #44 a
+INFO  15:54:03,716 - #7 )
+INFO  15:54:03,721 - #5 ;
+INFO  15:54:03,721 - #9 print
+INFO  15:54:03,721 - #6 (
+INFO  15:54:03,721 - #45 2
+INFO  15:54:03,721 - #7 )
+INFO  15:54:03,721 - #5 ;
+INFO  15:54:03,721 - #9 print
+INFO  15:54:03,721 - #6 (
+INFO  15:54:03,721 - #44 dani
+INFO  15:54:03,721 - #28 .
+INFO  15:54:03,721 - #44 uto
+INFO  15:54:03,721 - #7 )
+INFO  15:54:03,721 - #5 ;
+INFO  15:54:03,721 - #10 return
+INFO  15:54:03,721 - #5 ;
+INFO  15:54:03,721 - #4 }
+INFO  15:54:03,721 - #4 }
+INFO  15:54:03,746 - Definisana je konstanta a tipa Int sa vrednoscu 3 na liniji 2
+INFO  15:54:03,746 - Definisana je konstanta b tipa Int sa vrednoscu 2 na liniji 2
+INFO  15:54:03,746 - Definise se enum dani na liniji 3

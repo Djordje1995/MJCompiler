@@ -1,0 +1,26 @@
+INFO  16:51:36,962 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  16:51:36,985 - #2 program
+INFO  16:51:36,985 - #44 MJProgram
+INFO  16:51:36,985 - #3 {
+INFO  16:51:36,985 - #14 void
+INFO  16:51:36,985 - #44 main
+INFO  16:51:36,985 - #6 (
+INFO  16:51:36,985 - #7 )
+INFO  16:51:36,985 - #44 int
+INFO  16:51:36,985 - #44 c
+INFO  16:51:36,985 - #29 [
+INFO  16:51:36,985 - #30 ]
+INFO  16:51:36,985 - #5 ;
+INFO  16:51:36,985 - #3 {
+INFO  16:51:36,985 - #44 c
+INFO  16:51:36,985 - #29 [
+INFO  16:51:36,985 - #45 1
+INFO  16:51:36,985 - #30 ]
+INFO  16:51:36,985 - #27 =
+INFO  16:51:36,985 - #45 5
+INFO  16:51:36,985 - #5 ;
+INFO  16:51:36,985 - #10 return
+INFO  16:51:36,985 - #5 ;
+INFO  16:51:36,985 - #4 }
+INFO  16:51:37,000 - #4 }
+INFO  16:51:37,000 - Deklarisana je lokalna promenljiva c tipa int array na liniji 3

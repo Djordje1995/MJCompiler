@@ -1,0 +1,35 @@
+INFO  21:11:04,666 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  21:11:04,720 - #2 program
+INFO  21:11:04,720 - #44 MJProgram
+INFO  21:11:04,720 - #43 const
+INFO  21:11:04,720 - #44 int
+INFO  21:11:04,720 - #44 a
+INFO  21:11:04,720 - #27 =
+INFO  21:11:04,720 - #45 3
+INFO  21:11:04,720 - #8 ,
+INFO  21:11:04,720 - #44 b
+INFO  21:11:04,720 - #27 =
+INFO  21:11:04,720 - #45 2
+INFO  21:11:04,720 - #5 ;
+INFO  21:11:04,720 - #42 enum
+INFO  21:11:04,720 - #44 dani
+INFO  21:11:04,720 - #3 {
+INFO  21:11:04,720 - #44 pon
+INFO  21:11:04,720 - #8 ,
+INFO  21:11:04,720 - #44 uto
+INFO  21:11:04,720 - #8 ,
+INFO  21:11:04,720 - #44 sre
+INFO  21:11:04,720 - #4 }
+INFO  21:11:04,720 - #3 {
+INFO  21:11:04,720 - #14 void
+INFO  21:11:04,720 - #44 main
+INFO  21:11:04,720 - #6 (
+INFO  21:11:04,720 - #7 )
+INFO  21:11:04,735 - #44 int
+INFO  21:11:04,735 - #44 c
+INFO  21:11:04,735 - #27 =
+ERROR 21:11:04,735 - 
+Sintaksna greska na liniji 5
+ERROR 21:11:04,735 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 5
+INFO  21:11:04,735 - Print calls = 0
+ERROR 21:11:04,735 - Parsiranje NIJE uspesno zavrseno!

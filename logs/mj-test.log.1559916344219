@@ -1,0 +1,54 @@
+INFO  16:02:51,628 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  16:02:51,659 - #2 program
+INFO  16:02:51,659 - #44 MJProgram
+INFO  16:02:51,659 - #43 const
+INFO  16:02:51,659 - #44 int
+INFO  16:02:51,659 - #44 a
+INFO  16:02:51,659 - #27 =
+INFO  16:02:51,659 - #45 3
+INFO  16:02:51,659 - #8 ,
+INFO  16:02:51,659 - #44 b
+INFO  16:02:51,659 - #27 =
+INFO  16:02:51,659 - #45 2
+INFO  16:02:51,659 - #5 ;
+INFO  16:02:51,659 - #42 enum
+INFO  16:02:51,659 - #44 dani
+INFO  16:02:51,659 - #3 {
+INFO  16:02:51,659 - #44 pon
+INFO  16:02:51,659 - #8 ,
+INFO  16:02:51,659 - #44 uto
+INFO  16:02:51,659 - #8 ,
+INFO  16:02:51,659 - #44 sre
+INFO  16:02:51,659 - #4 }
+INFO  16:02:51,659 - #3 {
+INFO  16:02:51,659 - #14 void
+INFO  16:02:51,659 - #44 main
+INFO  16:02:51,659 - #6 (
+INFO  16:02:51,659 - #7 )
+INFO  16:02:51,659 - #3 {
+INFO  16:02:51,659 - #9 print
+INFO  16:02:51,659 - #6 (
+INFO  16:02:51,659 - #44 a
+INFO  16:02:51,659 - #7 )
+INFO  16:02:51,659 - #5 ;
+INFO  16:02:51,659 - #9 print
+INFO  16:02:51,659 - #6 (
+INFO  16:02:51,659 - #45 2
+INFO  16:02:51,659 - #7 )
+INFO  16:02:51,659 - #5 ;
+INFO  16:02:51,659 - #10 return
+INFO  16:02:51,659 - #5 ;
+INFO  16:02:51,659 - #4 }
+INFO  16:02:51,659 - #4 }
+INFO  16:02:51,675 - Definisana je konstanta a tipa Int sa vrednoscu 3 na liniji 2
+INFO  16:02:51,675 - Definisana je konstanta b tipa Int sa vrednoscu 2 na liniji 2
+INFO  16:02:51,675 - Definise se enum dani na liniji 3
+INFO  16:02:51,675 - Dodato je polje pon sa vrednoscu 0 u Enum dani na liniji 3
+INFO  16:02:51,675 - Dodato je polje uto sa vrednoscu 1 u Enum dani na liniji 3
+INFO  16:02:51,675 - Dodato je polje sre sa vrednoscu 2 u Enum dani na liniji 3
+INFO  16:02:51,675 - Definisan je enum dani na liniji 3
+INFO  16:02:51,675 - Definisana je metoda main tipa void na liniji 5
+INFO  16:02:51,675 - Globalnih promeljivih ima 0, a lokalnih 0
+INFO  16:02:51,675 - Print calls = 0
+INFO  16:02:51,675 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  16:02:51,675 - Parsiranje uspesno zavrseno!
