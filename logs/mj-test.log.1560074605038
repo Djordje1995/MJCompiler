@@ -1,0 +1,66 @@
+INFO  11:56:23,092 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  11:56:23,108 - #2 program
+INFO  11:56:23,108 - #44 MJProgram
+INFO  11:56:23,108 - #3 {
+INFO  11:56:23,108 - #14 void
+INFO  11:56:23,108 - #44 main
+INFO  11:56:23,108 - #6 (
+INFO  11:56:23,108 - #7 )
+INFO  11:56:23,108 - #44 int
+INFO  11:56:23,108 - #44 c
+INFO  11:56:23,108 - #29 [
+INFO  11:56:23,108 - #30 ]
+INFO  11:56:23,108 - #5 ;
+INFO  11:56:23,108 - #3 {
+INFO  11:56:23,108 - #44 c
+INFO  11:56:23,108 - #27 =
+INFO  11:56:23,108 - #31 new
+INFO  11:56:23,108 - #44 int
+INFO  11:56:23,108 - #29 [
+INFO  11:56:23,108 - #45 5
+INFO  11:56:23,108 - #30 ]
+INFO  11:56:23,108 - #5 ;
+INFO  11:56:23,123 - #44 c
+INFO  11:56:23,123 - #29 [
+INFO  11:56:23,128 - #45 0
+INFO  11:56:23,128 - #30 ]
+INFO  11:56:23,128 - #27 =
+INFO  11:56:23,128 - #45 16
+INFO  11:56:23,128 - #5 ;
+INFO  11:56:23,128 - #9 print
+INFO  11:56:23,128 - #6 (
+INFO  11:56:23,128 - #44 c
+INFO  11:56:23,128 - #29 [
+INFO  11:56:23,128 - #45 0
+INFO  11:56:23,128 - #30 ]
+INFO  11:56:23,128 - #7 )
+INFO  11:56:23,128 - #5 ;
+INFO  11:56:23,128 - #44 c
+INFO  11:56:23,128 - #29 [
+INFO  11:56:23,128 - #45 1
+INFO  11:56:23,128 - #30 ]
+INFO  11:56:23,128 - #27 =
+INFO  11:56:23,128 - #6 (
+INFO  11:56:23,128 - #45 14
+INFO  11:56:23,128 - #11 +
+INFO  11:56:23,128 - #45 3
+INFO  11:56:23,128 - #7 )
+INFO  11:56:23,128 - #5 ;
+INFO  11:56:23,128 - #9 print
+INFO  11:56:23,128 - #6 (
+INFO  11:56:23,128 - #44 c
+INFO  11:56:23,128 - #29 [
+INFO  11:56:23,128 - #45 1
+INFO  11:56:23,128 - #30 ]
+INFO  11:56:23,128 - #7 )
+INFO  11:56:23,128 - #5 ;
+INFO  11:56:23,128 - #10 return
+INFO  11:56:23,128 - #5 ;
+INFO  11:56:23,128 - #4 }
+INFO  11:56:23,128 - #4 }
+INFO  11:56:23,144 - Deklarisana je lokalna promenljiva c tipa int array na liniji 3
+INFO  11:56:23,144 - Definisana je metoda main tipa void na liniji 3
+INFO  11:56:23,144 - Globalnih promeljivih ima 0, a lokalnih 1
+INFO  11:56:23,144 - Print calls = 0
+INFO  11:56:23,144 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  11:56:23,144 - Parsiranje uspesno zavrseno!

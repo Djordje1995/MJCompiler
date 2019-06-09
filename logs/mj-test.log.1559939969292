@@ -1,0 +1,70 @@
+INFO  22:38:48,681 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  22:38:48,703 - #2 program
+INFO  22:38:48,703 - #44 MJProgram
+INFO  22:38:48,703 - #43 const
+INFO  22:38:48,703 - #44 int
+INFO  22:38:48,703 - #44 a
+INFO  22:38:48,703 - #27 =
+INFO  22:38:48,703 - #45 3
+INFO  22:38:48,703 - #8 ,
+INFO  22:38:48,703 - #44 b
+INFO  22:38:48,703 - #27 =
+INFO  22:38:48,703 - #45 2
+INFO  22:38:48,703 - #5 ;
+INFO  22:38:48,703 - #42 enum
+INFO  22:38:48,703 - #44 dani
+INFO  22:38:48,703 - #3 {
+INFO  22:38:48,703 - #44 pon
+INFO  22:38:48,703 - #8 ,
+INFO  22:38:48,703 - #44 uto
+INFO  22:38:48,703 - #8 ,
+INFO  22:38:48,703 - #44 sre
+INFO  22:38:48,703 - #4 }
+INFO  22:38:48,703 - #3 {
+INFO  22:38:48,703 - #14 void
+INFO  22:38:48,703 - #44 main
+INFO  22:38:48,703 - #6 (
+INFO  22:38:48,703 - #7 )
+INFO  22:38:48,703 - #44 int
+INFO  22:38:48,703 - #44 c
+INFO  22:38:48,703 - #5 ;
+INFO  22:38:48,719 - #3 {
+INFO  22:38:48,719 - #9 print
+INFO  22:38:48,719 - #6 (
+INFO  22:38:48,719 - #44 a
+INFO  22:38:48,719 - #7 )
+INFO  22:38:48,719 - #5 ;
+INFO  22:38:48,719 - #9 print
+INFO  22:38:48,719 - #6 (
+INFO  22:38:48,719 - #45 2
+INFO  22:38:48,719 - #7 )
+INFO  22:38:48,719 - #5 ;
+INFO  22:38:48,719 - #9 print
+INFO  22:38:48,719 - #6 (
+INFO  22:38:48,719 - #44 dani
+INFO  22:38:48,719 - #28 .
+INFO  22:38:48,719 - #44 uto
+INFO  22:38:48,719 - #7 )
+INFO  22:38:48,719 - #5 ;
+INFO  22:38:48,719 - #34 read
+INFO  22:38:48,719 - #6 (
+INFO  22:38:48,719 - #44 c
+INFO  22:38:48,719 - #7 )
+INFO  22:38:48,719 - #5 ;
+INFO  22:38:48,719 - #10 return
+INFO  22:38:48,719 - #5 ;
+INFO  22:38:48,719 - #4 }
+INFO  22:38:48,719 - #4 }
+INFO  22:38:48,719 - Definisana je konstanta a tipa Int sa vrednoscu 3 na liniji 2
+INFO  22:38:48,719 - Definisana je konstanta b tipa Int sa vrednoscu 2 na liniji 2
+INFO  22:38:48,719 - Definise se enum dani na liniji 3
+INFO  22:38:48,719 - Dodato je polje pon sa vrednoscu 0 u Enum dani na liniji 3
+INFO  22:38:48,719 - Dodato je polje uto sa vrednoscu 1 u Enum dani na liniji 3
+INFO  22:38:48,719 - Dodato je polje sre sa vrednoscu 2 u Enum dani na liniji 3
+INFO  22:38:48,719 - Definisan je enum dani na liniji 3
+INFO  22:38:48,719 - Deklarisana je lokalna promenljiva c tipa int na liniji 5
+INFO  22:38:48,719 - Definisana je metoda main tipa void na liniji 5
+INFO  22:38:48,719 - Globalnih promeljivih ima 0, a lokalnih 1
+INFO  22:38:48,719 - Print calls = 0
+INFO  22:38:48,719 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  22:38:48,734 - Parsiranje uspesno zavrseno!

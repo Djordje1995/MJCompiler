@@ -1,0 +1,40 @@
+INFO  12:20:54,448 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  12:20:54,511 - #2 program
+INFO  12:20:54,511 - #44 MJProgram
+INFO  12:20:54,511 - #43 const
+INFO  12:20:54,511 - #44 int
+INFO  12:20:54,511 - #44 a
+INFO  12:20:54,511 - #27 =
+INFO  12:20:54,511 - #45 3
+INFO  12:20:54,511 - #8 ,
+INFO  12:20:54,511 - #44 b
+INFO  12:20:54,511 - #27 =
+INFO  12:20:54,511 - #45 2
+INFO  12:20:54,511 - #5 ;
+INFO  12:20:54,511 - #3 {
+INFO  12:20:54,511 - #14 void
+INFO  12:20:54,511 - #44 main
+INFO  12:20:54,511 - #6 (
+INFO  12:20:54,511 - #7 )
+INFO  12:20:54,511 - #3 {
+INFO  12:20:54,511 - #9 print
+INFO  12:20:54,511 - #6 (
+INFO  12:20:54,511 - #44 a
+INFO  12:20:54,527 - #7 )
+INFO  12:20:54,527 - #5 ;
+INFO  12:20:54,527 - #9 print
+INFO  12:20:54,527 - #6 (
+INFO  12:20:54,527 - #45 2
+INFO  12:20:54,527 - #7 )
+INFO  12:20:54,527 - #5 ;
+INFO  12:20:54,527 - #10 return
+INFO  12:20:54,527 - #5 ;
+INFO  12:20:54,527 - #4 }
+INFO  12:20:54,527 - #4 }
+INFO  12:20:54,542 - Definisana je konstanta a tipa Int sa vrednoscu 3 na liniji 2
+INFO  12:20:54,542 - Definisana je konstanta b tipa Int sa vrednoscu 2 na liniji 2
+ERROR 12:20:54,542 - Pogresan tip argumenta funkcije print, argumenti mogu biti samo int ili char tipa na liniji 9
+INFO  12:20:54,542 - Definisana je metoda main tipa void na liniji 4
+INFO  12:20:54,542 - Globalnih promeljivih ima 0, a lokalnih 0
+INFO  12:20:54,542 - Print calls = 0
+ERROR 12:20:54,542 - Parsiranje NIJE uspesno zavrseno!

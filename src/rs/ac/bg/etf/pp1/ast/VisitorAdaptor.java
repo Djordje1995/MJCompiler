@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 3/5/2019 19:19:33
+// 8/5/2019 18:57:43
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -33,13 +33,12 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(MaybeRelopExpr MaybeRelopExpr) { }
     public void visit(AnyConst AnyConst) { }
     public void visit(MaybeCondition MaybeCondition) { }
-    public void visit(MaybeMethodDecl MaybeMethodDecl) { }
     public void visit(MaybeDesignatorStatement MaybeDesignatorStatement) { }
+    public void visit(MaybeMethodDecl MaybeMethodDecl) { }
     public void visit(MaybeEmptySquareBrackets MaybeEmptySquareBrackets) { }
     public void visit(VarDeclList VarDeclList) { }
     public void visit(TypeOrVoid TypeOrVoid) { }
     public void visit(MaybeAssignNumConst MaybeAssignNumConst) { }
-    public void visit(DesignatorStatement DesignatorStatement) { }
     public void visit(MaybeActualParams MaybeActualParams) { }
     public void visit(MaybeParams MaybeParams) { }
     public void visit(Statement Statement) { }
@@ -49,6 +48,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(Declaration Declaration) { }
     public void visit(MethodDeclList MethodDeclList) { }
     public void visit(CondTermOr CondTermOr) { }
+    public void visit(DesignatorStatementOp DesignatorStatementOp) { }
     public void visit(AddopTermList AddopTermList) { }
     public void visit(Mod Mod) { visit(); }
     public void visit(Div Div) { visit(); }
@@ -65,8 +65,8 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(DesignatorIdent DesignatorIdent) { visit(); }
     public void visit(DesignatorArrayMember DesignatorArrayMember) { visit(); }
     public void visit(DesignatorRefMember DesignatorRefMember) { visit(); }
-    public void visit(MaybeExpressionDerived2 MaybeExpressionDerived2) { visit(); }
-    public void visit(MaybeExpressionDerived1 MaybeExpressionDerived1) { visit(); }
+    public void visit(NoExpression NoExpression) { visit(); }
+    public void visit(IsExpression IsExpression) { visit(); }
     public void visit(MaybeActualParamsDerived1 MaybeActualParamsDerived1) { visit(); }
     public void visit(ActualParams ActualParams) { visit(); }
     public void visit(MaybeParamsDerived1 MaybeParamsDerived1) { visit(); }
@@ -101,14 +101,15 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(DesignatorInc DesignatorInc) { visit(); }
     public void visit(DesignatorParams DesignatorParams) { visit(); }
     public void visit(DesignatorExpr DesignatorExpr) { visit(); }
+    public void visit(DesignatorStatement DesignatorStatement) { visit(); }
     public void visit(MaybeDesignatorStatementDerived2 MaybeDesignatorStatementDerived2) { visit(); }
     public void visit(MaybeDesignatorStatementDerived1 MaybeDesignatorStatementDerived1) { visit(); }
     public void visit(MaybeConditionDerived2 MaybeConditionDerived2) { visit(); }
     public void visit(MaybeConditionDerived1 MaybeConditionDerived1) { visit(); }
     public void visit(NoReturnExpression NoReturnExpression) { visit(); }
     public void visit(ReturnExpressionE ReturnExpressionE) { visit(); }
-    public void visit(MaybeNumConstDerived2 MaybeNumConstDerived2) { visit(); }
-    public void visit(MaybeNumConstDerived1 MaybeNumConstDerived1) { visit(); }
+    public void visit(NoNumConst NoNumConst) { visit(); }
+    public void visit(IsNumConst IsNumConst) { visit(); }
     public void visit(StatementListDerived1 StatementListDerived1) { visit(); }
     public void visit(StatementListRec StatementListRec) { visit(); }
     public void visit(StatementBody StatementBody) { visit(); }

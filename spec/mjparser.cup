@@ -63,7 +63,7 @@ terminal Boolean BOOL_CONST;
 terminal Character CHAR_CONST;
 
 nonterminal MaybeAssignNumConst, EnumDecl, AnyConst, IdentConstList, ConstDecl, DeclarationList;  
-nonterminal MaybeExtends, ClassDecl, MaybeMethodDecl, MaybeImplements, TypeList;
+nonterminal MaybeExtends, ClassDecl, MaybeMethodDecl, MaybeImplements, TypeList, DesignatorStatementOp;
 nonterminal MethodDeclList, VarDecl, MaybeFormPars, InterfaceMethodDecl, InterfaceMethodDeclList, InterfaceDecl;
 nonterminal FormParsList, MaybeEmptySquareBrackets, FormPars, ActPars, ActParList, MaybeExpression; 
 nonterminal DesignatorStatement, StatementList, Statement, Addop, Mulop, Relop, Assignop;
@@ -241,10 +241,10 @@ StatementList ::= (StatementListRec) StatementList Statement:stmt
 				/* epsilon */
 				;
 			
-MaybeNumConst ::= COMMA NUM_CONST
-				|
-				/* epsilon */
-				;			
+MaybeNumConst ::= (IsNumConst) COMMA NUM_CONST
+				        |
+				        (NoNumConst) /* epsilon */
+				        ;			
 
 ReturnExpression ::= (ReturnExpressionE) Expr:e
 					         |
@@ -262,13 +262,16 @@ MaybeDesignatorStatement ::= DesignatorStatement:stmt
 							/* epsilon */
 							;			
 
-DesignatorStatement ::= (DesignatorExpr) Designator:d Assignop Expr:e
+DesignatorStatement ::= (DesignatorStatement) Designator DesignatorStatementOp;
+
+DesignatorStatementOp ::= 
+            (DesignatorExpr) Assignop Expr:e
 						|
-						(DesignatorParams) Designator:d LPAREN MaybeActualParams RPAREN
+						(DesignatorParams) LPAREN MaybeActualParams RPAREN
 						|
-						(DesignatorInc) Designator:d INC
+						(DesignatorInc) INC
 						|
-						(DesignatorDec) Designator:d DEC
+						(DesignatorDec) DEC
 						;
 
 ActPars ::= (ActPars) Expr:e ActParList;
@@ -314,22 +317,22 @@ AddopTermList ::= (AddopTermListRec) AddopTermList Addop Term:t
 Term ::= (Term) Factor:f MulopFactorList;
 
 MulopFactorList ::= (MulopFactorListRec) MulopFactorList Mulop Factor:f 
-				|
-				/* epsilon */
-				;
+				           |
+				           /* epsilon */
+				           ;
 
 Factor ::= (FactorDesignator) Designator:d MaybeParams
-		|
-		(FactorNumber) NUM_CONST
-		|
-		(FactorChar) CHAR_CONST
-		|
-		(FactorBool) BOOL_CONST
-		|
-		(FactorNewType) NEW Type:type MaybeExpression
-		|
-		(FactorExpression) LPAREN Expr:e RPAREN
-		;
+          |
+          (FactorNumber) NUM_CONST
+          |
+          (FactorChar) CHAR_CONST
+          |
+          (FactorBool) BOOL_CONST
+          |
+          (FactorNewType) NEW Type:type MaybeExpression
+          |
+          (FactorExpression) LPAREN Expr:e RPAREN
+          ;
 
 MaybeParams ::= (ActualParamsBrackets) LPAREN MaybeActualParams:params RPAREN
 				      |
@@ -341,10 +344,10 @@ MaybeActualParams ::= (ActualParams) ActPars:params
 						/* epsilon */
 						;
 				
-MaybeExpression ::= LSQUAREB Expr:e RSQUAREB
-					|
-					/* epsilon */
-					;
+MaybeExpression ::= (IsExpression) LSQUAREB Expr:e RSQUAREB
+        					|
+        					(NoExpression)/* epsilon */
+        					;
 
 Designator ::= (DesignatorRefMember) Designator DOT IDENT
 				|

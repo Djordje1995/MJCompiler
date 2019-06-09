@@ -1,0 +1,32 @@
+INFO  19:07:01,676 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  19:07:01,714 - #2 program
+INFO  19:07:01,714 - #44 MJProgram
+INFO  19:07:01,714 - #3 {
+INFO  19:07:01,714 - #14 void
+INFO  19:07:01,714 - #44 main
+INFO  19:07:01,714 - #6 (
+INFO  19:07:01,714 - #7 )
+INFO  19:07:01,714 - #44 int
+INFO  19:07:01,714 - #44 c
+INFO  19:07:01,714 - #29 [
+INFO  19:07:01,714 - #30 ]
+INFO  19:07:01,714 - #5 ;
+INFO  19:07:01,714 - #3 {
+INFO  19:07:01,714 - #44 c
+INFO  19:07:01,714 - #27 =
+INFO  19:07:01,714 - #31 new
+INFO  19:07:01,714 - #44 int
+INFO  19:07:01,714 - #29 [
+INFO  19:07:01,714 - #45 5
+INFO  19:07:01,714 - #30 ]
+INFO  19:07:01,714 - #5 ;
+INFO  19:07:01,714 - #10 return
+INFO  19:07:01,714 - #5 ;
+INFO  19:07:01,714 - #4 }
+INFO  19:07:01,714 - #4 }
+INFO  19:07:01,730 - Deklarisana je lokalna promenljiva c tipa int array na liniji 3
+ERROR 19:07:01,730 - Greska, dodeljena vrednost nije istog tipa kao promenljiva na liniji 4
+INFO  19:07:01,730 - Definisana je metoda main tipa void na liniji 3
+INFO  19:07:01,730 - Globalnih promeljivih ima 0, a lokalnih 1
+INFO  19:07:01,730 - Print calls = 0
+ERROR 19:07:01,730 - Parsiranje NIJE uspesno zavrseno!

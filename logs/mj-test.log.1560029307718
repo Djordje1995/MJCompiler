@@ -1,0 +1,38 @@
+INFO  23:26:42,580 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  23:26:42,627 - #2 program
+INFO  23:26:42,627 - #44 MJProgram
+INFO  23:26:42,627 - #3 {
+INFO  23:26:42,627 - #14 void
+INFO  23:26:42,627 - #44 main
+INFO  23:26:42,627 - #6 (
+INFO  23:26:42,627 - #7 )
+INFO  23:26:42,627 - #44 int
+INFO  23:26:42,627 - #44 c
+INFO  23:26:42,627 - #29 [
+INFO  23:26:42,627 - #30 ]
+INFO  23:26:42,627 - #5 ;
+INFO  23:26:42,627 - #3 {
+INFO  23:26:42,627 - #44 c
+INFO  23:26:42,627 - #27 =
+INFO  23:26:42,627 - #31 new
+INFO  23:26:42,627 - #44 int
+INFO  23:26:42,627 - #29 [
+INFO  23:26:42,627 - #45 5
+INFO  23:26:42,627 - #30 ]
+INFO  23:26:42,627 - #5 ;
+INFO  23:26:42,627 - #44 c
+INFO  23:26:42,627 - #29 [
+INFO  23:26:42,627 - #45 0
+INFO  23:26:42,627 - #30 ]
+INFO  23:26:42,627 - #27 =
+INFO  23:26:42,627 - #45 16
+INFO  23:26:42,627 - #5 ;
+INFO  23:26:42,627 - #10 return
+INFO  23:26:42,627 - #5 ;
+INFO  23:26:42,642 - #4 }
+INFO  23:26:42,642 - #4 }
+INFO  23:26:42,658 - Deklarisana je lokalna promenljiva c tipa int array na liniji 3
+INFO  23:26:45,471 - Definisana je metoda main tipa void na liniji 3
+INFO  23:26:45,471 - Globalnih promeljivih ima 0, a lokalnih 1
+INFO  23:26:45,471 - Print calls = 0
+INFO  23:26:45,475 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj

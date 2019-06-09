@@ -1,38 +1,54 @@
 package rs.ac.bg.etf.pp1;
 
 import rs.ac.bg.etf.pp1.ast.Addop;
+import rs.ac.bg.etf.pp1.ast.AddopTermListRec;
+import rs.ac.bg.etf.pp1.ast.Designator;
+import rs.ac.bg.etf.pp1.ast.DesignatorArrayMember;
+import rs.ac.bg.etf.pp1.ast.DesignatorDec;
+import rs.ac.bg.etf.pp1.ast.DesignatorExpr;
+import rs.ac.bg.etf.pp1.ast.DesignatorIdent;
+import rs.ac.bg.etf.pp1.ast.DesignatorInc;
+import rs.ac.bg.etf.pp1.ast.DesignatorStatement;
+import rs.ac.bg.etf.pp1.ast.DesignatorStatementOp;
 import rs.ac.bg.etf.pp1.ast.Div;
 import rs.ac.bg.etf.pp1.ast.FactorBool;
 import rs.ac.bg.etf.pp1.ast.FactorChar;
+import rs.ac.bg.etf.pp1.ast.FactorDesignator;
+import rs.ac.bg.etf.pp1.ast.FactorNewType;
 import rs.ac.bg.etf.pp1.ast.FactorNumber;
+import rs.ac.bg.etf.pp1.ast.IsNumConst;
+import rs.ac.bg.etf.pp1.ast.MaybeNumConst;
 import rs.ac.bg.etf.pp1.ast.MethodDecl;
 import rs.ac.bg.etf.pp1.ast.MethodName;
 import rs.ac.bg.etf.pp1.ast.MethodStart;
 import rs.ac.bg.etf.pp1.ast.Mul;
 import rs.ac.bg.etf.pp1.ast.Mulop;
+import rs.ac.bg.etf.pp1.ast.MulopFactorListRec;
 import rs.ac.bg.etf.pp1.ast.Plus;
 import rs.ac.bg.etf.pp1.ast.PrintStatement;
+import rs.ac.bg.etf.pp1.ast.ReadDesignatorStatement;
 import rs.ac.bg.etf.pp1.ast.ReturnStatement;
 import rs.ac.bg.etf.pp1.ast.VarDecl;
 import rs.ac.bg.etf.pp1.ast.VisitorAdaptor;
 import rs.etf.pp1.mj.runtime.Code;
 import rs.etf.pp1.symboltable.Tab;
 import rs.etf.pp1.symboltable.concepts.Obj;
+import rs.etf.pp1.symboltable.concepts.Struct;
 
 public class CodeGenerator extends VisitorAdaptor {
-	
+
 	private int varCount;
-	
-	private int paramCnt;
-	
+//
+//	private int paramCnt;
+
 	private int mainPc;
-	
+
 	public Obj currentMethod = null;
-	
+
 	public int getMainPc() {
 		return mainPc;
 	}
-	
+
 //	@Override
 //	public void visit(ProgName ProgName) {
 //
@@ -64,7 +80,7 @@ public class CodeGenerator extends VisitorAdaptor {
 //			Tab.currentScope.addToLocals(obj);
 //		}
 //	}
-	
+
 //	@Override
 //	public void visit(MethodTypeName MethodTypeName) {
 //		if ("main".equalsIgnoreCase(MethodTypeName.getMethName())) {
@@ -84,35 +100,12 @@ public class CodeGenerator extends VisitorAdaptor {
 //		Code.put(fpCnt.getCount());
 //		Code.put(varCnt.getCount() + fpCnt.getCount());
 //	}
-	
+
 	@Override
 	public void visit(VarDecl VarDecl) {
 		varCount++;
 	}
 
-//	@Override
-//	public void visit(FormalParamDecl FormalParam) {
-//		paramCnt++;
-//	}	
-//	
-//	@Override
-//	public void visit(MethodDecl MethodDecl) {
-//		Code.put(Code.exit);
-//		Code.put(Code.return_);
-//	}
-//	@Override
-//	public void visit(Assignment Assignment) {
-//		Code.store(Assignment.getDesignator().obj);
-//	}
-//	
-//	@Override
-//	public void visit(Designator Designator) {
-//		SyntaxNode parent = Designator.getParent();
-//		if (Assignment.class != parent.getClass() && FuncCall.class != parent.getClass()) {
-//			Code.load(Designator.obj);
-//		}
-//	}
-//	
 //	@Override
 //	public void visit(FuncCall FuncCall) {
 //		Obj functionObj = FuncCall.getDesignator().obj;
@@ -121,7 +114,7 @@ public class CodeGenerator extends VisitorAdaptor {
 //		Code.put2(offset);
 //	}
 //	
-	
+
 
 	@Override
 	public void visit(MethodDecl methodDecl) {
@@ -147,37 +140,119 @@ public class CodeGenerator extends VisitorAdaptor {
 		Code.put(currentMethod.getLevel());
 		Code.put(currentMethod.getLocalSymbols().size());
 	}
-	
+
 	@Override
-	public void visit (ReturnStatement returnStatement) {
+	public void visit(ReturnStatement returnStatement) {
 		Code.put(Code.exit);
 		Code.put(Code.return_);
 	}
-	
+
 	@Override
-	public void visit(FactorNumber factorNumber) {
-		Code.load(new Obj(Obj.Con, "", factorNumber.struct, factorNumber.getN1(), 0)); 
+	public void visit(FactorNewType factorNewType) {
+		Struct type = factorNewType.getType().struct;
+		Code.put(Code.newarray);
+		Code.put(type == Tab.intType ? 1 : 0);
 	}
 	
+	@Override
+	public void visit(FactorDesignator factorDesignator) {
+		Obj obj = factorDesignator.getDesignator().obj;
+		Code.load(obj);
+	}
+
+	@Override
+	public void visit(FactorNumber factorNumber) {
+		Obj obj = new Obj(Obj.Con, "", factorNumber.struct, factorNumber.getN1(), 0);
+		Code.load(obj);
+	}
+
 	@Override
 	public void visit(FactorChar factorChar) {
 		Code.load(new Obj(Obj.Con, "", Tab.charType, factorChar.getC1(), 0));
 	}
-	
+
 	@Override
 	public void visit(FactorBool factorBool) {
 		Code.load(new Obj(Obj.Con, "", SemanticAnalyser.boolType, factorBool.getB1() ? 1 : 0, 0));
 	}
-	
+
 	@Override
 	public void visit(PrintStatement printStatement) {
-		if (printStatement.getExpr().struct == Tab.intType || printStatement.getExpr().struct == SemanticAnalyser.boolType) {
-			Code.loadConst(5);
-			Code.put(Code.print);
+		MaybeNumConst mnc = printStatement.getMaybeNumConst();
+		if (mnc instanceof IsNumConst) {
+			IsNumConst isc = (IsNumConst) mnc;
+			Code.loadConst(isc.getN1());
 		}
 		else {
-			Code.loadConst(1);
+			Code.loadConst(3);
+		}
+		if (printStatement.getExpr().struct == Tab.intType
+		    || printStatement.getExpr().struct == SemanticAnalyser.boolType) {
+			Code.put(Code.print);
+		} else {
 			Code.put(Code.bprint);
+		}
+	}
+	
+	@Override
+	public void visit(ReadDesignatorStatement readDesignatorStatement) {
+		Struct type = readDesignatorStatement.getDesignator().obj.getType();
+		if (type == Tab.intType) {
+			Code.put(Code.read);
+		}
+		else {
+			Code.put(Code.bread);
+		}
+		Code.store(readDesignatorStatement.getDesignator().obj);
+	}
+
+	@Override
+	public void visit(DesignatorStatement designatorStatement) {
+		Designator designator = designatorStatement.getDesignator();
+		DesignatorStatementOp stmt = designatorStatement.getDesignatorStatementOp();
+		if (stmt instanceof DesignatorInc) {
+			Code.load(designator.obj);
+			Code.loadConst(1);
+			Code.put(Code.add);
+			Code.store(designator.obj);
+		}
+		else if (stmt instanceof DesignatorDec) {
+			Code.load(designator.obj);
+			Code.loadConst(1);
+			Code.put(Code.sub);
+			Code.store(designator.obj);
+		}
+		else if (stmt instanceof DesignatorExpr) {
+			Code.store(designator.obj);
+		}
+	}
+
+	@Override
+	public void visit(DesignatorIdent designatorIdent) {
+		if (designatorIdent.getParent() instanceof DesignatorArrayMember) {
+			Code.load(designatorIdent.obj);
+		}
+	}
+	
+	@Override
+	public void visit(MulopFactorListRec mulopFactorListRec) {
+		Mulop mulop = mulopFactorListRec.getMulop();
+		if (mulop instanceof Mul) {
+			Code.put(Code.mul);
+		} else if (mulop instanceof Div) {
+			Code.put(Code.div);
+		} else {
+			Code.put(Code.rem);
+		}
+	}
+	
+	@Override 
+	public void visit(AddopTermListRec addopTermListRec) {
+		Addop addop = addopTermListRec.getAddop();
+		if (addop instanceof Plus) {
+			Code.put(Code.add);
+		} else {
+			Code.put(Code.sub);
 		}
 	}
 	
@@ -185,21 +260,18 @@ public class CodeGenerator extends VisitorAdaptor {
 	public void visit(Mulop mulop) {
 		if (mulop instanceof Mul) {
 			Code.put(Code.mul);
-		}
-		else if (mulop instanceof Div) {
+		} else if (mulop instanceof Div) {
 			Code.put(Code.div);
-		}
-		else {
+		} else {
 			Code.put(Code.rem);
 		}
 	}
-	
+
 	@Override
 	public void visit(Addop addop) {
 		if (addop instanceof Plus) {
 			Code.put(Code.add);
-		}
-		else {
+		} else {
 			Code.put(Code.sub);
 		}
 	}

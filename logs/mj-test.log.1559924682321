@@ -1,0 +1,61 @@
+INFO  18:08:30,059 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  18:08:30,091 - #2 program
+INFO  18:08:30,091 - #44 MJProgram
+INFO  18:08:30,091 - #43 const
+INFO  18:08:30,107 - #44 int
+INFO  18:08:30,107 - #44 a
+INFO  18:08:30,107 - #27 =
+INFO  18:08:30,108 - #45 3
+INFO  18:08:30,108 - #8 ,
+INFO  18:08:30,108 - #44 b
+INFO  18:08:30,108 - #27 =
+INFO  18:08:30,108 - #45 2
+INFO  18:08:30,108 - #5 ;
+INFO  18:08:30,108 - #42 enum
+INFO  18:08:30,108 - #44 dani
+INFO  18:08:30,108 - #3 {
+INFO  18:08:30,108 - #44 pon
+INFO  18:08:30,108 - #8 ,
+INFO  18:08:30,108 - #44 uto
+INFO  18:08:30,108 - #8 ,
+INFO  18:08:30,108 - #44 sre
+INFO  18:08:30,108 - #4 }
+INFO  18:08:30,108 - #3 {
+INFO  18:08:30,108 - #14 void
+INFO  18:08:30,115 - #44 main
+INFO  18:08:30,115 - #6 (
+INFO  18:08:30,115 - #7 )
+INFO  18:08:30,115 - #3 {
+INFO  18:08:30,115 - #9 print
+INFO  18:08:30,115 - #6 (
+INFO  18:08:30,115 - #44 a
+INFO  18:08:30,115 - #7 )
+INFO  18:08:30,115 - #5 ;
+INFO  18:08:30,115 - #9 print
+INFO  18:08:30,115 - #6 (
+INFO  18:08:30,115 - #45 2
+INFO  18:08:30,115 - #7 )
+INFO  18:08:30,115 - #5 ;
+INFO  18:08:30,115 - #9 print
+INFO  18:08:30,115 - #6 (
+INFO  18:08:30,115 - #44 dani
+INFO  18:08:30,115 - #28 .
+INFO  18:08:30,115 - #44 uto
+INFO  18:08:30,115 - #7 )
+INFO  18:08:30,115 - #5 ;
+INFO  18:08:30,115 - #10 return
+INFO  18:08:30,115 - #5 ;
+INFO  18:08:30,115 - #4 }
+INFO  18:08:30,115 - #4 }
+INFO  18:08:30,128 - Definisana je konstanta a tipa Int sa vrednoscu 3 na liniji 2
+INFO  18:08:30,128 - Definisana je konstanta b tipa Int sa vrednoscu 2 na liniji 2
+INFO  18:08:30,128 - Definise se enum dani na liniji 3
+INFO  18:08:30,128 - Dodato je polje pon sa vrednoscu 0 u Enum dani na liniji 3
+INFO  18:08:30,128 - Dodato je polje uto sa vrednoscu 1 u Enum dani na liniji 3
+INFO  18:08:30,128 - Dodato je polje sre sa vrednoscu 2 u Enum dani na liniji 3
+INFO  18:08:30,128 - Definisan je enum dani na liniji 3
+INFO  18:08:30,128 - Definisana je metoda main tipa void na liniji 5
+INFO  18:08:30,128 - Globalnih promeljivih ima 0, a lokalnih 0
+INFO  18:08:30,128 - Print calls = 0
+INFO  18:08:30,128 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  18:10:31,847 - Parsiranje uspesno zavrseno!
