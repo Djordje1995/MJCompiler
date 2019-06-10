@@ -1,0 +1,55 @@
+INFO  23:24:17,856 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  23:24:17,880 - #2 program
+INFO  23:24:17,880 - #44 MJProgram
+INFO  23:24:17,880 - #42 enum
+INFO  23:24:17,880 - #44 dani
+INFO  23:24:17,880 - #3 {
+INFO  23:24:17,881 - #44 pon
+INFO  23:24:17,881 - #8 ,
+INFO  23:24:17,882 - #44 uto
+INFO  23:24:17,882 - #4 }
+INFO  23:24:17,882 - #44 char
+INFO  23:24:17,882 - #44 a
+INFO  23:24:17,882 - #5 ;
+INFO  23:24:17,883 - #3 {
+INFO  23:24:17,883 - #14 void
+INFO  23:24:17,884 - #44 main
+INFO  23:24:17,884 - #6 (
+INFO  23:24:17,884 - #7 )
+INFO  23:24:17,885 - #44 int
+INFO  23:24:17,885 - #44 c
+INFO  23:24:17,885 - #29 [
+INFO  23:24:17,885 - #30 ]
+INFO  23:24:17,885 - #5 ;
+INFO  23:24:17,886 - #3 {
+INFO  23:24:17,886 - #44 c
+INFO  23:24:17,886 - #27 =
+INFO  23:24:17,886 - #31 new
+INFO  23:24:17,887 - #44 int
+INFO  23:24:17,887 - #29 [
+INFO  23:24:17,887 - #45 2
+INFO  23:24:17,887 - #30 ]
+INFO  23:24:17,888 - #5 ;
+INFO  23:24:17,889 - #44 c
+INFO  23:24:17,889 - #29 [
+INFO  23:24:17,889 - #45 0
+INFO  23:24:17,889 - #30 ]
+INFO  23:24:17,889 - #27 =
+INFO  23:24:17,889 - #12 -
+INFO  23:24:17,889 - #44 a
+INFO  23:24:17,890 - #5 ;
+INFO  23:24:17,890 - #10 return
+INFO  23:24:17,890 - #5 ;
+INFO  23:24:17,890 - #4 }
+INFO  23:24:17,891 - #4 }
+INFO  23:24:17,896 - Definise se enum dani na liniji 2
+INFO  23:24:17,896 - Dodato je polje pon sa vrednoscu 0 u Enum dani na liniji 2
+INFO  23:24:17,896 - Dodato je polje uto sa vrednoscu 1 u Enum dani na liniji 2
+INFO  23:24:17,896 - Definisan je enum dani na liniji 2
+INFO  23:24:17,896 - Deklarisana je globalna promenljiva a tipa char na liniji 3
+INFO  23:24:17,896 - Deklarisana je lokalna promenljiva c tipa int array na liniji 5
+ERROR 23:24:17,897 - Greska, dodeljena vrednost nije istog tipa kao promenljiva na liniji 7
+INFO  23:24:17,897 - Definisana je metoda main tipa void na liniji 5
+INFO  23:24:17,897 - Globalnih promeljivih ima 1, a lokalnih 1
+INFO  23:24:17,897 - Print calls = 0
+ERROR 23:24:17,898 - Parsiranje NIJE uspesno zavrseno!

@@ -1,13 +1,13 @@
 // generated with ast extension for cup
 // version 0.8
-// 8/5/2019 18:57:43
+// 10/5/2019 18:5:38
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class MaybeMinusDerived2 extends MaybeMinus {
+public class VarDeclError extends VarDecl {
 
-    public MaybeMinusDerived2 () {
+    public VarDeclError () {
     }
 
     public void accept(Visitor visitor) {
@@ -28,10 +28,10 @@ public class MaybeMinusDerived2 extends MaybeMinus {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("MaybeMinusDerived2(\n");
+        buffer.append("VarDeclError(\n");
 
         buffer.append(tab);
-        buffer.append(") [MaybeMinusDerived2]");
+        buffer.append(") [VarDeclError]");
         return buffer.toString();
     }
 }

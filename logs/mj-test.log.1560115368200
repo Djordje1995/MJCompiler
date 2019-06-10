@@ -1,0 +1,53 @@
+INFO  23:22:34,080 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  23:22:34,104 - #2 program
+INFO  23:22:34,104 - #44 MJProgram
+INFO  23:22:34,104 - #42 enum
+INFO  23:22:34,105 - #44 dani
+INFO  23:22:34,105 - #3 {
+INFO  23:22:34,105 - #44 pon
+INFO  23:22:34,105 - #8 ,
+INFO  23:22:34,106 - #44 uto
+INFO  23:22:34,106 - #4 }
+INFO  23:22:34,106 - #3 {
+INFO  23:22:34,107 - #14 void
+INFO  23:22:34,107 - #44 main
+INFO  23:22:34,107 - #6 (
+INFO  23:22:34,108 - #7 )
+INFO  23:22:34,108 - #44 int
+INFO  23:22:34,108 - #44 c
+INFO  23:22:34,109 - #29 [
+INFO  23:22:34,109 - #30 ]
+INFO  23:22:34,109 - #5 ;
+INFO  23:22:34,110 - #3 {
+INFO  23:22:34,110 - #44 c
+INFO  23:22:34,111 - #27 =
+INFO  23:22:34,111 - #31 new
+INFO  23:22:34,112 - #44 int
+INFO  23:22:34,112 - #29 [
+INFO  23:22:34,112 - #45 2
+INFO  23:22:34,112 - #30 ]
+INFO  23:22:34,114 - #5 ;
+INFO  23:22:34,114 - #44 c
+INFO  23:22:34,114 - #29 [
+INFO  23:22:34,114 - #45 0
+INFO  23:22:34,114 - #30 ]
+INFO  23:22:34,114 - #27 =
+INFO  23:22:34,115 - #12 -
+INFO  23:22:34,115 - #45 5
+INFO  23:22:34,115 - #11 +
+INFO  23:22:34,115 - #45 2
+INFO  23:22:34,115 - #5 ;
+INFO  23:22:34,116 - #10 return
+INFO  23:22:34,116 - #5 ;
+INFO  23:22:34,116 - #4 }
+INFO  23:22:34,116 - #4 }
+INFO  23:22:34,121 - Definise se enum dani na liniji 2
+INFO  23:22:34,121 - Dodato je polje pon sa vrednoscu 0 u Enum dani na liniji 2
+INFO  23:22:34,121 - Dodato je polje uto sa vrednoscu 1 u Enum dani na liniji 2
+INFO  23:22:34,121 - Definisan je enum dani na liniji 2
+INFO  23:22:34,121 - Deklarisana je lokalna promenljiva c tipa int array na liniji 4
+INFO  23:22:34,122 - Definisana je metoda main tipa void na liniji 4
+INFO  23:22:34,122 - Globalnih promeljivih ima 0, a lokalnih 1
+INFO  23:22:34,122 - Print calls = 0
+INFO  23:22:34,122 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  23:22:34,130 - Parsiranje uspesno zavrseno!

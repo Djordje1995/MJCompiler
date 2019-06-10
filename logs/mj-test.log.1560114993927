@@ -1,0 +1,64 @@
+INFO  12:03:25,046 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  12:03:25,089 - #2 program
+INFO  12:03:25,089 - #44 MJProgram
+INFO  12:03:25,089 - #3 {
+INFO  12:03:25,089 - #14 void
+INFO  12:03:25,089 - #44 main
+INFO  12:03:25,089 - #6 (
+INFO  12:03:25,089 - #7 )
+INFO  12:03:25,089 - #44 int
+INFO  12:03:25,089 - #44 c
+INFO  12:03:25,089 - #29 [
+INFO  12:03:25,089 - #30 ]
+INFO  12:03:25,089 - #5 ;
+INFO  12:03:25,097 - #3 {
+INFO  12:03:25,097 - #44 c
+INFO  12:03:25,097 - #27 =
+INFO  12:03:25,099 - #31 new
+INFO  12:03:25,099 - #44 int
+INFO  12:03:25,099 - #29 [
+INFO  12:03:25,099 - #45 5
+INFO  12:03:25,099 - #30 ]
+INFO  12:03:25,099 - #5 ;
+INFO  12:03:25,099 - #44 c
+INFO  12:03:25,099 - #29 [
+INFO  12:03:25,107 - #45 0
+INFO  12:03:25,107 - #30 ]
+INFO  12:03:25,107 - #27 =
+INFO  12:03:25,107 - #45 16
+INFO  12:03:25,107 - #5 ;
+INFO  12:03:25,107 - #9 print
+INFO  12:03:25,107 - #6 (
+INFO  12:03:25,107 - #44 c
+INFO  12:03:25,107 - #29 [
+INFO  12:03:25,107 - #45 0
+INFO  12:03:25,107 - #30 ]
+INFO  12:03:25,107 - #7 )
+INFO  12:03:25,109 - #5 ;
+INFO  12:03:25,109 - #44 c
+INFO  12:03:25,109 - #29 [
+INFO  12:03:25,109 - #45 1
+INFO  12:03:25,109 - #30 ]
+INFO  12:03:25,109 - #27 =
+INFO  12:03:25,109 - #45 14
+INFO  12:03:25,109 - #11 +
+INFO  12:03:25,109 - #45 3
+INFO  12:03:25,109 - #5 ;
+INFO  12:03:25,109 - #9 print
+INFO  12:03:25,109 - #6 (
+INFO  12:03:25,109 - #44 c
+INFO  12:03:25,109 - #29 [
+INFO  12:03:25,109 - #45 1
+INFO  12:03:25,109 - #30 ]
+INFO  12:03:25,109 - #7 )
+INFO  12:03:25,109 - #5 ;
+INFO  12:03:25,109 - #10 return
+INFO  12:03:25,109 - #5 ;
+INFO  12:03:25,109 - #4 }
+INFO  12:03:25,109 - #4 }
+INFO  12:03:25,129 - Deklarisana je lokalna promenljiva c tipa int array na liniji 3
+INFO  12:03:37,063 - Definisana je metoda main tipa void na liniji 3
+INFO  12:03:37,063 - Globalnih promeljivih ima 0, a lokalnih 1
+INFO  12:03:37,063 - Print calls = 0
+INFO  12:03:37,073 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  12:03:57,991 - Parsiranje uspesno zavrseno!

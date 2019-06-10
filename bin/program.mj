@@ -1,11 +1,13 @@
 program MJProgram
 {
-	void main() int c[]; {
-	  c = new int[5];
-	  c[0] = 16;
-	  print(c[0]);
-	  c[1] = 14 + 3;
-	  print(c[1]);
+  int f() {
+    return 2;
+  }
+	void main() int c;{
+	  print(1);
+	  c = f();
+	  print(c);
 	  return;
 	}
+
 }

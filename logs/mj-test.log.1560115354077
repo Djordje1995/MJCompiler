@@ -1,0 +1,42 @@
+INFO  23:22:10,209 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  23:22:10,235 - #2 program
+INFO  23:22:10,235 - #44 MJProgram
+INFO  23:22:10,235 - #42 enum
+INFO  23:22:10,236 - #44 dani
+INFO  23:22:10,236 - #3 {
+INFO  23:22:10,236 - #44 pon
+INFO  23:22:10,236 - #8 ,
+INFO  23:22:10,237 - #44 uto
+INFO  23:22:10,237 - #4 }
+INFO  23:22:10,237 - #3 {
+INFO  23:22:10,238 - #14 void
+INFO  23:22:10,238 - #44 main
+INFO  23:22:10,238 - #6 (
+INFO  23:22:10,238 - #7 )
+INFO  23:22:10,239 - #44 int
+INFO  23:22:10,239 - #44 c
+INFO  23:22:10,239 - #29 [
+INFO  23:22:10,239 - #30 ]
+INFO  23:22:10,239 - #5 ;
+INFO  23:22:10,240 - #3 {
+INFO  23:22:10,241 - #9 print
+INFO  23:22:10,241 - #6 (
+INFO  23:22:10,242 - #44 uto
+INFO  23:22:10,242 - #7 )
+INFO  23:22:10,244 - #5 ;
+INFO  23:22:10,244 - #10 return
+INFO  23:22:10,244 - #5 ;
+INFO  23:22:10,244 - #4 }
+INFO  23:22:10,244 - #4 }
+INFO  23:22:10,255 - Definise se enum dani na liniji 2
+INFO  23:22:10,255 - Dodato je polje pon sa vrednoscu 0 u Enum dani na liniji 2
+INFO  23:22:10,255 - Dodato je polje uto sa vrednoscu 1 u Enum dani na liniji 2
+INFO  23:22:10,255 - Definisan je enum dani na liniji 2
+INFO  23:22:10,255 - Deklarisana je lokalna promenljiva c tipa int array na liniji 4
+ERROR 23:22:10,255 - Greska na liniji 5 : ime uto nije deklarisano! 
+ERROR 23:22:10,256 - Greska, promenljiva nije deklarisana na liniji 5
+ERROR 23:22:10,256 - Pogresan tip argumenta funkcije print, argumenti mogu biti samo int ili char tipa na liniji 8
+INFO  23:22:10,256 - Definisana je metoda main tipa void na liniji 4
+INFO  23:22:10,256 - Globalnih promeljivih ima 0, a lokalnih 1
+INFO  23:22:10,256 - Print calls = 0
+ERROR 23:22:10,257 - Parsiranje NIJE uspesno zavrseno!

@@ -1,0 +1,56 @@
+INFO  23:23:30,782 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  23:23:30,806 - #2 program
+INFO  23:23:30,807 - #44 MJProgram
+INFO  23:23:30,807 - #42 enum
+INFO  23:23:30,807 - #44 dani
+INFO  23:23:30,807 - #3 {
+INFO  23:23:30,808 - #44 pon
+INFO  23:23:30,808 - #8 ,
+INFO  23:23:30,808 - #44 uto
+INFO  23:23:30,808 - #4 }
+INFO  23:23:30,809 - #3 {
+INFO  23:23:30,809 - #14 void
+INFO  23:23:30,809 - #44 main
+INFO  23:23:30,810 - #6 (
+INFO  23:23:30,810 - #7 )
+INFO  23:23:30,810 - #44 int
+INFO  23:23:30,811 - #44 c
+INFO  23:23:30,811 - #29 [
+INFO  23:23:30,811 - #30 ]
+INFO  23:23:30,811 - #8 ,
+INFO  23:23:30,812 - #44 a
+INFO  23:23:30,812 - #5 ;
+INFO  23:23:30,812 - #3 {
+INFO  23:23:30,813 - #44 c
+INFO  23:23:30,815 - #27 =
+INFO  23:23:30,815 - #31 new
+INFO  23:23:30,816 - #44 int
+INFO  23:23:30,816 - #29 [
+INFO  23:23:30,816 - #45 2
+INFO  23:23:30,816 - #30 ]
+INFO  23:23:30,817 - #5 ;
+INFO  23:23:30,817 - #44 c
+INFO  23:23:30,818 - #29 [
+INFO  23:23:30,818 - #45 0
+INFO  23:23:30,818 - #30 ]
+INFO  23:23:30,818 - #27 =
+INFO  23:23:30,818 - #12 -
+INFO  23:23:30,818 - #44 a
+INFO  23:23:30,818 - #11 +
+INFO  23:23:30,819 - #45 2
+INFO  23:23:30,819 - #5 ;
+INFO  23:23:30,819 - #10 return
+INFO  23:23:30,819 - #5 ;
+INFO  23:23:30,819 - #4 }
+INFO  23:23:30,819 - #4 }
+INFO  23:23:30,827 - Definise se enum dani na liniji 2
+INFO  23:23:30,827 - Dodato je polje pon sa vrednoscu 0 u Enum dani na liniji 2
+INFO  23:23:30,827 - Dodato je polje uto sa vrednoscu 1 u Enum dani na liniji 2
+INFO  23:23:30,827 - Definisan je enum dani na liniji 2
+INFO  23:23:30,827 - Deklarisana je lokalna promenljiva c tipa int array na liniji 4
+INFO  23:23:30,827 - Deklarisana je lokalna promenljiva a tipa int na liniji 4
+INFO  23:23:30,828 - Definisana je metoda main tipa void na liniji 4
+INFO  23:23:30,828 - Globalnih promeljivih ima 0, a lokalnih 2
+INFO  23:23:30,828 - Print calls = 0
+INFO  23:23:30,828 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  23:23:30,836 - Parsiranje uspesno zavrseno!

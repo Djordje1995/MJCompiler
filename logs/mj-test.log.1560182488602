@@ -1,0 +1,49 @@
+INFO  18:01:08,642 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  18:01:08,673 - #2 program
+INFO  18:01:08,673 - #44 MJProgram
+INFO  18:01:08,673 - #3 {
+INFO  18:01:08,673 - #44 int
+INFO  18:01:08,673 - #44 f
+INFO  18:01:08,673 - #6 (
+INFO  18:01:08,673 - #44 int
+INFO  18:01:08,673 - #44 a
+INFO  18:01:08,673 - #7 )
+INFO  18:01:08,673 - #3 {
+INFO  18:01:08,673 - #10 return
+INFO  18:01:08,673 - #45 2
+INFO  18:01:08,673 - #5 ;
+INFO  18:01:08,673 - #4 }
+INFO  18:01:08,673 - #14 void
+INFO  18:01:08,673 - #44 main
+INFO  18:01:08,673 - #6 (
+INFO  18:01:08,673 - #7 )
+INFO  18:01:08,673 - #44 int
+INFO  18:01:08,673 - #44 c
+INFO  18:01:08,673 - #5 ;
+INFO  18:01:08,673 - #3 {
+INFO  18:01:08,673 - #44 c
+INFO  18:01:08,673 - #27 =
+INFO  18:01:08,673 - #44 f
+INFO  18:01:08,673 - #6 (
+INFO  18:01:08,673 - #45 1
+INFO  18:01:08,673 - #8 ,
+INFO  18:01:08,673 - #45 3
+INFO  18:01:08,673 - #7 )
+INFO  18:01:08,673 - #5 ;
+INFO  18:01:08,673 - #9 print
+INFO  18:01:08,673 - #6 (
+INFO  18:01:08,673 - #44 c
+INFO  18:01:08,673 - #7 )
+INFO  18:01:08,673 - #5 ;
+INFO  18:01:08,673 - #10 return
+INFO  18:01:08,673 - #5 ;
+INFO  18:01:08,673 - #4 }
+INFO  18:01:08,673 - #4 }
+INFO  18:01:08,689 - Dodat formalni parametar a na liniji 3
+INFO  18:01:08,689 - Definisana je metoda f tipa int na liniji 3
+INFO  18:01:08,689 - Deklarisana je lokalna promenljiva c tipa int na liniji 6
+INFO  18:01:08,689 - Definisana je metoda main tipa void na liniji 6
+INFO  18:01:08,689 - Globalnih promeljivih ima 0, a lokalnih 2
+INFO  18:01:08,689 - Print calls = 0
+INFO  18:01:08,689 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  18:01:08,689 - Parsiranje uspesno zavrseno!

@@ -1,0 +1,101 @@
+INFO  18:45:16,804 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  18:45:16,857 - #2 program
+INFO  18:45:16,857 - #44 MJProgram
+INFO  18:45:16,857 - #3 {
+INFO  18:45:16,857 - #44 int
+INFO  18:45:16,857 - #44 f
+INFO  18:45:16,857 - #6 (
+INFO  18:45:16,857 - #44 int
+INFO  18:45:16,857 - #44 a
+INFO  18:45:16,857 - #8 ,
+INFO  18:45:16,857 - #44 int
+INFO  18:45:16,857 - #44 b
+INFO  18:45:16,857 - #7 )
+INFO  18:45:16,857 - #3 {
+INFO  18:45:16,857 - #10 return
+INFO  18:45:16,857 - #45 2
+INFO  18:45:16,873 - #5 ;
+INFO  18:45:16,873 - #4 }
+INFO  18:45:16,873 - #14 void
+INFO  18:45:16,873 - #44 main
+INFO  18:45:16,873 - #6 (
+INFO  18:45:16,873 - #7 )
+INFO  18:45:16,873 - #44 int
+INFO  18:45:16,873 - #44 c
+INFO  18:45:16,873 - #5 ;
+INFO  18:45:16,873 - #3 {
+INFO  18:45:16,873 - #44 c
+INFO  18:45:16,873 - #27 =
+INFO  18:45:16,873 - #44 f
+INFO  18:45:16,873 - #6 (
+INFO  18:45:16,873 - #45 1
+INFO  18:45:16,873 - #8 ,
+INFO  18:45:16,873 - #46 true
+INFO  18:45:16,873 - #7 )
+INFO  18:45:16,873 - #5 ;
+INFO  18:45:16,873 - #9 print
+INFO  18:45:16,873 - #6 (
+INFO  18:45:16,873 - #44 c
+INFO  18:45:16,873 - #7 )
+INFO  18:45:16,873 - #5 ;
+INFO  18:45:16,873 - #10 return
+INFO  18:45:16,873 - #5 ;
+INFO  18:45:16,873 - #4 }
+INFO  18:45:16,873 - #4 }
+INFO  18:45:16,904 - Dodat formalni parametar a na liniji 3
+INFO  18:45:16,904 - Dodat formalni parametar b na liniji 3
+INFO  18:45:16,904 - Definisana je metoda f tipa int na liniji 3
+INFO  18:45:16,904 - Deklarisana je lokalna promenljiva c tipa int na liniji 6
+INFO  19:08:33,720 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  19:08:33,767 - #2 program
+INFO  19:08:33,767 - #44 MJProgram
+INFO  19:08:33,767 - #3 {
+INFO  19:08:33,767 - #44 int
+INFO  19:08:33,767 - #44 f
+INFO  19:08:33,767 - #6 (
+INFO  19:08:33,767 - #44 int
+INFO  19:08:33,767 - #44 a
+INFO  19:08:33,767 - #8 ,
+INFO  19:08:33,767 - #44 int
+INFO  19:08:33,767 - #44 b
+INFO  19:08:33,767 - #7 )
+INFO  19:08:33,767 - #3 {
+INFO  19:08:33,767 - #10 return
+INFO  19:08:33,767 - #45 2
+INFO  19:08:33,767 - #5 ;
+INFO  19:08:33,782 - #4 }
+INFO  19:08:33,782 - #14 void
+INFO  19:08:33,782 - #44 main
+INFO  19:08:33,782 - #6 (
+INFO  19:08:33,782 - #7 )
+INFO  19:08:33,782 - #44 int
+INFO  19:08:33,782 - #44 c
+INFO  19:08:33,782 - #5 ;
+INFO  19:08:33,782 - #3 {
+INFO  19:08:33,782 - #44 c
+INFO  19:08:33,782 - #27 =
+INFO  19:08:33,782 - #44 f
+INFO  19:08:33,782 - #6 (
+INFO  19:08:33,782 - #45 1
+INFO  19:08:33,782 - #8 ,
+INFO  19:08:33,782 - #46 true
+INFO  19:08:33,782 - #7 )
+INFO  19:08:33,782 - #5 ;
+INFO  19:08:33,782 - #9 print
+INFO  19:08:33,782 - #6 (
+INFO  19:08:33,782 - #44 c
+INFO  19:08:33,782 - #7 )
+INFO  19:08:33,782 - #5 ;
+INFO  19:08:33,782 - #10 return
+INFO  19:08:33,782 - #5 ;
+INFO  19:08:33,782 - #4 }
+INFO  19:08:33,782 - #4 }
+INFO  19:08:33,805 - Dodat formalni parametar a na liniji 3
+INFO  19:08:33,805 - Dodat formalni parametar b na liniji 3
+INFO  19:08:33,805 - Definisana je metoda f tipa int na liniji 3
+INFO  19:08:33,805 - Deklarisana je lokalna promenljiva c tipa int na liniji 6
+ERROR 19:08:39,969 - Greska, neodgovarajuci broj argumenata  na liniji 7
+INFO  19:08:41,426 - Definisana je metoda main tipa void na liniji 6
+INFO  19:08:41,426 - Globalnih promeljivih ima 0, a lokalnih 3
+INFO  19:08:41,426 - Print calls = 0
+ERROR 19:08:41,429 - Parsiranje NIJE uspesno zavrseno!

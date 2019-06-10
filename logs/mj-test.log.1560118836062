@@ -1,0 +1,56 @@
+INFO  00:19:52,676 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  00:19:52,700 - #2 program
+INFO  00:19:52,700 - #44 MJProgram
+INFO  00:19:52,700 - #42 enum
+INFO  00:19:52,701 - #44 dani
+INFO  00:19:52,701 - #3 {
+INFO  00:19:52,701 - #44 pon
+INFO  00:19:52,701 - #8 ,
+INFO  00:19:52,702 - #44 uto
+INFO  00:19:52,702 - #4 }
+INFO  00:19:52,702 - #44 char
+INFO  00:19:52,702 - #44 a
+INFO  00:19:52,703 - #44 m
+ERROR 00:19:52,703 - 
+Sintaksna greska na liniji 3
+INFO  00:19:52,703 - #44 m
+INFO  00:19:52,703 - #5 ;
+INFO  00:19:52,703 - #3 {
+INFO  00:19:52,703 - #14 void
+INFO  00:19:52,703 - #44 main
+INFO  00:19:52,704 - #6 (
+INFO  00:19:52,705 - #7 )
+INFO  00:19:52,705 - #44 int
+INFO  00:19:52,705 - #44 c
+INFO  00:19:52,706 - #29 [
+INFO  00:19:52,706 - #30 ]
+INFO  00:19:52,706 - #5 ;
+INFO  00:19:52,707 - #3 {
+INFO  00:19:52,707 - #44 c
+INFO  00:19:52,707 - #27 =
+INFO  00:19:52,707 - #31 new
+INFO  00:19:52,708 - #44 int
+INFO  00:19:52,708 - #29 [
+INFO  00:19:52,708 - #45 2
+INFO  00:19:52,708 - #30 ]
+INFO  00:19:52,710 - #5 ;
+INFO  00:19:52,710 - #44 c
+INFO  00:19:52,710 - #29 [
+INFO  00:19:52,710 - #45 0
+INFO  00:19:52,711 - #30 ]
+INFO  00:19:52,711 - #27 =
+INFO  00:19:52,711 - #12 -
+INFO  00:19:52,711 - #44 a
+INFO  00:19:52,711 - #5 ;
+INFO  00:19:52,711 - #10 return
+INFO  00:19:52,711 - #5 ;
+INFO  00:19:52,712 - #4 }
+INFO  00:19:52,712 - #4 }
+INFO  00:19:52,722 - Definise se enum dani na liniji 2
+INFO  00:19:52,722 - Dodato je polje pon sa vrednoscu 0 u Enum dani na liniji 2
+INFO  00:19:52,722 - Dodato je polje uto sa vrednoscu 1 u Enum dani na liniji 2
+INFO  00:19:52,722 - Definisan je enum dani na liniji 2
+INFO  00:19:52,722 - Deklarisana je lokalna promenljiva c tipa int array na liniji 5
+ERROR 00:19:52,723 - Greska na liniji 7 : ime a nije deklarisano! 
+ERROR 00:19:52,723 - Greska, promenljiva nije deklarisana na liniji 7
+ERROR 00:19:52,723 - Greska, tip terma mora da bude int na liniji 7
