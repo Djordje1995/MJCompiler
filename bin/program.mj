@@ -4,7 +4,7 @@ program MJProgram
     return 2;
   }
 	void main() int c;{
-	  c = 1;
+	  print(1);
 	  c = f();
 	  print(c);
 	  return;

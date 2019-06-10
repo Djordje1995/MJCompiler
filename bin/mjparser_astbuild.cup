@@ -93,6 +93,7 @@ nonterminal Addop Addop;
 nonterminal Mulop Mulop;
 nonterminal Relop Relop;
 nonterminal Assignop Assignop;
+nonterminal FormalParam FormalParam;
 nonterminal MaybeNumConst MaybeNumConst;
 nonterminal ReturnExpression ReturnExpression;
 nonterminal MaybeCondition MaybeCondition;
@@ -148,9 +149,13 @@ ConstDecl ::= (ConstDecl) CONST Type:t  IdentConst:I1 IdentConstList:I2 SEMI {: 
 IdentConst ::= (IdentConst) IDENT:name ASSIGN AnyConst:A1 {: RESULT=new IdentConst(name, A1); RESULT.setLine(nameleft); :};
 
 IdentConstList ::= (IdentConstListRec) IdentConstList:I1 COMMA IdentConst:I2 {: RESULT=new IdentConstListRec(I1, I2); RESULT.setLine(I1left); :}
-				| {: RESULT=new IdentConstListDerived1(); :}
-				/* epsilon */
-				;
+				        |
+				        (IdentConstListError) error
+				        {: System.out.println("Uspesan oporavak od greske (do prvog znaka ';') prilikom definisanja konstante"); :}
+				        COMMA IdentConst:I1 {: RESULT=new IdentConstListError(I1); RESULT.setLine(I1left); :}
+				        | {: RESULT=new IdentConstListDerived1(); :}
+				        /* epsilon */
+			 	        ;
 
 AnyConst ::= (NumConst) NUM_CONST:numValue {: RESULT=new NumConst(numValue); RESULT.setLine(numValueleft); :}
 			|
@@ -167,6 +172,10 @@ EnumParam ::= (EnumParam) IDENT:name MaybeAssignNumConst:M1 {: RESULT=new EnumPa
 
 EnumParamList ::= (EnumParamsList) EnumParamList:E1 COMMA EnumParam:E2 {: RESULT=new EnumParamsList(E1, E2); RESULT.setLine(E1left); :}
                   |
+                  (EnumParamListError) error
+                  {: System.out.println("Uspesan oporavak od greske (do prvog znaka ',') prilikom definisanja nabrojivog tipa"); :}
+                  COMMA EnumParam:E1 {: RESULT=new EnumParamListError(E1); RESULT.setLine(E1left); :}
+                  |
                   (NoEnumParamsList) {: RESULT=new NoEnumParamsList(); :} /* epsilon */
                   ; 
 
@@ -175,11 +184,20 @@ MaybeAssignNumConst ::= (EnumAssignNumConst) ASSIGN NUM_CONST:value {: RESULT=ne
 				              /* epsilon */
 				              ;
 
-VarDecl ::= (VarDecl) Type:t VarName:name VarList:V1 SEMI {: RESULT=new VarDecl(t, name, V1); RESULT.setLine(tleft); :};
+VarDecl ::= (VarDcl) Type:t VarName:name VarList:V1 SEMI {: RESULT=new VarDcl(t, name, V1); RESULT.setLine(tleft); :}
+          |
+          (VarDeclError) error
+          {: System.out.println("Uspesan oporavak od greske (do prvog znaka ';') prilikom deklarisanja promenljive"); :}
+          SEMI {: RESULT=new VarDeclError(); :}
+          ;
 
 VarName ::= (VarName) IDENT:varName MaybeEmptySquareBrackets:M1 {: RESULT=new VarName(varName, M1); RESULT.setLine(varNameleft); :};
 
 VarList ::= (VarListRec) VarList:V1 COMMA VarName:name {: RESULT=new VarListRec(V1, name); RESULT.setLine(V1left); :}
+        |
+        (VarListError) error
+        {: System.out.println("Uspesan oporavak od greske (do prvog znaka ',') prilikom deklarisanja promenljive"); :}
+        COMMA VarName:name {: RESULT=new VarListError(name); RESULT.setLine(nameleft); :}
 				| {: RESULT=new VarListDerived1(); :}
 				/* epsilon */
 				;
@@ -187,6 +205,7 @@ VarList ::= (VarListRec) VarList:V1 COMMA VarName:name {: RESULT=new VarListRec(
 ClassDecl ::= (ClassDecl) CLASS IDENT:I1 MaybeExtends:M2 MaybeImplements:M3 LBRACE VarDeclList:V4 MaybeMethodDecl:M5 RBRACE {: RESULT=new ClassDecl(I1, M2, M3, V4, M5); RESULT.setLine(I1left); :};
 
 MaybeMethodDecl ::= LBRACE MethodDeclList:M1 RBRACE {: RESULT=new MaybeMethodDeclDerived1(M1); RESULT.setLine(M1left); :}
+
 					| {: RESULT=new MaybeMethodDeclDerived2(); :}
 					/* epsilon */
 					;
@@ -202,9 +221,9 @@ MaybeImplements ::= IMPLEMENTS Type:t TypeList:T1 {: RESULT=new MaybeImplementsD
 					;
 
 TypeList ::= (TypeListRec) TypeList:T1 COMMA Type:t {: RESULT=new TypeListRec(T1, t); RESULT.setLine(T1left); :}
-				| {: RESULT=new TypeListDerived1(); :}
-				/* epsilon */
-				;
+				  | {: RESULT=new TypeListDerived1(); :}
+				  /* epsilon */
+				  ;
 
 MaybeExtends ::= EXTENDS Type:t {: RESULT=new MaybeExtendsDerived1(t); RESULT.setLine(tleft); :}
 				| {: RESULT=new MaybeExtendsDerived2(); :}
@@ -237,28 +256,30 @@ MaybeFormPars ::= (FormParams) FormPars:fp {: RESULT=new FormParams(fp); RESULT.
 				      ;
 
 VarDeclList ::= (VarDeclListRec) VarDeclList:V1 VarDecl:var {: RESULT=new VarDeclListRec(V1, var); RESULT.setLine(V1left); :}
-				| {: RESULT=new VarDeclListDerived1(); :}
-				/* epsilon */
-				; 
+      				| {: RESULT=new VarDeclListDerived1(); :}
+      				/* epsilon */
+      				; 
 
-FormPars ::= (FormPars) Type:t IDENT:I1 MaybeEmptySquareBrackets:M2 FormParsList:l {: RESULT=new FormPars(t, I1, M2, l); RESULT.setLine(tleft); :};
+FormPars ::= (FormPars) FormalParam:F1 FormParsList:l {: RESULT=new FormPars(F1, l); RESULT.setLine(F1left); :};
+
+FormalParam ::= (FormalParam) Type:t IDENT:I1 MaybeEmptySquareBrackets:M2 {: RESULT=new FormalParam(t, I1, M2); RESULT.setLine(tleft); :};
 
 MaybeEmptySquareBrackets ::= (EmptySquareBrackets) LSQUAREB RSQUAREB {: RESULT=new EmptySquareBrackets(); :}
-							|
-							(NoSquareBrackets) {: RESULT=new NoSquareBrackets(); :} /* epsilon */
-							;			
+          							|
+          							(NoSquareBrackets) {: RESULT=new NoSquareBrackets(); :} /* epsilon */
+          							;			
 
-FormParsList ::= (FormParsListRec) FormParsList:F1 COMMA Type:t IDENT:I2 MaybeEmptySquareBrackets:M3 {: RESULT=new FormParsListRec(F1, t, I2, M3); RESULT.setLine(F1left); :}
-				| {: RESULT=new FormParsListDerived1(); :}
-				/* epsilon */
-				;
+FormParsList ::= (FormParsListRec) FormParsList:F1 COMMA FormalParam:F2 {: RESULT=new FormParsListRec(F1, F2); RESULT.setLine(F1left); :}
+      				| {: RESULT=new FormParsListDerived1(); :}
+      				/* epsilon */
+      				;
 
 Type ::= (Type) IDENT:typeName {: RESULT=new Type(typeName); RESULT.setLine(typeNameleft); :};
 
 Statement ::= (MatchedStmt) Matched:M1 {: RESULT=new MatchedStmt(M1); RESULT.setLine(M1left); :}
-			  |
-			  (UnmatchedStmt) Unmatched:U1 {: RESULT=new UnmatchedStmt(U1); RESULT.setLine(U1left); :}
-			  ;
+    			  |
+    			  (UnmatchedStmt) Unmatched:U1 {: RESULT=new UnmatchedStmt(U1); RESULT.setLine(U1left); :}
+    			  ;
 
 Unmatched ::= (UnmatchedIf) IF LPAREN Condition:cond RPAREN Statement:stmt {: RESULT=new UnmatchedIf(cond, stmt); RESULT.setLine(condleft); :}
 			|
@@ -266,6 +287,10 @@ Unmatched ::= (UnmatchedIf) IF LPAREN Condition:cond RPAREN Statement:stmt {: RE
 	
 Matched ::=
 			(DesignStatement) DesignatorStatement:designatorStatement SEMI {: RESULT=new DesignStatement(designatorStatement); RESULT.setLine(designatorStatementleft); :}
+			|
+			(MatchedError) error
+			{: System.out.println("Uspesan oporavak od greske (do prvog znaka ';') prilikom izvrsavanja izraza"); :}
+			SEMI {: RESULT=new MatchedError(); :}
 			|
 			(MatchedIf) IF LPAREN Condition:cond RPAREN Matched:M1 ELSE Matched:M2 {: RESULT=new MatchedIf(cond, M1, M2); RESULT.setLine(condleft); :}
 			|
@@ -352,8 +377,8 @@ MaybeRelopExpr ::= Relop:R1 Expr:e {: RESULT=new MaybeRelopExprDerived1(R1, e); 
 				
 Expr ::= (Expr) MaybeMinus:M1 Term:t AddopTermList:A2 {: RESULT=new Expr(M1, t, A2); RESULT.setLine(M1left); :};
 
-MaybeMinus ::=  MINUS {: RESULT=new MaybeMinusDerived1(); :}
-				| {: RESULT=new MaybeMinusDerived2(); :}
+MaybeMinus ::=  (IsMinus) MINUS {: RESULT=new IsMinus(); :}
+				| {: RESULT=new MaybeMinusDerived1(); :}
 				/* epsilon */
 				;
 

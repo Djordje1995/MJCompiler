@@ -30,11 +30,8 @@ import rs.ac.bg.etf.pp1.ast.Mulop;
 import rs.ac.bg.etf.pp1.ast.MulopFactorListRec;
 import rs.ac.bg.etf.pp1.ast.Plus;
 import rs.ac.bg.etf.pp1.ast.PrintStatement;
-import rs.ac.bg.etf.pp1.ast.ProgName;
-import rs.ac.bg.etf.pp1.ast.Program;
 import rs.ac.bg.etf.pp1.ast.ReadDesignatorStatement;
 import rs.ac.bg.etf.pp1.ast.ReturnStatement;
-import rs.ac.bg.etf.pp1.ast.VarDcl;
 import rs.ac.bg.etf.pp1.ast.VisitorAdaptor;
 import rs.etf.pp1.mj.runtime.Code;
 import rs.etf.pp1.symboltable.Tab;
@@ -43,10 +40,6 @@ import rs.etf.pp1.symboltable.concepts.Struct;
 
 public class CodeGenerator extends VisitorAdaptor {
 
-	private int varCount;
-//
-//	private int paramCnt;
-
 	private int mainPc;
 
 	public Obj currentMethod = null;
@@ -54,87 +47,17 @@ public class CodeGenerator extends VisitorAdaptor {
 	public int getMainPc() {
 		return mainPc;
 	}
-
-//	@Override
-//	public void visit(ProgName ProgName) {
-//
-//		Collection<Obj> universeLocals = Tab.currentScope.getLocals().symbols();
-//		for (Obj obj : universeLocals) {
-//			if (obj.getKind() == Obj.Meth) {
-//
-//				obj.setAdr(Code.pc);
-//				Code.put(Code.enter);
-//				Code.put(obj.getLevel());
-//				Code.put(obj.getLocalSymbols().size());
-//				Code.put(Code.load_n);
-//
-//				if ("len".equals(obj.getName())) {
-//					Code.put(Code.arraylength);
-//				}
-//
-//				Code.put(Code.exit);
-//				Code.put(Code.return_);
-//			}
-//		}
-//
-//		Obj prog = Tab.find(ProgName.getProgName());
-//		Tab.openScope();
-//		for (Obj obj : prog.getLocalSymbols()) {
-//			if (obj.getKind() == Obj.Var) {
-//				Code.dataSize++;
-//			}
-//			Tab.currentScope.addToLocals(obj);
-//		}
-//	}
-
-//	@Override
-//	public void visit(MethodTypeName MethodTypeName) {
-//		if ("main".equalsIgnoreCase(MethodTypeName.getMethName())) {
-//			mainPc = Code.pc;
-//		}
-//		MethodTypeName.obj.setAdr(Code.pc);
-//		
-//		// Collect arguments and local variables.
-//		SyntaxNode methodNode = MethodTypeName.getParent();
-//		VarCounter varCnt = new VarCounter();
-//		methodNode.traverseTopDown(varCnt);
-//		FormParamCounter fpCnt = new FormParamCounter();
-//		methodNode.traverseTopDown(fpCnt);
-//		
-//		// Generate the entry.
-//		Code.put(Code.enter);
-//		Code.put(fpCnt.getCount());
-//		Code.put(varCnt.getCount() + fpCnt.getCount());
-//	}
-
-	@Override
-	public void visit(VarDcl VarDcl) {
-		varCount++;
-	}
-	
-	@Override
-	public void visit(ProgName progName) {
-//		Tab.insert(Obj.Prog, progName.getProgName(), Tab.noType);
-//		Tab.openScope();
-	}
-	
-	@Override
-	public void visit(Program program) {
-//		Tab.closeScope();
-	}
 	
 	@Override
 	public void visit(MethodDecl methodDecl) {
 		currentMethod = null;
 		Code.put(Code.exit);
 		Code.put(Code.return_);
-//		Tab.closeScope();
 	}
 
 	@Override
 	public void visit(MethodName methodName) {
-		currentMethod = Tab.find(methodName.getMethodName());
-//		Tab.openScope();
+		currentMethod = methodName.obj;
 	}
 
 	@Override
@@ -142,6 +65,7 @@ public class CodeGenerator extends VisitorAdaptor {
 		currentMethod.setAdr(Code.pc);
 		if ("main".equals(currentMethod.getName())) {
 			Code.mainPc = Code.pc;
+			mainPc = Code.mainPc;
 		}
 		Code.put(Code.enter);
 		Code.put(currentMethod.getLevel());
@@ -167,7 +91,7 @@ public class CodeGenerator extends VisitorAdaptor {
 		
 		if (factorDesignator.getMaybeParams() instanceof ActualParamsBrackets) {
 			Code.put(Code.call);
-			Code.put2(obj.getAdr() - Code.pc);
+			Code.put2(obj.getAdr() - Code.pc + 1);
 		}
 		else {
 			Code.load(obj);
@@ -241,7 +165,7 @@ public class CodeGenerator extends VisitorAdaptor {
 		}
 		else {
 			Code.put(Code.call);
-			Code.put2(designatorStatement.getDesignator().obj.getAdr() - Code.pc);
+			Code.put2(designatorStatement.getDesignator().obj.getAdr() - Code.pc + 1);
 		}
 	}
 
