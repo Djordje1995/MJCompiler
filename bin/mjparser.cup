@@ -66,7 +66,7 @@ nonterminal MaybeAssignNumConst, EnumDecl, AnyConst, IdentConstList, ConstDecl, 
 nonterminal MaybeExtends, ClassDecl, MaybeMethodDecl, MaybeImplements, TypeList, DesignatorStatementOp;
 nonterminal MethodDeclList, VarDecl, MaybeFormPars, InterfaceMethodDecl, InterfaceMethodDeclList, InterfaceDecl;
 nonterminal FormParsList, MaybeEmptySquareBrackets, FormPars, ActPars, ActParList, MaybeExpression; 
-nonterminal DesignatorStatement, StatementList, Statement, Addop, Mulop, Relop, Assignop;
+nonterminal DesignatorStatement, StatementList, Statement, Addop, Mulop, Relop, Assignop, FormalParam;
 nonterminal MaybeNumConst, ReturnExpression, MaybeCondition, MaybeDesignatorStatement, IdentConst;
 nonterminal MulopFactorList, AddopTermList, CondFact, CondFactAnd, CondTerm, CondTermOr, Condition;
 nonterminal MaybeActualParams, MaybeParams, MaybeMinus, MaybeRelopExpr, TypeOrVoid, Matched, Unmatched;
@@ -100,9 +100,13 @@ ConstDecl ::= (ConstDecl) CONST Type:t  IdentConst IdentConstList SEMI;
 IdentConst ::= (IdentConst) IDENT:name ASSIGN AnyConst;
 
 IdentConstList ::= (IdentConstListRec) IdentConstList COMMA IdentConst
-				|
-				/* epsilon */
-				;
+				        |
+				        (IdentConstListError) error
+				        {: System.out.println("Uspesan oporavak od greske (do prvog znaka ';') prilikom definisanja konstante"); :}
+				        COMMA IdentConst
+				        |
+				        /* epsilon */
+			 	        ;
 
 AnyConst ::= (NumConst) NUM_CONST:numValue
 			|
@@ -119,6 +123,10 @@ EnumParam ::= (EnumParam) IDENT:name MaybeAssignNumConst;
 
 EnumParamList ::= (EnumParamsList) EnumParamList COMMA EnumParam
                   |
+                  (EnumParamListError) error
+                  {: System.out.println("Uspesan oporavak od greske (do prvog znaka ',') prilikom definisanja nabrojivog tipa"); :}
+                  COMMA EnumParam
+                  |
                   (NoEnumParamsList) /* epsilon */
                   ; 
 
@@ -127,11 +135,20 @@ MaybeAssignNumConst ::= (EnumAssignNumConst) ASSIGN NUM_CONST:value
 				              /* epsilon */
 				              ;
 
-VarDecl ::= (VarDecl) Type:t VarName:name VarList SEMI;
+VarDecl ::= (VarDcl) Type:t VarName:name VarList SEMI
+          |
+          (VarDeclError) error
+          {: System.out.println("Uspesan oporavak od greske (do prvog znaka ';') prilikom deklarisanja promenljive"); :}
+          SEMI
+          ;
 
 VarName ::= (VarName) IDENT:varName MaybeEmptySquareBrackets;
 
 VarList ::= (VarListRec) VarList COMMA VarName:name
+        |
+        (VarListError) error
+        {: System.out.println("Uspesan oporavak od greske (do prvog znaka ',') prilikom deklarisanja promenljive"); :}
+        COMMA VarName:name
 				|
 				/* epsilon */
 				;
@@ -139,6 +156,7 @@ VarList ::= (VarListRec) VarList COMMA VarName:name
 ClassDecl ::= (ClassDecl) CLASS IDENT MaybeExtends MaybeImplements LBRACE VarDeclList MaybeMethodDecl RBRACE;
 
 MaybeMethodDecl ::= LBRACE MethodDeclList RBRACE
+
 					|
 					/* epsilon */
 					;
@@ -154,9 +172,9 @@ MaybeImplements ::= IMPLEMENTS Type:t TypeList
 					;
 
 TypeList ::= (TypeListRec) TypeList COMMA Type:t
-				|
-				/* epsilon */
-				;
+				  |
+				  /* epsilon */
+				  ;
 
 MaybeExtends ::= EXTENDS Type:t
 				|
@@ -189,28 +207,30 @@ MaybeFormPars ::= (FormParams) FormPars:fp
 				      ;
 
 VarDeclList ::= (VarDeclListRec) VarDeclList VarDecl:var
-				|
-				/* epsilon */
-				; 
+      				|
+      				/* epsilon */
+      				; 
 
-FormPars ::= (FormPars) Type:t IDENT MaybeEmptySquareBrackets FormParsList:l;
+FormPars ::= (FormPars) FormalParam FormParsList:l;
+
+FormalParam ::= (FormalParam) Type:t IDENT MaybeEmptySquareBrackets;
 
 MaybeEmptySquareBrackets ::= (EmptySquareBrackets) LSQUAREB RSQUAREB
-							|
-							(NoSquareBrackets) /* epsilon */
-							;			
+          							|
+          							(NoSquareBrackets) /* epsilon */
+          							;			
 
-FormParsList ::= (FormParsListRec) FormParsList COMMA Type:t IDENT MaybeEmptySquareBrackets
-				|
-				/* epsilon */
-				;
+FormParsList ::= (FormParsListRec) FormParsList COMMA FormalParam
+      				|
+      				/* epsilon */
+      				;
 
 Type ::= (Type) IDENT:typeName;
 
 Statement ::= (MatchedStmt) Matched
-			  |
-			  (UnmatchedStmt) Unmatched
-			  ;
+    			  |
+    			  (UnmatchedStmt) Unmatched
+    			  ;
 
 Unmatched ::= (UnmatchedIf) IF LPAREN Condition:cond RPAREN Statement:stmt
 			|
@@ -218,6 +238,10 @@ Unmatched ::= (UnmatchedIf) IF LPAREN Condition:cond RPAREN Statement:stmt
 	
 Matched ::=
 			(DesignStatement) DesignatorStatement:designatorStatement SEMI
+			|
+			(MatchedError) error
+			{: System.out.println("Uspesan oporavak od greske (do prvog znaka ';') prilikom izvrsavanja izraza"); :}
+			SEMI
 			|
 			(MatchedIf) IF LPAREN Condition:cond RPAREN Matched ELSE Matched
 			|
@@ -304,7 +328,7 @@ MaybeRelopExpr ::= Relop Expr:e
 				
 Expr ::= (Expr) MaybeMinus Term:t AddopTermList;
 
-MaybeMinus ::=  MINUS
+MaybeMinus ::=  (IsMinus) MINUS
 				|
 				/* epsilon */
 				;

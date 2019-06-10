@@ -1,5 +1,6 @@
 package rs.ac.bg.etf.pp1;
 
+import rs.ac.bg.etf.pp1.ast.ActualParamsBrackets;
 import rs.ac.bg.etf.pp1.ast.Addop;
 import rs.ac.bg.etf.pp1.ast.AddopTermListRec;
 import rs.ac.bg.etf.pp1.ast.Designator;
@@ -11,12 +12,15 @@ import rs.ac.bg.etf.pp1.ast.DesignatorInc;
 import rs.ac.bg.etf.pp1.ast.DesignatorStatement;
 import rs.ac.bg.etf.pp1.ast.DesignatorStatementOp;
 import rs.ac.bg.etf.pp1.ast.Div;
+import rs.ac.bg.etf.pp1.ast.Expr;
 import rs.ac.bg.etf.pp1.ast.FactorBool;
 import rs.ac.bg.etf.pp1.ast.FactorChar;
 import rs.ac.bg.etf.pp1.ast.FactorDesignator;
 import rs.ac.bg.etf.pp1.ast.FactorNewType;
 import rs.ac.bg.etf.pp1.ast.FactorNumber;
+import rs.ac.bg.etf.pp1.ast.IsMinus;
 import rs.ac.bg.etf.pp1.ast.IsNumConst;
+import rs.ac.bg.etf.pp1.ast.MaybeMinus;
 import rs.ac.bg.etf.pp1.ast.MaybeNumConst;
 import rs.ac.bg.etf.pp1.ast.MethodDecl;
 import rs.ac.bg.etf.pp1.ast.MethodName;
@@ -26,9 +30,11 @@ import rs.ac.bg.etf.pp1.ast.Mulop;
 import rs.ac.bg.etf.pp1.ast.MulopFactorListRec;
 import rs.ac.bg.etf.pp1.ast.Plus;
 import rs.ac.bg.etf.pp1.ast.PrintStatement;
+import rs.ac.bg.etf.pp1.ast.ProgName;
+import rs.ac.bg.etf.pp1.ast.Program;
 import rs.ac.bg.etf.pp1.ast.ReadDesignatorStatement;
 import rs.ac.bg.etf.pp1.ast.ReturnStatement;
-import rs.ac.bg.etf.pp1.ast.VarDecl;
+import rs.ac.bg.etf.pp1.ast.VarDcl;
 import rs.ac.bg.etf.pp1.ast.VisitorAdaptor;
 import rs.etf.pp1.mj.runtime.Code;
 import rs.etf.pp1.symboltable.Tab;
@@ -102,32 +108,33 @@ public class CodeGenerator extends VisitorAdaptor {
 //	}
 
 	@Override
-	public void visit(VarDecl VarDecl) {
+	public void visit(VarDcl VarDcl) {
 		varCount++;
 	}
-
-//	@Override
-//	public void visit(FuncCall FuncCall) {
-//		Obj functionObj = FuncCall.getDesignator().obj;
-//		int offset = functionObj.getAdr() - Code.pc; 
-//		Code.put(Code.call);
-//		Code.put2(offset);
-//	}
-//	
-
-
+	
+	@Override
+	public void visit(ProgName progName) {
+//		Tab.insert(Obj.Prog, progName.getProgName(), Tab.noType);
+//		Tab.openScope();
+	}
+	
+	@Override
+	public void visit(Program program) {
+//		Tab.closeScope();
+	}
+	
 	@Override
 	public void visit(MethodDecl methodDecl) {
 		currentMethod = null;
 		Code.put(Code.exit);
 		Code.put(Code.return_);
-		Tab.closeScope();
+//		Tab.closeScope();
 	}
 
 	@Override
 	public void visit(MethodName methodName) {
 		currentMethod = Tab.find(methodName.getMethodName());
-		Tab.openScope();
+//		Tab.openScope();
 	}
 
 	@Override
@@ -157,7 +164,14 @@ public class CodeGenerator extends VisitorAdaptor {
 	@Override
 	public void visit(FactorDesignator factorDesignator) {
 		Obj obj = factorDesignator.getDesignator().obj;
-		Code.load(obj);
+		
+		if (factorDesignator.getMaybeParams() instanceof ActualParamsBrackets) {
+			Code.put(Code.call);
+			Code.put2(obj.getAdr() - Code.pc);
+		}
+		else {
+			Code.load(obj);
+		}
 	}
 
 	@Override
@@ -225,8 +239,20 @@ public class CodeGenerator extends VisitorAdaptor {
 		else if (stmt instanceof DesignatorExpr) {
 			Code.store(designator.obj);
 		}
+		else {
+			Code.put(Code.call);
+			Code.put2(designatorStatement.getDesignator().obj.getAdr() - Code.pc);
+		}
 	}
 
+	@Override
+	public void visit(Expr expr) {
+		MaybeMinus neg = expr.getMaybeMinus();
+		if (neg instanceof IsMinus) {
+			Code.put(Code.neg);
+		}
+	}
+	
 	@Override
 	public void visit(DesignatorIdent designatorIdent) {
 		if (designatorIdent.getParent() instanceof DesignatorArrayMember) {

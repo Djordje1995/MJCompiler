@@ -1,0 +1,33 @@
+INFO  20:18:00,392 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  20:18:00,423 - #2 program
+INFO  20:18:00,423 - #44 MJProgram
+INFO  20:18:00,423 - #3 {
+INFO  20:18:00,423 - #14 void
+INFO  20:18:00,423 - #44 main
+INFO  20:18:00,423 - #6 (
+INFO  20:18:00,423 - #7 )
+INFO  20:18:00,423 - #44 int
+INFO  20:18:00,423 - #44 c
+INFO  20:18:00,423 - #5 ;
+INFO  20:18:00,423 - #3 {
+INFO  20:18:00,430 - #44 c
+INFO  20:18:00,430 - #27 =
+INFO  20:18:00,430 - #44 f
+INFO  20:18:00,430 - #6 (
+INFO  20:18:00,430 - #45 1
+INFO  20:18:00,430 - #8 ,
+INFO  20:18:00,430 - #45 3
+INFO  20:18:00,430 - #7 )
+INFO  20:18:00,430 - #5 ;
+INFO  20:18:00,430 - #9 print
+INFO  20:18:00,430 - #6 (
+INFO  20:18:00,430 - #44 c
+INFO  20:18:00,430 - #7 )
+INFO  20:18:00,430 - #5 ;
+INFO  20:18:00,430 - #10 return
+INFO  20:18:00,430 - #5 ;
+INFO  20:18:00,430 - #4 }
+INFO  20:18:00,430 - #4 }
+INFO  20:18:00,430 - Deklarisana je lokalna promenljiva c tipa int na liniji 6
+ERROR 20:18:00,430 - Greska na liniji 7 : ime f nije deklarisano! 
+ERROR 20:18:00,430 - Greska, promenljiva nije deklarisana na liniji 7

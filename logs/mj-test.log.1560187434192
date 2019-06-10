@@ -1,0 +1,53 @@
+INFO  19:22:11,054 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  19:22:11,086 - #2 program
+INFO  19:22:11,086 - #44 MJProgram
+INFO  19:22:11,086 - #3 {
+INFO  19:22:11,092 - #44 int
+INFO  19:22:11,092 - #44 f
+INFO  19:22:11,092 - #6 (
+INFO  19:22:11,092 - #44 int
+INFO  19:22:11,092 - #44 a
+INFO  19:22:11,092 - #8 ,
+INFO  19:22:11,092 - #44 int
+INFO  19:22:11,092 - #44 b
+INFO  19:22:11,092 - #7 )
+INFO  19:22:11,092 - #3 {
+INFO  19:22:11,092 - #10 return
+INFO  19:22:11,092 - #45 2
+INFO  19:22:11,092 - #5 ;
+INFO  19:22:11,092 - #4 }
+INFO  19:22:11,092 - #14 void
+INFO  19:22:11,092 - #44 main
+INFO  19:22:11,092 - #6 (
+INFO  19:22:11,092 - #7 )
+INFO  19:22:11,092 - #44 int
+INFO  19:22:11,092 - #44 c
+INFO  19:22:11,092 - #5 ;
+INFO  19:22:11,092 - #3 {
+INFO  19:22:11,092 - #44 c
+INFO  19:22:11,092 - #27 =
+INFO  19:22:11,092 - #44 f
+INFO  19:22:11,092 - #6 (
+INFO  19:22:11,092 - #45 1
+INFO  19:22:11,092 - #8 ,
+INFO  19:22:11,092 - #45 3
+INFO  19:22:11,092 - #7 )
+INFO  19:22:11,092 - #5 ;
+INFO  19:22:11,092 - #9 print
+INFO  19:22:11,092 - #6 (
+INFO  19:22:11,092 - #44 c
+INFO  19:22:11,092 - #7 )
+INFO  19:22:11,092 - #5 ;
+INFO  19:22:11,092 - #10 return
+INFO  19:22:11,092 - #5 ;
+INFO  19:22:11,092 - #4 }
+INFO  19:22:11,092 - #4 }
+INFO  19:22:11,108 - Dodat formalni parametar a na liniji 3
+INFO  19:22:11,108 - Dodat formalni parametar b na liniji 3
+INFO  19:22:11,108 - Definisana je metoda f tipa int na liniji 3
+INFO  19:22:11,108 - Deklarisana je lokalna promenljiva c tipa int na liniji 6
+INFO  19:22:11,108 - Definisana je metoda main tipa void na liniji 6
+INFO  19:22:11,108 - Globalnih promeljivih ima 0, a lokalnih 3
+INFO  19:22:11,108 - Print calls = 0
+INFO  19:22:11,108 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  19:22:11,108 - Parsiranje uspesno zavrseno!
