@@ -1,0 +1,38 @@
+INFO  19:54:05,813 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  19:54:05,838 - #2 program
+INFO  19:54:05,838 - #44 test301
+INFO  19:54:05,838 - #3 {
+INFO  19:54:05,839 - #14 void
+INFO  19:54:05,839 - #44 main
+INFO  19:54:05,839 - #6 (
+INFO  19:54:05,839 - #7 )
+INFO  19:54:05,840 - #44 char
+INFO  19:54:05,840 - #44 c
+INFO  19:54:05,840 - #5 ;
+INFO  19:54:05,841 - #44 int
+INFO  19:54:05,842 - #44 b
+INFO  19:54:05,842 - #5 ;
+INFO  19:54:05,842 - #3 {
+INFO  19:54:05,842 - #44 b
+INFO  19:54:05,842 - #27 =
+INFO  19:54:05,842 - #44 ord
+INFO  19:54:05,843 - #6 (
+INFO  19:54:05,844 - #44 a
+INFO  19:54:05,844 - #7 )
+INFO  19:54:05,846 - #5 ;
+INFO  19:54:05,846 - #9 print
+INFO  19:54:05,846 - #6 (
+INFO  19:54:05,847 - #44 b
+INFO  19:54:05,847 - #7 )
+INFO  19:54:05,847 - #5 ;
+INFO  19:54:05,847 - #4 }
+INFO  19:54:05,847 - #4 }
+INFO  19:54:05,855 - Deklarisana je lokalna promenljiva c tipa char na liniji 4
+INFO  19:54:05,856 - Deklarisana je lokalna promenljiva b tipa int na liniji 5
+ERROR 19:54:05,856 - Greska na liniji 7 : ime a nije deklarisano! 
+ERROR 19:54:05,856 - Greska, promenljiva nije deklarisana na liniji 7
+ERROR 19:54:05,856 - Greska, neodgovarajuci tip argumenta pri pozivu funkcije  na liniji 7
+INFO  19:54:05,856 - Definisana je metoda main tipa void na liniji 3
+INFO  19:54:05,856 - Globalnih promeljivih ima 0, a lokalnih 2
+INFO  19:54:05,856 - Print calls = 0
+ERROR 19:54:05,857 - Parsiranje NIJE uspesno zavrseno!

@@ -47,7 +47,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	public int getMainPc() {
 		return mainPc;
 	}
-	
+
 	@Override
 	public void visit(MethodDecl methodDecl) {
 		currentMethod = null;
@@ -84,16 +84,17 @@ public class CodeGenerator extends VisitorAdaptor {
 		Code.put(Code.newarray);
 		Code.put(type == Tab.intType ? 1 : 0);
 	}
-	
+
 	@Override
 	public void visit(FactorDesignator factorDesignator) {
 		Obj obj = factorDesignator.getDesignator().obj;
-		
+
 		if (factorDesignator.getMaybeParams() instanceof ActualParamsBrackets) {
-			Code.put(Code.call);
-			Code.put2(obj.getAdr() - Code.pc + 1);
-		}
-		else {
+			if (!"ord".equals(obj.getName()) && !"chr".equals(obj.getName()) && !"len".equals(obj.getName())) {
+				Code.put(Code.call);
+				Code.put2(obj.getAdr() - Code.pc + 1);
+			}
+		} else {
 			Code.load(obj);
 		}
 	}
@@ -120,8 +121,7 @@ public class CodeGenerator extends VisitorAdaptor {
 		if (mnc instanceof IsNumConst) {
 			IsNumConst isc = (IsNumConst) mnc;
 			Code.loadConst(isc.getN1());
-		}
-		else {
+		} else {
 			Code.loadConst(3);
 		}
 		if (printStatement.getExpr().struct == Tab.intType
@@ -131,14 +131,13 @@ public class CodeGenerator extends VisitorAdaptor {
 			Code.put(Code.bprint);
 		}
 	}
-	
+
 	@Override
 	public void visit(ReadDesignatorStatement readDesignatorStatement) {
 		Struct type = readDesignatorStatement.getDesignator().obj.getType();
 		if (type == Tab.intType) {
 			Code.put(Code.read);
-		}
-		else {
+		} else {
 			Code.put(Code.bread);
 		}
 		Code.store(readDesignatorStatement.getDesignator().obj);
@@ -156,8 +155,7 @@ public class CodeGenerator extends VisitorAdaptor {
 			Code.loadConst(1);
 			Code.put(Code.add);
 			Code.store(designator.obj);
-		}
-		else if (stmt instanceof DesignatorDec) {
+		} else if (stmt instanceof DesignatorDec) {
 			if (designator instanceof DesignatorArrayMember) {
 				Code.put(Code.dup2);
 			}
@@ -165,13 +163,15 @@ public class CodeGenerator extends VisitorAdaptor {
 			Code.loadConst(1);
 			Code.put(Code.sub);
 			Code.store(designator.obj);
-		}
-		else if (stmt instanceof DesignatorExpr) {
+		} else if (stmt instanceof DesignatorExpr) {
 			Code.store(designator.obj);
-		}
-		else {
-			Code.put(Code.call);
-			Code.put2(designatorStatement.getDesignator().obj.getAdr() - Code.pc + 1);
+		} else {
+			if (!"ord".equals(designator.obj.getName()) && !"chr".equals(designator.obj.getName())
+			    && !"len".equals(designator.obj.getName())) {
+				Code.put(Code.call);
+				Code.put2(designator.obj.getAdr() - Code.pc + 1);
+			}
+
 		}
 	}
 
@@ -182,14 +182,14 @@ public class CodeGenerator extends VisitorAdaptor {
 			Code.put(Code.neg);
 		}
 	}
-	
+
 	@Override
 	public void visit(DesignatorIdent designatorIdent) {
 		if (designatorIdent.getParent() instanceof DesignatorArrayMember) {
 			Code.load(designatorIdent.obj);
 		}
 	}
-	
+
 	@Override
 	public void visit(MulopFactorListRec mulopFactorListRec) {
 		Mulop mulop = mulopFactorListRec.getMulop();
@@ -201,8 +201,8 @@ public class CodeGenerator extends VisitorAdaptor {
 			Code.put(Code.rem);
 		}
 	}
-	
-	@Override 
+
+	@Override
 	public void visit(AddopTermListRec addopTermListRec) {
 		Addop addop = addopTermListRec.getAddop();
 		if (addop instanceof Plus) {
@@ -211,7 +211,7 @@ public class CodeGenerator extends VisitorAdaptor {
 			Code.put(Code.sub);
 		}
 	}
-	
+
 	@Override
 	public void visit(Mulop mulop) {
 		if (mulop instanceof Mul) {
