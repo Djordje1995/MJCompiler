@@ -1,0 +1,154 @@
+INFO  16:53:47,054 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  16:53:47,155 - #2 program
+INFO  16:53:47,155 - #44 test301
+INFO  16:53:47,155 - #42 enum
+INFO  16:53:47,157 - #44 Broj
+INFO  16:53:47,157 - #3 {
+INFO  16:53:47,158 - #44 NULA
+INFO  16:53:47,158 - #8 ,
+INFO  16:53:47,161 - #44 JEDAN
+INFO  16:53:47,161 - #8 ,
+INFO  16:53:47,161 - #44 PET
+INFO  16:53:47,161 - #27 =
+INFO  16:53:47,162 - #45 5
+INFO  16:53:47,162 - #8 ,
+INFO  16:53:47,162 - #44 DESET
+INFO  16:53:47,162 - #27 =
+INFO  16:53:47,162 - #45 10
+INFO  16:53:47,162 - #4 }
+INFO  16:53:47,162 - #43 const
+INFO  16:53:47,164 - #44 int
+INFO  16:53:47,164 - #44 jedan
+INFO  16:53:47,165 - #27 =
+INFO  16:53:47,165 - #45 1
+INFO  16:53:47,167 - #5 ;
+INFO  16:53:47,169 - #43 const
+INFO  16:53:47,170 - #44 int
+INFO  16:53:47,171 - #44 pet
+INFO  16:53:47,171 - #27 =
+INFO  16:53:47,171 - #45 5
+INFO  16:53:47,171 - #5 ;
+INFO  16:53:47,171 - #44 int
+INFO  16:53:47,171 - #44 niz
+INFO  16:53:47,171 - #29 [
+INFO  16:53:47,171 - #30 ]
+INFO  16:53:47,171 - #5 ;
+INFO  16:53:47,174 - #44 char
+INFO  16:53:47,174 - #44 nizch
+INFO  16:53:47,174 - #29 [
+INFO  16:53:47,174 - #30 ]
+INFO  16:53:47,174 - #5 ;
+INFO  16:53:47,174 - #3 {
+INFO  16:53:47,174 - #44 int
+INFO  16:53:47,175 - #44 inc
+INFO  16:53:47,175 - #6 (
+INFO  16:53:47,176 - #44 int
+INFO  16:53:47,176 - #44 broj
+INFO  16:53:47,176 - #7 )
+INFO  16:53:47,180 - #3 {
+INFO  16:53:47,180 - #10 return
+INFO  16:53:47,181 - #44 broj
+INFO  16:53:47,182 - #11 +
+INFO  16:53:47,185 - #44 Broj
+INFO  16:53:47,186 - #28 .
+INFO  16:53:47,186 - #44 JEDAN
+INFO  16:53:47,186 - #5 ;
+INFO  16:53:47,187 - #4 }
+INFO  16:53:47,188 - #14 void
+INFO  16:53:47,189 - #44 mul
+INFO  16:53:47,190 - #6 (
+INFO  16:53:47,190 - #44 int
+INFO  16:53:47,190 - #44 arr
+INFO  16:53:47,190 - #29 [
+INFO  16:53:47,190 - #30 ]
+INFO  16:53:47,190 - #8 ,
+INFO  16:53:47,190 - #44 int
+INFO  16:53:47,190 - #44 index
+INFO  16:53:47,190 - #8 ,
+INFO  16:53:47,190 - #44 int
+INFO  16:53:47,190 - #44 b
+INFO  16:53:47,190 - #7 )
+INFO  16:53:47,190 - #3 {
+INFO  16:53:47,190 - #44 arr
+INFO  16:53:47,191 - #29 [
+INFO  16:53:47,191 - #44 index
+INFO  16:53:47,191 - #30 ]
+INFO  16:53:47,191 - #27 =
+INFO  16:53:47,191 - #44 arr
+INFO  16:53:47,192 - #29 [
+INFO  16:53:47,192 - #44 index
+INFO  16:53:47,192 - #30 ]
+INFO  16:53:47,193 - #19 *
+INFO  16:53:47,193 - #44 b
+INFO  16:53:47,193 - #5 ;
+INFO  16:53:47,194 - #4 }
+INFO  16:53:47,195 - #14 void
+INFO  16:53:47,195 - #44 main
+INFO  16:53:47,195 - #6 (
+INFO  16:53:47,195 - #7 )
+INFO  16:53:47,195 - #44 int
+INFO  16:53:47,196 - #44 bodovi
+INFO  16:53:47,196 - #5 ;
+INFO  16:53:47,196 - #44 Broj
+INFO  16:53:47,196 - #44 nula
+INFO  16:53:47,196 - #8 ,
+INFO  16:53:47,196 - #44 jedan
+INFO  16:53:47,196 - #5 ;
+INFO  16:53:47,196 - #3 {
+INFO  16:53:47,196 - #44 niz
+INFO  16:53:47,196 - #27 =
+INFO  16:53:47,196 - #31 new
+INFO  16:53:47,196 - #44 int
+INFO  16:53:47,196 - #29 [
+INFO  16:53:47,196 - #45 2
+INFO  16:53:47,197 - #30 ]
+INFO  16:53:47,197 - #5 ;
+INFO  16:53:47,197 - #44 niz
+INFO  16:53:47,197 - #29 [
+INFO  16:53:47,197 - #45 0
+INFO  16:53:47,197 - #30 ]
+INFO  16:53:47,197 - #27 =
+INFO  16:53:47,197 - #45 5
+INFO  16:53:47,197 - #5 ;
+INFO  16:53:47,197 - #44 niz
+INFO  16:53:47,197 - #29 [
+INFO  16:53:47,197 - #45 1
+INFO  16:53:47,197 - #30 ]
+INFO  16:53:47,198 - #27 =
+INFO  16:53:47,198 - #44 Broj
+INFO  16:53:47,198 - #28 .
+INFO  16:53:47,198 - #44 DESET
+INFO  16:53:47,198 - #5 ;
+INFO  16:53:47,198 - #44 mul
+INFO  16:53:47,198 - #6 (
+INFO  16:53:47,198 - #44 niz
+INFO  16:53:47,198 - #8 ,
+INFO  16:53:47,199 - #44 inc
+INFO  16:53:47,199 - #6 (
+INFO  16:53:47,199 - #45 0
+INFO  16:53:47,199 - #7 )
+INFO  16:53:47,200 - #8 ,
+INFO  16:53:47,201 - #45 2
+INFO  16:53:47,201 - #7 )
+INFO  16:53:47,201 - #5 ;
+INFO  16:53:47,201 - #4 }
+INFO  16:53:47,201 - #4 }
+INFO  16:53:47,230 - Definise se enum Broj na liniji 3
+INFO  16:53:47,230 - Dodato je polje NULA sa vrednoscu 0 u Enum Broj na liniji 3
+INFO  16:53:47,231 - Dodato je polje JEDAN sa vrednoscu 1 u Enum Broj na liniji 3
+INFO  16:53:47,231 - Dodato je polje PET sa vrednoscu 5 u Enum Broj na liniji 3
+INFO  16:53:47,231 - Dodato je polje DESET sa vrednoscu 10 u Enum Broj na liniji 3
+INFO  16:53:47,231 - Definisan je enum Broj na liniji 3
+INFO  16:53:47,231 - Definisana je konstanta jedan tipa Int sa vrednoscu 1 na liniji 5
+INFO  16:53:47,231 - Definisana je konstanta pet tipa Int sa vrednoscu 5 na liniji 6
+INFO  16:53:47,231 - Deklarisana je globalna promenljiva niz tipa int array na liniji 8
+INFO  16:53:47,231 - Deklarisana je globalna promenljiva nizch tipa char array na liniji 9
+INFO  16:53:47,232 - Dodat formalni parametar broj na liniji 12
+INFO  16:54:38,816 - Definisana je metoda inc tipa int na liniji 12
+INFO  16:54:38,817 - Dodat formalni parametar arr na liniji 17
+INFO  16:54:38,817 - Dodat formalni parametar index na liniji 17
+INFO  16:54:38,817 - Dodat formalni parametar b na liniji 17
+INFO  16:55:14,402 - Definisana je metoda mul tipa void na liniji 17
+INFO  16:55:14,403 - Deklarisana je lokalna promenljiva bodovi tipa int na liniji 23
+INFO  16:55:14,403 - Deklarisana je lokalna promenljiva nula tipa Broj na liniji 24
+INFO  16:55:14,403 - Deklarisana je lokalna promenljiva jedan tipa Broj na liniji 24

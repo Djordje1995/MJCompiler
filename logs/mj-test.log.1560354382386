@@ -1,0 +1,207 @@
+INFO  17:20:38,095 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  17:20:38,111 - #2 program
+INFO  17:20:38,111 - #44 MJProgram
+INFO  17:20:38,111 - #44 int
+INFO  17:20:38,111 - #44 x
+INFO  17:20:38,111 - #29 [
+INFO  17:20:38,111 - #30 ]
+INFO  17:20:38,111 - #8 ,
+INFO  17:20:38,111 - #44 y
+INFO  17:20:38,111 - #5 ;
+INFO  17:20:38,111 - #42 enum
+INFO  17:20:38,111 - #44 Broj
+INFO  17:20:38,111 - #3 {
+INFO  17:20:38,111 - #44 NULA
+INFO  17:20:38,111 - #8 ,
+INFO  17:20:38,111 - #44 JEDAN
+INFO  17:20:38,111 - #8 ,
+INFO  17:20:38,111 - #44 OSAM
+INFO  17:20:38,111 - #27 =
+INFO  17:20:38,111 - #45 8
+INFO  17:20:38,111 - #4 }
+INFO  17:20:38,111 - #44 char
+INFO  17:20:38,111 - #44 s
+INFO  17:20:38,111 - #5 ;
+INFO  17:20:38,111 - #43 const
+INFO  17:20:38,111 - #44 int
+INFO  17:20:38,111 - #44 TRI
+INFO  17:20:38,111 - #27 =
+INFO  17:20:38,111 - #45 3
+INFO  17:20:38,111 - #5 ;
+INFO  17:20:38,111 - #44 bool
+INFO  17:20:38,111 - #44 b
+INFO  17:20:38,111 - #5 ;
+INFO  17:20:38,127 - #3 {
+INFO  17:20:38,127 - #14 void
+INFO  17:20:38,127 - #44 main
+INFO  17:20:38,127 - #6 (
+INFO  17:20:38,127 - #7 )
+INFO  17:20:38,127 - #44 int
+INFO  17:20:38,127 - #44 a
+INFO  17:20:38,127 - #8 ,
+INFO  17:20:38,127 - #44 niz
+INFO  17:20:38,127 - #29 [
+INFO  17:20:38,127 - #30 ]
+INFO  17:20:38,127 - #8 ,
+INFO  17:20:38,127 - #44 broj
+INFO  17:20:38,127 - #5 ;
+INFO  17:20:38,127 - #3 {
+INFO  17:20:38,127 - #44 broj
+INFO  17:20:38,127 - #27 =
+INFO  17:20:38,127 - #44 Broj
+INFO  17:20:38,127 - #28 .
+INFO  17:20:38,127 - #44 OSAM
+INFO  17:20:38,127 - #5 ;
+INFO  17:20:38,127 - #9 print
+INFO  17:20:38,127 - #6 (
+INFO  17:20:38,127 - #44 broj
+INFO  17:20:38,127 - #7 )
+INFO  17:20:38,127 - #5 ;
+INFO  17:20:38,127 - #44 broj
+INFO  17:20:38,127 - #17 ++
+INFO  17:20:38,127 - #5 ;
+INFO  17:20:38,127 - #9 print
+INFO  17:20:38,127 - #6 (
+INFO  17:20:38,127 - #44 broj
+INFO  17:20:38,127 - #7 )
+INFO  17:20:38,127 - #5 ;
+INFO  17:20:38,127 - #34 read
+INFO  17:20:38,127 - #6 (
+INFO  17:20:38,127 - #44 a
+INFO  17:20:38,127 - #7 )
+INFO  17:20:38,127 - #5 ;
+INFO  17:20:38,127 - #44 s
+INFO  17:20:38,127 - #27 =
+INFO  17:20:38,127 - #47 t
+INFO  17:20:38,127 - #5 ;
+INFO  17:20:38,127 - #9 print
+INFO  17:20:38,127 - #6 (
+INFO  17:20:38,127 - #44 a
+INFO  17:20:38,127 - #7 )
+INFO  17:20:38,127 - #5 ;
+INFO  17:20:38,127 - #44 a
+INFO  17:20:38,127 - #18 --
+INFO  17:20:38,127 - #5 ;
+INFO  17:20:38,127 - #9 print
+INFO  17:20:38,127 - #6 (
+INFO  17:20:38,127 - #44 a
+INFO  17:20:38,127 - #7 )
+INFO  17:20:38,127 - #5 ;
+INFO  17:20:38,127 - #44 niz
+INFO  17:20:38,127 - #27 =
+INFO  17:20:38,127 - #31 new
+INFO  17:20:38,127 - #44 int
+INFO  17:20:38,127 - #29 [
+INFO  17:20:38,127 - #45 5
+INFO  17:20:38,127 - #30 ]
+INFO  17:20:38,127 - #5 ;
+INFO  17:20:38,127 - #44 niz
+INFO  17:20:38,127 - #29 [
+INFO  17:20:38,127 - #45 0
+INFO  17:20:38,127 - #30 ]
+INFO  17:20:38,127 - #27 =
+INFO  17:20:38,127 - #45 1
+INFO  17:20:38,127 - #5 ;
+INFO  17:20:38,127 - #44 niz
+INFO  17:20:38,127 - #29 [
+INFO  17:20:38,127 - #45 2
+INFO  17:20:38,127 - #30 ]
+INFO  17:20:38,127 - #27 =
+INFO  17:20:38,127 - #45 2
+INFO  17:20:38,127 - #5 ;
+INFO  17:20:38,127 - #44 niz
+INFO  17:20:38,127 - #29 [
+INFO  17:20:38,127 - #45 3
+INFO  17:20:38,127 - #30 ]
+INFO  17:20:38,127 - #27 =
+INFO  17:20:38,127 - #44 niz
+INFO  17:20:38,127 - #29 [
+INFO  17:20:38,127 - #45 0
+INFO  17:20:38,127 - #30 ]
+INFO  17:20:38,127 - #11 +
+INFO  17:20:38,127 - #44 TRI
+INFO  17:20:38,127 - #5 ;
+INFO  17:20:38,127 - #9 print
+INFO  17:20:38,127 - #6 (
+INFO  17:20:38,127 - #44 niz
+INFO  17:20:38,127 - #29 [
+INFO  17:20:38,127 - #45 3
+INFO  17:20:38,127 - #30 ]
+INFO  17:20:38,127 - #7 )
+INFO  17:20:38,127 - #5 ;
+INFO  17:20:38,127 - #44 niz
+INFO  17:20:38,127 - #29 [
+INFO  17:20:38,127 - #45 3
+INFO  17:20:38,127 - #30 ]
+INFO  17:20:38,127 - #17 ++
+INFO  17:20:38,127 - #5 ;
+INFO  17:20:38,127 - #9 print
+INFO  17:20:38,127 - #6 (
+INFO  17:20:38,127 - #44 niz
+INFO  17:20:38,127 - #29 [
+INFO  17:20:38,127 - #45 3
+INFO  17:20:38,127 - #30 ]
+INFO  17:20:38,127 - #7 )
+INFO  17:20:38,127 - #5 ;
+INFO  17:20:38,127 - #44 niz
+INFO  17:20:38,127 - #29 [
+INFO  17:20:38,127 - #45 3
+INFO  17:20:38,127 - #30 ]
+INFO  17:20:38,127 - #27 =
+INFO  17:20:38,127 - #44 broj
+INFO  17:20:38,127 - #11 +
+INFO  17:20:38,127 - #45 5
+INFO  17:20:38,127 - #19 *
+INFO  17:20:38,127 - #45 2
+INFO  17:20:38,127 - #5 ;
+INFO  17:20:38,127 - #9 print
+INFO  17:20:38,127 - #6 (
+INFO  17:20:38,127 - #44 niz
+INFO  17:20:38,127 - #29 [
+INFO  17:20:38,127 - #45 3
+INFO  17:20:38,127 - #30 ]
+INFO  17:20:38,127 - #7 )
+INFO  17:20:38,127 - #5 ;
+INFO  17:20:38,127 - #44 x
+INFO  17:20:38,127 - #27 =
+INFO  17:20:38,127 - #31 new
+INFO  17:20:38,127 - #44 int
+INFO  17:20:38,127 - #29 [
+INFO  17:20:38,127 - #45 2
+INFO  17:20:38,127 - #30 ]
+INFO  17:20:38,127 - #5 ;
+INFO  17:20:38,127 - #44 x
+INFO  17:20:38,127 - #29 [
+INFO  17:20:38,127 - #45 0
+INFO  17:20:38,127 - #30 ]
+INFO  17:20:38,127 - #27 =
+INFO  17:20:38,127 - #45 100
+INFO  17:20:38,127 - #5 ;
+INFO  17:20:38,127 - #9 print
+INFO  17:20:38,127 - #6 (
+INFO  17:20:38,127 - #44 x
+INFO  17:20:38,127 - #29 [
+INFO  17:20:38,127 - #45 0
+INFO  17:20:38,127 - #30 ]
+INFO  17:20:38,127 - #7 )
+INFO  17:20:38,127 - #5 ;
+INFO  17:20:38,127 - #4 }
+INFO  17:20:38,127 - #4 }
+INFO  17:20:38,142 - Deklarisana je globalna promenljiva x tipa int array na liniji 4
+INFO  17:20:38,142 - Deklarisana je globalna promenljiva y tipa int na liniji 4
+INFO  17:20:38,142 - Definise se enum Broj na liniji 6
+INFO  17:20:38,142 - Dodato je polje NULA sa vrednoscu 0 u Enum Broj na liniji 6
+INFO  17:20:38,142 - Dodato je polje JEDAN sa vrednoscu 1 u Enum Broj na liniji 6
+INFO  17:20:38,142 - Dodato je polje OSAM sa vrednoscu 8 u Enum Broj na liniji 6
+INFO  17:20:38,142 - Definisan je enum Broj na liniji 6
+INFO  17:20:38,142 - Deklarisana je globalna promenljiva s tipa char na liniji 8
+INFO  17:20:38,142 - Definisana je konstanta TRI tipa Int sa vrednoscu 3 na liniji 9
+INFO  17:20:38,142 - Deklarisana je globalna promenljiva b tipa bool na liniji 10
+INFO  17:20:38,142 - Deklarisana je lokalna promenljiva a tipa int na liniji 12
+INFO  17:20:38,142 - Deklarisana je lokalna promenljiva niz tipa int array na liniji 12
+INFO  17:20:38,142 - Deklarisana je lokalna promenljiva broj tipa int na liniji 12
+INFO  17:20:38,142 - Definisana je metoda main tipa void na liniji 12
+INFO  17:20:38,142 - Globalnih promeljivih ima 4, a lokalnih 3
+INFO  17:20:38,142 - Print calls = 0
+INFO  17:20:38,142 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  17:20:38,142 - Parsiranje uspesno zavrseno!

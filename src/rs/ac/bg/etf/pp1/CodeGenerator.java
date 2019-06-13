@@ -149,12 +149,18 @@ public class CodeGenerator extends VisitorAdaptor {
 		Designator designator = designatorStatement.getDesignator();
 		DesignatorStatementOp stmt = designatorStatement.getDesignatorStatementOp();
 		if (stmt instanceof DesignatorInc) {
+			if (designator instanceof DesignatorArrayMember) {
+				Code.put(Code.dup2);
+			}
 			Code.load(designator.obj);
 			Code.loadConst(1);
 			Code.put(Code.add);
 			Code.store(designator.obj);
 		}
 		else if (stmt instanceof DesignatorDec) {
+			if (designator instanceof DesignatorArrayMember) {
+				Code.put(Code.dup2);
+			}
 			Code.load(designator.obj);
 			Code.loadConst(1);
 			Code.put(Code.sub);

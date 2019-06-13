@@ -1,0 +1,179 @@
+INFO  17:46:22,386 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  17:46:22,418 - #2 program
+INFO  17:46:22,418 - #44 test
+INFO  17:46:22,418 - #42 enum
+INFO  17:46:22,418 - #44 E
+INFO  17:46:22,418 - #3 {
+INFO  17:46:22,418 - #44 NULA
+INFO  17:46:22,418 - #8 ,
+INFO  17:46:22,418 - #44 DVA
+INFO  17:46:22,418 - #27 =
+INFO  17:46:22,418 - #45 2
+INFO  17:46:22,418 - #4 }
+INFO  17:46:22,418 - #42 enum
+INFO  17:46:22,418 - #44 D
+INFO  17:46:22,418 - #3 {
+INFO  17:46:22,418 - #44 NULA
+INFO  17:46:22,418 - #8 ,
+INFO  17:46:22,418 - #44 JEDAN
+INFO  17:46:22,418 - #8 ,
+INFO  17:46:22,418 - #44 DVA
+INFO  17:46:22,418 - #27 =
+INFO  17:46:22,418 - #45 3423
+INFO  17:46:22,418 - #4 }
+INFO  17:46:22,418 - #43 const
+INFO  17:46:22,418 - #44 int
+INFO  17:46:22,418 - #44 tri
+INFO  17:46:22,418 - #27 =
+INFO  17:46:22,418 - #45 3
+INFO  17:46:22,418 - #5 ;
+INFO  17:46:22,418 - #44 char
+INFO  17:46:22,418 - #44 a
+INFO  17:46:22,418 - #5 ;
+INFO  17:46:22,418 - #44 int
+INFO  17:46:22,418 - #44 broj
+INFO  17:46:22,418 - #8 ,
+INFO  17:46:22,418 - #44 bla
+INFO  17:46:22,418 - #5 ;
+INFO  17:46:22,418 - #3 {
+INFO  17:46:22,418 - #44 int
+INFO  17:46:22,418 - #44 main
+INFO  17:46:22,418 - #6 (
+INFO  17:46:22,418 - #7 )
+INFO  17:46:22,418 - #44 int
+INFO  17:46:22,418 - #44 r
+INFO  17:46:22,418 - #5 ;
+INFO  17:46:22,418 - #44 int
+INFO  17:46:22,418 - #44 s
+INFO  17:46:22,418 - #5 ;
+INFO  17:46:22,418 - #44 D
+INFO  17:46:22,418 - #44 bodovi
+INFO  17:46:22,418 - #8 ,
+INFO  17:46:22,418 - #44 radi
+INFO  17:46:22,418 - #5 ;
+INFO  17:46:22,418 - #44 E
+INFO  17:46:22,418 - #44 proba
+INFO  17:46:22,418 - #5 ;
+INFO  17:46:22,418 - #3 {
+INFO  17:46:22,418 - #44 radi
+INFO  17:46:22,418 - #27 =
+INFO  17:46:22,418 - #44 D
+INFO  17:46:22,418 - #28 .
+INFO  17:46:22,418 - #44 JEDAN
+INFO  17:46:22,418 - #5 ;
+INFO  17:46:22,418 - #9 print
+INFO  17:46:22,418 - #6 (
+INFO  17:46:22,418 - #44 radi
+INFO  17:46:22,418 - #7 )
+INFO  17:46:22,418 - #5 ;
+INFO  17:46:22,418 - #44 r
+INFO  17:46:22,433 - #27 =
+INFO  17:46:22,433 - #45 3
+INFO  17:46:22,433 - #5 ;
+INFO  17:46:22,434 - #44 s
+INFO  17:46:22,434 - #27 =
+INFO  17:46:22,434 - #45 4
+INFO  17:46:22,434 - #5 ;
+INFO  17:46:22,434 - #9 print
+INFO  17:46:22,434 - #6 (
+INFO  17:46:22,434 - #44 r
+INFO  17:46:22,434 - #7 )
+INFO  17:46:22,434 - #5 ;
+INFO  17:46:22,434 - #9 print
+INFO  17:46:22,434 - #6 (
+INFO  17:46:22,434 - #44 s
+INFO  17:46:22,434 - #7 )
+INFO  17:46:22,434 - #5 ;
+INFO  17:46:22,434 - #44 bodovi
+INFO  17:46:22,434 - #27 =
+INFO  17:46:22,434 - #45 2
+INFO  17:46:22,434 - #19 *
+INFO  17:46:22,434 - #44 D
+INFO  17:46:22,434 - #28 .
+INFO  17:46:22,434 - #44 JEDAN
+INFO  17:46:22,434 - #11 +
+INFO  17:46:22,434 - #44 tri
+INFO  17:46:22,434 - #5 ;
+INFO  17:46:22,434 - #44 proba
+INFO  17:46:22,434 - #27 =
+INFO  17:46:22,434 - #44 E
+INFO  17:46:22,434 - #28 .
+INFO  17:46:22,434 - #44 DVA
+INFO  17:46:22,434 - #5 ;
+INFO  17:46:22,434 - #9 print
+INFO  17:46:22,434 - #6 (
+INFO  17:46:22,434 - #44 proba
+INFO  17:46:22,434 - #7 )
+INFO  17:46:22,434 - #5 ;
+INFO  17:46:22,434 - #9 print
+INFO  17:46:22,434 - #6 (
+INFO  17:46:22,434 - #44 bodovi
+INFO  17:46:22,434 - #7 )
+INFO  17:46:22,434 - #5 ;
+INFO  17:46:22,434 - #34 read
+INFO  17:46:22,434 - #6 (
+INFO  17:46:22,434 - #44 a
+INFO  17:46:22,434 - #7 )
+INFO  17:46:22,434 - #5 ;
+INFO  17:46:22,434 - #9 print
+INFO  17:46:22,434 - #6 (
+INFO  17:46:22,434 - #44 a
+INFO  17:46:22,434 - #7 )
+INFO  17:46:22,434 - #5 ;
+INFO  17:46:22,434 - #44 a
+INFO  17:46:22,434 - #27 =
+INFO  17:46:22,434 - #47 a
+INFO  17:46:22,434 - #5 ;
+INFO  17:46:22,434 - #44 broj
+INFO  17:46:22,434 - #27 =
+INFO  17:46:22,434 - #44 ord
+INFO  17:46:22,434 - #6 (
+INFO  17:46:22,434 - #44 a
+INFO  17:46:22,434 - #7 )
+INFO  17:46:22,434 - #5 ;
+INFO  17:46:22,434 - #9 print
+INFO  17:46:22,434 - #6 (
+INFO  17:46:22,434 - #44 broj
+INFO  17:46:22,434 - #7 )
+INFO  17:46:22,434 - #5 ;
+INFO  17:46:22,434 - #9 print
+INFO  17:46:22,434 - #6 (
+INFO  17:46:22,434 - #44 a
+INFO  17:46:22,434 - #8 ,
+INFO  17:46:22,438 - #45 5
+INFO  17:46:22,438 - #7 )
+INFO  17:46:22,438 - #5 ;
+INFO  17:46:22,438 - #44 broj
+INFO  17:46:22,438 - #27 =
+INFO  17:46:22,438 - #45 7
+INFO  17:46:22,438 - #5 ;
+INFO  17:46:22,438 - #4 }
+INFO  17:46:22,438 - #4 }
+INFO  17:46:22,438 - Definise se enum E na liniji 3
+INFO  17:46:22,438 - Dodato je polje NULA sa vrednoscu 0 u Enum E na liniji 3
+INFO  17:46:22,438 - Dodato je polje DVA sa vrednoscu 2 u Enum E na liniji 3
+INFO  17:46:22,438 - Definisan je enum E na liniji 3
+INFO  17:46:22,438 - Definise se enum D na liniji 4
+INFO  17:46:22,438 - Dodato je polje NULA sa vrednoscu 0 u Enum D na liniji 4
+INFO  17:46:22,438 - Dodato je polje JEDAN sa vrednoscu 1 u Enum D na liniji 4
+INFO  17:46:22,438 - Dodato je polje DVA sa vrednoscu 3423 u Enum D na liniji 4
+INFO  17:46:22,438 - Definisan je enum D na liniji 4
+INFO  17:46:22,438 - Definisana je konstanta tri tipa Int sa vrednoscu 3 na liniji 5
+INFO  17:46:22,438 - Deklarisana je globalna promenljiva a tipa char na liniji 6
+INFO  17:46:22,438 - Deklarisana je globalna promenljiva broj tipa int na liniji 7
+INFO  17:46:22,438 - Deklarisana je globalna promenljiva bla tipa int na liniji 7
+INFO  17:46:22,438 - Deklarisana je lokalna promenljiva r tipa int na liniji 11
+INFO  17:46:22,438 - Deklarisana je lokalna promenljiva s tipa int na liniji 12
+INFO  17:46:22,438 - Deklarisana je lokalna promenljiva bodovi tipa D na liniji 13
+INFO  17:46:22,438 - Deklarisana je lokalna promenljiva radi tipa D na liniji 13
+INFO  17:46:22,438 - Deklarisana je lokalna promenljiva proba tipa E na liniji 14
+ERROR 17:46:22,438 - Greska, dodeljena vrednost nije istog tipa kao promenljiva na liniji 17
+ERROR 17:46:22,438 - Pogresan tip argumenta funkcije print, argumenti mogu biti samo int ili char tipa na liniji 9
+ERROR 17:46:22,438 - Greska, dodeljena vrednost nije istog tipa kao promenljiva na liniji 23
+ERROR 17:46:22,438 - Greska, dodeljena vrednost nije istog tipa kao promenljiva na liniji 24
+ERROR 17:46:22,438 - Pogresan tip argumenta funkcije print, argumenti mogu biti samo int ili char tipa na liniji 9
+ERROR 17:46:22,438 - Pogresan tip argumenta funkcije print, argumenti mogu biti samo int ili char tipa na liniji 9
+ERROR 17:46:22,438 - Main metoda mora biti tipa void na liniji 10
+ERROR 17:46:22,438 - Nije definisana metoda main u programu na liniji 1
+INFO  17:46:22,438 - Print calls = 0
+ERROR 17:46:22,438 - Parsiranje NIJE uspesno zavrseno!

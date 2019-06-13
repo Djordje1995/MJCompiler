@@ -1,0 +1,61 @@
+INFO  14:28:32,076 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  14:28:32,101 - #2 program
+INFO  14:28:32,101 - #44 test
+INFO  14:28:32,101 - #42 enum
+INFO  14:28:32,102 - #44 D
+INFO  14:28:32,102 - #3 {
+INFO  14:28:32,102 - #44 NULA
+INFO  14:28:32,102 - #8 ,
+INFO  14:28:32,103 - #44 JEDAN
+INFO  14:28:32,103 - #8 ,
+INFO  14:28:32,103 - #44 DVA
+INFO  14:28:32,103 - #27 =
+INFO  14:28:32,103 - #45 3423
+INFO  14:28:32,103 - #4 }
+INFO  14:28:32,103 - #42 enum
+INFO  14:28:32,104 - #44 E
+INFO  14:28:32,104 - #3 {
+INFO  14:28:32,104 - #44 JEN
+INFO  14:28:32,104 - #8 ,
+INFO  14:28:32,104 - #44 DVA
+INFO  14:28:32,104 - #4 }
+INFO  14:28:32,104 - #3 {
+INFO  14:28:32,104 - #14 void
+INFO  14:28:32,105 - #44 main
+INFO  14:28:32,105 - #6 (
+INFO  14:28:32,106 - #7 )
+INFO  14:28:32,106 - #44 E
+INFO  14:28:32,106 - #44 radi
+INFO  14:28:32,107 - #5 ;
+INFO  14:28:32,108 - #3 {
+INFO  14:28:32,108 - #44 radi
+INFO  14:28:32,108 - #27 =
+INFO  14:28:32,108 - #44 D
+INFO  14:28:32,109 - #28 .
+INFO  14:28:32,109 - #44 JEN
+INFO  14:28:32,109 - #5 ;
+INFO  14:28:32,111 - #9 print
+INFO  14:28:32,111 - #6 (
+INFO  14:28:32,111 - #44 radi
+INFO  14:28:32,111 - #7 )
+INFO  14:28:32,111 - #5 ;
+INFO  14:28:32,111 - #10 return
+INFO  14:28:32,111 - #5 ;
+INFO  14:28:32,112 - #4 }
+INFO  14:28:32,112 - #4 }
+INFO  14:28:32,117 - Definise se enum D na liniji 2
+INFO  14:28:32,117 - Dodato je polje NULA sa vrednoscu 0 u Enum D na liniji 2
+INFO  14:28:32,118 - Dodato je polje JEDAN sa vrednoscu 1 u Enum D na liniji 2
+INFO  14:28:32,118 - Dodato je polje DVA sa vrednoscu 3423 u Enum D na liniji 2
+INFO  14:28:32,118 - Definisan je enum D na liniji 2
+INFO  14:28:32,118 - Definise se enum E na liniji 3
+INFO  14:28:32,118 - Dodato je polje JEN sa vrednoscu 0 u Enum E na liniji 3
+INFO  14:28:32,118 - Dodato je polje DVA sa vrednoscu 1 u Enum E na liniji 3
+INFO  14:28:32,118 - Definisan je enum E na liniji 3
+INFO  14:28:32,118 - Deklarisana je lokalna promenljiva radi tipa E na liniji 5
+ERROR 14:28:32,118 - Greska, promenljiva nije deklarisana na liniji 6
+ERROR 14:28:32,119 - Greska, dodeljena vrednost nije istog tipa kao promenljiva na liniji 6
+INFO  14:28:32,119 - Definisana je metoda main tipa void na liniji 5
+INFO  14:28:32,119 - Globalnih promeljivih ima 0, a lokalnih 1
+INFO  14:28:32,119 - Print calls = 0
+ERROR 14:28:32,119 - Parsiranje NIJE uspesno zavrseno!

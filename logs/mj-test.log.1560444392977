@@ -1,0 +1,43 @@
+INFO  18:42:32,727 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  18:42:32,751 - #2 program
+INFO  18:42:32,751 - #44 test301
+INFO  18:42:32,751 - #3 {
+INFO  18:42:32,752 - #44 char
+INFO  18:42:32,752 - #44 c
+INFO  18:42:32,753 - #5 ;
+ERROR 18:42:32,753 - 
+Sintaksna greska na liniji 2
+INFO  18:42:32,753 - #14 void
+INFO  18:42:32,753 - #44 main
+INFO  18:42:32,753 - #6 (
+INFO  18:42:32,753 - #7 )
+INFO  18:42:32,753 - #44 int
+INFO  18:42:32,753 - #44 b
+INFO  18:42:32,753 - #5 ;
+INFO  18:42:32,753 - #3 {
+INFO  18:42:32,753 - #44 c
+INFO  18:42:32,753 - #27 =
+ERROR 18:42:32,754 - 
+Sintaksna greska na liniji 4
+INFO  18:42:32,754 - #47 k
+INFO  18:42:32,754 - #5 ;
+INFO  18:42:32,754 - #44 b
+INFO  18:42:32,754 - #27 =
+INFO  18:42:32,754 - #44 ord
+INFO  18:42:32,755 - #6 (
+INFO  18:42:32,755 - #44 c
+INFO  18:42:32,755 - #7 )
+INFO  18:42:32,755 - #5 ;
+INFO  18:42:32,755 - #9 print
+INFO  18:42:32,755 - #6 (
+INFO  18:42:32,755 - #44 c
+INFO  18:42:32,755 - #7 )
+INFO  18:42:32,755 - #5 ;
+INFO  18:42:32,755 - #9 print
+INFO  18:42:32,755 - #6 (
+INFO  18:42:32,755 - #44 b
+INFO  18:42:32,755 - #7 )
+INFO  18:42:32,755 - #5 ;
+INFO  18:42:32,755 - #4 }
+INFO  18:42:32,755 - #4 }
+ERROR 18:42:32,755 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 9

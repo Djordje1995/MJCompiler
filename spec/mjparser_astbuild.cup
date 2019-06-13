@@ -120,6 +120,7 @@ nonterminal Declaration Declaration;
 nonterminal VarName VarName;
 nonterminal VarList VarList;
 nonterminal MethodStart MethodStart;
+nonterminal FuncCall FuncCall;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgName, MethodDecl, MethodName, Designator; 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Term, Expr, Factor, VarDeclList; 
@@ -340,12 +341,14 @@ DesignatorStatement ::= (DesignatorStatement) Designator:D1 DesignatorStatementO
 DesignatorStatementOp ::= 
             (DesignatorExpr) Assignop:A1 Expr:e {: RESULT=new DesignatorExpr(A1, e); RESULT.setLine(A1left); :}
 						|
-						(DesignatorParams) LPAREN MaybeActualParams:M1 RPAREN {: RESULT=new DesignatorParams(M1); RESULT.setLine(M1left); :}
+						(DesignatorParams) FuncCall:F1 LPAREN MaybeActualParams:M2 RPAREN {: RESULT=new DesignatorParams(F1, M2); RESULT.setLine(F1left); :}
 						|
 						(DesignatorInc) INC {: RESULT=new DesignatorInc(); :}
 						|
 						(DesignatorDec) DEC {: RESULT=new DesignatorDec(); :}
 						;
+						
+FuncCall ::= (FuncCall) {: RESULT=new FuncCall(); :} /* epsilon */;
 
 ActPars ::= (ActPars) Expr:e ActParList:A1 {: RESULT=new ActPars(e, A1); RESULT.setLine(eleft); :};
 
@@ -407,7 +410,7 @@ Factor ::= (FactorDesignator) Designator:d MaybeParams:M1 {: RESULT=new FactorDe
           (FactorExpression) LPAREN Expr:e RPAREN {: RESULT=new FactorExpression(e); RESULT.setLine(eleft); :}
           ;
 
-MaybeParams ::= (ActualParamsBrackets) LPAREN MaybeActualParams:params RPAREN {: RESULT=new ActualParamsBrackets(params); RESULT.setLine(paramsleft); :}
+MaybeParams ::= (ActualParamsBrackets) FuncCall:F1 LPAREN MaybeActualParams:params RPAREN {: RESULT=new ActualParamsBrackets(F1, params); RESULT.setLine(F1left); :}
 				      | {: RESULT=new MaybeParamsDerived1(); :}
 				      /* epsilon */
 				      ;

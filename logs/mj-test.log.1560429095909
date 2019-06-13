@@ -1,0 +1,55 @@
+INFO  14:31:05,588 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  14:31:05,633 - #2 program
+INFO  14:31:05,633 - #44 test
+INFO  14:31:05,633 - #42 enum
+INFO  14:31:05,634 - #44 D
+INFO  14:31:05,634 - #3 {
+INFO  14:31:05,635 - #44 NULA
+INFO  14:31:05,635 - #8 ,
+INFO  14:31:05,636 - #44 JEDAN
+INFO  14:31:05,636 - #8 ,
+INFO  14:31:05,636 - #44 DVA
+INFO  14:31:05,636 - #27 =
+INFO  14:31:05,637 - #45 3423
+INFO  14:31:05,637 - #4 }
+INFO  14:31:05,637 - #42 enum
+INFO  14:31:05,638 - #44 E
+INFO  14:31:05,638 - #3 {
+INFO  14:31:05,638 - #44 JEN
+INFO  14:31:05,638 - #8 ,
+INFO  14:31:05,638 - #44 DVA
+INFO  14:31:05,638 - #4 }
+INFO  14:31:05,638 - #3 {
+INFO  14:31:05,638 - #14 void
+INFO  14:31:05,643 - #44 main
+INFO  14:31:05,644 - #6 (
+INFO  14:31:05,645 - #7 )
+INFO  14:31:05,646 - #44 E
+INFO  14:31:05,646 - #44 radi
+INFO  14:31:05,647 - #5 ;
+INFO  14:31:05,648 - #3 {
+INFO  14:31:05,648 - #44 radi
+INFO  14:31:05,649 - #27 =
+INFO  14:31:05,649 - #44 D
+INFO  14:31:05,651 - #28 .
+INFO  14:31:05,651 - #44 JEDAN
+INFO  14:31:05,651 - #5 ;
+INFO  14:31:05,654 - #9 print
+INFO  14:31:05,655 - #6 (
+INFO  14:31:05,655 - #44 radi
+INFO  14:31:05,655 - #7 )
+INFO  14:31:05,655 - #5 ;
+INFO  14:31:05,655 - #10 return
+INFO  14:31:05,655 - #5 ;
+INFO  14:31:05,656 - #4 }
+INFO  14:31:05,656 - #4 }
+INFO  14:31:05,672 - Definise se enum D na liniji 2
+INFO  14:31:05,673 - Dodato je polje NULA sa vrednoscu 0 u Enum D na liniji 2
+INFO  14:31:05,673 - Dodato je polje JEDAN sa vrednoscu 1 u Enum D na liniji 2
+INFO  14:31:05,673 - Dodato je polje DVA sa vrednoscu 3423 u Enum D na liniji 2
+INFO  14:31:05,673 - Definisan je enum D na liniji 2
+INFO  14:31:05,673 - Definise se enum E na liniji 3
+INFO  14:31:05,673 - Dodato je polje JEN sa vrednoscu 0 u Enum E na liniji 3
+INFO  14:31:05,673 - Dodato je polje DVA sa vrednoscu 1 u Enum E na liniji 3
+INFO  14:31:05,673 - Definisan je enum E na liniji 3
+INFO  14:31:05,674 - Deklarisana je lokalna promenljiva radi tipa E na liniji 5

@@ -1,0 +1,60 @@
+INFO  14:36:17,639 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  14:36:17,663 - #2 program
+INFO  14:36:17,663 - #44 test
+INFO  14:36:17,663 - #42 enum
+INFO  14:36:17,664 - #44 D
+INFO  14:36:17,664 - #3 {
+INFO  14:36:17,664 - #44 NULA
+INFO  14:36:17,665 - #8 ,
+INFO  14:36:17,665 - #44 JEDAN
+INFO  14:36:17,665 - #8 ,
+INFO  14:36:17,665 - #44 DVA
+INFO  14:36:17,665 - #27 =
+INFO  14:36:17,666 - #45 3423
+INFO  14:36:17,666 - #4 }
+INFO  14:36:17,666 - #42 enum
+INFO  14:36:17,666 - #44 E
+INFO  14:36:17,666 - #3 {
+INFO  14:36:17,666 - #44 JEN
+INFO  14:36:17,666 - #8 ,
+INFO  14:36:17,666 - #44 DVA
+INFO  14:36:17,666 - #4 }
+INFO  14:36:17,666 - #3 {
+INFO  14:36:17,667 - #14 void
+INFO  14:36:17,668 - #44 main
+INFO  14:36:17,668 - #6 (
+INFO  14:36:17,668 - #7 )
+INFO  14:36:17,669 - #44 D
+INFO  14:36:17,669 - #44 radi
+INFO  14:36:17,669 - #5 ;
+INFO  14:36:17,670 - #3 {
+INFO  14:36:17,670 - #44 radi
+INFO  14:36:17,671 - #27 =
+INFO  14:36:17,671 - #44 D
+INFO  14:36:17,672 - #28 .
+INFO  14:36:17,672 - #44 JEDAN
+INFO  14:36:17,672 - #5 ;
+INFO  14:36:17,674 - #9 print
+INFO  14:36:17,674 - #6 (
+INFO  14:36:17,674 - #44 radi
+INFO  14:36:17,674 - #7 )
+INFO  14:36:17,674 - #5 ;
+INFO  14:36:17,674 - #10 return
+INFO  14:36:17,675 - #5 ;
+INFO  14:36:17,675 - #4 }
+INFO  14:36:17,675 - #4 }
+INFO  14:36:17,681 - Definise se enum D na liniji 2
+INFO  14:36:17,681 - Dodato je polje NULA sa vrednoscu 0 u Enum D na liniji 2
+INFO  14:36:17,681 - Dodato je polje JEDAN sa vrednoscu 1 u Enum D na liniji 2
+INFO  14:36:17,681 - Dodato je polje DVA sa vrednoscu 3423 u Enum D na liniji 2
+INFO  14:36:17,681 - Definisan je enum D na liniji 2
+INFO  14:36:17,681 - Definise se enum E na liniji 3
+INFO  14:36:17,681 - Dodato je polje JEN sa vrednoscu 0 u Enum E na liniji 3
+INFO  14:36:17,681 - Dodato je polje DVA sa vrednoscu 1 u Enum E na liniji 3
+INFO  14:36:17,681 - Definisan je enum E na liniji 3
+INFO  14:36:17,681 - Deklarisana je lokalna promenljiva radi tipa D na liniji 5
+INFO  14:36:17,682 - Definisana je metoda main tipa void na liniji 5
+INFO  14:36:17,682 - Globalnih promeljivih ima 0, a lokalnih 1
+INFO  14:36:17,682 - Print calls = 0
+INFO  14:36:17,682 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  14:36:17,688 - Parsiranje uspesno zavrseno!

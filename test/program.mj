@@ -1,13 +1,10 @@
-program MJProgram
-{
-  int f() {
-    return 2;
+program test301 {
+    
+  void main()
+  char c;
+    int b;
+     {
+    c = chr(97);
+    print(c);
   }
-	void main() int c;{
-	  print(1);
-	  c = f();
-	  print(c);
-	  return;
-	}
-
 }

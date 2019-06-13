@@ -1,0 +1,31 @@
+INFO  15:24:48,586 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  15:24:48,625 - #2 program
+INFO  15:24:48,625 - #44 MJProgram
+INFO  15:24:48,625 - #44 int
+INFO  15:24:48,625 - #44 y
+INFO  15:24:48,625 - #8 ,
+INFO  15:24:48,625 - #44 p
+INFO  15:24:48,625 - #8 ,
+INFO  15:24:48,625 - #6 (
+ERROR 15:24:48,625 - 
+Sintaksna greska na liniji 2
+INFO  15:24:48,625 - #44 a
+INFO  15:24:48,625 - #5 ;
+INFO  15:24:48,625 - #3 {
+INFO  15:24:48,625 - #14 void
+INFO  15:24:48,625 - #44 main
+INFO  15:24:48,625 - #6 (
+INFO  15:24:48,625 - #7 )
+INFO  15:24:48,625 - #3 {
+INFO  15:24:48,625 - #44 y
+INFO  15:24:48,625 - #27 =
+INFO  15:24:48,625 - #11 +
+INFO  15:24:48,625 - #44 p
+INFO  15:24:48,625 - #5 ;
+INFO  15:24:48,635 - #44 k
+INFO  15:24:48,635 - #27 =
+INFO  15:24:48,635 - #45 3
+INFO  15:24:48,635 - #5 ;
+INFO  15:24:48,635 - #4 }
+INFO  15:24:48,635 - #4 }
+ERROR 15:24:48,635 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 8
