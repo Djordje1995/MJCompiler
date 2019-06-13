@@ -1,0 +1,89 @@
+INFO  16:57:37,131 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  16:57:37,196 - #2 program
+INFO  16:57:37,196 - #44 test301
+INFO  16:57:37,196 - #3 {
+INFO  16:57:37,198 - #44 int
+INFO  16:57:37,198 - #44 inc
+INFO  16:57:37,199 - #6 (
+INFO  16:57:37,200 - #44 int
+INFO  16:57:37,200 - #44 broj
+INFO  16:57:37,200 - #7 )
+INFO  16:57:37,203 - #3 {
+INFO  16:57:37,204 - #10 return
+INFO  16:57:37,205 - #44 broj
+INFO  16:57:37,206 - #11 +
+INFO  16:57:37,209 - #45 1
+INFO  16:57:37,210 - #5 ;
+INFO  16:57:37,211 - #4 }
+INFO  16:57:37,212 - #14 void
+INFO  16:57:37,213 - #44 mul
+INFO  16:57:37,213 - #6 (
+INFO  16:57:37,214 - #44 int
+INFO  16:57:37,214 - #44 arr
+INFO  16:57:37,214 - #29 [
+INFO  16:57:37,216 - #30 ]
+INFO  16:57:37,216 - #8 ,
+INFO  16:57:37,217 - #44 int
+INFO  16:57:37,217 - #44 index
+INFO  16:57:37,217 - #8 ,
+INFO  16:57:37,217 - #44 int
+INFO  16:57:37,217 - #44 b
+INFO  16:57:37,217 - #7 )
+INFO  16:57:37,217 - #3 {
+INFO  16:57:37,217 - #44 arr
+INFO  16:57:37,217 - #29 [
+INFO  16:57:37,217 - #44 index
+INFO  16:57:37,217 - #30 ]
+INFO  16:57:37,217 - #27 =
+INFO  16:57:37,218 - #44 arr
+INFO  16:57:37,219 - #29 [
+INFO  16:57:37,219 - #44 index
+INFO  16:57:37,219 - #30 ]
+INFO  16:57:37,219 - #19 *
+INFO  16:57:37,219 - #44 b
+INFO  16:57:37,220 - #5 ;
+INFO  16:57:37,222 - #4 }
+INFO  16:57:37,222 - #14 void
+INFO  16:57:37,222 - #44 main
+INFO  16:57:37,222 - #6 (
+INFO  16:57:37,222 - #7 )
+INFO  16:57:37,223 - #44 int
+INFO  16:57:37,223 - #44 niz
+INFO  16:57:37,223 - #29 [
+INFO  16:57:37,223 - #30 ]
+INFO  16:57:37,223 - #5 ;
+INFO  16:57:37,225 - #3 {
+INFO  16:57:37,225 - #44 niz
+INFO  16:57:37,225 - #27 =
+INFO  16:57:37,225 - #31 new
+INFO  16:57:37,226 - #44 int
+INFO  16:57:37,226 - #29 [
+INFO  16:57:37,226 - #45 2
+INFO  16:57:37,226 - #30 ]
+INFO  16:57:37,226 - #5 ;
+INFO  16:57:37,226 - #44 mul
+INFO  16:57:37,226 - #6 (
+INFO  16:57:37,226 - #44 niz
+INFO  16:57:37,226 - #8 ,
+INFO  16:57:37,227 - #44 inc
+INFO  16:57:37,227 - #6 (
+INFO  16:57:37,227 - #45 0
+INFO  16:57:37,227 - #7 )
+INFO  16:57:37,228 - #8 ,
+INFO  16:57:37,228 - #45 2
+INFO  16:57:37,228 - #7 )
+INFO  16:57:37,229 - #5 ;
+INFO  16:57:37,229 - #4 }
+INFO  16:57:37,229 - #4 }
+INFO  16:57:37,256 - Dodat formalni parametar broj na liniji 2
+INFO  16:57:39,892 - Definisana je metoda inc tipa int na liniji 2
+INFO  16:57:39,892 - Dodat formalni parametar arr na liniji 7
+INFO  16:57:39,892 - Dodat formalni parametar index na liniji 7
+INFO  16:57:39,892 - Dodat formalni parametar b na liniji 7
+INFO  16:57:43,381 - Definisana je metoda mul tipa void na liniji 7
+INFO  16:57:43,382 - Deklarisana je lokalna promenljiva niz tipa int array na liniji 12
+INFO  16:58:16,193 - Definisana je metoda main tipa void na liniji 12
+INFO  16:58:16,194 - Globalnih promeljivih ima 0, a lokalnih 5
+INFO  16:58:16,195 - Print calls = 0
+INFO  16:58:16,196 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  16:58:16,234 - Parsiranje uspesno zavrseno!

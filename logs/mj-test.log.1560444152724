@@ -1,0 +1,45 @@
+INFO  18:41:37,660 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  18:41:37,686 - #2 program
+INFO  18:41:37,686 - #44 test301
+INFO  18:41:37,686 - #3 {
+INFO  18:41:37,686 - #44 char
+INFO  18:41:37,687 - #44 c
+INFO  18:41:37,687 - #5 ;
+ERROR 18:41:37,687 - 
+Sintaksna greska na liniji 2
+INFO  18:41:37,687 - #44 int
+INFO  18:41:37,687 - #44 b
+INFO  18:41:37,687 - #5 ;
+INFO  18:41:37,691 - #14 void
+ERROR 18:41:37,691 - 
+Sintaksna greska na liniji 4
+INFO  18:41:37,692 - #44 main
+INFO  18:41:37,692 - #6 (
+INFO  18:41:37,692 - #7 )
+INFO  18:41:37,692 - #3 {
+INFO  18:41:37,692 - #44 c
+INFO  18:41:37,692 - #27 =
+INFO  18:41:37,692 - #47 k
+INFO  18:41:37,692 - #5 ;
+INFO  18:41:37,692 - #44 b
+INFO  18:41:37,699 - #27 =
+INFO  18:41:37,699 - #44 ord
+INFO  18:41:37,699 - #6 (
+INFO  18:41:37,699 - #44 c
+INFO  18:41:37,700 - #7 )
+INFO  18:41:37,700 - #5 ;
+INFO  18:41:37,700 - #9 print
+INFO  18:41:37,700 - #6 (
+INFO  18:41:37,700 - #44 c
+INFO  18:41:37,700 - #7 )
+INFO  18:41:37,700 - #5 ;
+INFO  18:41:37,700 - #9 print
+INFO  18:41:37,700 - #6 (
+INFO  18:41:37,700 - #44 b
+INFO  18:41:37,701 - #7 )
+INFO  18:41:37,701 - #5 ;
+INFO  18:41:37,701 - #4 }
+INFO  18:41:37,701 - #4 }
+ERROR 18:41:37,701 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 13
+INFO  18:41:37,718 - Print calls = 0
+ERROR 18:41:37,718 - Parsiranje NIJE uspesno zavrseno!

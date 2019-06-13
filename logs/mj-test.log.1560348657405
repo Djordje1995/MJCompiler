@@ -1,0 +1,183 @@
+INFO  15:27:27,289 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  15:27:27,304 - #2 program
+INFO  15:27:27,304 - #44 test
+INFO  15:27:27,304 - #42 enum
+INFO  15:27:27,304 - #44 E
+INFO  15:27:27,304 - #3 {
+INFO  15:27:27,304 - #44 NULA
+INFO  15:27:27,304 - #8 ,
+INFO  15:27:27,320 - #44 DVA
+INFO  15:27:27,320 - #27 =
+INFO  15:27:27,320 - #45 2
+INFO  15:27:27,320 - #4 }
+INFO  15:27:27,320 - #42 enum
+INFO  15:27:27,320 - #44 D
+INFO  15:27:27,320 - #3 {
+INFO  15:27:27,320 - #44 NULA
+INFO  15:27:27,320 - #8 ,
+INFO  15:27:27,320 - #44 JEDAN
+INFO  15:27:27,320 - #8 ,
+INFO  15:27:27,320 - #44 DVA
+INFO  15:27:27,320 - #27 =
+INFO  15:27:27,320 - #45 3423
+INFO  15:27:27,320 - #4 }
+INFO  15:27:27,320 - #43 const
+INFO  15:27:27,320 - #44 int
+INFO  15:27:27,320 - #44 tri
+INFO  15:27:27,320 - #27 =
+INFO  15:27:27,320 - #45 3
+INFO  15:27:27,320 - #5 ;
+INFO  15:27:27,320 - #44 char
+INFO  15:27:27,320 - #44 a
+INFO  15:27:27,320 - #5 ;
+INFO  15:27:27,320 - #44 int
+INFO  15:27:27,320 - #44 broj
+INFO  15:27:27,320 - #8 ,
+INFO  15:27:27,320 - #44 bla
+INFO  15:27:27,320 - #5 ;
+INFO  15:27:27,320 - #3 {
+INFO  15:27:27,320 - #14 void
+INFO  15:27:27,320 - #44 main
+INFO  15:27:27,320 - #6 (
+INFO  15:27:27,320 - #7 )
+INFO  15:27:27,320 - #44 int
+INFO  15:27:27,320 - #44 r
+INFO  15:27:27,320 - #5 ;
+INFO  15:27:27,320 - #44 int
+INFO  15:27:27,320 - #44 s
+INFO  15:27:27,320 - #5 ;
+INFO  15:27:27,320 - #44 D
+INFO  15:27:27,320 - #44 bodovi
+INFO  15:27:27,320 - #8 ,
+INFO  15:27:27,320 - #44 radi
+INFO  15:27:27,320 - #5 ;
+INFO  15:27:27,320 - #44 E
+INFO  15:27:27,320 - #44 proba
+INFO  15:27:27,320 - #5 ;
+INFO  15:27:27,320 - #3 {
+INFO  15:27:27,320 - #44 radi
+INFO  15:27:27,320 - #27 =
+INFO  15:27:27,320 - #44 D
+INFO  15:27:27,320 - #28 .
+INFO  15:27:27,320 - #44 JEDAN
+INFO  15:27:27,320 - #5 ;
+INFO  15:27:27,320 - #9 print
+INFO  15:27:27,320 - #6 (
+INFO  15:27:27,320 - #44 radi
+INFO  15:27:27,320 - #7 )
+INFO  15:27:27,320 - #5 ;
+INFO  15:27:27,320 - #44 r
+INFO  15:27:27,320 - #27 =
+INFO  15:27:27,320 - #45 3
+INFO  15:27:27,320 - #5 ;
+INFO  15:27:27,320 - #44 s
+INFO  15:27:27,320 - #27 =
+INFO  15:27:27,320 - #45 4
+INFO  15:27:27,320 - #5 ;
+INFO  15:27:27,320 - #9 print
+INFO  15:27:27,320 - #6 (
+INFO  15:27:27,320 - #44 r
+INFO  15:27:27,320 - #7 )
+INFO  15:27:27,320 - #5 ;
+INFO  15:27:27,320 - #9 print
+INFO  15:27:27,320 - #6 (
+INFO  15:27:27,320 - #44 s
+INFO  15:27:27,320 - #7 )
+INFO  15:27:27,320 - #5 ;
+INFO  15:27:27,320 - #44 bodovi
+INFO  15:27:27,320 - #27 =
+INFO  15:27:27,320 - #45 2
+INFO  15:27:27,320 - #19 *
+INFO  15:27:27,320 - #44 D
+INFO  15:27:27,320 - #28 .
+INFO  15:27:27,320 - #44 JEDAN
+INFO  15:27:27,320 - #11 +
+INFO  15:27:27,320 - #44 tri
+INFO  15:27:27,320 - #5 ;
+INFO  15:27:27,320 - #44 proba
+INFO  15:27:27,320 - #27 =
+INFO  15:27:27,320 - #44 E
+INFO  15:27:27,320 - #28 .
+INFO  15:27:27,320 - #44 DVA
+INFO  15:27:27,320 - #5 ;
+INFO  15:27:27,320 - #9 print
+INFO  15:27:27,320 - #6 (
+INFO  15:27:27,320 - #44 proba
+INFO  15:27:27,320 - #7 )
+INFO  15:27:27,320 - #5 ;
+INFO  15:27:27,335 - #9 print
+INFO  15:27:27,335 - #6 (
+INFO  15:27:27,335 - #44 bodovi
+INFO  15:27:27,335 - #7 )
+INFO  15:27:27,335 - #5 ;
+INFO  15:27:27,335 - #34 read
+INFO  15:27:27,335 - #6 (
+INFO  15:27:27,335 - #44 a
+INFO  15:27:27,335 - #7 )
+INFO  15:27:27,335 - #5 ;
+INFO  15:27:27,335 - #9 print
+INFO  15:27:27,335 - #6 (
+INFO  15:27:27,335 - #44 a
+INFO  15:27:27,335 - #7 )
+INFO  15:27:27,335 - #5 ;
+INFO  15:27:27,335 - #44 a
+INFO  15:27:27,335 - #27 =
+INFO  15:27:27,335 - #47 a
+INFO  15:27:27,335 - #5 ;
+INFO  15:27:27,335 - #44 broj
+INFO  15:27:27,335 - #27 =
+INFO  15:27:27,335 - #44 ord
+INFO  15:27:27,335 - #6 (
+INFO  15:27:27,335 - #44 a
+INFO  15:27:27,335 - #7 )
+INFO  15:27:27,335 - #5 ;
+INFO  15:27:27,335 - #9 print
+INFO  15:27:27,335 - #6 (
+INFO  15:27:27,335 - #44 broj
+INFO  15:27:27,335 - #7 )
+INFO  15:27:27,335 - #5 ;
+INFO  15:27:27,335 - #9 print
+INFO  15:27:27,335 - #6 (
+INFO  15:27:27,335 - #44 a
+INFO  15:27:27,335 - #8 ,
+INFO  15:27:27,335 - #45 5
+INFO  15:27:27,335 - #7 )
+INFO  15:27:27,335 - #5 ;
+INFO  15:27:27,335 - #44 broj
+INFO  15:27:27,335 - #27 =
+INFO  15:27:27,335 - #45 7
+INFO  15:27:27,335 - #5 ;
+INFO  15:27:27,335 - #10 return
+INFO  15:27:27,335 - #45 0
+INFO  15:27:27,335 - #5 ;
+INFO  15:27:27,335 - #4 }
+INFO  15:27:27,335 - #4 }
+INFO  15:27:27,335 - Definise se enum E na liniji 3
+INFO  15:27:27,335 - Dodato je polje NULA sa vrednoscu 0 u Enum E na liniji 3
+INFO  15:27:27,335 - Dodato je polje DVA sa vrednoscu 2 u Enum E na liniji 3
+INFO  15:27:27,335 - Definisan je enum E na liniji 3
+INFO  15:27:27,335 - Definise se enum D na liniji 4
+INFO  15:27:27,335 - Dodato je polje NULA sa vrednoscu 0 u Enum D na liniji 4
+INFO  15:27:27,335 - Dodato je polje JEDAN sa vrednoscu 1 u Enum D na liniji 4
+INFO  15:27:27,335 - Dodato je polje DVA sa vrednoscu 3423 u Enum D na liniji 4
+INFO  15:27:27,335 - Definisan je enum D na liniji 4
+INFO  15:27:27,335 - Definisana je konstanta tri tipa Int sa vrednoscu 3 na liniji 5
+INFO  15:27:27,335 - Deklarisana je globalna promenljiva a tipa char na liniji 6
+INFO  15:27:27,335 - Deklarisana je globalna promenljiva broj tipa int na liniji 7
+INFO  15:27:27,335 - Deklarisana je globalna promenljiva bla tipa int na liniji 7
+INFO  15:27:27,335 - Deklarisana je lokalna promenljiva r tipa int na liniji 11
+INFO  15:27:27,335 - Deklarisana je lokalna promenljiva s tipa int na liniji 12
+INFO  15:27:27,335 - Deklarisana je lokalna promenljiva bodovi tipa D na liniji 13
+INFO  15:27:27,335 - Deklarisana je lokalna promenljiva radi tipa D na liniji 13
+INFO  15:27:27,335 - Deklarisana je lokalna promenljiva proba tipa E na liniji 14
+ERROR 15:27:27,335 - Greska, dodeljena vrednost nije istog tipa kao promenljiva na liniji 17
+ERROR 15:27:27,335 - Pogresan tip argumenta funkcije print, argumenti mogu biti samo int ili char tipa na liniji 9
+ERROR 15:27:27,335 - Greska, dodeljena vrednost nije istog tipa kao promenljiva na liniji 23
+ERROR 15:27:27,335 - Greska, dodeljena vrednost nije istog tipa kao promenljiva na liniji 24
+ERROR 15:27:27,335 - Pogresan tip argumenta funkcije print, argumenti mogu biti samo int ili char tipa na liniji 9
+ERROR 15:27:27,335 - Pogresan tip argumenta funkcije print, argumenti mogu biti samo int ili char tipa na liniji 9
+ERROR 15:27:27,335 - Semanticka greska, povratna vrednost metode nije odgovarajuceg tipa na liniji 4
+INFO  15:27:27,335 - Definisana je metoda main tipa void na liniji 10
+INFO  15:27:27,335 - Globalnih promeljivih ima 3, a lokalnih 5
+INFO  15:27:27,335 - Print calls = 0
+ERROR 15:27:27,335 - Parsiranje NIJE uspesno zavrseno!

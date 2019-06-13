@@ -70,7 +70,7 @@ nonterminal DesignatorStatement, StatementList, Statement, Addop, Mulop, Relop, 
 nonterminal MaybeNumConst, ReturnExpression, MaybeCondition, MaybeDesignatorStatement, IdentConst;
 nonterminal MulopFactorList, AddopTermList, CondFact, CondFactAnd, CondTerm, CondTermOr, Condition;
 nonterminal MaybeActualParams, MaybeParams, MaybeMinus, MaybeRelopExpr, TypeOrVoid, Matched, Unmatched;
-nonterminal EnumParamList, EnumParam, EnumName, Declaration, VarName, VarList, MethodStart;
+nonterminal EnumParamList, EnumParam, EnumName, Declaration, VarName, VarList, MethodStart, FuncCall;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, ProgName, MethodDecl, MethodName, Designator; 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Term, Expr, Factor, VarDeclList; 
@@ -291,12 +291,14 @@ DesignatorStatement ::= (DesignatorStatement) Designator DesignatorStatementOp;
 DesignatorStatementOp ::= 
             (DesignatorExpr) Assignop Expr:e
 						|
-						(DesignatorParams) LPAREN MaybeActualParams RPAREN
+						(DesignatorParams) FuncCall LPAREN MaybeActualParams RPAREN
 						|
 						(DesignatorInc) INC
 						|
 						(DesignatorDec) DEC
 						;
+						
+FuncCall ::= (FuncCall) /* epsilon */;
 
 ActPars ::= (ActPars) Expr:e ActParList;
 
@@ -358,7 +360,7 @@ Factor ::= (FactorDesignator) Designator:d MaybeParams
           (FactorExpression) LPAREN Expr:e RPAREN
           ;
 
-MaybeParams ::= (ActualParamsBrackets) LPAREN MaybeActualParams:params RPAREN
+MaybeParams ::= (ActualParamsBrackets) FuncCall LPAREN MaybeActualParams:params RPAREN
 				      |
 				      /* epsilon */
 				      ;

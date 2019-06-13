@@ -1,0 +1,61 @@
+INFO  14:32:51,590 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  14:32:51,633 - #2 program
+INFO  14:32:51,634 - #44 test
+INFO  14:32:51,634 - #42 enum
+INFO  14:32:51,635 - #44 D
+INFO  14:32:51,635 - #3 {
+INFO  14:32:51,635 - #44 NULA
+INFO  14:32:51,635 - #8 ,
+INFO  14:32:51,636 - #44 JEDAN
+INFO  14:32:51,637 - #8 ,
+INFO  14:32:51,637 - #44 DVA
+INFO  14:32:51,637 - #27 =
+INFO  14:32:51,637 - #45 3423
+INFO  14:32:51,637 - #4 }
+INFO  14:32:51,637 - #42 enum
+INFO  14:32:51,638 - #44 E
+INFO  14:32:51,638 - #3 {
+INFO  14:32:51,638 - #44 JEN
+INFO  14:32:51,638 - #8 ,
+INFO  14:32:51,638 - #44 DVA
+INFO  14:32:51,638 - #4 }
+INFO  14:32:51,638 - #3 {
+INFO  14:32:51,638 - #14 void
+INFO  14:32:51,644 - #44 main
+INFO  14:32:51,644 - #6 (
+INFO  14:32:51,645 - #7 )
+INFO  14:32:51,646 - #44 D
+INFO  14:32:51,646 - #44 radi
+INFO  14:32:51,647 - #5 ;
+INFO  14:32:51,649 - #3 {
+INFO  14:32:51,649 - #44 radi
+INFO  14:32:51,650 - #27 =
+INFO  14:32:51,650 - #44 D
+INFO  14:32:51,651 - #28 .
+INFO  14:32:51,651 - #44 JEDAN
+INFO  14:32:51,652 - #5 ;
+INFO  14:32:51,654 - #9 print
+INFO  14:32:51,654 - #6 (
+INFO  14:32:51,654 - #44 radi
+INFO  14:32:51,654 - #7 )
+INFO  14:32:51,655 - #5 ;
+INFO  14:32:51,655 - #10 return
+INFO  14:32:51,655 - #5 ;
+INFO  14:32:51,656 - #4 }
+INFO  14:32:51,656 - #4 }
+INFO  14:32:51,674 - Definise se enum D na liniji 2
+INFO  14:33:30,847 - Dodato je polje NULA sa vrednoscu 0 u Enum D na liniji 2
+INFO  14:33:32,218 - Dodato je polje JEDAN sa vrednoscu 1 u Enum D na liniji 2
+INFO  14:33:33,064 - Dodato je polje DVA sa vrednoscu 3423 u Enum D na liniji 2
+INFO  14:33:33,066 - Definisan je enum D na liniji 2
+INFO  14:33:33,067 - Definise se enum E na liniji 3
+INFO  14:33:39,520 - Dodato je polje JEN sa vrednoscu 0 u Enum E na liniji 3
+INFO  14:33:40,649 - Dodato je polje DVA sa vrednoscu 1 u Enum E na liniji 3
+INFO  14:33:40,650 - Definisan je enum E na liniji 3
+INFO  14:33:40,654 - Deklarisana je lokalna promenljiva radi tipa D na liniji 5
+ERROR 14:36:09,473 - Greska, dodeljena vrednost nije istog tipa kao promenljiva na liniji 6
+ERROR 14:36:09,474 - Pogresan tip argumenta funkcije print, argumenti mogu biti samo int ili char tipa na liniji 9
+INFO  14:36:09,475 - Definisana je metoda main tipa void na liniji 5
+INFO  14:36:09,475 - Globalnih promeljivih ima 0, a lokalnih 1
+INFO  14:36:09,475 - Print calls = 0
+ERROR 14:36:09,477 - Parsiranje NIJE uspesno zavrseno!

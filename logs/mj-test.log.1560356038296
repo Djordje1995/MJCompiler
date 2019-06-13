@@ -1,0 +1,173 @@
+INFO  18:12:41,807 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  18:12:41,839 - #2 program
+INFO  18:12:41,839 - #44 test
+INFO  18:12:41,839 - #42 enum
+INFO  18:12:41,839 - #44 E
+INFO  18:12:41,839 - #3 {
+INFO  18:12:41,839 - #44 NULA
+INFO  18:12:41,839 - #8 ,
+INFO  18:12:41,839 - #44 DVA
+INFO  18:12:41,839 - #27 =
+INFO  18:12:41,839 - #45 2
+INFO  18:12:41,839 - #4 }
+INFO  18:12:41,839 - #42 enum
+INFO  18:12:41,839 - #44 D
+INFO  18:12:41,839 - #3 {
+INFO  18:12:41,839 - #44 NULA
+INFO  18:12:41,839 - #8 ,
+INFO  18:12:41,839 - #44 JEDAN
+INFO  18:12:41,839 - #8 ,
+INFO  18:12:41,839 - #44 DVA
+INFO  18:12:41,839 - #27 =
+INFO  18:12:41,839 - #45 3423
+INFO  18:12:41,839 - #4 }
+INFO  18:12:41,839 - #43 const
+INFO  18:12:41,839 - #44 int
+INFO  18:12:41,839 - #44 tri
+INFO  18:12:41,839 - #27 =
+INFO  18:12:41,839 - #45 3
+INFO  18:12:41,839 - #5 ;
+INFO  18:12:41,839 - #44 char
+INFO  18:12:41,839 - #44 a
+INFO  18:12:41,839 - #5 ;
+INFO  18:12:41,839 - #44 int
+INFO  18:12:41,839 - #44 broj
+INFO  18:12:41,839 - #8 ,
+INFO  18:12:41,839 - #44 bla
+INFO  18:12:41,839 - #5 ;
+INFO  18:12:41,839 - #3 {
+INFO  18:12:41,839 - #44 int
+INFO  18:12:41,839 - #44 main
+INFO  18:12:41,839 - #6 (
+INFO  18:12:41,839 - #7 )
+INFO  18:12:41,839 - #44 int
+INFO  18:12:41,839 - #44 r
+INFO  18:12:41,839 - #5 ;
+INFO  18:12:41,839 - #44 int
+INFO  18:12:41,839 - #44 s
+INFO  18:12:41,839 - #5 ;
+INFO  18:12:41,839 - #44 D
+INFO  18:12:41,839 - #44 bodovi
+INFO  18:12:41,839 - #8 ,
+INFO  18:12:41,839 - #44 radi
+INFO  18:12:41,839 - #5 ;
+INFO  18:12:41,839 - #44 E
+INFO  18:12:41,839 - #44 proba
+INFO  18:12:41,839 - #5 ;
+INFO  18:12:41,839 - #3 {
+INFO  18:12:41,839 - #44 radi
+INFO  18:12:41,839 - #27 =
+INFO  18:12:41,839 - #44 D
+INFO  18:12:41,839 - #28 .
+INFO  18:12:41,839 - #44 JEDAN
+INFO  18:12:41,839 - #5 ;
+INFO  18:12:41,839 - #9 print
+INFO  18:12:41,839 - #6 (
+INFO  18:12:41,839 - #44 radi
+INFO  18:12:41,839 - #7 )
+INFO  18:12:41,839 - #5 ;
+INFO  18:12:41,839 - #44 r
+INFO  18:12:41,854 - #27 =
+INFO  18:12:41,854 - #45 3
+INFO  18:12:41,854 - #5 ;
+INFO  18:12:41,854 - #44 s
+INFO  18:12:41,854 - #27 =
+INFO  18:12:41,854 - #45 4
+INFO  18:12:41,854 - #5 ;
+INFO  18:12:41,854 - #9 print
+INFO  18:12:41,854 - #6 (
+INFO  18:12:41,854 - #44 r
+INFO  18:12:41,854 - #7 )
+INFO  18:12:41,854 - #5 ;
+INFO  18:12:41,854 - #9 print
+INFO  18:12:41,854 - #6 (
+INFO  18:12:41,854 - #44 s
+INFO  18:12:41,854 - #7 )
+INFO  18:12:41,854 - #5 ;
+INFO  18:12:41,854 - #44 bodovi
+INFO  18:12:41,854 - #27 =
+INFO  18:12:41,854 - #45 2
+INFO  18:12:41,854 - #19 *
+INFO  18:12:41,854 - #44 D
+INFO  18:12:41,854 - #28 .
+INFO  18:12:41,854 - #44 JEDAN
+INFO  18:12:41,854 - #11 +
+INFO  18:12:41,854 - #44 tri
+INFO  18:12:41,854 - #5 ;
+INFO  18:12:41,854 - #44 proba
+INFO  18:12:41,854 - #27 =
+INFO  18:12:41,854 - #44 E
+INFO  18:12:41,854 - #28 .
+INFO  18:12:41,854 - #44 DVA
+INFO  18:12:41,854 - #5 ;
+INFO  18:12:41,854 - #9 print
+INFO  18:12:41,854 - #6 (
+INFO  18:12:41,854 - #44 proba
+INFO  18:12:41,854 - #7 )
+INFO  18:12:41,854 - #5 ;
+INFO  18:12:41,854 - #9 print
+INFO  18:12:41,854 - #6 (
+INFO  18:12:41,854 - #44 bodovi
+INFO  18:12:41,854 - #7 )
+INFO  18:12:41,854 - #5 ;
+INFO  18:12:41,854 - #34 read
+INFO  18:12:41,854 - #6 (
+INFO  18:12:41,854 - #44 a
+INFO  18:12:41,854 - #7 )
+INFO  18:12:41,854 - #5 ;
+INFO  18:12:41,854 - #9 print
+INFO  18:12:41,854 - #6 (
+INFO  18:12:41,854 - #44 a
+INFO  18:12:41,854 - #7 )
+INFO  18:12:41,854 - #5 ;
+INFO  18:12:41,854 - #44 a
+INFO  18:12:41,854 - #27 =
+INFO  18:12:41,854 - #47 a
+INFO  18:12:41,854 - #5 ;
+INFO  18:12:41,854 - #44 broj
+INFO  18:12:41,854 - #27 =
+INFO  18:12:41,854 - #44 ord
+INFO  18:12:41,854 - #6 (
+INFO  18:12:41,854 - #44 a
+INFO  18:12:41,854 - #7 )
+INFO  18:12:41,854 - #5 ;
+INFO  18:12:41,854 - #9 print
+INFO  18:12:41,854 - #6 (
+INFO  18:12:41,854 - #44 broj
+INFO  18:12:41,854 - #7 )
+INFO  18:12:41,854 - #5 ;
+INFO  18:12:41,854 - #9 print
+INFO  18:12:41,854 - #6 (
+INFO  18:12:41,854 - #44 a
+INFO  18:12:41,854 - #8 ,
+INFO  18:12:41,854 - #45 5
+INFO  18:12:41,854 - #7 )
+INFO  18:12:41,854 - #5 ;
+INFO  18:12:41,854 - #44 broj
+INFO  18:12:41,854 - #27 =
+INFO  18:12:41,854 - #45 7
+INFO  18:12:41,854 - #5 ;
+INFO  18:12:41,854 - #10 return
+INFO  18:12:41,854 - #45 0
+INFO  18:12:41,854 - #5 ;
+INFO  18:12:41,854 - #4 }
+INFO  18:12:41,854 - #4 }
+INFO  18:12:41,854 - Definise se enum E na liniji 3
+INFO  18:12:41,854 - Dodato je polje NULA sa vrednoscu 0 u Enum E na liniji 3
+INFO  18:12:41,854 - Dodato je polje DVA sa vrednoscu 2 u Enum E na liniji 3
+INFO  18:12:41,854 - Definisan je enum E na liniji 3
+INFO  18:12:41,854 - Definise se enum D na liniji 4
+INFO  18:12:41,854 - Dodato je polje NULA sa vrednoscu 0 u Enum D na liniji 4
+INFO  18:12:41,854 - Dodato je polje JEDAN sa vrednoscu 1 u Enum D na liniji 4
+INFO  18:12:41,854 - Dodato je polje DVA sa vrednoscu 3423 u Enum D na liniji 4
+INFO  18:12:41,854 - Definisan je enum D na liniji 4
+INFO  18:12:41,854 - Definisana je konstanta tri tipa Int sa vrednoscu 3 na liniji 5
+INFO  18:12:41,854 - Deklarisana je globalna promenljiva a tipa char na liniji 6
+INFO  18:12:41,854 - Deklarisana je globalna promenljiva broj tipa int na liniji 7
+INFO  18:12:41,854 - Deklarisana je globalna promenljiva bla tipa int na liniji 7
+INFO  18:12:41,854 - Deklarisana je lokalna promenljiva r tipa int na liniji 11
+INFO  18:12:41,854 - Deklarisana je lokalna promenljiva s tipa int na liniji 12
+INFO  18:12:41,854 - Deklarisana je lokalna promenljiva bodovi tipa D na liniji 13
+INFO  18:12:41,854 - Deklarisana je lokalna promenljiva radi tipa D na liniji 13
+INFO  18:12:41,854 - Deklarisana je lokalna promenljiva proba tipa E na liniji 14
+ERROR 18:12:41,870 - Greska, promenljiva nije deklarisana na liniji 17

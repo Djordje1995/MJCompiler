@@ -2,6 +2,7 @@ package rs.ac.bg.etf.pp1;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -40,6 +41,7 @@ import rs.ac.bg.etf.pp1.ast.FactorNewType;
 import rs.ac.bg.etf.pp1.ast.FactorNumber;
 import rs.ac.bg.etf.pp1.ast.FormParams;
 import rs.ac.bg.etf.pp1.ast.FormalParam;
+import rs.ac.bg.etf.pp1.ast.FuncCall;
 import rs.ac.bg.etf.pp1.ast.IdentConst;
 import rs.ac.bg.etf.pp1.ast.IsExpression;
 import rs.ac.bg.etf.pp1.ast.IsMinus;
@@ -94,7 +96,7 @@ public class SemanticAnalyser extends VisitorAdaptor {
 	public static final Struct boolType = new Struct(Struct.Bool);
 	public static final Struct enumType = new Struct(Struct.Enum);
 	public SymbolDataStructure sds;
-	public List<Struct> actualParamsList = new ArrayList<>();
+	public List<List<Struct>> actualParamsLists = new LinkedList<>();
 
 	Logger log = Logger.getLogger(getClass());
 
@@ -123,6 +125,11 @@ public class SemanticAnalyser extends VisitorAdaptor {
 		log.info(msg.toString());
 	}
 
+	public void visit(FuncCall funcCall) {
+		List<Struct> actualParamsList = new ArrayList<>();
+		actualParamsLists.add(actualParamsList);
+	}
+	
 	public void visit(FactorNewType factorNewType) {
 		Type type = factorNewType.getType();
 		MaybeExpression me = factorNewType.getMaybeExpression();
@@ -173,33 +180,22 @@ public class SemanticAnalyser extends VisitorAdaptor {
 							break;
 						}
 					}
-					if (formalParams.size() != actualParamsList.size()) {
+					if (formalParams.size() != actualParamsLists.get(actualParamsLists.size() - 1).size()) {
 						report_error("Greska, neodgovarajuci broj argumenata ", factorDesignator);
 						return;
 					}
 					else {
 						for (int i = 0; i < formalParams.size(); i++) {
-							if (!formalParams.get(i).compatibleWith(actualParamsList.get(i))) {
+							if (!formalParams.get(i).compatibleWith(actualParamsLists.get(actualParamsLists.size() - 1).get(i))) {
 								report_error("Greska, neodgovarajuci tip argumenta pri pozivu funkcije ", factorDesignator);
 								return;
 							}
 						}
 					}
-					actualParamsList.clear();
+					actualParamsLists.remove(actualParamsLists.size() - 1);
 				}
-
 			}
 		}
-//		if (factorDesignator.getMaybeParams() instanceof MaybeParams) {
-//			MaybeParams mp = factorDesignator.getMaybeParams();
-//			if (mp instanceof ActualParamsBrackets) {
-//				MaybeActualParams apb = ((ActualParamsBrackets) mp).getMaybeActualParams();
-//				if (apb instanceof ActualParams) {
-//					ActPars ap = ((ActualParams) apb).getActPars();
-////					ap.getExpr()
-//				}
-//			}
-//		}
 	}
 
 	public void visit(FormalParam formalParam) {
@@ -215,11 +211,11 @@ public class SemanticAnalyser extends VisitorAdaptor {
 	}
 	
 	public void visit(ActParListRec actParListRec) {
-		actualParamsList.add(0, actParListRec.getExpr().struct);  //valjda je dovoljno
+		actualParamsLists.get(actualParamsLists.size() - 1).add(0, actParListRec.getExpr().struct);;
 	}
 	
 	public void visit(ActPars actPars) {
-		actualParamsList.add(0, actPars.getExpr().struct);
+		actualParamsLists.get(actualParamsLists.size() - 1).add(0, actPars.getExpr().struct);
 	}
 	
 	public void visit(FactorExpression factorExpression) {
@@ -295,7 +291,13 @@ public class SemanticAnalyser extends VisitorAdaptor {
 			report_info("Deklarisana je " + (isGlobal ? "globalna" : "lokalna") + " promenljiva " + varName.getVarName()
 			    + " tipa " + currentType.getTypeName() + " array", varName);
 		} else {
-			Tab.insert(Obj.Var, varName.getVarName(), currentType.struct);
+			Obj obj = Tab.find(currentType.getTypeName());
+			if(obj.getType() == enumType) {
+				Tab.insert(Obj.Var, varName.getVarName(), Tab.intType);
+			}
+			else {
+				Tab.insert(Obj.Var, varName.getVarName(), currentType.struct);
+			}
 			report_info("Deklarisana je " + (isGlobal ? "globalna" : "lokalna") + " promenljiva " + varName.getVarName()
 			    + " tipa " + currentType.getTypeName(), varName);
 		}
@@ -331,7 +333,6 @@ public class SemanticAnalyser extends VisitorAdaptor {
 			    + ((NumConst) cnst).getNumValue(), identConst);
 			Obj obj = Tab.insert(Obj.Con, identConst.getName(), Tab.intType);
 			obj.setAdr(((NumConst) cnst).getNumValue());
-			System.out.println("ovo je adr " + obj.getAdr());
 		}
 		if (cnst instanceof CharConst) {
 			tempType = Tab.charType;
@@ -358,8 +359,9 @@ public class SemanticAnalyser extends VisitorAdaptor {
 	}
 
 	public void visit(EnumDecl enumDecl) {
-		Tab.closeScope();
 		currentEnum.setLocals(sds);
+		Tab.chainLocalSymbols(currentEnum);
+		Tab.closeScope();
 		sds = null;
 		currentEnum = null;
 		report_info("Definisan je enum " + enumDecl.getEnumName().getEnumName(), enumDecl);
@@ -368,7 +370,7 @@ public class SemanticAnalyser extends VisitorAdaptor {
 
 	public void visit(EnumName enumName) {
 		if (Tab.find(enumName.getEnumName()) != null && Tab.find(enumName.getEnumName()) != Tab.noObj) {
-			report_error("Dvostruka definicija enuma " + enumName.getEnumName(), enumName);
+			report_error("Greska, Dvostruka definicija enuma " + enumName.getEnumName(), enumName);
 			return;
 		}
 		currentEnum = Tab.insert(Obj.Type, enumName.getEnumName(), enumType);
@@ -536,7 +538,7 @@ public class SemanticAnalyser extends VisitorAdaptor {
 			return;
 		}
 		Struct type = readDesignatorStatement.getDesignator().obj.getType();
-		if (type != Tab.intType || type != Tab.charType || type != boolType) {
+		if (type != Tab.intType && type != Tab.charType && type != boolType) {
 			report_error("Greska, argument read funckije mora biti int, char ili bool tipa", readDesignatorStatement);
 		}
 	}
@@ -549,8 +551,7 @@ public class SemanticAnalyser extends VisitorAdaptor {
 		}
 		DesignatorStatementOp stmt = designatorStatement.getDesignatorStatementOp();
 		if (stmt instanceof DesignatorExpr) {
-			if (designatorStatement.getDesignator().obj.getType().getKind() != ((DesignatorExpr) stmt).getExpr().struct
-			    .getKind()) {
+			if (!designator.getType().assignableTo(((DesignatorExpr) stmt).getExpr().struct)) {
 				report_error("Greska, dodeljena vrednost nije istog tipa kao promenljiva", designatorStatement);
 				return;
 			}
@@ -581,48 +582,23 @@ public class SemanticAnalyser extends VisitorAdaptor {
 						break;
 					}
 				}
-				if (formalParams.size() != actualParamsList.size()) {
+				if (formalParams.size() != actualParamsLists.get(actualParamsLists.size() - 1).size()) {
 					report_error("Greska, neodgovarajuci broj argumenata ", designatorStatement);
 					return;
 				}
 				else {
 					for (int i = 0; i < formalParams.size(); i++) {
-						if (!formalParams.get(i).compatibleWith(actualParamsList.get(i))) {
+						if (!formalParams.get(i).compatibleWith(actualParamsLists.get(actualParamsLists.size() - 1).get(i))) {
 							report_error("Greska, neodgovarajuci tip argumenta pri pozivu funkcije ", designatorStatement);
 							return;
 						}
 					}
 				}
-				actualParamsList.clear();
+				actualParamsLists.remove(actualParamsLists.size() - 1);
 			}
 		}
 	}
 
-//	public void visit(ProcCall procCall){
-//		Obj func = procCall.getDesignator().obj;
-//		if (Obj.Meth == func.getKind()) { 
-//			report_info("Pronadjen poziv funkcije " + func.getName() + " na liniji " + procCall.getLine(), null);
-//			//RESULT = func.getType();
-//		} 
-//		else {
-//			report_error("Greska na liniji " + procCall.getLine()+" : ime " + func.getName() + " nije funkcija!", null);
-//			//RESULT = Tab.noType;
-//		}     	
-//	}    
-
-//	public void visit(FuncCall funcCall){
-//		Obj func = funcCall.getDesignator().obj;
-//		if (Obj.Meth == func.getKind()) { 
-//			report_info("Pronadjen poziv funkcije " + func.getName() + " na liniji " + funcCall.getLine(), null);
-//			funcCall.struct = func.getType();
-//		} 
-//		else {
-//			report_error("Greska na liniji " + funcCall.getLine()+" : ime " + func.getName() + " nije funkcija!", null);
-//			funcCall.struct = Tab.noType;
-//		}
-//
-//	}
-//	
 	public boolean passed() {
 		return !errorDetected;
 	}

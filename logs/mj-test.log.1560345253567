@@ -1,0 +1,98 @@
+INFO  14:08:15,454 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  14:08:15,502 - #2 program
+INFO  14:08:15,502 - #44 MJProgram
+INFO  14:08:15,502 - #44 int
+INFO  14:08:15,502 - #44 x
+INFO  14:08:15,502 - #29 [
+INFO  14:08:15,502 - #30 ]
+INFO  14:08:15,502 - #8 ,
+INFO  14:08:15,518 - #44 y
+INFO  14:08:15,518 - #5 ;
+INFO  14:08:15,518 - #42 enum
+INFO  14:08:15,518 - #44 Broj
+INFO  14:08:15,518 - #3 {
+INFO  14:08:15,518 - #44 NULA
+INFO  14:08:15,518 - #8 ,
+INFO  14:08:15,518 - #44 JEDAN
+INFO  14:08:15,518 - #8 ,
+INFO  14:08:15,518 - #44 OSAM
+INFO  14:08:15,518 - #27 =
+INFO  14:08:15,523 - #45 8
+INFO  14:08:15,523 - #4 }
+INFO  14:08:15,523 - #44 char
+INFO  14:08:15,523 - #44 s
+INFO  14:08:15,527 - #5 ;
+INFO  14:08:15,527 - #43 const
+INFO  14:08:15,527 - #44 int
+INFO  14:08:15,527 - #44 TRI
+INFO  14:08:15,527 - #27 =
+INFO  14:08:15,527 - #45 3
+INFO  14:08:15,527 - #5 ;
+INFO  14:08:15,527 - #44 bool
+INFO  14:08:15,527 - #44 b
+INFO  14:08:15,527 - #5 ;
+INFO  14:08:15,527 - #3 {
+INFO  14:08:15,527 - #14 void
+INFO  14:08:15,527 - #44 main
+INFO  14:08:15,527 - #6 (
+INFO  14:08:15,527 - #7 )
+INFO  14:08:15,527 - #44 int
+INFO  14:08:15,527 - #44 a
+INFO  14:08:15,527 - #8 ,
+INFO  14:08:15,527 - #44 niz
+INFO  14:08:15,527 - #29 [
+INFO  14:08:15,527 - #30 ]
+INFO  14:08:15,527 - #8 ,
+INFO  14:08:15,527 - #44 broj
+INFO  14:08:15,527 - #5 ;
+INFO  14:08:15,527 - #3 {
+INFO  14:08:15,527 - #44 niz
+INFO  14:08:15,527 - #27 =
+INFO  14:08:15,527 - #31 new
+INFO  14:08:15,527 - #44 int
+INFO  14:08:15,527 - #29 [
+INFO  14:08:15,527 - #45 5
+INFO  14:08:15,527 - #30 ]
+INFO  14:08:15,542 - #5 ;
+INFO  14:08:15,542 - #9 print
+INFO  14:08:15,542 - #6 (
+INFO  14:08:15,542 - #44 niz
+INFO  14:08:15,542 - #29 [
+INFO  14:08:15,542 - #45 3
+INFO  14:08:15,542 - #30 ]
+INFO  14:08:15,542 - #7 )
+INFO  14:08:15,542 - #5 ;
+INFO  14:08:15,542 - #44 niz
+INFO  14:08:15,542 - #29 [
+INFO  14:08:15,542 - #45 3
+INFO  14:08:15,542 - #30 ]
+INFO  14:08:15,542 - #17 ++
+INFO  14:08:15,542 - #5 ;
+INFO  14:08:15,542 - #9 print
+INFO  14:08:15,542 - #6 (
+INFO  14:08:15,542 - #44 niz
+INFO  14:08:15,542 - #29 [
+INFO  14:08:15,542 - #45 3
+INFO  14:08:15,542 - #30 ]
+INFO  14:08:15,542 - #7 )
+INFO  14:08:15,542 - #5 ;
+INFO  14:08:15,542 - #4 }
+INFO  14:08:15,542 - #4 }
+INFO  14:08:15,574 - Deklarisana je globalna promenljiva x tipa int array na liniji 2
+INFO  14:08:15,574 - Deklarisana je globalna promenljiva y tipa int na liniji 2
+INFO  14:08:15,574 - Definise se enum Broj na liniji 4
+INFO  14:08:15,574 - Dodato je polje NULA sa vrednoscu 0 u Enum Broj na liniji 4
+INFO  14:08:15,574 - Dodato je polje JEDAN sa vrednoscu 1 u Enum Broj na liniji 4
+INFO  14:08:15,574 - Dodato je polje OSAM sa vrednoscu 8 u Enum Broj na liniji 4
+INFO  14:08:15,574 - Definisan je enum Broj na liniji 4
+INFO  14:08:15,574 - Deklarisana je globalna promenljiva s tipa char na liniji 6
+INFO  14:08:15,574 - Definisana je konstanta TRI tipa Int sa vrednoscu 3 na liniji 7
+INFO  14:08:15,574 - Deklarisana je globalna promenljiva b tipa bool na liniji 8
+INFO  14:08:15,574 - Deklarisana je lokalna promenljiva a tipa int na liniji 10
+INFO  14:08:15,574 - Deklarisana je lokalna promenljiva niz tipa int array na liniji 10
+INFO  14:08:15,574 - Deklarisana je lokalna promenljiva broj tipa int na liniji 10
+INFO  14:08:15,574 - Definisana je metoda main tipa void na liniji 10
+INFO  14:08:15,574 - Globalnih promeljivih ima 4, a lokalnih 3
+INFO  14:08:15,574 - Print calls = 0
+INFO  14:08:15,574 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  14:13:03,415 - Parsiranje uspesno zavrseno!

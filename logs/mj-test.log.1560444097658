@@ -1,0 +1,57 @@
+INFO  18:41:02,297 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  18:41:02,322 - #2 program
+INFO  18:41:02,322 - #44 test301
+INFO  18:41:02,322 - #3 {
+INFO  18:41:02,323 - #14 void
+INFO  18:41:02,323 - #44 main
+INFO  18:41:02,323 - #6 (
+INFO  18:41:02,324 - #7 )
+INFO  18:41:02,324 - #3 {
+INFO  18:41:02,324 - #44 char
+INFO  18:41:02,325 - #44 c
+ERROR 18:41:02,325 - 
+Sintaksna greska na liniji 3
+INFO  18:41:02,325 - #5 ;
+INFO  18:41:02,325 - #44 int
+INFO  18:41:02,325 - #44 b
+INFO  18:41:02,328 - #5 ;
+INFO  18:41:02,328 - #44 c
+INFO  18:41:02,328 - #27 =
+INFO  18:41:02,328 - #47 k
+INFO  18:41:02,329 - #5 ;
+INFO  18:41:02,331 - #44 b
+INFO  18:41:02,331 - #27 =
+INFO  18:41:02,331 - #44 ord
+INFO  18:41:02,332 - #6 (
+INFO  18:41:02,332 - #44 c
+INFO  18:41:02,332 - #7 )
+INFO  18:41:02,333 - #5 ;
+INFO  18:41:02,333 - #9 print
+INFO  18:41:02,333 - #6 (
+INFO  18:41:02,333 - #44 c
+INFO  18:41:02,333 - #7 )
+INFO  18:41:02,334 - #5 ;
+INFO  18:41:02,334 - #9 print
+INFO  18:41:02,334 - #6 (
+INFO  18:41:02,334 - #44 b
+INFO  18:41:02,334 - #7 )
+INFO  18:41:02,334 - #5 ;
+INFO  18:41:02,334 - #4 }
+INFO  18:41:02,334 - #4 }
+ERROR 18:41:02,345 - Greska na liniji 5 : ime c nije deklarisano! 
+ERROR 18:41:02,345 - Greska, promenljiva nije deklarisana na liniji 5
+ERROR 18:41:02,345 - Greska na liniji 6 : ime b nije deklarisano! 
+ERROR 18:41:02,345 - Greska na liniji 6 : ime c nije deklarisano! 
+ERROR 18:41:02,345 - Greska, promenljiva nije deklarisana na liniji 6
+ERROR 18:41:02,346 - Greska, neodgovarajuci tip argumenta pri pozivu funkcije  na liniji 6
+ERROR 18:41:02,346 - Greska, promenljiva nije deklarisana na liniji 6
+ERROR 18:41:02,346 - Greska na liniji 7 : ime c nije deklarisano! 
+ERROR 18:41:02,346 - Greska, promenljiva nije deklarisana na liniji 7
+ERROR 18:41:02,346 - Pogresan tip argumenta funkcije print, argumenti mogu biti samo int ili char tipa na liniji 9
+ERROR 18:41:02,346 - Greska na liniji 8 : ime b nije deklarisano! 
+ERROR 18:41:02,346 - Greska, promenljiva nije deklarisana na liniji 8
+ERROR 18:41:02,346 - Pogresan tip argumenta funkcije print, argumenti mogu biti samo int ili char tipa na liniji 9
+INFO  18:41:02,346 - Definisana je metoda main tipa void na liniji 2
+INFO  18:41:02,346 - Globalnih promeljivih ima 0, a lokalnih 0
+INFO  18:41:02,346 - Print calls = 0
+ERROR 18:41:02,346 - Parsiranje NIJE uspesno zavrseno!

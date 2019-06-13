@@ -1,0 +1,36 @@
+INFO  18:57:03,681 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  18:57:03,706 - #2 program
+INFO  18:57:03,706 - #44 test301
+INFO  18:57:03,706 - #3 {
+INFO  18:57:03,706 - #14 void
+INFO  18:57:03,707 - #44 main
+INFO  18:57:03,707 - #6 (
+INFO  18:57:03,707 - #7 )
+INFO  18:57:03,708 - #44 char
+INFO  18:57:03,708 - #44 c
+INFO  18:57:03,708 - #5 ;
+INFO  18:57:03,709 - #44 int
+INFO  18:57:03,709 - #44 b
+INFO  18:57:03,709 - #5 ;
+INFO  18:57:03,710 - #3 {
+INFO  18:57:03,710 - #44 c
+INFO  18:57:03,710 - #27 =
+INFO  18:57:03,710 - #44 chr
+INFO  18:57:03,711 - #6 (
+INFO  18:57:03,711 - #45 97
+INFO  18:57:03,712 - #7 )
+INFO  18:57:03,713 - #5 ;
+INFO  18:57:03,714 - #9 print
+INFO  18:57:03,714 - #6 (
+INFO  18:57:03,715 - #44 c
+INFO  18:57:03,715 - #7 )
+INFO  18:57:03,716 - #5 ;
+INFO  18:57:03,716 - #4 }
+INFO  18:57:03,716 - #4 }
+INFO  18:57:03,724 - Deklarisana je lokalna promenljiva c tipa char na liniji 4
+INFO  18:57:03,724 - Deklarisana je lokalna promenljiva b tipa int na liniji 5
+INFO  18:57:03,725 - Definisana je metoda main tipa void na liniji 3
+INFO  18:57:03,725 - Globalnih promeljivih ima 0, a lokalnih 2
+INFO  18:57:03,725 - Print calls = 0
+INFO  18:57:03,725 - Generating bytecode file: C:\Users\bozov\Desktop\git\test\program.obj
+INFO  18:57:03,734 - Parsiranje uspesno zavrseno!

@@ -1,0 +1,100 @@
+INFO  12:40:50,221 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  12:40:50,246 - #2 program
+INFO  12:40:50,246 - #44 MJProgram
+INFO  12:40:50,246 - #44 int
+INFO  12:40:50,247 - #44 x
+INFO  12:40:50,247 - #29 [
+INFO  12:40:50,247 - #30 ]
+INFO  12:40:50,247 - #8 ,
+INFO  12:40:50,248 - #44 y
+INFO  12:40:50,248 - #5 ;
+INFO  12:40:50,249 - #42 enum
+INFO  12:40:50,249 - #44 Broj
+INFO  12:40:50,249 - #3 {
+INFO  12:40:50,249 - #44 NULA
+INFO  12:40:50,249 - #8 ,
+INFO  12:40:50,250 - #44 JEDAN
+INFO  12:40:50,250 - #8 ,
+INFO  12:40:50,250 - #44 OSAM
+INFO  12:40:50,250 - #27 =
+INFO  12:40:50,250 - #45 8
+INFO  12:40:50,251 - #4 }
+INFO  12:40:50,251 - #44 char
+INFO  12:40:50,251 - #44 s
+INFO  12:40:50,252 - #5 ;
+INFO  12:40:50,252 - #43 const
+INFO  12:40:50,252 - #44 int
+INFO  12:40:50,252 - #44 TRI
+INFO  12:40:50,252 - #27 =
+INFO  12:40:50,252 - #45 3
+INFO  12:40:50,252 - #5 ;
+INFO  12:40:50,253 - #44 bool
+INFO  12:40:50,253 - #44 b
+INFO  12:40:50,253 - #5 ;
+INFO  12:40:50,253 - #3 {
+INFO  12:40:50,253 - #14 void
+INFO  12:40:50,253 - #44 main
+INFO  12:40:50,254 - #6 (
+INFO  12:40:50,254 - #7 )
+INFO  12:40:50,254 - #44 int
+INFO  12:40:50,255 - #44 a
+INFO  12:40:50,255 - #8 ,
+INFO  12:40:50,255 - #44 niz
+INFO  12:40:50,255 - #29 [
+INFO  12:40:50,255 - #30 ]
+INFO  12:40:50,255 - #8 ,
+INFO  12:40:50,255 - #44 broj
+INFO  12:40:50,255 - #5 ;
+INFO  12:40:50,255 - #3 {
+INFO  12:40:50,255 - #44 niz
+INFO  12:40:50,256 - #27 =
+INFO  12:40:50,256 - #31 new
+INFO  12:40:50,257 - #44 int
+INFO  12:40:50,257 - #29 [
+INFO  12:40:50,257 - #45 5
+INFO  12:40:50,257 - #30 ]
+INFO  12:40:50,258 - #5 ;
+INFO  12:40:50,258 - #44 n
+INFO  12:40:50,259 - #9 print
+ERROR 12:40:50,259 - 
+Sintaksna greska na liniji 25
+INFO  12:40:50,259 - #6 (
+INFO  12:40:50,259 - #44 niz
+INFO  12:40:50,259 - #29 [
+INFO  12:40:50,261 - #45 3
+INFO  12:40:50,262 - #30 ]
+INFO  12:40:50,262 - #7 )
+INFO  12:40:50,262 - #5 ;
+INFO  12:40:50,262 - #44 niz
+INFO  12:40:50,262 - #29 [
+INFO  12:40:50,262 - #45 3
+INFO  12:40:50,268 - #30 ]
+INFO  12:40:50,268 - #17 ++
+INFO  12:40:50,268 - #5 ;
+INFO  12:40:50,268 - #9 print
+INFO  12:40:50,268 - #6 (
+INFO  12:40:50,268 - #44 niz
+INFO  12:40:50,268 - #29 [
+INFO  12:40:50,268 - #45 3
+INFO  12:40:50,268 - #30 ]
+INFO  12:40:50,268 - #7 )
+INFO  12:40:50,269 - #5 ;
+INFO  12:40:50,269 - #4 }
+INFO  12:40:50,269 - #4 }
+INFO  12:40:50,275 - Deklarisana je globalna promenljiva x tipa int array na liniji 2
+INFO  12:40:50,275 - Deklarisana je globalna promenljiva y tipa int na liniji 2
+INFO  12:40:50,275 - Definise se enum Broj na liniji 4
+INFO  12:40:50,275 - Dodato je polje NULA sa vrednoscu 0 u Enum Broj na liniji 4
+INFO  12:40:50,275 - Dodato je polje JEDAN sa vrednoscu 1 u Enum Broj na liniji 4
+INFO  12:40:50,275 - Dodato je polje OSAM sa vrednoscu 8 u Enum Broj na liniji 4
+INFO  12:40:50,275 - Definisan je enum Broj na liniji 4
+INFO  12:40:50,275 - Deklarisana je globalna promenljiva s tipa char na liniji 6
+INFO  12:40:50,275 - Definisana je konstanta TRI tipa Int sa vrednoscu 3 na liniji 7
+INFO  12:40:50,275 - Deklarisana je globalna promenljiva b tipa bool na liniji 8
+INFO  12:40:50,275 - Deklarisana je lokalna promenljiva a tipa int na liniji 10
+INFO  12:40:50,275 - Deklarisana je lokalna promenljiva niz tipa int array na liniji 10
+INFO  12:40:50,275 - Deklarisana je lokalna promenljiva broj tipa int na liniji 10
+INFO  12:40:50,276 - Definisana je metoda main tipa void na liniji 10
+INFO  12:40:50,276 - Globalnih promeljivih ima 4, a lokalnih 3
+INFO  12:40:50,276 - Print calls = 0
+ERROR 12:40:50,276 - Parsiranje NIJE uspesno zavrseno!

@@ -1,0 +1,38 @@
+INFO  15:25:25,078 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  15:25:25,109 - #2 program
+INFO  15:25:25,109 - #44 MJProgram
+INFO  15:25:25,109 - #44 int
+INFO  15:25:25,109 - #44 y
+INFO  15:25:25,109 - #8 ,
+INFO  15:25:25,116 - #44 p
+INFO  15:25:25,116 - #8 ,
+INFO  15:25:25,116 - #44 a
+INFO  15:25:25,116 - #5 ;
+INFO  15:25:25,116 - #3 {
+INFO  15:25:25,116 - #14 void
+INFO  15:25:25,116 - #44 main
+INFO  15:25:25,116 - #6 (
+INFO  15:25:25,116 - #7 )
+INFO  15:25:25,116 - #3 {
+INFO  15:25:25,116 - #44 y
+INFO  15:25:25,116 - #27 =
+INFO  15:25:25,116 - #11 +
+ERROR 15:25:25,116 - 
+Sintaksna greska na liniji 5
+INFO  15:25:25,116 - #44 p
+INFO  15:25:25,116 - #5 ;
+INFO  15:25:25,116 - #44 k
+INFO  15:25:25,116 - #27 =
+INFO  15:25:25,116 - #45 3
+INFO  15:25:25,116 - #5 ;
+INFO  15:25:25,116 - #4 }
+INFO  15:25:25,116 - #4 }
+INFO  15:25:25,131 - Deklarisana je globalna promenljiva y tipa int na liniji 2
+INFO  15:25:25,131 - Deklarisana je globalna promenljiva p tipa int na liniji 2
+INFO  15:25:25,131 - Deklarisana je globalna promenljiva a tipa int na liniji 2
+ERROR 15:25:25,131 - Greska na liniji 6 : ime k nije deklarisano! 
+ERROR 15:25:25,131 - Greska, promenljiva nije deklarisana na liniji 6
+INFO  15:25:25,131 - Definisana je metoda main tipa void na liniji 4
+INFO  15:25:25,131 - Globalnih promeljivih ima 3, a lokalnih 0
+INFO  15:25:25,131 - Print calls = 0
+ERROR 15:25:25,131 - Parsiranje NIJE uspesno zavrseno!
