@@ -1,0 +1,33 @@
+INFO  19:53:44,188 - Compiling source file: C:\Users\bozov\Desktop\git\test\program.mj
+INFO  19:53:44,214 - #2 program
+INFO  19:53:44,214 - #44 test301
+INFO  19:53:44,214 - #3 {
+INFO  19:53:44,215 - #14 void
+INFO  19:53:44,215 - #44 main
+INFO  19:53:44,215 - #6 (
+INFO  19:53:44,216 - #7 )
+INFO  19:53:44,216 - #44 char
+INFO  19:53:44,216 - #44 c
+INFO  19:53:44,217 - #5 ;
+INFO  19:53:44,218 - #44 int
+INFO  19:53:44,218 - #44 b
+INFO  19:53:44,218 - #5 ;
+INFO  19:53:44,218 - #3 {
+INFO  19:53:44,218 - #44 b
+INFO  19:53:44,218 - #27 =
+INFO  19:53:44,219 - #47 a
+INFO  19:53:44,219 - #5 ;
+INFO  19:53:44,221 - #9 print
+INFO  19:53:44,221 - #6 (
+INFO  19:53:44,221 - #44 b
+INFO  19:53:44,221 - #7 )
+INFO  19:53:44,222 - #5 ;
+INFO  19:53:44,222 - #4 }
+INFO  19:53:44,222 - #4 }
+INFO  19:53:44,231 - Deklarisana je lokalna promenljiva c tipa char na liniji 4
+INFO  19:53:44,231 - Deklarisana je lokalna promenljiva b tipa int na liniji 5
+ERROR 19:53:44,232 - Greska, dodeljena vrednost nije istog tipa kao promenljiva na liniji 7
+INFO  19:53:44,232 - Definisana je metoda main tipa void na liniji 3
+INFO  19:53:44,232 - Globalnih promeljivih ima 0, a lokalnih 2
+INFO  19:53:44,232 - Print calls = 0
+ERROR 19:53:44,232 - Parsiranje NIJE uspesno zavrseno!
